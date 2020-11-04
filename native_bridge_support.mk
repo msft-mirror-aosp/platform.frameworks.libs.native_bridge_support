@@ -28,23 +28,7 @@ NATIVE_BRIDGE_PRODUCT_PACKAGES := \
     native_bridge_guest_app_process.native_bridge \
     native_bridge_guest_linker.native_bridge
 
-# Original guest libraries.
-NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
-    libcompiler_rt \
-    libcrypto \
-    libcutils \
-    libdl.bootstrap \
-    libdl_android.bootstrap \
-    liblog \
-    libm.bootstrap \
-    libsqlite \
-    libssl \
-    libstdc++ \
-    libsync \
-    libutils \
-    libz
-
-# TODO(b/141167717): hack to make libandroidicu compatible with APEX.
+# TODO(b/141167717): using "bootstrap" to make APEX libraries compatible with native bridge:
 #
 # If library is APEX-enabled:
 #
@@ -60,8 +44,24 @@ NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
 #   /system/lib/$GUEST_ARCH/ - as we need for native bridge.
 #
 # Note: this doesn't affect native libraries at all.
-NATIVE_BRIDGE_ORIG_GUEST_LIBS += \
-    libandroidicu.bootstrap
+
+# Original guest libraries.
+NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
+    libandroidicu.bootstrap \
+    libcompiler_rt \
+    libcrypto \
+    libcutils \
+    libdl.bootstrap \
+    libdl_android.bootstrap \
+    libicu.bootstrap \
+    liblog \
+    libm.bootstrap \
+    libsqlite \
+    libssl \
+    libstdc++ \
+    libsync \
+    libutils \
+    libz
 
 NATIVE_BRIDGE_PRODUCT_PACKAGES += \
     libclcore.bc \
