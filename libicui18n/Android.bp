@@ -14,12 +14,6 @@
 // limitations under the License.
 //
 
-// We introduce this namespace so that native bridge guest libraries are built
-// only for targets that explicitly use this namespace via PRODUCT_SOONG_NAMESPACES
-// and checkbuild.
-soong_namespace {
-}
-
 cc_library {
     defaults: ["native_bridge_stub_library_defaults"],
     name: "libnative_bridge_guest_libicui18n",
@@ -33,4 +27,5 @@ cc_library {
             srcs: ["stubs_arm64.cc"],
         },
     },
+    shared_libs: ["libnative_bridge_guest_libicuuc"],
 }
