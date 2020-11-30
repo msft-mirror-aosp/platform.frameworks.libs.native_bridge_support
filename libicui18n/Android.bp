@@ -27,5 +27,5 @@ cc_library {
             srcs: ["stubs_arm64.cc"],
         },
     },
-    shared_libs: ["libnative_bridge_guest_libicuuc"]
+    shared_libs: ["libnative_bridge_guest_libicuuc"],
 }
