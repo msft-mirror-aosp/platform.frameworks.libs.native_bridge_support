@@ -14,6 +14,12 @@
 // limitations under the License.
 //
 
+// We introduce this namespace so that native bridge guest libraries are built
+// only for targets that explicitly use this namespace via PRODUCT_SOONG_NAMESPACES
+// and checkbuild.
+soong_namespace {
+}
+
 cc_library {
     defaults: [
         "native_bridge_stub_library_defaults",
@@ -74,8 +80,6 @@ cc_library {
             strip: {
                 keep_symbols_and_debug_frame: true,
             },
-
-            whole_static_libs: [ "libunwind_llvm" ],
         },
         arm64: {
             srcs: ["stubs_arm64.cpp"],
@@ -87,8 +91,6 @@ cc_library {
             strip: {
                 keep_symbols: true,
             },
-
-            whole_static_libs: [ "libgcc_stripped" ],
         }
     },
 
@@ -100,6 +102,7 @@ cc_library {
         "gwp_asan",
         "libc_init_dynamic",
         "libc_common_shared",
+        "libunwind-exported",
     ],
 
     shared_libs: [
