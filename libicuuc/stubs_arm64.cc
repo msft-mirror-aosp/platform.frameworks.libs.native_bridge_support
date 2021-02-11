@@ -1677,6 +1677,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(ubiditransform_close_68);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ubiditransform_open_68);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ubiditransform_transform_68);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ublock_getCode_68);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ubrk_clone_68);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ubrk_close_68);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ubrk_countAvailable_68);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ubrk_current_68);
@@ -4022,6 +4023,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ubiditransform_open_68);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ubiditransform_transform_68);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ublock_getCode_68);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ubrk_clone_68);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ubrk_close_68);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ubrk_countAvailable_68);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ubrk_current_68);
