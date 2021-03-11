@@ -40,6 +40,7 @@ cc_library {
         "__cxa_thread_atexit_impl.cpp",
         "__libc_add_main_thread.cpp",
         "__libc_init_scudo.cpp",
+        "__libc_set_target_sdk_version.cpp",
         "exit.c",
         "malloc_init.cpp",
     ],
