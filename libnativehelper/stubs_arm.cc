@@ -19,7 +19,9 @@
 
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_create);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_getFD);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_getFd);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_setFD);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_setFd);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(DlCloseLibrary);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(DlGetError);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(DlGetSymbol);
@@ -70,7 +72,9 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniUninitializeConstants);
 static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_create);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_getFD);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_getFd);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_setFD);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_setFd);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", DlCloseLibrary);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", DlGetError);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", DlGetSymbol);
