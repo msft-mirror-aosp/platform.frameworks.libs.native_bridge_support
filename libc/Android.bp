@@ -14,6 +14,16 @@
 // limitations under the License.
 //
 
+// We introduce this namespace so that native bridge guest libraries are built
+// only for targets that explicitly use this namespace via PRODUCT_SOONG_NAMESPACES
+// and checkbuild.
+soong_namespace {
+}
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
 cc_library {
     defaults: [
         "native_bridge_stub_library_defaults",
@@ -29,6 +39,8 @@ cc_library {
         ":libc_sources_shared",
         "__cxa_thread_atexit_impl.cpp",
         "__libc_add_main_thread.cpp",
+        "__libc_init_scudo.cpp",
+        "__libc_set_target_sdk_version.cpp",
         "exit.c",
         "malloc_init.cpp",
     ],
@@ -66,6 +78,12 @@ cc_library {
             ],
 
             version_script: ":libc.arm.map",
+            no_libcrt: true,
+
+            shared: {
+                // For backwards-compatibility, some arm32 builtins are exported from libc.so.
+                static_libs: ["libclang_rt.builtins-arm-android-exported"],
+            },
 
             // Arm 32 bit does not produce complete exidx unwind information
             // so keep the .debug_frame which is relatively small and does
@@ -74,8 +92,6 @@ cc_library {
             strip: {
                 keep_symbols_and_debug_frame: true,
             },
-
-            whole_static_libs: [ "libunwind_llvm" ],
         },
         arm64: {
             srcs: ["stubs_arm64.cpp"],
@@ -87,8 +103,6 @@ cc_library {
             strip: {
                 keep_symbols: true,
             },
-
-            whole_static_libs: [ "libgcc_stripped" ],
         }
     },
 
@@ -100,6 +114,7 @@ cc_library {
         "gwp_asan",
         "libc_init_dynamic",
         "libc_common_shared",
+        "libunwind-exported",
     ],
 
     shared_libs: [
