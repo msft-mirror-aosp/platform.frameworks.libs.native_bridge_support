@@ -18,8 +18,8 @@
 #include "native_bridge_support/vdso/interceptable_functions.h"
 
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_create);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_getFD);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_setFD);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_getFd);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AFileDescriptor_setFd);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(DlCloseLibrary);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(DlGetError);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(DlGetSymbol);
@@ -50,18 +50,14 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniInvocationDestroy);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniInvocationGetLibrary);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniInvocationGetLibraryWith);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniInvocationInit);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniCreateFileDescriptor);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniCreateString);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniCreateStringArray);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniGetFDFromFileDescriptor);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniGetNioBufferBaseArray);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniGetNioBufferBaseArrayOffset);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniGetNioBufferFields);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniGetNioBufferPointer);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniGetReferent);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniLogException);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniRegisterNativeMethods);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniSetFileDescriptorOfFD);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniThrowErrnoException);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniThrowException);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniThrowExceptionFmt);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniThrowIOException);
@@ -71,8 +67,8 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(jniUninitializeConstants);
 
 static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_create);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_getFD);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_setFD);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_getFd);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", AFileDescriptor_setFd);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", DlCloseLibrary);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", DlGetError);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", DlGetSymbol);
@@ -103,18 +99,14 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniInvocationGetLibrary);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniInvocationGetLibraryWith);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniInvocationInit);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniCreateFileDescriptor);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniCreateString);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniCreateStringArray);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniGetFDFromFileDescriptor);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniGetNioBufferBaseArray);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniGetNioBufferBaseArrayOffset);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniGetNioBufferFields);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniGetNioBufferPointer);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniGetReferent);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniLogException);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniRegisterNativeMethods);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniSetFileDescriptorOfFD);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniThrowErrnoException);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniThrowException);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniThrowExceptionFmt);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", jniThrowIOException);
