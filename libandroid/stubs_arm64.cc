@@ -138,6 +138,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AInputEvent_release);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AInputQueue_attachLooper);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AInputQueue_detachLooper);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AInputQueue_finishEvent);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AInputQueue_fromJava);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AInputQueue_getEvent);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AInputQueue_hasEvents);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AInputQueue_preDispatchEvent);
@@ -464,6 +465,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AInputQueue_attachLooper);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AInputQueue_detachLooper);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AInputQueue_finishEvent);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AInputQueue_fromJava);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AInputQueue_getEvent);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AInputQueue_hasEvents);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AInputQueue_preDispatchEvent);
