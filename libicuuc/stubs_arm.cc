@@ -1752,6 +1752,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucnv_cbFromUWriteSub_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucnv_cbFromUWriteUChars_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucnv_cbToUWriteSub_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucnv_cbToUWriteUChars_70);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucnv_clone_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucnv_close_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucnv_compareNames_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucnv_convertEx_70);
@@ -4129,6 +4130,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ucnv_cbFromUWriteUChars_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ucnv_cbToUWriteSub_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ucnv_cbToUWriteUChars_70);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ucnv_clone_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ucnv_close_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ucnv_compareNames_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicuuc.so", ucnv_convertEx_70);
