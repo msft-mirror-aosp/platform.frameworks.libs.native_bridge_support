@@ -4109,6 +4109,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucfpos_reset_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucfpos_setInt64IterationContext_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucfpos_setState_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucol_cloneBinary_70);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucol_clone_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucol_closeElements_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucol_close_70);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ucol_countAvailable_70);
@@ -8776,6 +8777,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicui18n.so", ucfpos_setInt64IterationContext_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicui18n.so", ucfpos_setState_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicui18n.so", ucol_cloneBinary_70);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libicui18n.so", ucol_clone_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicui18n.so", ucol_closeElements_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicui18n.so", ucol_close_70);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libicui18n.so", ucol_countAvailable_70);
