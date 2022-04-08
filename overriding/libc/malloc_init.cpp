@@ -79,10 +79,8 @@ static void malloc_init_impl(libc_globals* globals) {
     native_bridge_aligned_alloc,
     native_bridge_malloc_info,
   };
-
   globals->malloc_dispatch_table = malloc_default_dispatch;
-  atomic_store(&globals->default_dispatch_table, &malloc_default_dispatch);
-  atomic_store(&globals->current_dispatch_table, &malloc_default_dispatch);
+  globals->current_dispatch_table = &globals->malloc_dispatch_table;
 }
 
 // Initializes memory allocation framework.

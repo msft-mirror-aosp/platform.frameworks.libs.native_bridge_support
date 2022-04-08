@@ -14,19 +14,8 @@
 // limitations under the License.
 //
 
-cc_library {
-    defaults: ["native_bridge_stub_library_defaults"],
-    name: "libnative_bridge_guest_libwebviewchromium_plat_support",
-    overrides: ["libwebviewchromium_plat_support"],
-    stem: "libwebviewchromium_plat_support",
-    arch: {
-        arm: {
-            srcs: ["stubs_arm.cc"],
-        },
-        arm64: {
-            srcs: ["stubs_arm64.cc"],
-        },
-    },
-    // We don't track dependencies of libandroid_runtime because we are only
-    // providing a fake implementation without full compatibility.
+// We introduce this namespace so that native bridge guest libraries are built
+// only for targets that explicitly use this namespace via PRODUCT_SOONG_NAMESPACES
+// and checkbuild.
+soong_namespace {
 }
