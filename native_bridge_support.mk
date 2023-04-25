@@ -68,6 +68,9 @@ NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libutils \
     libz
 
+# TODO(b/277625560): Deprecate when everything is ready for riscv64.
+NATIVE_BRIDGE_PRODUCT_PACKAGES_RISCV_READY := $(addsuffix .native_bridge,$(NATIVE_BRIDGE_ORIG_GUEST_LIBS))
+
 NATIVE_BRIDGE_PRODUCT_PACKAGES += \
     libclcore.bc \
     libclcore_neon.bc

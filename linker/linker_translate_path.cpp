@@ -50,6 +50,11 @@
   { "/system/lib64/" name, "/system/lib64/arm64/" name }
 #define APEX_LIB(apex, name) \
   { "/apex/" apex "/lib64/" name, "/system/lib64/arm64/" name }
+#elif defined(__riscv)
+#define SYSTEM_LIB(name) \
+  { "/system/lib64/" name, "/system/lib64/riscv64/" name }
+#define APEX_LIB(apex, name) \
+  { "/apex/" apex "/lib64/" name, "/system/lib64/riscv64/" name }
 #else
 #error "Unknown guest arch"
 #endif
