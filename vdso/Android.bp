@@ -31,6 +31,9 @@ cc_library_shared {
         arm64: {
             srcs: ["vdso_arm64.S"],
         },
+        riscv64: {
+            srcs: ["vdso_riscv64.S"],
+        },
         arm: {
             srcs: ["vdso_arm.S"],
         },
