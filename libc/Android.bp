@@ -98,11 +98,22 @@ cc_library {
 
             version_script: ":libc.arm64.map",
 
-            // Leave the symbols in the shared library so that stack unwinders can produce
-            // meaningful name resolution.
-            strip: {
-                keep_symbols: true,
-            },
+	    // Leave the symbols in the shared library so that stack unwinders can produce
+	    // meaningful name resolution.
+	    strip: {
+		keep_symbols: true,
+	    },
+        },
+        riscv64: {
+            srcs: ["stubs_riscv64.cpp"],
+
+            version_script: ":libc.riscv64.map",
+
+	    // Leave the symbols in the shared library so that stack unwinders can produce
+	    // meaningful name resolution.
+	    strip: {
+		keep_symbols: true,
+	    },
         }
     },
 
