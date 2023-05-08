@@ -36,8 +36,14 @@
         "ldr x3, =0\n"                          \
         "blr x3");                              \
   }
+#elif defined(__riscv)
+#define INTERCEPTABLE_STUB_ASM_FUNCTION(name)   \
+  extern "C" void __attribute((naked)) name() { \
+    __asm__ __volatile__(                       \
+        "unimp");                               \
+  }
 #else
-#error Unknown architecture, only arm and aarch64 are supported.
+#error Unknown architecture, only riscv64, arm and aarch64 are supported.
 #endif
 
 #define DEFINE_INTERCEPTABLE_STUB_VARIABLE(name) uintptr_t name;
