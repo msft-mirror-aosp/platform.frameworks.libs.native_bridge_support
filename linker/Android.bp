@@ -55,6 +55,10 @@ cc_binary {
             srcs: ["init_static_tls_arm64.S"],
             version_script: "linker.generic.map",
         },
+        riscv64: {
+            srcs: ["init_static_tls_riscv64.cc"],
+            version_script: "linker.generic.map",
+        },
     },
 
     cflags: [
