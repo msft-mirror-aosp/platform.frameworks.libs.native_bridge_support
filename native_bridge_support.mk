@@ -68,18 +68,6 @@ NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libutils \
     libz
 
-# TODO(b/277625560): Deprecate when everything is ready for riscv64.
-NATIVE_BRIDGE_PRODUCT_PACKAGES_RISCV_READY := $(addsuffix .native_bridge,$(NATIVE_BRIDGE_ORIG_GUEST_LIBS))
-
-NATIVE_BRIDGE_PRODUCT_PACKAGES += \
-    libclcore.bc \
-    libclcore_neon.bc
-
-NATIVE_BRIDGE_ORIG_GUEST_LIBS += \
-    libRS \
-    libRSDriver \
-    libnative_bridge_guest_libRSSupport
-
 # These native libraries are needed to pass CtsJniTestCases, we do not use them in any way and
 # once/if build system allows us to build dummy arm libraries they can be replaced with empty ones.
 #NATIVE_BRIDGE_ORIG_GUEST_LIBS += \
@@ -117,5 +105,21 @@ NATIVE_BRIDGE_PRODUCT_PACKAGES += \
 # have special build target prefix
 NATIVE_BRIDGE_PRODUCT_PACKAGES += \
     $(addprefix libnative_bridge_guest_,$(addsuffix .native_bridge,$(NATIVE_BRIDGE_MODIFIED_GUEST_LIBS)))
+
+# TODO(b/277625560): Deprecate after we deside what to do with renderscript
+NATIVE_BRIDGE_PRODUCT_PACKAGES_RISCV_READY := $(NATIVE_BRIDGE_PRODUCT_PACKAGES)
+
+# Renderscript specific files/libraries
+NATIVE_BRIDGE_PRODUCT_PACKAGES += \
+    libclcore.bc \
+    libclcore_neon.bc
+
+NATIVE_BRIDGE_RS_GUEST_LIBS += \
+    libRS \
+    libRSDriver \
+    libnative_bridge_guest_libRSSupport
+
+NATIVE_BRIDGE_PRODUCT_PACKAGES += \
+    $(addsuffix .native_bridge,$(NATIVE_BRIDGE_RS_GUEST_LIBS))
 
 NATIVE_BRIDGE_ORIG_GUEST_LIBS :=
