@@ -114,12 +114,12 @@ NATIVE_BRIDGE_PRODUCT_PACKAGES += \
     libclcore.bc \
     libclcore_neon.bc
 
-NATIVE_BRIDGE_RS_GUEST_LIBS += \
+NATIVE_BRIDGE_RS_ORIG_GUEST_LIBS += \
     libRS \
     libRSDriver \
     libnative_bridge_guest_libRSSupport
 
 NATIVE_BRIDGE_PRODUCT_PACKAGES += \
-    $(addsuffix .native_bridge,$(NATIVE_BRIDGE_RS_GUEST_LIBS))
+    $(addsuffix .native_bridge,$(NATIVE_BRIDGE_RS_ORIG_GUEST_LIBS))
 
 NATIVE_BRIDGE_ORIG_GUEST_LIBS :=
