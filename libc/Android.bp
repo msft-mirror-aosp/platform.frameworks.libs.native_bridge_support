@@ -153,3 +153,31 @@ cc_library {
     // Bug: 117558759
     ldflags: ["-Wl,-z,muldefs"],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libc_files",
+    srcs: [
+        "proxy/cxa_trampolines.cc",
+        "proxy/libc_translation.cc",
+        "proxy/malloc_translation.cc",
+        "proxy/pthread_translation.cc",
+        "proxy/setjmp_thunks.cc",
+        "proxy/system_properties_trampolines.cc",
+        "proxy/unistd_thunks.cc",
+    ],
+}
+
+cc_defaults {
+    name: "native_bridge_proxy_libc_defaults",
+    srcs: [ "//frameworks/libs/native_bridge_support/libc:native_bridge_proxy_libc_files" ],
+    header_libs: [
+	"libberberis_guest_abi_headers",
+        "libberberis_guest_os_primitives_headers",
+        "libberberis_guest_state_headers",
+	"libberberis_proxy_loader_headers",
+        "libberberis_runtime_primitives_headers",
+    ],
+
+    // We need to access Bionic private headers in the libc proxy.
+    include_dirs: ["bionic/libc"],
+}
