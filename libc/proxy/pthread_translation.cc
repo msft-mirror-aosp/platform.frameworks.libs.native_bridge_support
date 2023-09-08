@@ -32,7 +32,6 @@
 #include "berberis/guest_os_primitives/guest_thread_manager.h"
 #include "berberis/guest_os_primitives/scoped_pending_signals.h"
 #include "berberis/guest_state/guest_addr.h"
-#include "berberis/runtime_primitives/config.h"
 #include "berberis/runtime_primitives/host_stack.h"
 
 namespace berberis {
