@@ -107,7 +107,7 @@ NATIVE_BRIDGE_PRODUCT_PACKAGES += \
     $(addprefix libnative_bridge_guest_,$(addsuffix .native_bridge,$(NATIVE_BRIDGE_MODIFIED_GUEST_LIBS)))
 
 # TODO(b/277625560): Deprecate after we deside what to do with renderscript
-NATIVE_BRIDGE_PRODUCT_PACKAGES_RISCV_READY := $(NATIVE_BRIDGE_PRODUCT_PACKAGES)
+NATIVE_BRIDGE_PRODUCT_PACKAGES_RISCV64_READY := $(NATIVE_BRIDGE_PRODUCT_PACKAGES)
 
 # Renderscript specific files/libraries
 NATIVE_BRIDGE_PRODUCT_PACKAGES += \
