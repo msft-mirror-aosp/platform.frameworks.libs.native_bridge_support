@@ -38,3 +38,10 @@ cc_library {
         "libutils",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libnativewindow_files",
+    srcs: [
+        "proxy/nativewindow_trampolines.cc",
+    ],
+}
