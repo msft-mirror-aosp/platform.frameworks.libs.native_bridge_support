@@ -40,3 +40,10 @@ cc_library {
         "libutils",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libneuralnetworks_files",
+    srcs: [
+        "proxy/neuralnetworks_trampolines.cc",
+    ],
+}
