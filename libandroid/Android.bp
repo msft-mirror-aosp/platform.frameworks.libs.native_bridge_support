@@ -41,3 +41,10 @@ cc_library {
         "libutils",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libandroid_files",
+    srcs: [
+        "proxy/libandroid_trampolines.cc",
+    ],
+}

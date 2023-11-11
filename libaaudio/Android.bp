@@ -38,3 +38,10 @@ cc_library {
         "libutils",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libaaudio_files",
+    srcs: [
+        "proxy/android_audio_trampolines.cc",
+    ],
+}
