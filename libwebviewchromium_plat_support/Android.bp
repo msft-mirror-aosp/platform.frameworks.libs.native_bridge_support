@@ -34,3 +34,10 @@ cc_library {
     // We don't track dependencies of libandroid_runtime because we are only
     // providing a fake implementation without full compatibility.
 }
+
+filegroup {
+    name: "native_bridge_proxy_libwebviewchromium_plat_support_files",
+    srcs: [
+        "proxy/libwebviewchromium_plat_support_trampolines.cc",
+    ],
+}
