@@ -43,3 +43,10 @@ cc_library {
         "libutils",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libmediandk_files",
+    srcs: [
+        "proxy/media_trampolines.cc",
+    ],
+}
