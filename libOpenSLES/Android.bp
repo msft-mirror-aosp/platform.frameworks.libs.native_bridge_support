@@ -36,3 +36,10 @@ cc_library {
         "libnative_bridge_guest_libnativewindow",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libOpenSLES_files",
+    srcs: [
+        "proxy/sles_trampolines.cc",
+    ],
+}
