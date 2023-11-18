@@ -39,3 +39,10 @@ cc_library {
         "libutils",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libamidi_files",
+    srcs: [
+        "proxy/libamidi_trampolines.cc",
+    ],
+}
