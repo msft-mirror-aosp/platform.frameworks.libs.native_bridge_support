@@ -36,3 +36,10 @@ cc_library {
         "libnative_bridge_guest_libnativewindow",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libOpenMAXAL_files",
+    srcs: [
+        "proxy/maxal_translation.cc",
+    ],
+}
