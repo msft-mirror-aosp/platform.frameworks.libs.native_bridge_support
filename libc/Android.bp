@@ -56,7 +56,6 @@ cc_library {
 
     cflags: [
         "-D_LIBC=1",
-        "-fno-emulated-tls", // Required for GWP-Asan.
     ],
 
     product_variables: {
