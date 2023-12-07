@@ -38,3 +38,15 @@ cc_library {
         "libutils",
     ],
 }
+
+cc_library_headers {
+    name: "libnative_bridge_proxy_libEGL_headers",
+    export_include_dirs: ["proxy/include"],
+}
+
+filegroup {
+    name: "native_bridge_proxy_libEGL_files",
+    srcs: [
+        "proxy/egl_trampolines.cc",
+    ],
+}
