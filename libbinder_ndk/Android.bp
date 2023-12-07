@@ -39,3 +39,10 @@ cc_library {
         "libutils",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libbinder_ndk_files",
+    srcs: [
+        "proxy/libbinder_ndk_trampolines.cc",
+    ],
+}
