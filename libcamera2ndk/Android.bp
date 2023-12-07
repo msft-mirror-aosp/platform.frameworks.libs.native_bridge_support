@@ -42,3 +42,17 @@ cc_library {
         "libutils",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libcamera2ndk_files",
+    srcs: [
+        "proxy/android_camera_trampolines.cc",
+    ],
+}
+
+filegroup {
+    name: "native_bridge_proxy_libcamera2ndk_api_checker_files",
+    srcs: [
+        "proxy/emulated_api_checker.cc",
+    ],
+}
