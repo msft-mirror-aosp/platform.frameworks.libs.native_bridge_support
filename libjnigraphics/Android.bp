@@ -33,3 +33,10 @@ cc_library {
     },
     shared_libs: ["libnative_bridge_guest_libandroid_runtime"],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libjnigraphics_files",
+    srcs: [
+        "proxy/libjnigraphics_trampolines.cc",
+    ],
+}
