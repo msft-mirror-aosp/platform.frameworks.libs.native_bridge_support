@@ -48,3 +48,9 @@ filegroup {
         "proxy/libandroid_trampolines.cc",
     ],
 }
+
+cc_defaults {
+    name: "native_bridge_proxy_libandroid_defaults",
+    srcs: ["//frameworks/libs/native_bridge_support/libandroid:native_bridge_proxy_libandroid_files"],
+    header_libs: ["libberberis_native_activity_headers"],
+}
