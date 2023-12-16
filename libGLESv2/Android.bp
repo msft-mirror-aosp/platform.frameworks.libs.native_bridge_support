@@ -37,3 +37,10 @@ cc_library {
         "libnative_bridge_guest_libEGL"
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libGLESv2_files",
+    srcs: [
+        "proxy/gles2_trampolines.cc",
+    ],
+}
