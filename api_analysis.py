@@ -15,6 +15,8 @@
 # limitations under the License.
 #
 
+import warnings
+
 """Compares Host types against Guest types."""
 
 
@@ -443,7 +445,7 @@ def _check_force_compatibility_was_useful(types):
   for atype, descr in types.items():
     if (('force_compatible' in descr) or ('force_compatible_with' in descr)):
       if (not descr.get('useful_force_compatible', False)):
-        raise Exception("Forcing compatibility for type '%s' is redundant" % (atype))
+        warnings.warn("Forcing compatibility for type '%s' is redundant" % (atype))
 
 
 def _check_expected_types_compatibility(types):
