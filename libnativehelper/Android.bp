@@ -33,3 +33,10 @@ cc_library {
     },
     shared_libs: ["liblog"]
 }
+
+filegroup {
+    name: "native_bridge_proxy_libnativehelper_files",
+    srcs: [
+        "proxy/nativehelper_trampolines.cc",
+    ],
+}
