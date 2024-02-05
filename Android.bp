@@ -19,14 +19,24 @@ package {
 }
 
 cc_defaults {
-    name: "native_bridge_stub_library_defaults",
+    name: "native_bridge_support_defaults",
+
     cflags: [
         "-Wall",
         "-Werror",
         "-Wextra",
+        "-Wmost",
         "-Wover-aligned",
         "-Wunused",
+        "-Wimplicit-fallthrough",
+        "-Werror=reorder-init-list",
+        "-Wdefaulted-function-deleted",
     ],
+}
+
+cc_defaults {
+    name: "native_bridge_stub_library_defaults",
+    defaults: ["native_bridge_support_defaults"],
 
     shared_libs: [
         "libnative_bridge_vdso",
@@ -40,9 +50,9 @@ cc_defaults {
 
     enabled: false,
     target: {
-       native_bridge: {
-           enabled: true,
-       }
+        native_bridge: {
+            enabled: true,
+        },
     },
 
     native_bridge_supported: true,
