@@ -27,13 +27,13 @@ import tempfile
 class ProxyGenerator:
 
   def __init__(self):
-    self.native_bridge_support_root = os.path.abspath('%s/' %
-                                                os.path.dirname(__file__))
-    self.android_tree_root = os.path.abspath('%s/../../../' %
-                                             self.native_bridge_support_root)
+    self.android_api_root = os.path.abspath('%s/' %
+                                            os.path.dirname(__file__))
+    self.android_tree_root = os.path.abspath('%s/../../../../' %
+                                             self.android_api_root)
 
     self.dwarf_reader = '%s/out/host/linux-x86/bin/dwarf_reader' % self.android_tree_root
-    self.proxy_generator = '%s/gen_known_trampolines.py' % self.native_bridge_support_root
+    self.proxy_generator = '%s/gen_known_trampolines.py' % self.android_api_root
 
     self.arches = {
         'arm': '%s/out/target/product/generic_arm64/symbols/%s/lib/%s.so',
@@ -138,7 +138,7 @@ class ProxyGenerator:
 
     for proc in processes:
       arch, _, _, tmp_output = proc
-      json_output = ('%s/%s/proxy/api_%s.json' % (self.native_bridge_support_root, library, arch))
+      json_output = ('%s/%s/proxy/api_%s.json' % (self.android_api_root, library, arch))
 
       if not os.path.isfile(json_output) or not filecmp.cmp(
           tmp_output[1], json_output, shallow=False):
@@ -161,11 +161,11 @@ class ProxyGenerator:
     inputs = [
         library,
         '%s/%s/proxy/api_%s.json' %
-        (self.native_bridge_support_root, library, guest_json_suffix),
+        (self.android_api_root, library, guest_json_suffix),
         '%s/%s/proxy/api_%s.json' %
-        (self.native_bridge_support_root, library, host_json_suffix),
+        (self.android_api_root, library, host_json_suffix),
         '%s/%s/proxy/custom_trampolines_%s.json' %
-        (self.native_bridge_support_root, library, custom_json_suffix),
+        (self.android_api_root, library, custom_json_suffix),
     ]
 
     tmp_output_trampolines = tempfile.mkstemp()
@@ -174,7 +174,7 @@ class ProxyGenerator:
       inputs += ['--verbose']
 
     trampoline_out = '%s/%s/proxy/trampolines_%s-inl.h' % (
-        self.native_bridge_support_root, library, trampoline_suffix)
+        self.android_api_root, library, trampoline_suffix)
 
     print('Generating %s trampolines for %s, logs: %s' % (
         trampoline_suffix, library, tmp_output_trampolines[1]))
@@ -188,7 +188,7 @@ class ProxyGenerator:
 
     info = self.proxy_libraries[library]
     stubs_out = '%s/%s/stubs_%s.%s' % (
-        self.native_bridge_support_root, library, stubs_suffix, info['stubs_ext'])
+        self.android_api_root, library, stubs_suffix, info['stubs_ext'])
 
     print('Generating %s stubs for %s, logs: %s' % (stubs_suffix, library,
                                                     tmp_output_stubs[1]))
