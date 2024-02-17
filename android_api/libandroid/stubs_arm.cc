@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2023 The Android Open Source Project
+// Copyright (C) 2024 The Android Open Source Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -231,8 +231,10 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_getManager);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_getPreferredUpdateRateNanos);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_getThreadIds);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_reportActualWorkDuration);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_reportActualWorkDuration2);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_sendHint);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_setIHintManagerForTesting);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_setPreferPowerEfficiency);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_setThreads);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(APerformanceHint_updateTargetWorkDuration);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(APermissionManager_checkPermission);
@@ -337,8 +339,10 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(ASystemFontIterator_open);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AThermal_acquireManager);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AThermal_getCurrentThermalStatus);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AThermal_getThermalHeadroom);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AThermal_getThermalHeadroomThresholds);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AThermal_registerThermalStatusListener);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AThermal_releaseManager);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AThermal_setIThermalServiceForTesting);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AThermal_unregisterThermalStatusListener);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ATrace_beginAsyncSection);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ATrace_beginSection);
@@ -346,6 +350,12 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(ATrace_endAsyncSection);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ATrace_endSection);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ATrace_isEnabled);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ATrace_setCounter);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AWorkDuration_create);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AWorkDuration_release);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AWorkDuration_setActualCpuDurationNanos);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AWorkDuration_setActualGpuDurationNanos);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AWorkDuration_setActualTotalDurationNanos);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AWorkDuration_setWorkPeriodStartTimestampNanos);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(android_getaddrinfofornetwork);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(android_getprocdns);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(android_getprocnetwork);
@@ -575,8 +585,10 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_getPreferredUpdateRateNanos);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_getThreadIds);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_reportActualWorkDuration);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_reportActualWorkDuration2);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_sendHint);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_setIHintManagerForTesting);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_setPreferPowerEfficiency);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_setThreads);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APerformanceHint_updateTargetWorkDuration);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", APermissionManager_checkPermission);
@@ -681,8 +693,10 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AThermal_acquireManager);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AThermal_getCurrentThermalStatus);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AThermal_getThermalHeadroom);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AThermal_getThermalHeadroomThresholds);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AThermal_registerThermalStatusListener);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AThermal_releaseManager);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AThermal_setIThermalServiceForTesting);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AThermal_unregisterThermalStatusListener);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ATrace_beginAsyncSection);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ATrace_beginSection);
@@ -690,6 +704,12 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ATrace_endSection);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ATrace_isEnabled);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ATrace_setCounter);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AWorkDuration_create);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AWorkDuration_release);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AWorkDuration_setActualCpuDurationNanos);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AWorkDuration_setActualGpuDurationNanos);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AWorkDuration_setActualTotalDurationNanos);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", AWorkDuration_setWorkPeriodStartTimestampNanos);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", android_getaddrinfofornetwork);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", android_getprocdns);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", android_getprocnetwork);
