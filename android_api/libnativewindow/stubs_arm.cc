@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2023 The Android Open Source Project
+// Copyright (C) 2024 The Android Open Source Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,8 +19,10 @@
 
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_acquire);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_allocate);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_allocateWithOptions);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_createFromHandle);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_describe);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_getDataSpace);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_getId);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_getNativeHandle);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_isSupported);
@@ -31,6 +33,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_readFromParcel);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_recvHandleFromUnixSocket);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_release);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_sendHandleToUnixSocket);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_setDataSpace);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_unlock);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AHardwareBuffer_writeToParcel);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANativeWindowBuffer_getHardwareBuffer);
@@ -79,7 +82,6 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android28AHardwareBuffer_getDataSpaceEP15
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android32AHardwareBuffer_to_GraphicBufferEP15AHardwareBuffer);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android32AHardwareBuffer_to_GraphicBufferEPK15AHardwareBuffer);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android34AHardwareBuffer_from_GraphicBufferEPNS_13GraphicBufferE);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android34AHardwareBuffer_isValidPixelFormatEj);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android36AHardwareBuffer_convertToPixelFormatEj);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android38AHardwareBuffer_convertFromPixelFormatEj);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android38AHardwareBuffer_to_ANativeWindowBufferEP15AHardwareBuffer);
@@ -90,8 +92,10 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android43AHardwareBuffer_convertFromGrall
 static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_acquire);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_allocate);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_allocateWithOptions);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_createFromHandle);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_describe);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_getDataSpace);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_getId);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_getNativeHandle);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_isSupported);
@@ -102,6 +106,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_recvHandleFromUnixSocket);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_release);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_sendHandleToUnixSocket);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_setDataSpace);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_unlock);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", AHardwareBuffer_writeToParcel);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", ANativeWindowBuffer_getHardwareBuffer);
@@ -150,7 +155,6 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", _ZN7android32AHardwareBuffer_to_GraphicBufferEP15AHardwareBuffer);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", _ZN7android32AHardwareBuffer_to_GraphicBufferEPK15AHardwareBuffer);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", _ZN7android34AHardwareBuffer_from_GraphicBufferEPNS_13GraphicBufferE);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", _ZN7android34AHardwareBuffer_isValidPixelFormatEj);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", _ZN7android36AHardwareBuffer_convertToPixelFormatEj);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", _ZN7android38AHardwareBuffer_convertFromPixelFormatEj);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativewindow.so", _ZN7android38AHardwareBuffer_to_ANativeWindowBufferEP15AHardwareBuffer);
