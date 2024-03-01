@@ -18,6 +18,7 @@
 #define NATIVE_BRIDGE_SUPPORT_GUEST_STATE_ACCESSOR_H_
 
 #include <stdalign.h>
+#include <stddef.h>
 #include <stdint.h>
 #include <sys/cdefs.h>
 
@@ -58,7 +59,7 @@ struct NativeBridgeGuestRegsArm {
 //
 // Note that 64bit architectures are only supported for 64bit host platform.
 struct NativeBridgeGuestRegs {
-  uint64_t arch;
+  uint64_t guest_arch;
   union {
 #if defined(__LP64__)
     NativeBridgeGuestRegsArm64 regs_arm64;
@@ -69,10 +70,7 @@ struct NativeBridgeGuestRegs {
 };
 
 // Signature value for NativeBridgeGuestStateHeader::signature
-#define NATIVE_BRIDGE_GUEST_STATE_SIGNATURE 0x4E424753
-
-// List of native bridge providers
-#define NATIVE_BRIDGE_PROVIDER_BERBERIS 7
+#define NATIVE_BRIDGE_GUEST_STATE_SIGNATURE 0x5349'5245'4252'4542
 
 // This is the header of guest_state, pointer to which is stored in
 // TLS_SLOT_NATIVE_BRIDGE_GUEST_STATE and accessed by android debuggerd
@@ -80,25 +78,16 @@ struct NativeBridgeGuestRegs {
 struct alignas(16) NativeBridgeGuestStateHeader {
   // Guest state signature for initial check must always be
   // equal to NATIVE_BRIDGE_GUEST_STATE_SIGNATURE
-  uint32_t signature;
-  // Native bridge implementation provider id
-  uint32_t native_bridge_provider_id;
+  uint64_t signature;
   // Guest and host architectures: defined as NATIVE_BRIDGE_ARCH_*
   uint32_t native_bridge_host_arch;
   uint32_t native_bridge_guest_arch;
-  // Version (for internal use - can be bumped when internal representation
-  // of the guest state changes).
-  uint32_t version;
-  // Do not use (they are here to keep guest_state_data following this header
-  // aligned to 16bytes).
-  uint32_t reserved1;
-  uint32_t reserved2;
-  // Size of implementation specific representation of the guest state.
-  // The size is used by debugging/crash reporting tools to copy
+  // The pointer and size are used by debugging/crash reporting tools to copy
   // the state from a (probably crashed) process.
-  uint32_t guest_state_size;
-  // the implementation specific guest state must follow the header
-  // uint8_t guest_state_data[guest_state_size]
+  // The pointer to the implementation specific guest state.
+  const void* guest_state_data;
+  // Size of implementation specific representation of the guest state.
+  size_t guest_state_data_size;
 };
 
 // Unsupported combination of guest and host architectures
@@ -114,11 +103,10 @@ struct alignas(16) NativeBridgeGuestStateHeader {
 // `guest_regs` structure with values from internal representation of
 // the guest state.
 //
-// Note that this function expects the implementation specific guest state
-// to follow the header.
-int LoadGuestStateRegisters(
-    const NativeBridgeGuestStateHeader* guest_state_header,
-    NativeBridgeGuestRegs* guest_regs);
+// `guest_state_data` points to the implementation specific guest_state
+int LoadGuestStateRegisters(const void* guest_state_data,
+                            size_t guest_state_data_size,
+                            NativeBridgeGuestRegs* guest_regs);
 
 __END_DECLS
 
