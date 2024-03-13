@@ -30,6 +30,9 @@ cc_library {
         arm64: {
             srcs: ["stubs_arm64.cc"],
         },
+        riscv64: {
+            srcs: ["stubs_riscv64.cc"],
+        },
     },
     shared_libs: ["liblog"]
 }
