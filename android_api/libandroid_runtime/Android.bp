@@ -30,6 +30,9 @@ cc_library {
         arm64: {
             srcs: ["stubs_arm64.cc"],
         },
+        riscv64: {
+            srcs: ["stubs_riscv64.cc"],
+        },
     },
     // We don't track dependencies of libandroid_runtime because we are only
     // providing a fake implementation without full compatibility.
