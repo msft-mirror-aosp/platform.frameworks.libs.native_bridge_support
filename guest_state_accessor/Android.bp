@@ -25,6 +25,20 @@ cc_library_headers {
     export_include_dirs: ["include"],
 }
 
+cc_library_static {
+    name: "libnative_bridge_guest_state_accessor",
+    defaults: ["native_bridge_support_defaults"],
+    host_supported: true,
+    header_libs: [
+        "libnative_bridge_support_accessor_headers",
+    ],
+    srcs: ["accessor_proxy.cc"],
+    shared_libs: [
+        "libbase",
+        "liblog",
+    ],
+}
+
 cc_test_host {
     name: "libnative_bridge_guest_state_accessor_tests",
     defaults: ["native_bridge_support_defaults"],
