@@ -17,6 +17,8 @@
 #ifndef NATIVE_BRIDGE_SUPPORT_ARM64_GUEST_STATE_GUEST_STATE_CPU_STATE_H_
 #define NATIVE_BRIDGE_SUPPORT_ARM64_GUEST_STATE_GUEST_STATE_CPU_STATE_H_
 
+#include <cstdint>
+
 namespace berberis {
 
 using GuestAddr = uintptr_t;
