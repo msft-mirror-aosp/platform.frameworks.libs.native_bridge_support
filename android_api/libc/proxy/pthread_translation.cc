@@ -86,7 +86,7 @@ void DoCustomTrampoline_pthread_join(HostCode /* callee */,
       GuestParamsValues<decltype(pthread_join)>(state);
 
   ScopedPendingSignalsDisabler scoped_pending_signals_disabler(state->thread);
-  auto&& [ret] = GuestReturnReference<decltype(pthread_create)>(state);
+  auto&& [ret] = GuestReturnReference<decltype(pthread_join)>(state);
   ret = pthread_join(guest_thread, retval);
 }
 
