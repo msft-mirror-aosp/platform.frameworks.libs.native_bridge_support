@@ -149,6 +149,10 @@
 		{
 			"type" : "func ACameraMetadata_getConstEntry"
 		},
+		"ACameraMetadata_getTagFromName" : 
+		{
+			"type" : "func ACameraMetadata_getTagFromName"
+		},
 		"ACameraMetadata_isLogicalMultiCamera" : 
 		{
 			"type" : "func ACameraMetadata_isLogicalMultiCamera"
@@ -538,6 +542,20 @@
 			"kind" : "class",
 			"size" : 160
 		},
+		"class android::LightRefBase<android::VendorTagDescriptor>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mCount",
+					"offset" : 0,
+					"type" : "struct std::__1::atomic<int32>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 32
+		},
 		"class android::List<int64>" : 
 		{
 			"fields" : 
@@ -661,6 +679,23 @@
 		"class android::VectorImpl" : 
 		{
 			"kind" : "incomplete"
+		},
+		"class android::VendorTagDescriptor" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"class android::hardware::camera2::params::VendorTagDescriptor",
+				"class android::LightRefBase<android::VendorTagDescriptor>"
+			],
+			"kind" : "class",
+			"size" : 1312
+		},
+		"class android::VendorTagDescriptor*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "class android::VendorTagDescriptor",
+			"size" : 32
 		},
 		"class android::acam::CameraDevice" : 
 		{
@@ -1059,6 +1094,10 @@
 		{
 			"kind" : "incomplete"
 		},
+		"class android::hardware::camera2::params::VendorTagDescriptor" : 
+		{
+			"kind" : "incomplete"
+		},
 		"class android::sp<ACameraCaptureSession>" : 
 		{
 			"fields" : 
@@ -1115,6 +1154,20 @@
 					"name" : "m_ptr",
 					"offset" : 0,
 					"type" : "struct android::CaptureRequest*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 32
+		},
+		"class android::sp<android::VendorTagDescriptor>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "m_ptr",
+					"offset" : 0,
+					"type" : "class android::VendorTagDescriptor*"
 				}
 			],
 			"inheritance" : [],
@@ -2154,7 +2207,7 @@
 				"class std::__1::__tree_node_base<void*>"
 			],
 			"kind" : "class",
-			"size" : 1152
+			"size" : 1280
 		},
 		"class std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, android::acam::CameraManagerGlobal::StatusAndHAL3Support>, void*>" : 
 		{
@@ -8155,6 +8208,20 @@
 			"return_type" : "unsigned int32",
 			"size" : 0
 		},
+		"func ACameraMetadata_getTagFromName" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACameraMetadata const*",
+				"unsigned char8 const*",
+				"unsigned int32*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
 		"func ACameraMetadata_isLogicalMultiCamera" : 
 		{
 			"has_variadic_args" : false,
@@ -8655,6 +8722,12 @@
 		{
 			"kind" : "int",
 			"signed" : true,
+			"size" : 32
+		},
+		"int32 atomic" : 
+		{
+			"base_type" : "int32",
+			"kind" : "atomic",
 			"size" : 32
 		},
 		"int32 const" : 
@@ -9347,6 +9420,11 @@
 					"name" : "mStaticPhysicalCameraIdValues",
 					"offset" : 448,
 					"type" : "class std::__1::vector<android::String8, std::__1::allocator<android::String8>>"
+				},
+				{
+					"name" : "mVTags",
+					"offset" : 544,
+					"type" : "class android::sp<android::VendorTagDescriptor>"
 				}
 			],
 			"inheritance" : 
@@ -9354,7 +9432,7 @@
 				"class android::RefBase"
 			],
 			"kind" : "struct",
-			"size" : 544
+			"size" : 576
 		},
 		"struct ACameraMetadata const" : 
 		{
@@ -11259,6 +11337,30 @@
 			"kind" : "struct",
 			"size" : 8
 		},
+		"struct std::__1::__atomic_base<int32, false>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__a_",
+					"offset" : 0,
+					"type" : "int32 atomic"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::__atomic_base<int32, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__atomic_base<int32, false>"
+			],
+			"kind" : "struct",
+			"size" : 32
+		},
 		"struct std::__1::__compressed_pair_elem<android::String8*, int32, false>" : 
 		{
 			"fields" : 
@@ -11793,7 +11895,7 @@
 			],
 			"inheritance" : [],
 			"kind" : "struct",
-			"size" : 1024
+			"size" : 1152
 		},
 		"struct std::__1::__value_type<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, android::acam::CameraManagerGlobal::StatusAndHAL3Support>" : 
 		{
@@ -11818,6 +11920,16 @@
 			],
 			"kind" : "struct",
 			"size" : 8
+		},
+		"struct std::__1::atomic<int32>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__atomic_base<int32, true>"
+			],
+			"kind" : "struct",
+			"size" : 32
 		},
 		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long" : 
 		{
@@ -12053,7 +12165,7 @@
 			],
 			"inheritance" : [],
 			"kind" : "struct",
-			"size" : 960
+			"size" : 1088
 		},
 		"struct std::__1::pair<int32 const, android::acam::CameraDevice::CallbackHolder>" : 
 		{
@@ -12110,7 +12222,7 @@
 			],
 			"inheritance" : [],
 			"kind" : "struct",
-			"size" : 1024
+			"size" : 1152
 		},
 		"struct std::__1::pair<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>> const, android::acam::CameraManagerGlobal::StatusAndHAL3Support>" : 
 		{
