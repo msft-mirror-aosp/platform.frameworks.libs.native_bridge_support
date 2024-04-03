@@ -73,6 +73,10 @@
 		{
 			"type" : "func JniConstants_FileDescriptor_init"
 		},
+		"JniConstants_FileDescriptor_setInt$" : 
+		{
+			"type" : "func JniConstants_FileDescriptor_setInt$"
+		},
 		"JniConstants_NIOAccessClass" : 
 		{
 			"type" : "func JniConstants_NIOAccessClass"
@@ -338,7 +342,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -351,17 +355,16 @@
 		},
 		"func #1001" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "float32",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #1001*" : 
@@ -372,14 +375,15 @@
 		},
 		"func #1002" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -400,7 +404,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -413,17 +417,16 @@
 		},
 		"func #1004" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "float64",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #1004*" : 
@@ -434,14 +437,15 @@
 		},
 		"func #1005" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -462,7 +466,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -482,10 +486,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jfieldID*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #1007*" : 
@@ -505,7 +508,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #1008*" : 
@@ -525,7 +528,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #1009*" : 
@@ -566,7 +569,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #1010*" : 
@@ -586,7 +589,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #1011*" : 
@@ -606,7 +609,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int16",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #1012*" : 
@@ -626,7 +629,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #1013*" : 
@@ -646,7 +649,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #1014*" : 
@@ -666,7 +669,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "float32",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #1015*" : 
@@ -684,9 +687,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*"
+				"struct _jfieldID*",
+				"void*"
 			],
-			"return_type" : "float64",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #1016*" : 
@@ -705,7 +709,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"void*"
+				"unsigned char8"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -726,7 +730,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"unsigned char8"
+				"char8"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -747,7 +751,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"char8"
+				"unsigned int16"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -789,7 +793,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"unsigned int16"
+				"int16"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -810,7 +814,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int16"
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -831,7 +835,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int32"
+				"int64"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -852,7 +856,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int64"
+				"float32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -873,7 +877,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"float32"
+				"float64"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -892,11 +896,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"struct _jfieldID*",
-				"float64"
+				"unsigned int16 const*",
+				"int32"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #1025*" : 
@@ -913,10 +916,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"unsigned int16 const*",
-				"int32"
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #1026*" : 
@@ -933,9 +935,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"unsigned char8*"
 			],
-			"return_type" : "int32",
+			"return_type" : "unsigned int16 const*",
 			"size" : 0
 		},
 		"func #1027*" : 
@@ -953,9 +956,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned char8*"
+				"unsigned int16 const*"
 			],
-			"return_type" : "unsigned int16 const*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #1028*" : 
@@ -972,10 +975,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"unsigned int16 const*"
+				"char8 const*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #1029*" : 
@@ -1013,9 +1015,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"char8 const*"
+				"void*",
+				"unsigned char8*"
 			],
-			"return_type" : "void*",
+			"return_type" : "char8 const*",
 			"size" : 0
 		},
 		"func #1030*" : 
@@ -1033,9 +1036,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned char8*"
+				"char8 const*"
 			],
-			"return_type" : "char8 const*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #1031*" : 
@@ -1052,10 +1055,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"char8 const*"
+				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #1032*" : 
@@ -1072,9 +1074,11 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
+				"int32",
+				"void*",
 				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #1033*" : 
@@ -1091,9 +1095,8 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"int32",
 				"void*",
-				"void*"
+				"int32"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -1113,9 +1116,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int32"
+				"int32",
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #1035*" : 
@@ -1132,11 +1136,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"int32",
-				"void*"
+				"int32"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #1036*" : 
@@ -1307,9 +1309,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"int32"
+				"void*",
+				"unsigned char8*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8*",
 			"size" : 0
 		},
 		"func #1044*" : 
@@ -1329,7 +1332,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "unsigned char8*",
+			"return_type" : "char8*",
 			"size" : 0
 		},
 		"func #1045*" : 
@@ -1349,7 +1352,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "char8*",
+			"return_type" : "unsigned int16*",
 			"size" : 0
 		},
 		"func #1046*" : 
@@ -1369,7 +1372,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "unsigned int16*",
+			"return_type" : "int16*",
 			"size" : 0
 		},
 		"func #1047*" : 
@@ -1389,7 +1392,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "int16*",
+			"return_type" : "int32*",
 			"size" : 0
 		},
 		"func #1048*" : 
@@ -1409,7 +1412,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "int32*",
+			"return_type" : "int64*",
 			"size" : 0
 		},
 		"func #1049*" : 
@@ -1449,7 +1452,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "int64*",
+			"return_type" : "float32*",
 			"size" : 0
 		},
 		"func #1050*" : 
@@ -1469,7 +1472,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "float32*",
+			"return_type" : "float64*",
 			"size" : 0
 		},
 		"func #1051*" : 
@@ -1487,9 +1490,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned char8*"
+				"unsigned char8*",
+				"int32"
 			],
-			"return_type" : "float64*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #1052*" : 
@@ -1507,7 +1511,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned char8*",
+				"char8*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -1528,7 +1532,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"char8*",
+				"unsigned int16*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -1549,7 +1553,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned int16*",
+				"int16*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -1570,7 +1574,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int16*",
+				"int32*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -1591,7 +1595,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int32*",
+				"int64*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -1612,7 +1616,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int64*",
+				"float32*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -1633,7 +1637,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"float32*",
+				"float64*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -1675,8 +1679,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"float64*",
-				"int32"
+				"int32",
+				"int32",
+				"unsigned char8*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1698,7 +1703,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"unsigned char8*"
+				"char8*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1720,7 +1725,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"char8*"
+				"unsigned int16*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1742,7 +1747,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"unsigned int16*"
+				"int16*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1764,7 +1769,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int16*"
+				"int32*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1786,7 +1791,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int32*"
+				"int64*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1808,7 +1813,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int64*"
+				"float32*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1830,7 +1835,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"float32*"
+				"float64*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1852,7 +1857,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"float64*"
+				"unsigned char8 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1874,7 +1879,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"unsigned char8 const*"
+				"char8 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1917,7 +1922,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"char8 const*"
+				"unsigned int16 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1939,7 +1944,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"unsigned int16 const*"
+				"int16 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1961,7 +1966,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int16 const*"
+				"int32 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1983,7 +1988,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int32 const*"
+				"int64 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2005,7 +2010,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int64 const*"
+				"float32 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2027,7 +2032,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"float32 const*"
+				"float64 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2047,11 +2052,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int32",
-				"int32",
-				"float64 const*"
+				"struct JNINativeMethod const*",
+				"int32"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #1076*" : 
@@ -2068,9 +2072,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"struct JNINativeMethod const*",
-				"int32"
+				"void*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -2108,7 +2110,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"struct JNIInvokeInterface const***"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -2146,8 +2148,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"struct JNIInvokeInterface const***"
+				"struct JNIInvokeInterface const**"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -2165,13 +2166,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"void*",
-				"int32",
-				"int32",
-				"unsigned int16*"
+				"struct JNIInvokeInterface const**",
+				"struct JNINativeInterface const***",
+				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #1081*" : 
@@ -2187,13 +2186,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"void*",
-				"int32",
-				"int32",
-				"char8*"
+				"struct JNIInvokeInterface const**",
+				"void**",
+				"int32"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #1082*" : 
@@ -2211,9 +2208,11 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned char8*"
+				"int32",
+				"int32",
+				"unsigned int16*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #1083*" : 
@@ -2231,8 +2230,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"void*",
-				"int32"
+				"int32",
+				"int32",
+				"char8*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2251,7 +2251,8 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"unsigned char8*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -2270,7 +2271,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"void*",
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2288,9 +2291,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**"
+				"struct JNINativeInterface const**",
+				"void*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #1087*" : 
@@ -2307,10 +2311,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"int64"
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #1088*" : 
@@ -2326,10 +2329,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"void*"
+				"struct JNINativeInterface const**"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #1089*" : 
@@ -2367,9 +2369,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"int64"
 			],
-			"return_type" : "int64",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #1090*" : 
@@ -2388,7 +2391,7 @@
 				"struct JNINativeInterface const**",
 				"void*"
 			],
-			"return_type" : "unsigned int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #1091*" : 
@@ -2404,11 +2407,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNIInvokeInterface const**",
-				"void**",
-				"int32"
+				"struct JNINativeInterface const**",
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #1092*" : 
@@ -2424,11 +2426,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNIInvokeInterface const***",
-				"int32",
-				"int32*"
+				"struct JNINativeInterface const**",
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func #1093*" : 
@@ -14866,7 +14867,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**"
+				"struct JNIInvokeInterface const**"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -14884,13 +14885,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"char8 const*",
-				"void*",
-				"char8 const*",
-				"int32"
+				"struct JNIInvokeInterface const**",
+				"struct JNINativeInterface const***",
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #656*" : 
@@ -14906,10 +14905,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"char8 const*"
+				"struct JNINativeInterface const**"
 			],
-			"return_type" : "void*",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #657*" : 
@@ -14926,9 +14924,12 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"char8 const*",
+				"void*",
+				"char8 const*",
+				"int32"
 			],
-			"return_type" : "struct _jmethodID*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #658*" : 
@@ -14945,9 +14946,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"char8 const*"
 			],
-			"return_type" : "struct _jfieldID*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #659*" : 
@@ -14986,11 +14987,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"struct _jmethodID*",
-				"unsigned char8"
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "struct _jmethodID*",
 			"size" : 0
 		},
 		"func #660*" : 
@@ -15009,7 +15008,7 @@
 				"struct JNINativeInterface const**",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "struct _jfieldID*",
 			"size" : 0
 		},
 		"func #661*" : 
@@ -15027,9 +15026,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"void*"
+				"struct _jmethodID*",
+				"unsigned char8"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #662*" : 
@@ -15046,9 +15046,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"struct _jfieldID*",
-				"unsigned char8"
+				"void*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -15067,9 +15065,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
+				"void*",
 				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #664*" : 
@@ -15087,9 +15086,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"char8 const*"
+				"struct _jfieldID*",
+				"unsigned char8"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #665*" : 
@@ -15105,9 +15105,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**"
+				"struct JNINativeInterface const**",
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #666*" : 
@@ -15123,9 +15124,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**"
+				"struct JNINativeInterface const**",
+				"void*",
+				"char8 const*"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #667*" : 
@@ -15141,10 +15144,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"char8 const*"
+				"struct JNINativeInterface const**"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #668*" : 
@@ -15160,10 +15162,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"int32"
+				"struct JNINativeInterface const**"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #669*" : 
@@ -15202,9 +15203,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"char8 const*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #670*" : 
@@ -15221,9 +15222,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"int32"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #671*" : 
@@ -15240,10 +15241,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
 				"void*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #672*" : 
@@ -15262,7 +15262,7 @@
 				"struct JNINativeInterface const**",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #673*" : 
@@ -15273,16 +15273,16 @@
 		},
 		"func #674" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #674*" : 
@@ -15299,9 +15299,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"void*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -15314,15 +15312,14 @@
 		},
 		"func #676" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -15341,7 +15338,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -15361,9 +15360,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"void*"
+				"struct _jmethodID*",
+				"union jvalue const*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #678*" : 
@@ -15380,11 +15380,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"char8 const*",
-				"char8 const*"
+				"void*"
 			],
-			"return_type" : "struct _jmethodID*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #679*" : 
@@ -15416,16 +15414,16 @@
 		},
 		"func #680" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #680*" : 
@@ -15443,10 +15441,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"char8 const*",
+				"char8 const*"
 			],
-			"return_type" : "void*",
+			"return_type" : "struct _jmethodID*",
 			"size" : 0
 		},
 		"func #681*" : 
@@ -15457,15 +15455,14 @@
 		},
 		"func #682" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -15478,16 +15475,17 @@
 		},
 		"func #683" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #683*" : 
@@ -15506,9 +15504,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #684*" : 
@@ -15519,15 +15517,14 @@
 		},
 		"func #685" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -15540,16 +15537,17 @@
 		},
 		"func #686" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #686*" : 
@@ -15568,9 +15566,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #687*" : 
@@ -15581,15 +15579,14 @@
 		},
 		"func #688" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -15602,16 +15599,17 @@
 		},
 		"func #689" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #689*" : 
@@ -15652,9 +15650,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #690*" : 
@@ -15665,15 +15663,14 @@
 		},
 		"func #691" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -15686,16 +15683,17 @@
 		},
 		"func #692" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int16",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #692*" : 
@@ -15714,9 +15712,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int16",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #693*" : 
@@ -15727,15 +15725,14 @@
 		},
 		"func #694" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -15748,16 +15745,17 @@
 		},
 		"func #695" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #695*" : 
@@ -15776,9 +15774,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #696*" : 
@@ -15789,15 +15787,14 @@
 		},
 		"func #697" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -15810,16 +15807,17 @@
 		},
 		"func #698" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int64",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #698*" : 
@@ -15838,9 +15836,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int64",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #699*" : 
@@ -15892,15 +15890,14 @@
 		},
 		"func #700" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -15913,16 +15910,17 @@
 		},
 		"func #701" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "float32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #701*" : 
@@ -15941,9 +15939,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "float32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #702*" : 
@@ -15954,15 +15952,14 @@
 		},
 		"func #703" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -15975,16 +15972,17 @@
 		},
 		"func #704" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "float64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #704*" : 
@@ -16003,9 +16001,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "float64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #705*" : 
@@ -16016,15 +16014,14 @@
 		},
 		"func #706" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -16037,16 +16034,17 @@
 		},
 		"func #707" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #707*" : 
@@ -16065,9 +16063,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #708*" : 
@@ -16078,15 +16076,14 @@
 		},
 		"func #709" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -16120,17 +16117,17 @@
 		},
 		"func #710" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #710*" : 
@@ -16148,11 +16145,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #711*" : 
@@ -16163,7 +16159,7 @@
 		},
 		"func #712" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16171,8 +16167,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -16185,7 +16180,7 @@
 		},
 		"func #713" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16193,9 +16188,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #713*" : 
@@ -16215,9 +16211,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #714*" : 
@@ -16228,7 +16224,7 @@
 		},
 		"func #715" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16236,8 +16232,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -16250,7 +16245,7 @@
 		},
 		"func #716" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16258,9 +16253,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #716*" : 
@@ -16280,9 +16276,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #717*" : 
@@ -16293,7 +16289,7 @@
 		},
 		"func #718" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16301,8 +16297,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -16315,7 +16310,7 @@
 		},
 		"func #719" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16323,9 +16318,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #719*" : 
@@ -16367,9 +16363,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #720*" : 
@@ -16380,7 +16376,7 @@
 		},
 		"func #721" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16388,8 +16384,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -16402,7 +16397,7 @@
 		},
 		"func #722" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16410,9 +16405,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int16",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #722*" : 
@@ -16432,9 +16428,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int16",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #723*" : 
@@ -16445,7 +16441,7 @@
 		},
 		"func #724" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16453,8 +16449,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -16467,7 +16462,7 @@
 		},
 		"func #725" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16475,9 +16470,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #725*" : 
@@ -16497,9 +16493,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #726*" : 
@@ -16510,7 +16506,7 @@
 		},
 		"func #727" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16518,8 +16514,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -16532,7 +16527,7 @@
 		},
 		"func #728" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16540,9 +16535,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int64",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #728*" : 
@@ -16562,9 +16558,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int64",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #729*" : 
@@ -16597,7 +16593,7 @@
 		},
 		"func #730" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16605,8 +16601,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -16619,7 +16614,7 @@
 		},
 		"func #731" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16627,9 +16622,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "float32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #731*" : 
@@ -16649,9 +16645,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "float32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #732*" : 
@@ -16662,7 +16658,7 @@
 		},
 		"func #733" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16670,8 +16666,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -16684,7 +16679,7 @@
 		},
 		"func #734" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16692,9 +16687,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "float64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #734*" : 
@@ -16714,9 +16710,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "float64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #735*" : 
@@ -16727,7 +16723,7 @@
 		},
 		"func #736" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16735,8 +16731,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -16749,7 +16744,7 @@
 		},
 		"func #737" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16757,9 +16752,10 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #737*" : 
@@ -16779,9 +16775,9 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #738*" : 
@@ -16792,7 +16788,7 @@
 		},
 		"func #739" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -16800,8 +16796,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -16842,10 +16837,11 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"char8 const*",
-				"char8 const*"
+				"void*",
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "struct _jfieldID*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #740*" : 
@@ -16863,9 +16859,11 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*"
+				"void*",
+				"struct _jmethodID*",
+				"union jvalue const*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #741*" : 
@@ -16883,9 +16881,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*"
+				"char8 const*",
+				"char8 const*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "struct _jfieldID*",
 			"size" : 0
 		},
 		"func #742*" : 
@@ -16905,7 +16904,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #743*" : 
@@ -16925,7 +16924,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #744*" : 
@@ -16945,7 +16944,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int16",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #745*" : 
@@ -16965,7 +16964,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int32",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #746*" : 
@@ -16985,7 +16984,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int64",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #747*" : 
@@ -17005,7 +17004,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "float32",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #748*" : 
@@ -17025,7 +17024,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "float64",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #749*" : 
@@ -17065,10 +17064,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*",
-				"void*"
+				"struct _jfieldID*"
 			],
-			"return_type" : "void",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #750*" : 
@@ -17086,10 +17084,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*",
-				"unsigned char8"
+				"struct _jfieldID*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #751*" : 
@@ -17108,7 +17105,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"char8"
+				"void*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -17129,7 +17126,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"unsigned int16"
+				"unsigned char8"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -17150,7 +17147,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int16"
+				"char8"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -17171,7 +17168,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int32"
+				"unsigned int16"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -17192,7 +17189,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int64"
+				"int16"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -17213,7 +17210,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"float32"
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -17234,7 +17231,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"float64"
+				"int64"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -17247,16 +17244,17 @@
 		},
 		"func #759" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jfieldID*",
+				"float32"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #759*" : 
@@ -17296,10 +17294,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"struct _jfieldID*",
+				"float64"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #760*" : 
@@ -17310,15 +17308,14 @@
 		},
 		"func #761" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -17331,16 +17328,17 @@
 		},
 		"func #762" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #762*" : 
@@ -17359,9 +17357,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #763*" : 
@@ -17372,15 +17370,14 @@
 		},
 		"func #764" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -17393,16 +17390,17 @@
 		},
 		"func #765" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #765*" : 
@@ -17421,9 +17419,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #766*" : 
@@ -17434,15 +17432,14 @@
 		},
 		"func #767" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -17455,16 +17452,17 @@
 		},
 		"func #768" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int16",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #768*" : 
@@ -17483,9 +17481,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int16",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #769*" : 
@@ -17517,15 +17515,14 @@
 		},
 		"func #770" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -17538,16 +17535,17 @@
 		},
 		"func #771" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #771*" : 
@@ -17566,9 +17564,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #772*" : 
@@ -17579,15 +17577,14 @@
 		},
 		"func #773" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -17600,16 +17597,17 @@
 		},
 		"func #774" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "int64",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #774*" : 
@@ -17628,9 +17626,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "int64",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #775*" : 
@@ -17641,15 +17639,14 @@
 		},
 		"func #776" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -17662,16 +17659,17 @@
 		},
 		"func #777" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "float32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #777*" : 
@@ -17690,9 +17688,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "float32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #778*" : 
@@ -17703,15 +17701,14 @@
 		},
 		"func #779" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -17746,16 +17743,17 @@
 		},
 		"func #780" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "float64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #780*" : 
@@ -17774,9 +17772,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "float64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #781*" : 
@@ -17787,15 +17785,14 @@
 		},
 		"func #782" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -17808,16 +17805,17 @@
 		},
 		"func #783" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #783*" : 
@@ -17836,9 +17834,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #784*" : 
@@ -17849,15 +17847,14 @@
 		},
 		"func #785" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -17877,9 +17874,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #786*" : 
@@ -17897,9 +17895,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*"
+				"struct _jmethodID*",
+				"union jvalue const*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #787*" : 
@@ -17919,7 +17918,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #788*" : 
@@ -17939,7 +17938,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #789*" : 
@@ -17981,7 +17980,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int16",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #790*" : 
@@ -18001,7 +18000,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int32",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #791*" : 
@@ -18021,7 +18020,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int64",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #792*" : 
@@ -18041,7 +18040,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "float32",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #793*" : 
@@ -18061,7 +18060,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "float64",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #794*" : 
@@ -18079,10 +18078,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*",
-				"void*"
+				"struct _jfieldID*"
 			],
-			"return_type" : "void",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #795*" : 
@@ -18100,10 +18098,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*",
-				"unsigned char8"
+				"struct _jfieldID*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #796*" : 
@@ -18122,7 +18119,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"char8"
+				"void*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -18143,7 +18140,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"unsigned int16"
+				"unsigned char8"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -18164,7 +18161,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int16"
+				"char8"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -18226,7 +18223,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int32"
+				"unsigned int16"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -18247,7 +18244,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int64"
+				"int16"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -18268,7 +18265,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"float32"
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -18289,7 +18286,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"float64"
+				"int64"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -18308,10 +18305,11 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"unsigned int16 const*",
-				"int32"
+				"void*",
+				"struct _jfieldID*",
+				"float32"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #804*" : 
@@ -18328,9 +18326,11 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"struct _jfieldID*",
+				"float64"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #805*" : 
@@ -18347,10 +18347,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"unsigned char8*"
+				"unsigned int16 const*",
+				"int32"
 			],
-			"return_type" : "unsigned int16 const*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #806*" : 
@@ -18367,10 +18367,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"unsigned int16 const*"
+				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #807*" : 
@@ -18387,9 +18386,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"char8 const*"
+				"void*",
+				"unsigned char8*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned int16 const*",
 			"size" : 0
 		},
 		"func #808*" : 
@@ -18407,9 +18407,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned char8*"
+				"unsigned int16 const*"
 			],
-			"return_type" : "char8 const*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #809*" : 
@@ -18448,10 +18448,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
 				"char8 const*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #810*" : 
@@ -18468,9 +18467,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"unsigned char8*"
 			],
-			"return_type" : "int32",
+			"return_type" : "char8 const*",
 			"size" : 0
 		},
 		"func #811*" : 
@@ -18487,11 +18487,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"int32",
 				"void*",
-				"void*"
+				"char8 const*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #812*" : 
@@ -18508,10 +18507,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"int32"
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #813*" : 
@@ -18528,11 +18526,11 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
 				"int32",
+				"void*",
 				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #814*" : 
@@ -18549,6 +18547,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
+				"void*",
 				"int32"
 			],
 			"return_type" : "void*",
@@ -18568,9 +18567,11 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"int32"
+				"void*",
+				"int32",
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #816*" : 
@@ -18723,10 +18724,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"unsigned char8*"
+				"int32"
 			],
-			"return_type" : "unsigned char8*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #823*" : 
@@ -18743,10 +18743,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"unsigned char8*"
+				"int32"
 			],
-			"return_type" : "char8*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #824*" : 
@@ -18766,7 +18765,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "unsigned int16*",
+			"return_type" : "unsigned char8*",
 			"size" : 0
 		},
 		"func #825*" : 
@@ -18786,7 +18785,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "int16*",
+			"return_type" : "char8*",
 			"size" : 0
 		},
 		"func #826*" : 
@@ -18806,7 +18805,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "int32*",
+			"return_type" : "unsigned int16*",
 			"size" : 0
 		},
 		"func #827*" : 
@@ -18826,7 +18825,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "int64*",
+			"return_type" : "int16*",
 			"size" : 0
 		},
 		"func #828*" : 
@@ -18846,7 +18845,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "float32*",
+			"return_type" : "int32*",
 			"size" : 0
 		},
 		"func #829*" : 
@@ -18887,7 +18886,7 @@
 				"void*",
 				"unsigned char8*"
 			],
-			"return_type" : "float64*",
+			"return_type" : "int64*",
 			"size" : 0
 		},
 		"func #830*" : 
@@ -18905,10 +18904,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned char8*",
-				"int32"
+				"unsigned char8*"
 			],
-			"return_type" : "void",
+			"return_type" : "float32*",
 			"size" : 0
 		},
 		"func #831*" : 
@@ -18926,10 +18924,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"char8*",
-				"int32"
+				"unsigned char8*"
 			],
-			"return_type" : "void",
+			"return_type" : "float64*",
 			"size" : 0
 		},
 		"func #832*" : 
@@ -18947,7 +18944,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned int16*",
+				"unsigned char8*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -18968,7 +18965,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int16*",
+				"char8*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -18989,7 +18986,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int32*",
+				"unsigned int16*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -19010,7 +19007,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int64*",
+				"int16*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -19031,7 +19028,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"float32*",
+				"int32*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -19052,7 +19049,7 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"float64*",
+				"int64*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -19073,9 +19070,8 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int32",
-				"int32",
-				"unsigned char8*"
+				"float32*",
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19117,9 +19113,8 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int32",
-				"int32",
-				"char8*"
+				"float64*",
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19141,7 +19136,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"unsigned int16*"
+				"unsigned char8*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19163,7 +19158,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int16*"
+				"char8*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19185,7 +19180,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int32*"
+				"unsigned int16*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19207,7 +19202,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int64*"
+				"int16*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19229,7 +19224,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"float32*"
+				"int32*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19251,7 +19246,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"float64*"
+				"int64*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19273,7 +19268,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"unsigned char8 const*"
+				"float32*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19295,7 +19290,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"char8 const*"
+				"float64*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19317,7 +19312,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"unsigned int16 const*"
+				"unsigned char8 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19361,7 +19356,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int16 const*"
+				"char8 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19383,7 +19378,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int32 const*"
+				"unsigned int16 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19405,7 +19400,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"int64 const*"
+				"int16 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19427,7 +19422,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"float32 const*"
+				"int32 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19449,7 +19444,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"float64 const*"
+				"int64 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19469,10 +19464,11 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct JNINativeMethod const*",
-				"int32"
+				"int32",
+				"int32",
+				"float32 const*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #855*" : 
@@ -19489,9 +19485,12 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"int32",
+				"int32",
+				"float64 const*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #856*" : 
@@ -19508,7 +19507,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"struct JNINativeMethod const*",
+				"int32"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -19527,7 +19528,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"struct JNIInvokeInterface const***"
+				"void*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -19545,7 +19546,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNIInvokeInterface const**"
+				"struct JNINativeInterface const**",
+				"void*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -19584,9 +19586,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNIInvokeInterface const**",
-				"struct JNINativeInterface const***",
-				"void*"
+				"struct JNINativeInterface const**",
+				"struct JNIInvokeInterface const***"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -19604,11 +19605,13 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNIInvokeInterface const**",
-				"void**",
-				"int32"
+				"struct JNINativeInterface const**",
+				"void*",
+				"int32",
+				"int32",
+				"unsigned int16*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #861*" : 
@@ -19628,7 +19631,7 @@
 				"void*",
 				"int32",
 				"int32",
-				"unsigned int16*"
+				"char8*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -19648,11 +19651,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"int32",
-				"int32",
-				"char8*"
+				"unsigned char8*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #863*" : 
@@ -19670,9 +19671,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"unsigned char8*"
+				"void*",
+				"int32"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #864*" : 
@@ -19689,11 +19691,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"void*",
-				"int32"
+				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #865*" : 
@@ -19712,7 +19712,7 @@
 				"struct JNINativeInterface const**",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #866*" : 
@@ -19728,10 +19728,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"void*"
+				"struct JNINativeInterface const**"
 			],
-			"return_type" : "void",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #867*" : 
@@ -19747,9 +19746,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**"
+				"struct JNINativeInterface const**",
+				"void*",
+				"int64"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #868*" : 
@@ -19766,8 +19767,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"int64"
+				"void*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -19808,7 +19808,7 @@
 				"struct JNINativeInterface const**",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #870*" : 
@@ -19827,7 +19827,7 @@
 				"struct JNINativeInterface const**",
 				"void*"
 			],
-			"return_type" : "int64",
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func #871*" : 
@@ -19843,10 +19843,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"void*"
+				"struct JNIInvokeInterface const**",
+				"void**",
+				"int32"
 			],
-			"return_type" : "unsigned int32",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #872*" : 
@@ -19900,7 +19901,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNIInvokeInterface const**"
+				"struct JNIInvokeInterface const***",
+				"int32",
+				"int32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -19918,9 +19921,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNIInvokeInterface const**",
-				"struct JNINativeInterface const***",
-				"void*"
+				"struct JNINativeInterface const**"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -19938,9 +19939,13 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**"
+				"struct JNINativeInterface const**",
+				"char8 const*",
+				"void*",
+				"char8 const*",
+				"int32"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #877*" : 
@@ -19957,10 +19962,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"char8 const*",
-				"void*",
-				"char8 const*",
-				"int32"
+				"char8 const*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -19979,9 +19981,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"char8 const*"
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "struct _jmethodID*",
 			"size" : 0
 		},
 		"func #879*" : 
@@ -20020,7 +20022,7 @@
 				"struct JNINativeInterface const**",
 				"void*"
 			],
-			"return_type" : "struct _jmethodID*",
+			"return_type" : "struct _jfieldID*",
 			"size" : 0
 		},
 		"func #880*" : 
@@ -20037,9 +20039,11 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"struct _jmethodID*",
+				"unsigned char8"
 			],
-			"return_type" : "struct _jfieldID*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #881*" : 
@@ -20056,9 +20060,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"struct _jmethodID*",
-				"unsigned char8"
+				"void*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20077,9 +20079,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
+				"void*",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #883*" : 
@@ -20097,9 +20100,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"void*"
+				"struct _jfieldID*",
+				"unsigned char8"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #884*" : 
@@ -20116,11 +20120,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"struct _jfieldID*",
-				"unsigned char8"
+				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #885*" : 
@@ -20137,7 +20139,8 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"char8 const*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -20155,11 +20158,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**",
-				"void*",
-				"char8 const*"
+				"struct JNINativeInterface const**"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #887*" : 
@@ -20177,7 +20178,7 @@
 			[
 				"struct JNINativeInterface const**"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #888*" : 
@@ -20193,7 +20194,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct JNINativeInterface const**"
+				"struct JNINativeInterface const**",
+				"char8 const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -20232,9 +20234,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"char8 const*"
+				"int32"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #890*" : 
@@ -20251,9 +20253,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"int32"
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #891*" : 
@@ -20272,7 +20274,7 @@
 				"struct JNINativeInterface const**",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #892*" : 
@@ -20289,9 +20291,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
+				"void*",
 				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #893*" : 
@@ -20308,10 +20311,9 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
 				"void*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #894*" : 
@@ -20322,13 +20324,14 @@
 		},
 		"func #895" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*"
+				"void*",
+				"struct _jmethodID*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20341,14 +20344,15 @@
 		},
 		"func #896" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20369,7 +20373,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20388,9 +20392,7 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
-				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"void*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20409,9 +20411,10 @@
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
+				"void*",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #899*" : 
@@ -20470,9 +20473,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"void*"
+				"char8 const*",
+				"char8 const*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "struct _jmethodID*",
 			"size" : 0
 		},
 		"func #900*" : 
@@ -20483,17 +20487,16 @@
 		},
 		"func #901" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"char8 const*",
-				"char8 const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "struct _jmethodID*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #901*" : 
@@ -20504,14 +20507,15 @@
 		},
 		"func #902" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20532,7 +20536,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20545,17 +20549,16 @@
 		},
 		"func #904" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #904*" : 
@@ -20566,14 +20569,15 @@
 		},
 		"func #905" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -20594,7 +20598,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -20607,17 +20611,16 @@
 		},
 		"func #907" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #907*" : 
@@ -20628,14 +20631,15 @@
 		},
 		"func #908" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -20656,7 +20660,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -20689,17 +20693,16 @@
 		},
 		"func #910" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #910*" : 
@@ -20710,14 +20713,15 @@
 		},
 		"func #911" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -20738,7 +20742,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -20751,17 +20755,16 @@
 		},
 		"func #913" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #913*" : 
@@ -20772,14 +20775,15 @@
 		},
 		"func #914" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -20800,7 +20804,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -20813,17 +20817,16 @@
 		},
 		"func #916" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int16",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #916*" : 
@@ -20834,14 +20837,15 @@
 		},
 		"func #917" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -20862,7 +20866,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -20875,17 +20879,16 @@
 		},
 		"func #919" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #919*" : 
@@ -20916,14 +20919,15 @@
 		},
 		"func #920" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -20944,7 +20948,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -20957,17 +20961,16 @@
 		},
 		"func #922" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #922*" : 
@@ -20978,14 +20981,15 @@
 		},
 		"func #923" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -21006,7 +21010,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -21019,17 +21023,16 @@
 		},
 		"func #925" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "float32",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #925*" : 
@@ -21040,14 +21043,15 @@
 		},
 		"func #926" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -21068,7 +21072,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -21081,17 +21085,16 @@
 		},
 		"func #928" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "float64",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #928*" : 
@@ -21102,14 +21105,15 @@
 		},
 		"func #929" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -21150,7 +21154,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -21163,17 +21167,17 @@
 		},
 		"func #931" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"void*",
+				"struct _jmethodID*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #931*" : 
@@ -21184,7 +21188,7 @@
 		},
 		"func #932" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21192,7 +21196,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -21214,7 +21219,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -21227,7 +21232,7 @@
 		},
 		"func #934" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21235,10 +21240,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #934*" : 
@@ -21249,7 +21253,7 @@
 		},
 		"func #935" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21257,7 +21261,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -21279,7 +21284,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -21292,7 +21297,7 @@
 		},
 		"func #937" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21300,10 +21305,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #937*" : 
@@ -21314,7 +21318,7 @@
 		},
 		"func #938" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21322,7 +21326,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -21344,7 +21349,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -21377,7 +21382,7 @@
 		},
 		"func #940" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21385,10 +21390,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #940*" : 
@@ -21399,7 +21403,7 @@
 		},
 		"func #941" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21407,7 +21411,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -21429,7 +21434,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -21442,7 +21447,7 @@
 		},
 		"func #943" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21450,10 +21455,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #943*" : 
@@ -21464,7 +21468,7 @@
 		},
 		"func #944" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21472,7 +21476,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -21494,7 +21499,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -21507,7 +21512,7 @@
 		},
 		"func #946" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21515,10 +21520,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int16",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #946*" : 
@@ -21529,7 +21533,7 @@
 		},
 		"func #947" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21537,7 +21541,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -21559,7 +21564,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -21572,7 +21577,7 @@
 		},
 		"func #949" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21580,10 +21585,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #949*" : 
@@ -21614,7 +21618,7 @@
 		},
 		"func #950" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21622,7 +21626,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -21644,7 +21649,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -21657,7 +21662,7 @@
 		},
 		"func #952" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21665,10 +21670,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #952*" : 
@@ -21679,7 +21683,7 @@
 		},
 		"func #953" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21687,7 +21691,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -21709,7 +21714,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -21722,7 +21727,7 @@
 		},
 		"func #955" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21730,10 +21735,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "float32",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #955*" : 
@@ -21744,7 +21748,7 @@
 		},
 		"func #956" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21752,7 +21756,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -21774,7 +21779,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "float64",
 			"size" : 0
@@ -21787,7 +21792,7 @@
 		},
 		"func #958" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21795,10 +21800,9 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "float64",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #958*" : 
@@ -21809,7 +21813,7 @@
 		},
 		"func #959" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
@@ -21817,7 +21821,8 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -21860,7 +21865,7 @@
 				"void*",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -21880,11 +21885,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"char8 const*",
+				"char8 const*"
 			],
-			"return_type" : "void",
+			"return_type" : "struct _jfieldID*",
 			"size" : 0
 		},
 		"func #961*" : 
@@ -21902,10 +21906,9 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"char8 const*",
-				"char8 const*"
+				"struct _jfieldID*"
 			],
-			"return_type" : "struct _jfieldID*",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #962*" : 
@@ -21925,7 +21928,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #963*" : 
@@ -21945,7 +21948,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #964*" : 
@@ -21965,7 +21968,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #965*" : 
@@ -21985,7 +21988,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #966*" : 
@@ -22005,7 +22008,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int16",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #967*" : 
@@ -22025,7 +22028,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #968*" : 
@@ -22045,7 +22048,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "int64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #969*" : 
@@ -22086,7 +22089,7 @@
 				"void*",
 				"struct _jfieldID*"
 			],
-			"return_type" : "float32",
+			"return_type" : "float64",
 			"size" : 0
 		},
 		"func #970*" : 
@@ -22104,9 +22107,10 @@
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*"
+				"struct _jfieldID*",
+				"void*"
 			],
-			"return_type" : "float64",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #971*" : 
@@ -22125,7 +22129,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"void*"
+				"unsigned char8"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -22146,7 +22150,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"unsigned char8"
+				"char8"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -22167,7 +22171,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"char8"
+				"unsigned int16"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -22188,7 +22192,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"unsigned int16"
+				"int16"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -22209,7 +22213,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int16"
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -22230,7 +22234,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int32"
+				"int64"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -22251,7 +22255,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"int64"
+				"float32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -22272,7 +22276,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jfieldID*",
-				"float32"
+				"float64"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -22306,17 +22310,16 @@
 		},
 		"func #980" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jfieldID*",
-				"float64"
+				"struct _jmethodID*"
 			],
-			"return_type" : "void",
+			"return_type" : "unsigned char8",
 			"size" : 0
 		},
 		"func #980*" : 
@@ -22327,14 +22330,15 @@
 		},
 		"func #981" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -22355,7 +22359,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "unsigned char8",
 			"size" : 0
@@ -22368,17 +22372,16 @@
 		},
 		"func #983" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "unsigned char8",
+			"return_type" : "char8",
 			"size" : 0
 		},
 		"func #983*" : 
@@ -22389,14 +22392,15 @@
 		},
 		"func #984" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -22417,7 +22421,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "char8",
 			"size" : 0
@@ -22430,17 +22434,16 @@
 		},
 		"func #986" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "char8",
+			"return_type" : "unsigned int16",
 			"size" : 0
 		},
 		"func #986*" : 
@@ -22451,14 +22454,15 @@
 		},
 		"func #987" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -22479,7 +22483,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "unsigned int16",
 			"size" : 0
@@ -22492,17 +22496,16 @@
 		},
 		"func #989" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "unsigned int16",
+			"return_type" : "int16",
 			"size" : 0
 		},
 		"func #989*" : 
@@ -22534,14 +22537,15 @@
 		},
 		"func #990" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -22562,7 +22566,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int16",
 			"size" : 0
@@ -22575,17 +22579,16 @@
 		},
 		"func #992" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int16",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #992*" : 
@@ -22596,14 +22599,15 @@
 		},
 		"func #993" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -22624,7 +22628,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -22637,17 +22641,16 @@
 		},
 		"func #995" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int32",
+			"return_type" : "int64",
 			"size" : 0
 		},
 		"func #995*" : 
@@ -22658,14 +22661,15 @@
 		},
 		"func #996" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -22686,7 +22690,7 @@
 				"struct JNINativeInterface const**",
 				"void*",
 				"struct _jmethodID*",
-				"struct __va_list_tag*"
+				"union jvalue const*"
 			],
 			"return_type" : "int64",
 			"size" : 0
@@ -22699,17 +22703,16 @@
 		},
 		"func #998" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*",
-				"union jvalue const*"
+				"struct _jmethodID*"
 			],
-			"return_type" : "int64",
+			"return_type" : "float32",
 			"size" : 0
 		},
 		"func #998*" : 
@@ -22720,14 +22723,15 @@
 		},
 		"func #999" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct JNINativeInterface const**",
 				"void*",
-				"struct _jmethodID*"
+				"struct _jmethodID*",
+				"struct __va_list_tag*"
 			],
 			"return_type" : "float32",
 			"size" : 0
@@ -22950,6 +22954,18 @@
 			"size" : 0
 		},
 		"func JniConstants_FileDescriptor_init" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct JNINativeInterface const**"
+			],
+			"return_type" : "struct _jmethodID*",
+			"size" : 0
+		},
+		"func JniConstants_FileDescriptor_setInt$" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
@@ -23451,27 +23467,27 @@
 				{
 					"name" : "DestroyJavaVM",
 					"offset" : 192,
-					"type" : "func #859*"
+					"type" : "func #1080*"
 				},
 				{
 					"name" : "AttachCurrentThread",
 					"offset" : 256,
-					"type" : "func #860*"
+					"type" : "func #1081*"
 				},
 				{
 					"name" : "DetachCurrentThread",
 					"offset" : 320,
-					"type" : "func #859*"
+					"type" : "func #1080*"
 				},
 				{
 					"name" : "GetEnv",
 					"offset" : 384,
-					"type" : "func #861*"
+					"type" : "func #1082*"
 				},
 				{
 					"name" : "AttachCurrentThreadAsDaemon",
 					"offset" : 448,
-					"type" : "func #860*"
+					"type" : "func #1081*"
 				}
 			],
 			"inheritance" : [],
@@ -23529,1147 +23545,1147 @@
 				{
 					"name" : "GetVersion",
 					"offset" : 256,
-					"type" : "func #877*"
+					"type" : "func #876*"
 				},
 				{
 					"name" : "DefineClass",
 					"offset" : 320,
-					"type" : "func #878*"
+					"type" : "func #877*"
 				},
 				{
 					"name" : "FindClass",
 					"offset" : 384,
-					"type" : "func #879*"
+					"type" : "func #878*"
 				},
 				{
 					"name" : "FromReflectedMethod",
 					"offset" : 448,
-					"type" : "func #880*"
+					"type" : "func #879*"
 				},
 				{
 					"name" : "FromReflectedField",
 					"offset" : 512,
-					"type" : "func #881*"
+					"type" : "func #880*"
 				},
 				{
 					"name" : "ToReflectedMethod",
 					"offset" : 576,
-					"type" : "func #882*"
+					"type" : "func #881*"
 				},
 				{
 					"name" : "GetSuperclass",
 					"offset" : 640,
-					"type" : "func #883*"
+					"type" : "func #882*"
 				},
 				{
 					"name" : "IsAssignableFrom",
 					"offset" : 704,
-					"type" : "func #884*"
+					"type" : "func #883*"
 				},
 				{
 					"name" : "ToReflectedField",
 					"offset" : 768,
-					"type" : "func #885*"
+					"type" : "func #884*"
 				},
 				{
 					"name" : "Throw",
 					"offset" : 832,
-					"type" : "func #886*"
+					"type" : "func #885*"
 				},
 				{
 					"name" : "ThrowNew",
 					"offset" : 896,
-					"type" : "func #887*"
+					"type" : "func #886*"
 				},
 				{
 					"name" : "ExceptionOccurred",
 					"offset" : 960,
-					"type" : "func #888*"
+					"type" : "func #887*"
 				},
 				{
 					"name" : "ExceptionDescribe",
 					"offset" : 1024,
-					"type" : "func #889*"
+					"type" : "func #888*"
 				},
 				{
 					"name" : "ExceptionClear",
 					"offset" : 1088,
-					"type" : "func #889*"
+					"type" : "func #888*"
 				},
 				{
 					"name" : "FatalError",
 					"offset" : 1152,
-					"type" : "func #890*"
+					"type" : "func #889*"
 				},
 				{
 					"name" : "PushLocalFrame",
 					"offset" : 1216,
-					"type" : "func #891*"
+					"type" : "func #890*"
 				},
 				{
 					"name" : "PopLocalFrame",
 					"offset" : 1280,
-					"type" : "func #892*"
+					"type" : "func #891*"
 				},
 				{
 					"name" : "NewGlobalRef",
 					"offset" : 1344,
-					"type" : "func #892*"
+					"type" : "func #891*"
 				},
 				{
 					"name" : "DeleteGlobalRef",
 					"offset" : 1408,
-					"type" : "func #893*"
+					"type" : "func #892*"
 				},
 				{
 					"name" : "DeleteLocalRef",
 					"offset" : 1472,
-					"type" : "func #893*"
+					"type" : "func #892*"
 				},
 				{
 					"name" : "IsSameObject",
 					"offset" : 1536,
-					"type" : "func #894*"
+					"type" : "func #893*"
 				},
 				{
 					"name" : "NewLocalRef",
 					"offset" : 1600,
-					"type" : "func #892*"
+					"type" : "func #891*"
 				},
 				{
 					"name" : "EnsureLocalCapacity",
 					"offset" : 1664,
-					"type" : "func #891*"
+					"type" : "func #890*"
 				},
 				{
 					"name" : "AllocObject",
 					"offset" : 1728,
-					"type" : "func #895*"
+					"type" : "func #894*"
 				},
 				{
 					"name" : "NewObject",
 					"offset" : 1792,
-					"type" : "func #896*"
+					"type" : "func #895*"
 				},
 				{
 					"name" : "NewObjectV",
 					"offset" : 1856,
-					"type" : "func #897*"
+					"type" : "func #896*"
 				},
 				{
 					"name" : "NewObjectA",
 					"offset" : 1920,
-					"type" : "func #898*"
+					"type" : "func #897*"
 				},
 				{
 					"name" : "GetObjectClass",
 					"offset" : 1984,
-					"type" : "func #899*"
+					"type" : "func #898*"
 				},
 				{
 					"name" : "IsInstanceOf",
 					"offset" : 2048,
-					"type" : "func #900*"
+					"type" : "func #899*"
 				},
 				{
 					"name" : "GetMethodID",
 					"offset" : 2112,
-					"type" : "func #901*"
+					"type" : "func #900*"
 				},
 				{
 					"name" : "CallObjectMethod",
 					"offset" : 2176,
-					"type" : "func #902*"
+					"type" : "func #901*"
 				},
 				{
 					"name" : "CallObjectMethodV",
 					"offset" : 2240,
-					"type" : "func #903*"
+					"type" : "func #902*"
 				},
 				{
 					"name" : "CallObjectMethodA",
 					"offset" : 2304,
-					"type" : "func #904*"
+					"type" : "func #903*"
 				},
 				{
 					"name" : "CallBooleanMethod",
 					"offset" : 2368,
-					"type" : "func #905*"
+					"type" : "func #904*"
 				},
 				{
 					"name" : "CallBooleanMethodV",
 					"offset" : 2432,
-					"type" : "func #906*"
+					"type" : "func #905*"
 				},
 				{
 					"name" : "CallBooleanMethodA",
 					"offset" : 2496,
-					"type" : "func #907*"
+					"type" : "func #906*"
 				},
 				{
 					"name" : "CallByteMethod",
 					"offset" : 2560,
-					"type" : "func #908*"
+					"type" : "func #907*"
 				},
 				{
 					"name" : "CallByteMethodV",
 					"offset" : 2624,
-					"type" : "func #909*"
+					"type" : "func #908*"
 				},
 				{
 					"name" : "CallByteMethodA",
 					"offset" : 2688,
-					"type" : "func #910*"
+					"type" : "func #909*"
 				},
 				{
 					"name" : "CallCharMethod",
 					"offset" : 2752,
-					"type" : "func #911*"
+					"type" : "func #910*"
 				},
 				{
 					"name" : "CallCharMethodV",
 					"offset" : 2816,
-					"type" : "func #912*"
+					"type" : "func #911*"
 				},
 				{
 					"name" : "CallCharMethodA",
 					"offset" : 2880,
-					"type" : "func #913*"
+					"type" : "func #912*"
 				},
 				{
 					"name" : "CallShortMethod",
 					"offset" : 2944,
-					"type" : "func #914*"
+					"type" : "func #913*"
 				},
 				{
 					"name" : "CallShortMethodV",
 					"offset" : 3008,
-					"type" : "func #915*"
+					"type" : "func #914*"
 				},
 				{
 					"name" : "CallShortMethodA",
 					"offset" : 3072,
-					"type" : "func #916*"
+					"type" : "func #915*"
 				},
 				{
 					"name" : "CallIntMethod",
 					"offset" : 3136,
-					"type" : "func #917*"
+					"type" : "func #916*"
 				},
 				{
 					"name" : "CallIntMethodV",
 					"offset" : 3200,
-					"type" : "func #918*"
+					"type" : "func #917*"
 				},
 				{
 					"name" : "CallIntMethodA",
 					"offset" : 3264,
-					"type" : "func #919*"
+					"type" : "func #918*"
 				},
 				{
 					"name" : "CallLongMethod",
 					"offset" : 3328,
-					"type" : "func #920*"
+					"type" : "func #919*"
 				},
 				{
 					"name" : "CallLongMethodV",
 					"offset" : 3392,
-					"type" : "func #921*"
+					"type" : "func #920*"
 				},
 				{
 					"name" : "CallLongMethodA",
 					"offset" : 3456,
-					"type" : "func #922*"
+					"type" : "func #921*"
 				},
 				{
 					"name" : "CallFloatMethod",
 					"offset" : 3520,
-					"type" : "func #923*"
+					"type" : "func #922*"
 				},
 				{
 					"name" : "CallFloatMethodV",
 					"offset" : 3584,
-					"type" : "func #924*"
+					"type" : "func #923*"
 				},
 				{
 					"name" : "CallFloatMethodA",
 					"offset" : 3648,
-					"type" : "func #925*"
+					"type" : "func #924*"
 				},
 				{
 					"name" : "CallDoubleMethod",
 					"offset" : 3712,
-					"type" : "func #926*"
+					"type" : "func #925*"
 				},
 				{
 					"name" : "CallDoubleMethodV",
 					"offset" : 3776,
-					"type" : "func #927*"
+					"type" : "func #926*"
 				},
 				{
 					"name" : "CallDoubleMethodA",
 					"offset" : 3840,
-					"type" : "func #928*"
+					"type" : "func #927*"
 				},
 				{
 					"name" : "CallVoidMethod",
 					"offset" : 3904,
-					"type" : "func #929*"
+					"type" : "func #928*"
 				},
 				{
 					"name" : "CallVoidMethodV",
 					"offset" : 3968,
-					"type" : "func #930*"
+					"type" : "func #929*"
 				},
 				{
 					"name" : "CallVoidMethodA",
 					"offset" : 4032,
-					"type" : "func #931*"
+					"type" : "func #930*"
 				},
 				{
 					"name" : "CallNonvirtualObjectMethod",
 					"offset" : 4096,
-					"type" : "func #932*"
+					"type" : "func #931*"
 				},
 				{
 					"name" : "CallNonvirtualObjectMethodV",
 					"offset" : 4160,
-					"type" : "func #933*"
+					"type" : "func #932*"
 				},
 				{
 					"name" : "CallNonvirtualObjectMethodA",
 					"offset" : 4224,
-					"type" : "func #934*"
+					"type" : "func #933*"
 				},
 				{
 					"name" : "CallNonvirtualBooleanMethod",
 					"offset" : 4288,
-					"type" : "func #935*"
+					"type" : "func #934*"
 				},
 				{
 					"name" : "CallNonvirtualBooleanMethodV",
 					"offset" : 4352,
-					"type" : "func #936*"
+					"type" : "func #935*"
 				},
 				{
 					"name" : "CallNonvirtualBooleanMethodA",
 					"offset" : 4416,
-					"type" : "func #937*"
+					"type" : "func #936*"
 				},
 				{
 					"name" : "CallNonvirtualByteMethod",
 					"offset" : 4480,
-					"type" : "func #938*"
+					"type" : "func #937*"
 				},
 				{
 					"name" : "CallNonvirtualByteMethodV",
 					"offset" : 4544,
-					"type" : "func #939*"
+					"type" : "func #938*"
 				},
 				{
 					"name" : "CallNonvirtualByteMethodA",
 					"offset" : 4608,
-					"type" : "func #940*"
+					"type" : "func #939*"
 				},
 				{
 					"name" : "CallNonvirtualCharMethod",
 					"offset" : 4672,
-					"type" : "func #941*"
+					"type" : "func #940*"
 				},
 				{
 					"name" : "CallNonvirtualCharMethodV",
 					"offset" : 4736,
-					"type" : "func #942*"
+					"type" : "func #941*"
 				},
 				{
 					"name" : "CallNonvirtualCharMethodA",
 					"offset" : 4800,
-					"type" : "func #943*"
+					"type" : "func #942*"
 				},
 				{
 					"name" : "CallNonvirtualShortMethod",
 					"offset" : 4864,
-					"type" : "func #944*"
+					"type" : "func #943*"
 				},
 				{
 					"name" : "CallNonvirtualShortMethodV",
 					"offset" : 4928,
-					"type" : "func #945*"
+					"type" : "func #944*"
 				},
 				{
 					"name" : "CallNonvirtualShortMethodA",
 					"offset" : 4992,
-					"type" : "func #946*"
+					"type" : "func #945*"
 				},
 				{
 					"name" : "CallNonvirtualIntMethod",
 					"offset" : 5056,
-					"type" : "func #947*"
+					"type" : "func #946*"
 				},
 				{
 					"name" : "CallNonvirtualIntMethodV",
 					"offset" : 5120,
-					"type" : "func #948*"
+					"type" : "func #947*"
 				},
 				{
 					"name" : "CallNonvirtualIntMethodA",
 					"offset" : 5184,
-					"type" : "func #949*"
+					"type" : "func #948*"
 				},
 				{
 					"name" : "CallNonvirtualLongMethod",
 					"offset" : 5248,
-					"type" : "func #950*"
+					"type" : "func #949*"
 				},
 				{
 					"name" : "CallNonvirtualLongMethodV",
 					"offset" : 5312,
-					"type" : "func #951*"
+					"type" : "func #950*"
 				},
 				{
 					"name" : "CallNonvirtualLongMethodA",
 					"offset" : 5376,
-					"type" : "func #952*"
+					"type" : "func #951*"
 				},
 				{
 					"name" : "CallNonvirtualFloatMethod",
 					"offset" : 5440,
-					"type" : "func #953*"
+					"type" : "func #952*"
 				},
 				{
 					"name" : "CallNonvirtualFloatMethodV",
 					"offset" : 5504,
-					"type" : "func #954*"
+					"type" : "func #953*"
 				},
 				{
 					"name" : "CallNonvirtualFloatMethodA",
 					"offset" : 5568,
-					"type" : "func #955*"
+					"type" : "func #954*"
 				},
 				{
 					"name" : "CallNonvirtualDoubleMethod",
 					"offset" : 5632,
-					"type" : "func #956*"
+					"type" : "func #955*"
 				},
 				{
 					"name" : "CallNonvirtualDoubleMethodV",
 					"offset" : 5696,
-					"type" : "func #957*"
+					"type" : "func #956*"
 				},
 				{
 					"name" : "CallNonvirtualDoubleMethodA",
 					"offset" : 5760,
-					"type" : "func #958*"
+					"type" : "func #957*"
 				},
 				{
 					"name" : "CallNonvirtualVoidMethod",
 					"offset" : 5824,
-					"type" : "func #959*"
+					"type" : "func #958*"
 				},
 				{
 					"name" : "CallNonvirtualVoidMethodV",
 					"offset" : 5888,
-					"type" : "func #960*"
+					"type" : "func #959*"
 				},
 				{
 					"name" : "CallNonvirtualVoidMethodA",
 					"offset" : 5952,
-					"type" : "func #961*"
+					"type" : "func #960*"
 				},
 				{
 					"name" : "GetFieldID",
 					"offset" : 6016,
-					"type" : "func #962*"
+					"type" : "func #961*"
 				},
 				{
 					"name" : "GetObjectField",
 					"offset" : 6080,
-					"type" : "func #963*"
+					"type" : "func #962*"
 				},
 				{
 					"name" : "GetBooleanField",
 					"offset" : 6144,
-					"type" : "func #964*"
+					"type" : "func #963*"
 				},
 				{
 					"name" : "GetByteField",
 					"offset" : 6208,
-					"type" : "func #965*"
+					"type" : "func #964*"
 				},
 				{
 					"name" : "GetCharField",
 					"offset" : 6272,
-					"type" : "func #966*"
+					"type" : "func #965*"
 				},
 				{
 					"name" : "GetShortField",
 					"offset" : 6336,
-					"type" : "func #967*"
+					"type" : "func #966*"
 				},
 				{
 					"name" : "GetIntField",
 					"offset" : 6400,
-					"type" : "func #968*"
+					"type" : "func #967*"
 				},
 				{
 					"name" : "GetLongField",
 					"offset" : 6464,
-					"type" : "func #969*"
+					"type" : "func #968*"
 				},
 				{
 					"name" : "GetFloatField",
 					"offset" : 6528,
-					"type" : "func #970*"
+					"type" : "func #969*"
 				},
 				{
 					"name" : "GetDoubleField",
 					"offset" : 6592,
-					"type" : "func #971*"
+					"type" : "func #970*"
 				},
 				{
 					"name" : "SetObjectField",
 					"offset" : 6656,
-					"type" : "func #972*"
+					"type" : "func #971*"
 				},
 				{
 					"name" : "SetBooleanField",
 					"offset" : 6720,
-					"type" : "func #973*"
+					"type" : "func #972*"
 				},
 				{
 					"name" : "SetByteField",
 					"offset" : 6784,
-					"type" : "func #974*"
+					"type" : "func #973*"
 				},
 				{
 					"name" : "SetCharField",
 					"offset" : 6848,
-					"type" : "func #975*"
+					"type" : "func #974*"
 				},
 				{
 					"name" : "SetShortField",
 					"offset" : 6912,
-					"type" : "func #976*"
+					"type" : "func #975*"
 				},
 				{
 					"name" : "SetIntField",
 					"offset" : 6976,
-					"type" : "func #977*"
+					"type" : "func #976*"
 				},
 				{
 					"name" : "SetLongField",
 					"offset" : 7040,
-					"type" : "func #978*"
+					"type" : "func #977*"
 				},
 				{
 					"name" : "SetFloatField",
 					"offset" : 7104,
-					"type" : "func #979*"
+					"type" : "func #978*"
 				},
 				{
 					"name" : "SetDoubleField",
 					"offset" : 7168,
-					"type" : "func #980*"
+					"type" : "func #979*"
 				},
 				{
 					"name" : "GetStaticMethodID",
 					"offset" : 7232,
-					"type" : "func #901*"
+					"type" : "func #900*"
 				},
 				{
 					"name" : "CallStaticObjectMethod",
 					"offset" : 7296,
-					"type" : "func #896*"
+					"type" : "func #895*"
 				},
 				{
 					"name" : "CallStaticObjectMethodV",
 					"offset" : 7360,
-					"type" : "func #897*"
+					"type" : "func #896*"
 				},
 				{
 					"name" : "CallStaticObjectMethodA",
 					"offset" : 7424,
-					"type" : "func #898*"
+					"type" : "func #897*"
 				},
 				{
 					"name" : "CallStaticBooleanMethod",
 					"offset" : 7488,
-					"type" : "func #981*"
+					"type" : "func #980*"
 				},
 				{
 					"name" : "CallStaticBooleanMethodV",
 					"offset" : 7552,
-					"type" : "func #982*"
+					"type" : "func #981*"
 				},
 				{
 					"name" : "CallStaticBooleanMethodA",
 					"offset" : 7616,
-					"type" : "func #983*"
+					"type" : "func #982*"
 				},
 				{
 					"name" : "CallStaticByteMethod",
 					"offset" : 7680,
-					"type" : "func #984*"
+					"type" : "func #983*"
 				},
 				{
 					"name" : "CallStaticByteMethodV",
 					"offset" : 7744,
-					"type" : "func #985*"
+					"type" : "func #984*"
 				},
 				{
 					"name" : "CallStaticByteMethodA",
 					"offset" : 7808,
-					"type" : "func #986*"
+					"type" : "func #985*"
 				},
 				{
 					"name" : "CallStaticCharMethod",
 					"offset" : 7872,
-					"type" : "func #987*"
+					"type" : "func #986*"
 				},
 				{
 					"name" : "CallStaticCharMethodV",
 					"offset" : 7936,
-					"type" : "func #988*"
+					"type" : "func #987*"
 				},
 				{
 					"name" : "CallStaticCharMethodA",
 					"offset" : 8000,
-					"type" : "func #989*"
+					"type" : "func #988*"
 				},
 				{
 					"name" : "CallStaticShortMethod",
 					"offset" : 8064,
-					"type" : "func #990*"
+					"type" : "func #989*"
 				},
 				{
 					"name" : "CallStaticShortMethodV",
 					"offset" : 8128,
-					"type" : "func #991*"
+					"type" : "func #990*"
 				},
 				{
 					"name" : "CallStaticShortMethodA",
 					"offset" : 8192,
-					"type" : "func #992*"
+					"type" : "func #991*"
 				},
 				{
 					"name" : "CallStaticIntMethod",
 					"offset" : 8256,
-					"type" : "func #993*"
+					"type" : "func #992*"
 				},
 				{
 					"name" : "CallStaticIntMethodV",
 					"offset" : 8320,
-					"type" : "func #994*"
+					"type" : "func #993*"
 				},
 				{
 					"name" : "CallStaticIntMethodA",
 					"offset" : 8384,
-					"type" : "func #995*"
+					"type" : "func #994*"
 				},
 				{
 					"name" : "CallStaticLongMethod",
 					"offset" : 8448,
-					"type" : "func #996*"
+					"type" : "func #995*"
 				},
 				{
 					"name" : "CallStaticLongMethodV",
 					"offset" : 8512,
-					"type" : "func #997*"
+					"type" : "func #996*"
 				},
 				{
 					"name" : "CallStaticLongMethodA",
 					"offset" : 8576,
-					"type" : "func #998*"
+					"type" : "func #997*"
 				},
 				{
 					"name" : "CallStaticFloatMethod",
 					"offset" : 8640,
-					"type" : "func #999*"
+					"type" : "func #998*"
 				},
 				{
 					"name" : "CallStaticFloatMethodV",
 					"offset" : 8704,
-					"type" : "func #1000*"
+					"type" : "func #999*"
 				},
 				{
 					"name" : "CallStaticFloatMethodA",
 					"offset" : 8768,
-					"type" : "func #1001*"
+					"type" : "func #1000*"
 				},
 				{
 					"name" : "CallStaticDoubleMethod",
 					"offset" : 8832,
-					"type" : "func #1002*"
+					"type" : "func #1001*"
 				},
 				{
 					"name" : "CallStaticDoubleMethodV",
 					"offset" : 8896,
-					"type" : "func #1003*"
+					"type" : "func #1002*"
 				},
 				{
 					"name" : "CallStaticDoubleMethodA",
 					"offset" : 8960,
-					"type" : "func #1004*"
+					"type" : "func #1003*"
 				},
 				{
 					"name" : "CallStaticVoidMethod",
 					"offset" : 9024,
-					"type" : "func #1005*"
+					"type" : "func #1004*"
 				},
 				{
 					"name" : "CallStaticVoidMethodV",
 					"offset" : 9088,
-					"type" : "func #1006*"
+					"type" : "func #1005*"
 				},
 				{
 					"name" : "CallStaticVoidMethodA",
 					"offset" : 9152,
-					"type" : "func #1007*"
+					"type" : "func #1006*"
 				},
 				{
 					"name" : "GetStaticFieldID",
 					"offset" : 9216,
-					"type" : "func #962*"
+					"type" : "func #961*"
 				},
 				{
 					"name" : "GetStaticObjectField",
 					"offset" : 9280,
-					"type" : "func #1008*"
+					"type" : "func #1007*"
 				},
 				{
 					"name" : "GetStaticBooleanField",
 					"offset" : 9344,
-					"type" : "func #1009*"
+					"type" : "func #1008*"
 				},
 				{
 					"name" : "GetStaticByteField",
 					"offset" : 9408,
-					"type" : "func #1010*"
+					"type" : "func #1009*"
 				},
 				{
 					"name" : "GetStaticCharField",
 					"offset" : 9472,
-					"type" : "func #1011*"
+					"type" : "func #1010*"
 				},
 				{
 					"name" : "GetStaticShortField",
 					"offset" : 9536,
-					"type" : "func #1012*"
+					"type" : "func #1011*"
 				},
 				{
 					"name" : "GetStaticIntField",
 					"offset" : 9600,
-					"type" : "func #1013*"
+					"type" : "func #1012*"
 				},
 				{
 					"name" : "GetStaticLongField",
 					"offset" : 9664,
-					"type" : "func #1014*"
+					"type" : "func #1013*"
 				},
 				{
 					"name" : "GetStaticFloatField",
 					"offset" : 9728,
-					"type" : "func #1015*"
+					"type" : "func #1014*"
 				},
 				{
 					"name" : "GetStaticDoubleField",
 					"offset" : 9792,
-					"type" : "func #1016*"
+					"type" : "func #1015*"
 				},
 				{
 					"name" : "SetStaticObjectField",
 					"offset" : 9856,
-					"type" : "func #1017*"
+					"type" : "func #1016*"
 				},
 				{
 					"name" : "SetStaticBooleanField",
 					"offset" : 9920,
-					"type" : "func #1018*"
+					"type" : "func #1017*"
 				},
 				{
 					"name" : "SetStaticByteField",
 					"offset" : 9984,
-					"type" : "func #1019*"
+					"type" : "func #1018*"
 				},
 				{
 					"name" : "SetStaticCharField",
 					"offset" : 10048,
-					"type" : "func #1020*"
+					"type" : "func #1019*"
 				},
 				{
 					"name" : "SetStaticShortField",
 					"offset" : 10112,
-					"type" : "func #1021*"
+					"type" : "func #1020*"
 				},
 				{
 					"name" : "SetStaticIntField",
 					"offset" : 10176,
-					"type" : "func #1022*"
+					"type" : "func #1021*"
 				},
 				{
 					"name" : "SetStaticLongField",
 					"offset" : 10240,
-					"type" : "func #1023*"
+					"type" : "func #1022*"
 				},
 				{
 					"name" : "SetStaticFloatField",
 					"offset" : 10304,
-					"type" : "func #1024*"
+					"type" : "func #1023*"
 				},
 				{
 					"name" : "SetStaticDoubleField",
 					"offset" : 10368,
-					"type" : "func #1025*"
+					"type" : "func #1024*"
 				},
 				{
 					"name" : "NewString",
 					"offset" : 10432,
-					"type" : "func #1026*"
+					"type" : "func #1025*"
 				},
 				{
 					"name" : "GetStringLength",
 					"offset" : 10496,
-					"type" : "func #1027*"
+					"type" : "func #1026*"
 				},
 				{
 					"name" : "GetStringChars",
 					"offset" : 10560,
-					"type" : "func #1028*"
+					"type" : "func #1027*"
 				},
 				{
 					"name" : "ReleaseStringChars",
 					"offset" : 10624,
-					"type" : "func #1029*"
+					"type" : "func #1028*"
 				},
 				{
 					"name" : "NewStringUTF",
 					"offset" : 10688,
-					"type" : "func #1030*"
+					"type" : "func #1029*"
 				},
 				{
 					"name" : "GetStringUTFLength",
 					"offset" : 10752,
-					"type" : "func #1027*"
+					"type" : "func #1026*"
 				},
 				{
 					"name" : "GetStringUTFChars",
 					"offset" : 10816,
-					"type" : "func #1031*"
+					"type" : "func #1030*"
 				},
 				{
 					"name" : "ReleaseStringUTFChars",
 					"offset" : 10880,
-					"type" : "func #1032*"
+					"type" : "func #1031*"
 				},
 				{
 					"name" : "GetArrayLength",
 					"offset" : 10944,
-					"type" : "func #1033*"
+					"type" : "func #1032*"
 				},
 				{
 					"name" : "NewObjectArray",
 					"offset" : 11008,
-					"type" : "func #1034*"
+					"type" : "func #1033*"
 				},
 				{
 					"name" : "GetObjectArrayElement",
 					"offset" : 11072,
-					"type" : "func #1035*"
+					"type" : "func #1034*"
 				},
 				{
 					"name" : "SetObjectArrayElement",
 					"offset" : 11136,
-					"type" : "func #1036*"
+					"type" : "func #1035*"
 				},
 				{
 					"name" : "NewBooleanArray",
 					"offset" : 11200,
-					"type" : "func #1037*"
+					"type" : "func #1036*"
 				},
 				{
 					"name" : "NewByteArray",
 					"offset" : 11264,
-					"type" : "func #1038*"
+					"type" : "func #1037*"
 				},
 				{
 					"name" : "NewCharArray",
 					"offset" : 11328,
-					"type" : "func #1039*"
+					"type" : "func #1038*"
 				},
 				{
 					"name" : "NewShortArray",
 					"offset" : 11392,
-					"type" : "func #1040*"
+					"type" : "func #1039*"
 				},
 				{
 					"name" : "NewIntArray",
 					"offset" : 11456,
-					"type" : "func #1041*"
+					"type" : "func #1040*"
 				},
 				{
 					"name" : "NewLongArray",
 					"offset" : 11520,
-					"type" : "func #1042*"
+					"type" : "func #1041*"
 				},
 				{
 					"name" : "NewFloatArray",
 					"offset" : 11584,
-					"type" : "func #1043*"
+					"type" : "func #1042*"
 				},
 				{
 					"name" : "NewDoubleArray",
 					"offset" : 11648,
-					"type" : "func #1044*"
+					"type" : "func #1043*"
 				},
 				{
 					"name" : "GetBooleanArrayElements",
 					"offset" : 11712,
-					"type" : "func #1045*"
+					"type" : "func #1044*"
 				},
 				{
 					"name" : "GetByteArrayElements",
 					"offset" : 11776,
-					"type" : "func #1046*"
+					"type" : "func #1045*"
 				},
 				{
 					"name" : "GetCharArrayElements",
 					"offset" : 11840,
-					"type" : "func #1047*"
+					"type" : "func #1046*"
 				},
 				{
 					"name" : "GetShortArrayElements",
 					"offset" : 11904,
-					"type" : "func #1048*"
+					"type" : "func #1047*"
 				},
 				{
 					"name" : "GetIntArrayElements",
 					"offset" : 11968,
-					"type" : "func #1049*"
+					"type" : "func #1048*"
 				},
 				{
 					"name" : "GetLongArrayElements",
 					"offset" : 12032,
-					"type" : "func #1050*"
+					"type" : "func #1049*"
 				},
 				{
 					"name" : "GetFloatArrayElements",
 					"offset" : 12096,
-					"type" : "func #1051*"
+					"type" : "func #1050*"
 				},
 				{
 					"name" : "GetDoubleArrayElements",
 					"offset" : 12160,
-					"type" : "func #1052*"
+					"type" : "func #1051*"
 				},
 				{
 					"name" : "ReleaseBooleanArrayElements",
 					"offset" : 12224,
-					"type" : "func #1053*"
+					"type" : "func #1052*"
 				},
 				{
 					"name" : "ReleaseByteArrayElements",
 					"offset" : 12288,
-					"type" : "func #1054*"
+					"type" : "func #1053*"
 				},
 				{
 					"name" : "ReleaseCharArrayElements",
 					"offset" : 12352,
-					"type" : "func #1055*"
+					"type" : "func #1054*"
 				},
 				{
 					"name" : "ReleaseShortArrayElements",
 					"offset" : 12416,
-					"type" : "func #1056*"
+					"type" : "func #1055*"
 				},
 				{
 					"name" : "ReleaseIntArrayElements",
 					"offset" : 12480,
-					"type" : "func #1057*"
+					"type" : "func #1056*"
 				},
 				{
 					"name" : "ReleaseLongArrayElements",
 					"offset" : 12544,
-					"type" : "func #1058*"
+					"type" : "func #1057*"
 				},
 				{
 					"name" : "ReleaseFloatArrayElements",
 					"offset" : 12608,
-					"type" : "func #1059*"
+					"type" : "func #1058*"
 				},
 				{
 					"name" : "ReleaseDoubleArrayElements",
 					"offset" : 12672,
-					"type" : "func #1060*"
+					"type" : "func #1059*"
 				},
 				{
 					"name" : "GetBooleanArrayRegion",
 					"offset" : 12736,
-					"type" : "func #1061*"
+					"type" : "func #1060*"
 				},
 				{
 					"name" : "GetByteArrayRegion",
 					"offset" : 12800,
-					"type" : "func #1062*"
+					"type" : "func #1061*"
 				},
 				{
 					"name" : "GetCharArrayRegion",
 					"offset" : 12864,
-					"type" : "func #1063*"
+					"type" : "func #1062*"
 				},
 				{
 					"name" : "GetShortArrayRegion",
 					"offset" : 12928,
-					"type" : "func #1064*"
+					"type" : "func #1063*"
 				},
 				{
 					"name" : "GetIntArrayRegion",
 					"offset" : 12992,
-					"type" : "func #1065*"
+					"type" : "func #1064*"
 				},
 				{
 					"name" : "GetLongArrayRegion",
 					"offset" : 13056,
-					"type" : "func #1066*"
+					"type" : "func #1065*"
 				},
 				{
 					"name" : "GetFloatArrayRegion",
 					"offset" : 13120,
-					"type" : "func #1067*"
+					"type" : "func #1066*"
 				},
 				{
 					"name" : "GetDoubleArrayRegion",
 					"offset" : 13184,
-					"type" : "func #1068*"
+					"type" : "func #1067*"
 				},
 				{
 					"name" : "SetBooleanArrayRegion",
 					"offset" : 13248,
-					"type" : "func #1069*"
+					"type" : "func #1068*"
 				},
 				{
 					"name" : "SetByteArrayRegion",
 					"offset" : 13312,
-					"type" : "func #1070*"
+					"type" : "func #1069*"
 				},
 				{
 					"name" : "SetCharArrayRegion",
 					"offset" : 13376,
-					"type" : "func #1071*"
+					"type" : "func #1070*"
 				},
 				{
 					"name" : "SetShortArrayRegion",
 					"offset" : 13440,
-					"type" : "func #1072*"
+					"type" : "func #1071*"
 				},
 				{
 					"name" : "SetIntArrayRegion",
 					"offset" : 13504,
-					"type" : "func #1073*"
+					"type" : "func #1072*"
 				},
 				{
 					"name" : "SetLongArrayRegion",
 					"offset" : 13568,
-					"type" : "func #1074*"
+					"type" : "func #1073*"
 				},
 				{
 					"name" : "SetFloatArrayRegion",
 					"offset" : 13632,
-					"type" : "func #1075*"
+					"type" : "func #1074*"
 				},
 				{
 					"name" : "SetDoubleArrayRegion",
 					"offset" : 13696,
-					"type" : "func #1076*"
+					"type" : "func #1075*"
 				},
 				{
 					"name" : "RegisterNatives",
 					"offset" : 13760,
-					"type" : "func #1077*"
+					"type" : "func #1076*"
 				},
 				{
 					"name" : "UnregisterNatives",
 					"offset" : 13824,
-					"type" : "func #1078*"
+					"type" : "func #1077*"
 				},
 				{
 					"name" : "MonitorEnter",
 					"offset" : 13888,
-					"type" : "func #1079*"
+					"type" : "func #1078*"
 				},
 				{
 					"name" : "MonitorExit",
 					"offset" : 13952,
-					"type" : "func #1079*"
+					"type" : "func #1078*"
 				},
 				{
 					"name" : "GetJavaVM",
 					"offset" : 14016,
-					"type" : "func #1080*"
+					"type" : "func #1079*"
 				},
 				{
 					"name" : "GetStringRegion",
 					"offset" : 14080,
-					"type" : "func #1081*"
+					"type" : "func #1083*"
 				},
 				{
 					"name" : "GetStringUTFRegion",
 					"offset" : 14144,
-					"type" : "func #1082*"
+					"type" : "func #1084*"
 				},
 				{
 					"name" : "GetPrimitiveArrayCritical",
 					"offset" : 14208,
-					"type" : "func #1083*"
+					"type" : "func #1085*"
 				},
 				{
 					"name" : "ReleasePrimitiveArrayCritical",
 					"offset" : 14272,
-					"type" : "func #1084*"
+					"type" : "func #1086*"
 				},
 				{
 					"name" : "GetStringCritical",
 					"offset" : 14336,
-					"type" : "func #1028*"
+					"type" : "func #1027*"
 				},
 				{
 					"name" : "ReleaseStringCritical",
 					"offset" : 14400,
-					"type" : "func #1029*"
+					"type" : "func #1028*"
 				},
 				{
 					"name" : "NewWeakGlobalRef",
 					"offset" : 14464,
-					"type" : "func #1085*"
+					"type" : "func #1087*"
 				},
 				{
 					"name" : "DeleteWeakGlobalRef",
 					"offset" : 14528,
-					"type" : "func #1086*"
+					"type" : "func #1088*"
 				},
 				{
 					"name" : "ExceptionCheck",
 					"offset" : 14592,
-					"type" : "func #1087*"
+					"type" : "func #1089*"
 				},
 				{
 					"name" : "NewDirectByteBuffer",
 					"offset" : 14656,
-					"type" : "func #1088*"
+					"type" : "func #1090*"
 				},
 				{
 					"name" : "GetDirectBufferAddress",
 					"offset" : 14720,
-					"type" : "func #1089*"
+					"type" : "func #1091*"
 				},
 				{
 					"name" : "GetDirectBufferCapacity",
 					"offset" : 14784,
-					"type" : "func #1090*"
+					"type" : "func #1092*"
 				},
 				{
 					"name" : "GetObjectRefType",
 					"offset" : 14848,
-					"type" : "func #1091*"
+					"type" : "func #1093*"
 				}
 			],
 			"inheritance" : [],
@@ -24763,7 +24779,7 @@
 				{
 					"name" : "JNI_GetCreatedJavaVMs",
 					"offset" : 256,
-					"type" : "func #1093*"
+					"type" : "func #875*"
 				}
 			],
 			"inheritance" : [],

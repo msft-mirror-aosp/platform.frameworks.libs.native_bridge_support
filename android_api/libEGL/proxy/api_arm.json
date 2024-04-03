@@ -21308,7 +21308,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep::#13"
+					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep::#7"
 				}
 			],
 			"inheritance" : [],
@@ -21322,7 +21322,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#18"
+					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#8"
 				},
 				{
 					"name" : "__data_",
