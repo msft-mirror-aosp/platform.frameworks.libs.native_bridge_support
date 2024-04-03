@@ -37,6 +37,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"ACameraMetadata_fromCameraMetadata", GetTrampolineFunc<auto(void*, void*) -> void*>(), reinterpret_cast<void*>(NULL)},
 {"ACameraMetadata_getAllTags", GetTrampolineFunc<auto(void*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"ACameraMetadata_getConstEntry", GetTrampolineFunc<auto(void*, uint32_t, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
+{"ACameraMetadata_getTagFromName", GetTrampolineFunc<auto(void*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"ACameraMetadata_isLogicalMultiCamera", GetTrampolineFunc<auto(void*, void*, void*) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
 {"ACameraOutputTarget_create", GetTrampolineFunc<auto(void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"ACameraOutputTarget_free", GetTrampolineFunc<auto(void*) -> void>(), reinterpret_cast<void*>(NULL)},
