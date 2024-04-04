@@ -28,6 +28,8 @@
 # NATIVE_BRIDGE_MODIFIED_GUEST_LIBS: List of modified guest libraries that require host counterpart.
 #
 
+# Note: When modifying this variable, please also update the dependencies of
+#       `berberis_all` in frameworks/libs/binary_translation/Android.bp.
 NATIVE_BRIDGE_PRODUCT_PACKAGES := \
     libnative_bridge_vdso.native_bridge \
     native_bridge_guest_app_process.native_bridge \
@@ -55,6 +57,8 @@ NATIVE_BRIDGE_PRODUCT_PACKAGES := \
 # libicui18n.bootstrap
 # libicuuc.bootstrap
 
+# Note: When modifying this variable, please also update the dependencies of
+#       `berberis_all` in frameworks/libs/binary_translation/Android.bp.
 # Original guest libraries.
 NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libandroidicu.bootstrap \
@@ -73,6 +77,8 @@ NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libutils \
     libz
 
+# Note: When modifying this variable, please also update the dependencies of
+#       `berberis_all` in frameworks/libs/binary_translation/Android.bp.
 # These libraries need special support on the native bridge implementation side.
 NATIVE_BRIDGE_MODIFIED_GUEST_LIBS := \
     libaaudio \
