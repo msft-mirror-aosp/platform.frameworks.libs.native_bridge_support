@@ -34,14 +34,10 @@ void DoCustomTrampoline__ZN7android14AndroidRuntime21registerNativeMethodsEP7_JN
   using PFN_callee = decltype(&android::AndroidRuntime::registerNativeMethods);
   auto [arg_env, arg_class_name, arg_methods, arg_n] = GuestParamsValues<PFN_callee>(state);
 
-  JNINativeMethod* host_methods = ConvertJNINativeMethods(arg_methods, arg_n);
-
   auto&& [ret] = GuestReturnReference<PFN_callee>(state);
 
-  ret =
-      android::AndroidRuntime::registerNativeMethods(arg_env, arg_class_name, host_methods, arg_n);
-
-  delete[] host_methods;
+  ret = android::AndroidRuntime::registerNativeMethods(arg_env, arg_class_name,
+                                                       arg_methods, arg_n);
 }
 
 // TODO(b/278625630): This is not a standard library and will be deprecated.
