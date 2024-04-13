@@ -69,6 +69,12 @@
       "reason_for_compatible": [
         "_JNIEnv is made on x86 side is passed to x86 libandroid_runtime without changes"
       ]
+    },
+    "struct AInputReceiverCallbacks*": {
+      "force_compatible": true,
+      "reason_for_compatible": [
+        "It's opaque structure in public API (used as a handle)"
+      ]
     }
   }
 }
