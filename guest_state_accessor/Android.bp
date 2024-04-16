@@ -23,6 +23,10 @@ cc_library_headers {
     defaults: ["native_bridge_support_defaults"],
     host_supported: true,
     export_include_dirs: ["include"],
+    apex_available: [
+        "com.android.runtime",
+        "//apex_available:platform",
+    ],
 }
 
 cc_library_static {
@@ -36,6 +40,10 @@ cc_library_static {
     shared_libs: [
         "libbase",
         "liblog",
+    ],
+    apex_available: [
+        "com.android.runtime",
+        "//apex_available:platform",
     ],
 }
 
