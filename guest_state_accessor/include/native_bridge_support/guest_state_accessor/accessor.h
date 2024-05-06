@@ -34,6 +34,7 @@ __BEGIN_DECLS
 #if defined(__LP64__)
 struct NativeBridgeGuestRegsArm64 {
   uint64_t x[31];
+  uint64_t sp;
   uint64_t ip;
   alignas(16) __uint128_t v[32];
 };
