@@ -20,9 +20,17 @@
 # NATIVE_BRIDGE_PRODUCT_PACKAGES: Add this to PRODUCT_PACKAGES for your project to facilitate
 # native bridge support.
 #
+# NATIVE_BRIDGE_PRODUCT_PACKAGES_ARM: arm32-only product packages.
+#
+# NATIVE_BRIDGE_PRODUCT_PACKAGES_RISCV64_READY: products packages ready for riscv64 translation.
+# Currently same as NATIVE_BRIDGE_PRODUCT_PACKAGES excluding render script.
+#
 # NATIVE_BRIDGE_MODIFIED_GUEST_LIBS: List of modified guest libraries that require host counterpart.
 #
 
+# Note: When modifying this variable, please also update the `phony_deps` of
+#       `berberis_riscv64_to_x86_64_defaults` in
+#       frameworks/libs/binary_translation/Android.bp.
 NATIVE_BRIDGE_PRODUCT_PACKAGES := \
     libnative_bridge_vdso.native_bridge \
     native_bridge_guest_app_process.native_bridge \
@@ -50,6 +58,9 @@ NATIVE_BRIDGE_PRODUCT_PACKAGES := \
 # libicui18n.bootstrap
 # libicuuc.bootstrap
 
+# Note: When modifying this variable, please also update the `phony_deps` of
+#       `berberis_riscv64_to_x86_64_defaults` in
+#       frameworks/libs/binary_translation/Android.bp.
 # Original guest libraries.
 NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libandroidicu.bootstrap \
@@ -68,21 +79,9 @@ NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libutils \
     libz
 
-NATIVE_BRIDGE_PRODUCT_PACKAGES += \
-    libclcore.bc \
-    libclcore_neon.bc
-
-NATIVE_BRIDGE_ORIG_GUEST_LIBS += \
-    libRS \
-    libRSDriver \
-    libnative_bridge_guest_libRSSupport
-
-# These native libraries are needed to pass CtsJniTestCases, we do not use them in any way and
-# once/if build system allows us to build dummy arm libraries they can be replaced with empty ones.
-#NATIVE_BRIDGE_ORIG_GUEST_LIBS += \
-#    libart \
-#    libvorbisidec
-
+# Note: When modifying this variable, please also update the `phony_deps` of
+#       `berberis_riscv64_to_x86_64_defaults` in
+#       frameworks/libs/binary_translation/Android.bp.
 # These libraries need special support on the native bridge implementation side.
 NATIVE_BRIDGE_MODIFIED_GUEST_LIBS := \
     libaaudio \
@@ -115,4 +114,24 @@ NATIVE_BRIDGE_PRODUCT_PACKAGES += \
 NATIVE_BRIDGE_PRODUCT_PACKAGES += \
     $(addprefix libnative_bridge_guest_,$(addsuffix .native_bridge,$(NATIVE_BRIDGE_MODIFIED_GUEST_LIBS)))
 
+# TODO(b/277625560): Deprecate after we deside what to do with renderscript
+NATIVE_BRIDGE_PRODUCT_PACKAGES_RISCV64_READY := $(NATIVE_BRIDGE_PRODUCT_PACKAGES)
+
+# Renderscript specific files/libraries
+NATIVE_BRIDGE_PRODUCT_PACKAGES += \
+    libclcore.bc
+
+# libclcore_neon.bc is arm32 only.
+NATIVE_BRIDGE_PRODUCT_PACKAGES_ARM := \
+    libclcore_neon.bc
+
+NATIVE_BRIDGE_RS_ORIG_GUEST_LIBS += \
+    libRS \
+    libRSDriver \
+    libnative_bridge_guest_libRSSupport
+
+NATIVE_BRIDGE_PRODUCT_PACKAGES += \
+    $(addsuffix .native_bridge,$(NATIVE_BRIDGE_RS_ORIG_GUEST_LIBS))
+
 NATIVE_BRIDGE_ORIG_GUEST_LIBS :=
+NATIVE_BRIDGE_RS_ORIG_GUEST_LIBS :=
