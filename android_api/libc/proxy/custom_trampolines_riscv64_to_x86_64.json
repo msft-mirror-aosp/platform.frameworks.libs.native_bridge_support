@@ -234,6 +234,24 @@
       "header": "setjump.h",
       "signature": "vpi"
     },
+    "memset": {
+      "call_method": "default",
+      "comment": "performance optimization",
+      "is_compatible": true,
+      "signature": "ppii"
+    },
+    "memcpy": {
+      "call_method": "default",
+      "comment": "performance optimization",
+      "is_compatible": true,
+      "signature": "pppi"
+    },
+    "memcmp": {
+      "call_method": "default",
+      "comment": "performance optimization",
+      "is_compatible": true,
+      "signature": "ippi"
+    },
     "native_bridge___cxa_thread_atexit_impl": {
       "call_method": "custom_trampoline",
       "header": "c++ abi"
