@@ -74,9 +74,10 @@ func main() {
 		} else if args[id] == "--input" {
 			id++
 			vk_xml_filename = args[id]
-		} else if args[id] == "--output" {
+		} else if args[id] == "--xml" {
 			id++
 			vulkan_xml_filename = args[id]
+		} else if args[id] == "--json" {
 			id++
 			custom_trampolines_filename = args[id]
 		} else {
@@ -107,14 +108,18 @@ Usage: gen_vulkan --input vk.xml --output vulkan_xml.h
 		panic(err)
 	}
 
-	err = generateVulkanXML(sorted_type_names, types, sorted_command_names, commands, extensions, vulkan_xml_filename, host_arch, guest_arch)
-	if err != nil {
-		panic(err)
+	if vulkan_xml_filename != "" {
+		err = generateVulkanXML(sorted_type_names, types, sorted_command_names, commands, extensions, vulkan_xml_filename, host_arch, guest_arch)
+		if err != nil {
+			panic(err)
+		}
 	}
 
-	err = generateCustomTrampolines(custom_trampolines_filename, sorted_command_names, commands, host_arch, guest_arch)
-	if err != nil {
-		panic(err)
+	if custom_trampolines_filename != "" {
+		err = generateCustomTrampolines(custom_trampolines_filename, sorted_command_names, commands, host_arch, guest_arch)
+		if err != nil {
+			panic(err)
+		}
 	}
 }
 
@@ -329,7 +334,7 @@ func generateCustomTrampolines(output_file_name string, sorted_command_names []s
 	}
 	_, err = fmt.Fprintf(out_file, `{
   "config": {
-    "ignore_non_present": true
+    "ignore_non_present": true,
     "reason": "some Vulkan functions are in drivers and are supported by our proxy while libvulkan.so lags behind"
   },
   "symbols": {
