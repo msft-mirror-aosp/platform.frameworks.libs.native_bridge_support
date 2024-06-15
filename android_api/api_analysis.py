@@ -400,7 +400,7 @@ def _override_custom_type_properties(guest_api, custom_api):
 def _set_call_method_for_symbols(guest_api):
   for symbol, descr in guest_api['symbols'].items():
     type_name = descr['type']
-    if (guest_api['types'][type_name]['kind'] == 'function'):
+    if guest_api['types'][type_name]['kind'] == 'function':
       descr['call_method'] = 'default'
     else:
       descr['call_method'] = 'do_not_call'
@@ -409,21 +409,22 @@ def _set_call_method_for_symbols(guest_api):
 def _override_custom_symbol_properties(guest_api, custom_api):
   custom_config = custom_api.get('config', {})
 
-  if (custom_config.get('ignore_variables', False)):
+  if custom_config.get('ignore_variables', False):
     for symbol, descr in guest_api['symbols'].items():
       type_name = descr['type']
       if guest_api['types'][type_name]['kind'] != 'function':
         descr['call_method'] = 'ignore'
 
-  if (custom_config.get('force_incompatible', False)):
+  if custom_config.get('force_incompatible', False):
     for symbol, descr in guest_api['symbols'].items():
       descr['is_compatible'] = False
 
   for custom_symbol, custom_descr in custom_api['symbols'].items():
     # Some exported symbols may not present in headers
     # which are used for guest_api generation.
-    if (custom_symbol not in guest_api['symbols']):
-      guest_api['symbols'][custom_symbol] = custom_descr
+    if custom_symbol not in guest_api['symbols']:
+      if not custom_config.get('ignore_non_present', False):
+        guest_api['symbols'][custom_symbol] = custom_descr
     else:
       # This may override 'call_method' for function-type symbol.
       # But should not override 'is_compatible', which is only used
@@ -431,11 +432,11 @@ def _override_custom_symbol_properties(guest_api, custom_api):
       assert 'is_compatible' not in custom_descr, ('The symbol %s is already '
                                                    'compatible: remove the '
                                                    'override') % custom_symbol
-      if ('is_custom_compatible' in custom_descr):
+      if 'is_custom_compatible' in custom_descr:
         custom_descr['is_compatible'] = custom_descr['is_custom_compatible']
       guest_api['symbols'][custom_symbol].update(custom_descr)
 
-  if (custom_config.get('ignore_non_custom', False)):
+  if custom_config.get('ignore_non_custom', False):
     for symbol, descr in guest_api['symbols'].items():
       if symbol not in custom_api['symbols']:
         descr['call_method'] = 'ignore'
@@ -443,15 +444,15 @@ def _override_custom_symbol_properties(guest_api, custom_api):
 
 def _check_force_compatibility_was_useful(types):
   for atype, descr in types.items():
-    if (('force_compatible' in descr) or ('force_compatible_with' in descr)):
-      if (not descr.get('useful_force_compatible', False)):
+    if ('force_compatible' in descr) or ('force_compatible_with' in descr):
+      if not descr.get('useful_force_compatible', False):
         warnings.warn("Forcing compatibility for type '%s' is redundant" % (atype))
 
 
 def _check_expected_types_compatibility(types):
   for atype, descr in types.items():
-    if ('expect_compatible' in descr):
-      if (descr['is_compatible'] != descr['expect_compatible']):
+    if 'expect_compatible' in descr:
+      if descr['is_compatible'] != descr['expect_compatible']:
         raise Exception(
             ("Compatibility expectation for type '%s' is wrong:"
              ' is_compatible=%s, expect_compatible=%s') %
