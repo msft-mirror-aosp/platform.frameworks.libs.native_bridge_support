@@ -1,6 +1,6 @@
 {
   "config": {
-    "ignore_non_present": true
+    "ignore_non_present": true,
     "reason": "some Vulkan functions are in drivers and are supported by our proxy while libvulkan.so lags behind"
   },
   "symbols": {
