@@ -35,7 +35,7 @@ var HANDLEType = cpp_types.AliasType(
 
 var HINSTANCEType = cpp_types.AliasType("HINSTANCE", HANDLEType)
 
-var HMONITORType = cpp_types.AliasType("HINSTANCE", HANDLEType)
+var HMONITORType = cpp_types.AliasType("HMONITOR", HANDLEType)
 
 var HWNDType = cpp_types.AliasType("HWND", HANDLEType)
 

@@ -44,8 +44,6 @@
 
 // DirectFB types: vulkan_directfb.h requires definitions of DirectFB types which are not available
 // on Android.
-#define BERBERIS_IDIRECT_NOVERIFY_FB 1
-#define BERBERIS_IDIRECT_FBSURFACE_NOVERIFY 1
 #define BERBERIS_VK_DIRECT_FBSURFACE_CREATE_FLAGS_NOVERIFY_EXT 1
 #define BERBERIS_VK_DIRECT_FBSURFACE_CREATE_INFO_NOVERIFY_EXT 1
 
