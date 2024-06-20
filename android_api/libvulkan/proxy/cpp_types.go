@@ -116,6 +116,25 @@ const (
 	LastArch  = X86_64
 )
 
+func Define(arch Arch) string {
+	switch arch {
+	default:
+		panic(fmt.Sprintf("cpp_types: Unknown arch %d", arch))
+	case Arm:
+		return "defined(__arm__)"
+	case Arm64:
+		return "defined(__aarch64__)"
+	case Riscv32:
+		return "defined(__riscv) && (__riscv_xlen == 32)"
+	case Riscv64:
+		return "defined(__riscv) && (__riscv_xlen == 64)"
+	case X86:
+		return "defined(__i386__)"
+	case X86_64:
+		return "defined(__x86_64__)"
+	}
+}
+
 // The zero Kind is Invalid Kind.
 type Kind uint
 
