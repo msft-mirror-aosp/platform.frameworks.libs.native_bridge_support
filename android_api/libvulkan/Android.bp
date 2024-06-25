@@ -82,7 +82,7 @@ bootstrap_go_package {
 blueprint_go_binary {
     name: "gen_vulkan",
     srcs: ["proxy/gen_vulkan.go"],
-    testSrcs: ["gen_vulkan_test.go"],
+    testSrcs: ["proxy/gen_vulkan_test.go"],
     deps: ["vulkan_xml"],
 }
 
