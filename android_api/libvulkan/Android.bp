@@ -92,3 +92,10 @@ filegroup {
         "proxy/vulkan_trampolines.cc",
     ],
 }
+
+filegroup {
+    name: "native_bridge_proxy_libvulkan_checker",
+    srcs: [
+        "proxy/emulated_api_checker.cc",
+    ],
+}
