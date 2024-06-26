@@ -177,6 +177,11 @@ func generateVulkanXML(sorted_type_names []string, types map[string]cpp_types.Ty
 		return err
 	}
 
+	_, err = fmt.Fprint(out_file, "#ifndef BERBERIS_LAYOUT_CHECK_ONLY\n")
+	if err != nil {
+		return err
+	}
+
 	err = printExtensionsMap(out_file, extensions)
 	if err != nil {
 		return err
@@ -199,15 +204,6 @@ func generateVulkanXML(sorted_type_names []string, types map[string]cpp_types.Ty
 
 	_, err = fmt.Fprint(out_file,
 		`
-
-namespace {
-
-`)
-
-	_, err = fmt.Fprint(out_file,
-		`
-
-}  // namespace
 
 // Note: we put all the conversion routines in the anonymous namespace to make sure we are not
 // generating dead code or referencing non-existing code: attempt to use static function which
@@ -252,8 +248,15 @@ void RunGuest_vkGetInstanceProcAddr(GuestAddr pc, GuestArgumentBuffer* buf);
 		return err
 	}
 
+	err = printGuestStructVerification(out_file, sorted_type_names, types, host_arch, guest_arch)
+	if err != nil {
+		return err
+	}
+
 	_, err = fmt.Fprintf(out_file,
-		`} // namespace
+		`#endif  // BERBERIS_LAYOUT_CHECK_ONLY
+
+} // namespace
 
 }  // namespace berberis
 
@@ -290,11 +293,6 @@ void RunGuest_vkGetInstanceProcAddr(GuestAddr pc, GuestArgumentBuffer* buf);
 	}
 
 	err = printHostStructVerification(out_file, sorted_type_names, types, host_arch, guest_arch)
-	if err != nil {
-		return err
-	}
-
-	err = printGuestStructVerification(out_file, sorted_type_names, types, host_arch, guest_arch)
 	if err != nil {
 		return err
 	}

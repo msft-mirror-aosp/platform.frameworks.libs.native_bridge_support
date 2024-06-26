@@ -23,6 +23,7 @@
 
 #include "berberis/base/bit_util.h"
 #include "berberis/base/struct_check.h"
+#ifndef BERBERIS_LAYOUT_CHECK_ONLY
 #include "berberis/guest_abi/function_wrappers.h"
 #include "berberis/guest_abi/guest_arguments.h"
 #include "berberis/guest_abi/guest_function_wrapper_signature.h"
@@ -36,6 +37,8 @@
 #include "berberis/runtime_primitives/runtime_library.h"
 
 #include "binary_search.h"
+#endif
+
 // Note: we only need these defines at the end of xvulkan_xml-inl.h and would like to not include it
 // prematurely but vulkan_xml_define.h couldn't be included from vulkan_xml-inl.h when these two
 // files are in different filegroups.
@@ -53,6 +56,8 @@ struct wl_display;
 struct xcb_connection_t;
 
 namespace berberis {
+
+#ifndef BERBERIS_LAYOUT_CHECK_ONLY
 
 template <typename ResultType, typename... ArgumentType>
 inline ResultType (*WrapGuestFunctionIfNeeded(GuestType<ResultType (*)(ArgumentType...)> func,
@@ -108,6 +113,7 @@ static GuestType<const void*> ConvertOptionalStructures(const void* head,
 static GuestType<void*> ConvertOptionalStructures(void* head,
                                                   std::unique_ptr<GuestHolderBase>& holder,
                                                   bool& out_of_memory);
+#endif  // BERBERIS_LAYOUT_CHECK_ONLY
 
 namespace {
 
