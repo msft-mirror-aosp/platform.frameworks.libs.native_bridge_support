@@ -147,9 +147,9 @@ cc_library {
         never: true,
     },
 
-    // lld complains about duplicate symbols in libcrt and libgcc. Suppress the
-    // warning since this is intended right now.
-    // Bug: 117558759
+    // lld complains about duplicate symbols in libc because we are intercepting some symbols that
+    // are not marked as weak in bionic.
+    // TODO(b/349973092): remove workaround when all relevant symbols are properly marked.
     ldflags: ["-Wl,-z,muldefs"],
 }
 
