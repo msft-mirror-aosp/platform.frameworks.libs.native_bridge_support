@@ -97,23 +97,23 @@ cc_library {
 
             version_script: ":libc.arm64.map",
 
-	    // Leave the symbols in the shared library so that stack unwinders can produce
-	    // meaningful name resolution.
-	    strip: {
-		keep_symbols: true,
-	    },
+            // Leave the symbols in the shared library so that stack unwinders can produce
+            // meaningful name resolution.
+            strip: {
+                keep_symbols: true,
+            },
         },
         riscv64: {
             srcs: ["stubs_riscv64.cpp"],
 
             version_script: ":libc.riscv64.map",
 
-	    // Leave the symbols in the shared library so that stack unwinders can produce
-	    // meaningful name resolution.
-	    strip: {
-		keep_symbols: true,
-	    },
-        }
+            // Leave the symbols in the shared library so that stack unwinders can produce
+            // meaningful name resolution.
+            strip: {
+                keep_symbols: true,
+            },
+        },
     },
 
     nocrt: true,
@@ -147,9 +147,9 @@ cc_library {
         never: true,
     },
 
-    // lld complains about duplicate symbols in libcrt and libgcc. Suppress the
-    // warning since this is intended right now.
-    // Bug: 117558759
+    // lld complains about duplicate symbols in libc because we are intercepting some symbols that
+    // are not marked as weak in bionic.
+    // TODO(b/349973092): remove workaround when all relevant symbols are properly marked.
     ldflags: ["-Wl,-z,muldefs"],
 }
 
@@ -168,12 +168,12 @@ filegroup {
 
 cc_defaults {
     name: "native_bridge_proxy_libc_defaults",
-    srcs: [ "//frameworks/libs/native_bridge_support/android_api/libc:native_bridge_proxy_libc_files" ],
+    srcs: ["//frameworks/libs/native_bridge_support/android_api/libc:native_bridge_proxy_libc_files"],
     header_libs: [
-	"libberberis_guest_abi_headers",
+        "libberberis_guest_abi_headers",
         "libberberis_guest_os_primitives_headers",
         "libberberis_guest_state_headers",
-	"libberberis_proxy_loader_headers",
+        "libberberis_proxy_loader_headers",
         "libberberis_runtime_primitives_headers",
     ],
 

@@ -74,9 +74,10 @@ func main() {
 		} else if args[id] == "--input" {
 			id++
 			vk_xml_filename = args[id]
-		} else if args[id] == "--output" {
+		} else if args[id] == "--xml" {
 			id++
 			vulkan_xml_filename = args[id]
+		} else if args[id] == "--json" {
 			id++
 			custom_trampolines_filename = args[id]
 		} else {
@@ -107,14 +108,18 @@ Usage: gen_vulkan --input vk.xml --output vulkan_xml.h
 		panic(err)
 	}
 
-	err = generateVulkanXML(sorted_type_names, types, sorted_command_names, commands, extensions, vulkan_xml_filename, host_arch, guest_arch)
-	if err != nil {
-		panic(err)
+	if vulkan_xml_filename != "" {
+		err = generateVulkanXML(sorted_type_names, types, sorted_command_names, commands, extensions, vulkan_xml_filename, host_arch, guest_arch)
+		if err != nil {
+			panic(err)
+		}
 	}
 
-	err = generateCustomTrampolines(custom_trampolines_filename, sorted_command_names, commands, host_arch, guest_arch)
-	if err != nil {
-		panic(err)
+	if custom_trampolines_filename != "" {
+		err = generateCustomTrampolines(custom_trampolines_filename, sorted_command_names, commands, host_arch, guest_arch)
+		if err != nil {
+			panic(err)
+		}
 	}
 }
 
@@ -172,6 +177,11 @@ func generateVulkanXML(sorted_type_names []string, types map[string]cpp_types.Ty
 		return err
 	}
 
+	_, err = fmt.Fprint(out_file, "#ifndef BERBERIS_LAYOUT_CHECK_ONLY\n")
+	if err != nil {
+		return err
+	}
+
 	err = printExtensionsMap(out_file, extensions)
 	if err != nil {
 		return err
@@ -194,15 +204,6 @@ func generateVulkanXML(sorted_type_names []string, types map[string]cpp_types.Ty
 
 	_, err = fmt.Fprint(out_file,
 		`
-
-namespace {
-
-`)
-
-	_, err = fmt.Fprint(out_file,
-		`
-
-}  // namespace
 
 // Note: we put all the conversion routines in the anonymous namespace to make sure we are not
 // generating dead code or referencing non-existing code: attempt to use static function which
@@ -247,8 +248,15 @@ void RunGuest_vkGetInstanceProcAddr(GuestAddr pc, GuestArgumentBuffer* buf);
 		return err
 	}
 
+	err = printGuestStructVerification(out_file, sorted_type_names, types, host_arch, guest_arch)
+	if err != nil {
+		return err
+	}
+
 	_, err = fmt.Fprintf(out_file,
-		`} // namespace
+		`#endif  // BERBERIS_LAYOUT_CHECK_ONLY
+
+} // namespace
 
 }  // namespace berberis
 
@@ -274,22 +282,17 @@ void RunGuest_vkGetInstanceProcAddr(GuestAddr pc, GuestArgumentBuffer* buf);
 		return err
 	}
 
-	err = printAliasVerification(out_file, sorted_type_names, types)
+	err = printAliasVerification(out_file, sorted_type_names, types, host_arch, guest_arch)
 	if err != nil {
 		return err
 	}
 
-	err = printEnumVerification(out_file, sorted_type_names, types)
+	err = printEnumVerification(out_file, sorted_type_names, types, host_arch, guest_arch)
 	if err != nil {
 		return err
 	}
 
-	err = printHostStructVerification(out_file, sorted_type_names, types)
-	if err != nil {
-		return err
-	}
-
-	err = printGuestStructVerification(out_file, sorted_type_names, types, host_arch, guest_arch)
+	err = printHostStructVerification(out_file, sorted_type_names, types, host_arch, guest_arch)
 	if err != nil {
 		return err
 	}
@@ -329,7 +332,7 @@ func generateCustomTrampolines(output_file_name string, sorted_command_names []s
 	}
 	_, err = fmt.Fprintf(out_file, `{
   "config": {
-    "ignore_non_present": true
+    "ignore_non_present": true,
     "reason": "some Vulkan functions are in drivers and are supported by our proxy while libvulkan.so lags behind"
   },
   "symbols": {
@@ -416,24 +419,40 @@ func printAliasTypes(w io.Writer, sorted_type_names []string, types map[string]c
 	return nil
 }
 
-func printAliasVerification(w io.Writer, sorted_type_names []string, types map[string]cpp_types.Type) error {
+func printAliasVerification(w io.Writer, sorted_type_names []string, types map[string]cpp_types.Type, host_arch, guest_arch cpp_types.Arch) error {
 	for _, name := range sorted_type_names {
 		typе := types[name]
 		if !vulkan_types.IsVulkanHandle(typе) && !vulkan_types.IsVulkanNondispatchableHandle(typе) && !isAlias(typе) {
 			continue
 		}
+		if isAliasOfOpaque(typе) {
+			continue
+		}
 		_, err := fmt.Fprintf(
 			w,
-			`#if !defined(BERBERIS_%s)
-CHECK_STRUCT_LAYOUT(berberis::%s, sizeof(::%s) * 8, alignof(::%s) * 8);
-#endif  /* BERBERIS_%s */
+			`#if %[7]s
+CHECK_STRUCT_LAYOUT(berberis::%[2]s, %[3]d, %[4]d);
+#if !defined(BERBERIS_%[1]s)
+CHECK_STRUCT_LAYOUT(::%[2]s, %[3]d, %[4]d);
+#endif  /* BERBERIS_%[1]s */
+#elif %[8]s
+CHECK_STRUCT_LAYOUT(berberis::%[2]s, %[5]d, %[6]d);
+#if !defined(BERBERIS_%[1]s)
+CHECK_STRUCT_LAYOUT(::%[2]s, %[5]d, %[6]d);
+#endif  /* BERBERIS_%[1]s */
+#else
+#error Unsupported architecture.
+#endif
 
 `,
 			toEnumNameWithSuffix(name, "NOVERIFY"),
 			name,
-			name,
-			name,
-			toEnumNameWithSuffix(name, "NOVERIFY"))
+			typе.Bits(host_arch),
+			typе.Align(host_arch),
+			typе.Bits(guest_arch),
+			typе.Align(guest_arch),
+			cpp_types.Define(host_arch),
+			cpp_types.Define(guest_arch))
 		if err != nil {
 			return err
 		}
@@ -493,7 +512,7 @@ func printEnums(w io.Writer, sorted_type_names []string, types map[string]cpp_ty
 	return nil
 }
 
-func printEnumVerification(w io.Writer, sorted_type_names []string, types map[string]cpp_types.Type) error {
+func printEnumVerification(w io.Writer, sorted_type_names []string, types map[string]cpp_types.Type, host_arch, guest_arch cpp_types.Arch) error {
 	for _, name := range sorted_type_names {
 		typе := types[name]
 		// Note: currently enums in vk.xml are architecture-agnostic. If some type is enum then it's always enum, on all
@@ -507,13 +526,30 @@ func printEnumVerification(w io.Writer, sorted_type_names []string, types map[st
 		}
 		_, err = fmt.Fprintf(
 			w,
-			`#if !defined(BERBERIS_%s)
-CHECK_STRUCT_LAYOUT(berberis::%s, sizeof(%s) * 8, alignof(%s) * 8);
+			`#if %[7]s
+CHECK_STRUCT_LAYOUT(berberis::%[2]s, %[3]d, %[4]d);
+#elif %[8]s
+CHECK_STRUCT_LAYOUT(berberis::%[2]s, %[5]d, %[6]d);
+#else
+#error Unsupported architecture.
+#endif
+#if !defined(BERBERIS_%[1]s)
+#if %[7]s
+CHECK_STRUCT_LAYOUT(::%[2]s, %[3]d, %[4]d);
+#elif %[8]s
+CHECK_STRUCT_LAYOUT(::%[2]s, %[5]d, %[6]d);
+#else
+#error Unsupported architecture.
+#endif
 `,
 			toEnumNameWithSuffix(name, "NOVERIFY"),
 			name,
-			name,
-			name)
+			typе.Bits(host_arch),
+			typе.Align(host_arch),
+			typе.Bits(guest_arch),
+			typе.Align(guest_arch),
+			cpp_types.Define(host_arch),
+			cpp_types.Define(guest_arch))
 		if err != nil {
 			return err
 		}
@@ -521,12 +557,10 @@ CHECK_STRUCT_LAYOUT(berberis::%s, sizeof(%s) * 8, alignof(%s) * 8);
 			field := typе.Field(i, cpp_types.FirstArch).(cpp_types.EnumFieldInfo)
 			_, err = fmt.Fprintf(
 				w,
-				`#if !defined(BERBERIS_%s_NOVERIFY)
-static_assert(std::int64_t(%s) == std::int64_t(berberis::BERBERIS_%s));
+				`#if !defined(BERBERIS_%[1]s_NOVERIFY)
+static_assert(std::int64_t(%[1]s) == std::int64_t(berberis::BERBERIS_%[1]s));
 #endif
 `,
-				field.Name(),
-				field.Name(),
 				field.Name())
 			if err != nil {
 				return err
@@ -534,17 +568,14 @@ static_assert(std::int64_t(%s) == std::int64_t(berberis::BERBERIS_%s));
 		}
 		_, err = fmt.Fprintf(
 			w,
-			`#if !defined(BERBERIS_%s_NOVERIFY)
-static_assert(std::int64_t(%s) == std::int64_t(berberis::BERBERIS_%s));
-#endif  /* BERBERIS_%s_NOVERIFY */
-#endif  /* BERBERIS_%s */
+			`#if !defined(BERBERIS_%[2]s_NOVERIFY)
+static_assert(std::int64_t(%[2]s) == std::int64_t(berberis::BERBERIS_%[2]s));
+#endif  /* BERBERIS_%[2]s_NOVERIFY */
+#endif  /* BERBERIS_%[1]s */
 
 `,
-			toEnumNameWithSuffix(name, "MAX_ENUM"),
-			toEnumNameWithSuffix(name, "MAX_ENUM"),
-			toEnumNameWithSuffix(name, "MAX_ENUM"),
-			toEnumNameWithSuffix(name, "MAX_ENUM"),
-			toEnumNameWithSuffix(name, "NOVERIFY"))
+			toEnumNameWithSuffix(name, "NOVERIFY"),
+			toEnumNameWithSuffix(name, "MAX_ENUM"))
 		if err != nil {
 			return err
 		}
@@ -3127,34 +3158,91 @@ func doesNeedHolder(typе cpp_types.Type, host_arch cpp_types.Arch, guest_arch c
 	return false
 }
 
-func printHostStructVerification(w io.Writer, sorted_type_names []string, types map[string]cpp_types.Type) error {
+func printHostStructVerification(w io.Writer, sorted_type_names []string, types map[string]cpp_types.Type, host_arch, guest_arch cpp_types.Arch) error {
 	for _, name := range sorted_type_names {
 		typе := types[name]
 		if !isStruct(typе) && !isUnion(typе) {
 			continue
 		}
+		fields_check_berberis_host := []string{}
+		fields_check_platform_host := []string{}
+		for i := uint(0); i < typе.NumField(host_arch); i++ {
+			field := typе.Field(i, host_arch)
+			var field_offset uint
+			if !isUnion(typе) {
+				field_offset = field.(cpp_types.StructFieldInfo).Offset()
+			} else {
+				field_offset = 0
+			}
+			fields_check_berberis_host = append(fields_check_berberis_host,
+				fmt.Sprintf("CHECK_FIELD_LAYOUT(berberis::%[1]s, %[2]s, %[3]d, %[4]d);",
+					name,
+					field.Name(),
+					field_offset,
+					field.Type().Bits(host_arch)))
+			fields_check_platform_host = append(fields_check_platform_host,
+				fmt.Sprintf("CHECK_FIELD_LAYOUT(::%[1]s, %[2]s, %[3]d, %[4]d);",
+					name,
+					field.Name(),
+					field_offset,
+					field.Type().Bits(host_arch)))
+		}
+		fields_check_berberis_guest := []string{}
+		fields_check_platform_guest := []string{}
+		for i := uint(0); i < typе.NumField(guest_arch); i++ {
+			field := typе.Field(i, guest_arch)
+			var field_offset uint
+			if !isUnion(typе) {
+				field_offset = field.(cpp_types.StructFieldInfo).Offset()
+			} else {
+				field_offset = 0
+			}
+			fields_check_berberis_guest = append(fields_check_berberis_guest,
+				fmt.Sprintf("CHECK_FIELD_LAYOUT(berberis::%[1]s, %[2]s, %[3]d, %[4]d);",
+					name,
+					field.Name(),
+					field_offset,
+					field.Type().Bits(guest_arch)))
+			fields_check_platform_guest = append(fields_check_platform_guest,
+				fmt.Sprintf("CHECK_FIELD_LAYOUT(::%[1]s, %[2]s, %[3]d, %[4]d);",
+					name,
+					field.Name(),
+					field_offset,
+					field.Type().Bits(guest_arch)))
+		}
 		_, err := fmt.Fprintf(
 			w,
-			`#if !defined(BERBERIS_%[1]s)
-CHECK_STRUCT_LAYOUT(berberis::%[2]s, sizeof(%[2]s) * 8, alignof(%[2]s) * 8);
+			`#if %[7]s
+CHECK_STRUCT_LAYOUT(berberis::%[2]s, %[3]d, %[4]d);
+%[9]s
+#if !defined(BERBERIS_%[1]s)
+CHECK_STRUCT_LAYOUT(::%[2]s, %[3]d, %[4]d);
+%[10]s
+#endif  /* BERBERIS_%[1]s */
+#elif %[8]s
+CHECK_STRUCT_LAYOUT(berberis::%[2]s, %[5]d, %[6]d);
+%[11]s
+#if !defined(BERBERIS_%[1]s)
+CHECK_STRUCT_LAYOUT(::%[2]s, %[5]d, %[6]d);
+%[12]s
+#endif  /* BERBERIS_%[1]s */
+#else
+#error Unsupported architecture.
+#endif
+
 `,
 			toEnumNameWithSuffix(name, "NOVERIFY"),
-			name)
-		if err != nil {
-			return err
-		}
-		for i := uint(0); i < typе.NumField(cpp_types.FirstArch); i++ {
-			field := typе.Field(i, cpp_types.FirstArch)
-			_, err = fmt.Fprintf(
-				w,
-				"CHECK_FIELD_LAYOUT(berberis::%[1]s, %[2]s, offsetof(::%[1]s, %[2]s) * 8, sizeof(std::declval<::%[1]s*>()->%[2]s) * 8);\n",
-				name,
-				field.Name())
-			if err != nil {
-				return err
-			}
-		}
-		_, err = fmt.Fprintf(w, "#endif  /* %s */\n\n", toEnumNameWithSuffix(name, "NOVERIFY"))
+			name,
+			typе.Bits(host_arch),
+			typе.Align(host_arch),
+			typе.Bits(guest_arch),
+			typе.Align(guest_arch),
+			cpp_types.Define(host_arch),
+			cpp_types.Define(guest_arch),
+			strings.Join(fields_check_berberis_host, "\n"),
+			strings.Join(fields_check_platform_host, "\n"),
+			strings.Join(fields_check_berberis_guest, "\n"),
+			strings.Join(fields_check_platform_guest, "\n"))
 		if err != nil {
 			return err
 		}
@@ -3786,6 +3874,10 @@ func isAlias(typе cpp_types.Type) bool {
 
 func isAliasOfEnum(typе cpp_types.Type) bool {
 	return cpp_types.IsKind(typе, []cpp_types.Kind{cpp_types.Alias, cpp_types.Enum})
+}
+
+func isAliasOfOpaque(typе cpp_types.Type) bool {
+	return cpp_types.IsKind(typе, []cpp_types.Kind{cpp_types.Alias, cpp_types.Opaque})
 }
 
 func isArray(typе cpp_types.Type) bool {
