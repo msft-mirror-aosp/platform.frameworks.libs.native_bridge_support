@@ -30,6 +30,7 @@ cc_library {
         // Definitions come from bionic/libc/Android.bp that force
         // the usage of the correct native allocator.
         "libc_native_allocator_defaults",
+        "keep_symbols",
     ],
     name: "libnative_bridge_guest_libc",
     overrides: ["libc"],
@@ -83,36 +84,16 @@ cc_library {
                 // For backwards-compatibility, some arm32 builtins are exported from libc.so.
                 static_libs: ["libclang_rt.builtins-exported"],
             },
-
-            // Arm 32 bit does not produce complete exidx unwind information
-            // so keep the .debug_frame which is relatively small and does
-            // include needed unwind information.
-            // See b/132992102 for details.
-            strip: {
-                keep_symbols_and_debug_frame: true,
-            },
         },
         arm64: {
             srcs: ["stubs_arm64.cpp"],
 
             version_script: ":libc.arm64.map",
-
-            // Leave the symbols in the shared library so that stack unwinders can produce
-            // meaningful name resolution.
-            strip: {
-                keep_symbols: true,
-            },
         },
         riscv64: {
             srcs: ["stubs_riscv64.cpp"],
 
             version_script: ":libc.riscv64.map",
-
-            // Leave the symbols in the shared library so that stack unwinders can produce
-            // meaningful name resolution.
-            strip: {
-                keep_symbols: true,
-            },
         },
     },
 
