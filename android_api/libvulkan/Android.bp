@@ -30,6 +30,9 @@ cc_library {
         arm64: {
             srcs: ["stubs_arm64.cc"],
         },
+        riscv64: {
+            srcs: ["stubs_riscv64.cc"],
+        },
     },
     shared_libs: [
         // libbinder.so — greylisted, not included.
@@ -38,5 +41,61 @@ cc_library {
         "libnative_bridge_guest_libnativewindow",
         // libui.so — greylisted, not included.
         "libutils",
+    ],
+}
+
+bootstrap_go_package {
+    name: "cpp_types",
+    pkgPath: "berberis/cpp_types",
+    srcs: [
+        "proxy/cpp_types.go",
+    ],
+    testSrcs: [
+        "proxy/cpp_types_test.go",
+    ],
+}
+
+bootstrap_go_package {
+    name: "vulkan_types",
+    pkgPath: "berberis/vulkan_types",
+    srcs: [
+        "proxy/vulkan_types.go",
+    ],
+    deps: ["cpp_types"],
+}
+
+bootstrap_go_package {
+    name: "vulkan_xml",
+    pkgPath: "berberis/vulkan_xml",
+    srcs: [
+        "proxy/vulkan_xml.go",
+    ],
+    deps: [
+        "cpp_types",
+        "vulkan_types",
+    ],
+    testSrcs: [
+        "proxy/vulkan_xml_test.go",
+    ],
+}
+
+blueprint_go_binary {
+    name: "gen_vulkan",
+    srcs: ["proxy/gen_vulkan.go"],
+    testSrcs: ["proxy/gen_vulkan_test.go"],
+    deps: ["vulkan_xml"],
+}
+
+filegroup {
+    name: "native_bridge_proxy_libvulkan_files",
+    srcs: [
+        "proxy/vulkan_trampolines.cc",
+    ],
+}
+
+filegroup {
+    name: "native_bridge_proxy_libvulkan_checker",
+    srcs: [
+        "proxy/emulated_api_checker.cc",
     ],
 }
