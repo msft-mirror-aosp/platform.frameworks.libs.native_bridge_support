@@ -82,7 +82,7 @@ bootstrap_go_package {
 blueprint_go_binary {
     name: "gen_vulkan",
     srcs: ["proxy/gen_vulkan.go"],
-    testSrcs: ["gen_vulkan_test.go"],
+    testSrcs: ["proxy/gen_vulkan_test.go"],
     deps: ["vulkan_xml"],
 }
 
@@ -90,5 +90,12 @@ filegroup {
     name: "native_bridge_proxy_libvulkan_files",
     srcs: [
         "proxy/vulkan_trampolines.cc",
+    ],
+}
+
+filegroup {
+    name: "native_bridge_proxy_libvulkan_checker",
+    srcs: [
+        "proxy/emulated_api_checker.cc",
     ],
 }
