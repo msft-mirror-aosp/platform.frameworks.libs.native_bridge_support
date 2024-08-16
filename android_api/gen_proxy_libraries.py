@@ -33,7 +33,9 @@ class ProxyGenerator:
                                              self.android_api_root)
 
     self.dwarf_reader = '%s/out/host/linux-x86/bin/dwarf_reader' % self.android_tree_root
+    self.gen_vulkan = '%s/out/host/linux-x86/bin/gen_vulkan' % self.android_tree_root
     self.proxy_generator = '%s/gen_known_trampolines.py' % self.android_api_root
+    self.vk_xml = '%s/external/vulkan-headers/registry/vk.xml' % self.android_tree_root
 
     self.arches = {
         'arm': '%s/out/target/product/generic_arm64/symbols/%s/lib/%s.so',
@@ -101,6 +103,9 @@ class ProxyGenerator:
 
   def build_nogrod_dwarf_reader(self):
     self._build('aosp_x86_64', 'dwarf_reader')
+
+  def build_gen_vulkan(self):
+    self._build('aosp_x86_64', 'gen_vulkan')
 
   def generate_json_files_for_arch(self, arch, path_template, library):
     library_path = path_template % (self.android_tree_root,
@@ -176,6 +181,23 @@ class ProxyGenerator:
     trampoline_out = '%s/%s/proxy/trampolines_%s-inl.h' % (
         self.android_api_root, library, trampoline_suffix)
 
+    if library == 'libvulkan':
+      print('Generating %s custom trampolines for %s' % (
+          trampoline_suffix, library))
+      os.remove(inputs[3])
+      p = subprocess.Popen([self.gen_vulkan,
+                            '--json',
+                            inputs[3],
+                            '--input',
+                            self.vk_xml,
+                            '--guest_arch',
+                            guest_json_suffix,
+                            '--host_arch',
+                            host_json_suffix],
+                           shell=False)
+    if p.wait() != 0:
+      raise Exception('Error while generating custom trampolines for %s' % library)
+
     print('Generating %s trampolines for %s, logs: %s' % (
         trampoline_suffix, library, tmp_output_trampolines[1]))
     p_trampolines = subprocess.Popen(
@@ -239,6 +261,10 @@ def main(argv):
     generator.build_source_libraries()
     print('Building nogrod dwarf reader ... ')
     generator.build_nogrod_dwarf_reader()
+
+  if args.trampolines and not args.skip_build:
+    print('Building gen_vulkan')
+    generator.build_gen_vulkan()
 
   for lib in libraries:
     if args.json:
