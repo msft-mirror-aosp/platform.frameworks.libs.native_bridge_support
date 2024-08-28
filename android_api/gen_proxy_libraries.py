@@ -195,8 +195,8 @@ class ProxyGenerator:
                             '--host_arch',
                             host_json_suffix],
                            shell=False)
-    if p.wait() != 0:
-      raise Exception('Error while generating custom trampolines for %s' % library)
+      if p.wait() != 0:
+        raise Exception('Error while generating custom trampolines for %s' % library)
 
     print('Generating %s trampolines for %s, logs: %s' % (
         trampoline_suffix, library, tmp_output_trampolines[1]))
