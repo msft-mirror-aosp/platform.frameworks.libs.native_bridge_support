@@ -161,6 +161,30 @@
       "is_compatible": true,
       "signature": "vp"
     },
+    "android_crash_detail_register": {
+      "call_method": "default",
+      "header": "android/crash_detail.h",
+      "is_compatible": true,
+      "signature": "ppipi"
+    },
+    "android_crash_detail_unregister": {
+      "call_method": "default",
+      "header": "android/crash_detail.h",
+      "is_compatible": true,
+      "signature": "vp"
+    },
+    "android_crash_detail_replace_data": {
+      "call_method": "default",
+      "header": "android/crash_detail.h",
+      "is_compatible": true,
+      "signature": "vppi"
+    },
+    "android_crash_detail_replace_name": {
+      "call_method": "default",
+      "header": "android/crash_detail.h",
+      "is_compatible": true,
+      "signature": "vppi"
+    },
     "clock_gettime": {
       "call_method": "default",
       "comment": "clock_gettime uses call to vdso symbol to avoid doing syscall, this is why we want to proxy it to the host library",
