@@ -28,8 +28,7 @@
 # NATIVE_BRIDGE_MODIFIED_GUEST_LIBS: List of modified guest libraries that require host counterpart.
 #
 
-# Note: When modifying this variable, please also update the `phony_deps` of
-#       `berberis_riscv64_to_x86_64_defaults` in
+# Note: keep in sync with `berberis_all_riscv64_to_x86_64_defaults` in
 #       frameworks/libs/binary_translation/Android.bp.
 NATIVE_BRIDGE_PRODUCT_PACKAGES := \
     libnative_bridge_vdso.native_bridge \
@@ -58,10 +57,9 @@ NATIVE_BRIDGE_PRODUCT_PACKAGES := \
 # libicui18n.bootstrap
 # libicuuc.bootstrap
 
-# Note: When modifying this variable, please also update the `phony_deps` of
-#       `berberis_riscv64_to_x86_64_defaults` in
-#       frameworks/libs/binary_translation/Android.bp.
 # Original guest libraries.
+# Note: keep in sync with `berberis_all_riscv64_to_x86_64_defaults` in
+#       frameworks/libs/binary_translation/Android.bp.
 NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libandroidicu.bootstrap \
     libcompiler_rt \
@@ -79,10 +77,9 @@ NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libutils \
     libz
 
-# Note: When modifying this variable, please also update the `phony_deps` of
-#       `berberis_riscv64_to_x86_64_defaults` in
-#       frameworks/libs/binary_translation/Android.bp.
 # These libraries need special support on the native bridge implementation side.
+# Note: keep in sync with `berberis_all_riscv64_to_x86_64_defaults` in
+#       frameworks/libs/binary_translation/Android.bp.
 NATIVE_BRIDGE_MODIFIED_GUEST_LIBS := \
     libaaudio \
     libamidi \
