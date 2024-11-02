@@ -30,12 +30,21 @@ struct CPUState {
 
   // Flags
   // clang-format off
+#if defined(__x86_64__)
   enum FlagMask {
     kFlagNegative = 1 << 15,
     kFlagZero     = 1 << 14,
     kFlagCarry    = 1 << 8,
     kFlagOverflow = 1,
   };
+#else
+  enum FlagMask {
+    kFlagNegative = 1 << 3,
+    kFlagZero     = 1 << 2,
+    kFlagCarry    = 1 << 1,
+    kFlagOverflow = 1,
+  };
+#endif
 
   static constexpr uint32_t kFpsrQcBit = 1U << 27;
 
