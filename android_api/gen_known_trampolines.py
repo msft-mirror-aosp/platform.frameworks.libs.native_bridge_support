@@ -74,6 +74,14 @@ def _get_type_str(guest_api, type_name, is_return_type):
   if kind == 'function':
     return _get_function_type_str(guest_api, type, 'auto(%s) -> %s')
 
+  # JNIEnv may be automatically converted.
+  if kind == 'pointer' and "JNIEnv" in type_name:
+    # Only support raw reference to JNIEnv.
+    # We don't have trampolines with transitive references to JNIEnv and thus
+    # don't know how to properly handle these.
+    assert(type_name == 'struct _JNIEnv*')
+    return 'JNIEnv*'
+
   # Handle pointers to functions.
   if kind == 'pointer':
     pointee_type = guest_api['types'][type['pointee_type']]
