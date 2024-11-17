@@ -1,6 +1,6 @@
 // clang-format off
 const KnownTrampoline kKnownTrampolines[] = {
-{"AMidiDevice_fromJava", GetTrampolineFunc<auto(void*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
+{"AMidiDevice_fromJava", GetTrampolineFunc<auto(JNIEnv*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"AMidiDevice_getDefaultProtocol", GetTrampolineFunc<auto(void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"AMidiDevice_getNumInputPorts", GetTrampolineFunc<auto(void*) -> int64_t>(), reinterpret_cast<void*>(NULL)},
 {"AMidiDevice_getNumOutputPorts", GetTrampolineFunc<auto(void*) -> int64_t>(), reinterpret_cast<void*>(NULL)},

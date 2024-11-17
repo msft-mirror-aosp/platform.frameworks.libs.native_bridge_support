@@ -34,11 +34,11 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"AImageDecoder_setTargetSize", GetTrampolineFunc<auto(void*, int32_t, int32_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"AImageDecoder_setUnpremultipliedRequired", GetTrampolineFunc<auto(void*, uint8_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"AndroidBitmap_compress", GetTrampolineFunc<auto(void*, int32_t, void*, int32_t, int32_t, void*, auto(*)(void*, void*, uint64_t) -> uint8_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
-{"AndroidBitmap_getDataSpace", GetTrampolineFunc<auto(void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
-{"AndroidBitmap_getHardwareBuffer", GetTrampolineFunc<auto(void*, void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
-{"AndroidBitmap_getInfo", GetTrampolineFunc<auto(void*, void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
-{"AndroidBitmap_lockPixels", GetTrampolineFunc<auto(void*, void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
-{"AndroidBitmap_unlockPixels", GetTrampolineFunc<auto(void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
+{"AndroidBitmap_getDataSpace", GetTrampolineFunc<auto(JNIEnv*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
+{"AndroidBitmap_getHardwareBuffer", GetTrampolineFunc<auto(JNIEnv*, void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
+{"AndroidBitmap_getInfo", GetTrampolineFunc<auto(JNIEnv*, void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
+{"AndroidBitmap_lockPixels", GetTrampolineFunc<auto(JNIEnv*, void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
+{"AndroidBitmap_unlockPixels", GetTrampolineFunc<auto(JNIEnv*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 };  // kKnownTrampolines
 const KnownVariable kKnownVariables[] = {
 };  // kKnownVariables

@@ -35,6 +35,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(JNI_GetDefaultJavaVMInitArgs);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniConstants_FileDescriptorClass);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniConstants_FileDescriptor_descriptor);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniConstants_FileDescriptor_init);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniConstants_FileDescriptor_setInt$);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniConstants_NIOAccessClass);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniConstants_NIOAccess_getBaseArray);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniConstants_NIOAccess_getBaseArrayOffset);
@@ -84,6 +85,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniConstants_FileDescriptorClass);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniConstants_FileDescriptor_descriptor);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniConstants_FileDescriptor_init);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniConstants_FileDescriptor_setInt$);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniConstants_NIOAccessClass);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniConstants_NIOAccess_getBaseArray);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libnativehelper.so", JniConstants_NIOAccess_getBaseArrayOffset);
