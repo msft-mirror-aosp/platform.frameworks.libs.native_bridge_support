@@ -18,6 +18,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"JniConstants_FileDescriptorClass", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JniConstants_FileDescriptor_descriptor", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JniConstants_FileDescriptor_init", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
+{"JniConstants_FileDescriptor_setInt$", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JniConstants_NIOAccessClass", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JniConstants_NIOAccess_getBaseArray", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JniConstants_NIOAccess_getBaseArrayOffset", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
