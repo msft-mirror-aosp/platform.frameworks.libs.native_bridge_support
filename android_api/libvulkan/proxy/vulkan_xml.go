@@ -279,6 +279,11 @@ var known_types = map[string]string{
 	"StdVideoH265SubLayerHrdParameters":            "vk_video/vulkan_video_codec_h265std.h",
 	"StdVideoH265VideoParameterSet":                "vk_video/vulkan_video_codec_h265std.h",
 	"StdVideoH265VpsFlags":                         "vk_video/vulkan_video_codec_h265std.h",
+	"StdVideoAV1Profile":				"vk_video/vulkan_video_codec_av1std.h",
+	"StdVideoAV1Level":				"vk_video/vulkan_video_codec_av1std.h",
+	"StdVideoAV1SequenceHeader":			"vk_video/vulkan_video_codec_av1std.h",
+	"StdVideoDecodeAV1PictureInfo":			"vk_video/vulkan_video_codec_av1std_decode.h",
+	"StdVideoDecodeAV1ReferenceInfo":		"vk_video/vulkan_video_codec_av1std_decode.h",
 	"uint8_t":                                      "vk_platform",
 	"uint16_t":                                     "vk_platform",
 	"uint32_t":                                     "vk_platform",
@@ -325,6 +330,8 @@ var known_defines = map[string]string{
 		"#define <name>VK_API_VERSION_1_2</name> <type>VK_MAKE_API_VERSION</type>(0, 1, 2, 0)// Patch version should always be set to 0",
 	"VK_API_VERSION_1_3": "// Vulkan 1.3 version number\n" +
 		"#define <name>VK_API_VERSION_1_3</name> <type>VK_MAKE_API_VERSION</type>(0, 1, 3, 0)// Patch version should always be set to 0",
+	"VK_API_VERSION_1_4": "// Vulkan 1.4 version number\n" +
+		"#define <name>VK_API_VERSION_1_4</name> <type>VK_MAKE_API_VERSION</type>(0, 1, 4, 0)// Patch version should always be set to 0",
 	"VKSC_API_VERSION_1_0": "// Vulkan SC 1.0 version number\n#define <name>VKSC_API_VERSION_1_0</name> <type>VK_MAKE_API_VERSION</type>(VKSC_API_VARIANT, 1, 0, 0)// Patch version should always be set to 0",
 	"VK_HEADER_VERSION": "// Version of this file\n" +
 		"#define <name>VK_HEADER_VERSION</name> ",
@@ -748,31 +755,31 @@ func vulkanBaseTypeFromXML(typе *typeInfo) (cpp_types.Type, error) {
 		return cpp_types.OpaqueType("CAMetalLayer"), nil
 	}
 	if typе.Name == "MTLDevice_id" {
-		if RawXML != "#ifdef __OBJC__ @protocol MTLDevice; typedef id&lt;MTLDevice&gt; MTLDevice_id; #else typedef void* <name>MTLDevice_id</name>; #endif" {
+		if RawXML != "#ifdef __OBJC__ @protocol MTLDevice; typedef __unsafe_unretained id&lt;MTLDevice&gt; MTLDevice_id; #else typedef void* <name>MTLDevice_id</name>; #endif" {
 			return nil, errors.New("Unexpected define \"" + typе.Name + "\": \"" + typе.RawXML + "\"\"")
 		}
 		return cpp_types.PointerType(cpp_types.VoidType), nil
 	}
 	if typе.Name == "MTLCommandQueue_id" {
-		if RawXML != "#ifdef __OBJC__ @protocol MTLCommandQueue; typedef id&lt;MTLCommandQueue&gt; MTLCommandQueue_id; #else typedef void* <name>MTLCommandQueue_id</name>; #endif" {
+		if RawXML != "#ifdef __OBJC__ @protocol MTLCommandQueue; typedef __unsafe_unretained id&lt;MTLCommandQueue&gt; MTLCommandQueue_id; #else typedef void* <name>MTLCommandQueue_id</name>; #endif" {
 			return nil, errors.New("Unexpected define \"" + typе.Name + "\": \"" + typе.RawXML + "\"\"")
 		}
 		return cpp_types.PointerType(cpp_types.VoidType), nil
 	}
 	if typе.Name == "MTLBuffer_id" {
-		if RawXML != "#ifdef __OBJC__ @protocol MTLBuffer; typedef id&lt;MTLBuffer&gt; MTLBuffer_id; #else typedef void* <name>MTLBuffer_id</name>; #endif" {
+		if RawXML != "#ifdef __OBJC__ @protocol MTLBuffer; typedef __unsafe_unretained id&lt;MTLBuffer&gt; MTLBuffer_id; #else typedef void* <name>MTLBuffer_id</name>; #endif" {
 			return nil, errors.New("Unexpected define \"" + typе.Name + "\": \"" + typе.RawXML + "\"\"")
 		}
 		return cpp_types.PointerType(cpp_types.VoidType), nil
 	}
 	if typе.Name == "MTLTexture_id" {
-		if RawXML != "#ifdef __OBJC__ @protocol MTLTexture; typedef id&lt;MTLTexture&gt; MTLTexture_id; #else typedef void* <name>MTLTexture_id</name>; #endif" {
+		if RawXML != "#ifdef __OBJC__ @protocol MTLTexture; typedef __unsafe_unretained id&lt;MTLTexture&gt; MTLTexture_id; #else typedef void* <name>MTLTexture_id</name>; #endif" {
 			return nil, errors.New("Unexpected define \"" + typе.Name + "\": \"" + typе.RawXML + "\"\"")
 		}
 		return cpp_types.PointerType(cpp_types.VoidType), nil
 	}
 	if typе.Name == "MTLSharedEvent_id" {
-		if RawXML != "#ifdef __OBJC__ @protocol MTLSharedEvent; typedef id&lt;MTLSharedEvent&gt; MTLSharedEvent_id; #else typedef void* <name>MTLSharedEvent_id</name>; #endif" {
+		if RawXML != "#ifdef __OBJC__ @protocol MTLSharedEvent; typedef __unsafe_unretained id&lt;MTLSharedEvent&gt; MTLSharedEvent_id; #else typedef void* <name>MTLSharedEvent_id</name>; #endif" {
 			return nil, errors.New("Unexpected define \"" + typе.Name + "\": \"" + typе.RawXML + "\"\"")
 		}
 		return cpp_types.PointerType(cpp_types.VoidType), nil
@@ -1215,6 +1222,10 @@ func vulkanStructuralTypeMembersFromXML(name string, members []structuralMemberI
 				element_type.Kind(cpp_types.FirstArch) != cpp_types.UInt32T {
 				return nil, errors.New("Unexpected altlen field in \"" + member.Name + "\"")
 			}
+			// Weird case with constant 1 length. This is currently only used by GetDeviceSubpassShadingMaxWorkgroupSize,
+			// for a VkExtent2D, which should not require translation.
+		} else if member.Length == "1" {
+			// TODO(b/372341855): Figure out what we really need to do in this case.
 		} else if member.Length != "" && member.Length != "null-terminated" && !strings.HasSuffix(member.Length, ",null-terminated") {
 			if length, ok := field_map[member.Length]; ok {
 				field_map[member.Name].length = length
