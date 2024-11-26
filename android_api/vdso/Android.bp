@@ -23,9 +23,9 @@ cc_library_shared {
     enabled: false,
     native_bridge_supported: true,
     target: {
-       native_bridge: {
-           enabled: true,
-       }
+        native_bridge: {
+            enabled: true,
+        },
     },
     arch: {
         arm64: {
@@ -47,6 +47,9 @@ cc_library_shared {
         // TODO(b/146399556): Use -z,separate-code to ensure that each segment's p_offset and
         // p_vaddr values are equal to work around problems with __libc_init_vdso in Bionic.
         "-Wl,-z,separate-code",
+        // We need sysv hash style to support vdso-parser:
+        // https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/vDSO/parse_vdso.c
+        "-Wl,--hash-style=both",
     ],
     system_shared_libs: [],
     // Opt out of native_coverage when opting out of system_shared_libs
