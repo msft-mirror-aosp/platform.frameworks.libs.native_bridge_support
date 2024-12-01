@@ -919,7 +919,8 @@ func getRequiredConversions(commands map[string]cpp_types.Type, types map[string
 						base_name == "VkDrmFormatModifierProperties2EXT" ||
 						base_name == "VkDrmFormatModifierPropertiesEXT" ||
 						base_name == "VkRenderPassCreationFeedbackInfoEXT" ||
-						base_name == "VkRenderPassSubpassFeedbackInfoEXT" {
+						base_name == "VkRenderPassSubpassFeedbackInfoEXT" ||
+						base_name == "VkPhysicalDeviceLayeredApiPropertiesListKHR" {
 						// TODO(b/171255170): Process the optional structures correctly.
 					} else if base_name == "VkPipelineCreationFeedback" {
 						// VkPipelineCreationFeedback is referred from input data structure VkPipelineCreationFeedbackCreateInfo
