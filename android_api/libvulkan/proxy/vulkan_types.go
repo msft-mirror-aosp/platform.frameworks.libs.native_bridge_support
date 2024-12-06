@@ -185,6 +185,12 @@ func PlatformTypes() map[string]cpp_types.Type {
 		"StdVideoH265SubLayerHrdParameters":            cpp_types.VoidType, // Treat as opaque type for now.
 		"StdVideoH265VideoParameterSet":                cpp_types.VoidType, // Treat as opaque type for now.
 		"StdVideoH265VpsFlags":                         cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoAV1Profile":				cpp_types.IntType,  // Treat as opaque type for now.
+		"StdVideoAV1Level":				cpp_types.IntType,  // Treat as opaque type for now.
+		"StdVideoAV1SequenceHeader":			cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoDecodeAV1PictureInfo":			cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoDecodeAV1ReferenceInfo":		cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoDecodeAV1ReferenceInfoFlags":		cpp_types.IntType,
 		"uint8_t":                                      cpp_types.UInt8TType,
 		"uint16_t":                                     cpp_types.UInt16TType,
 		"uint32_t":                                     cpp_types.UInt32TType,
