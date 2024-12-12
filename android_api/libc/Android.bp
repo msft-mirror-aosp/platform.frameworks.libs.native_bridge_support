@@ -84,16 +84,32 @@ cc_library {
                 // For backwards-compatibility, some arm32 builtins are exported from libc.so.
                 static_libs: ["libclang_rt.builtins-exported"],
             },
+
+            // arm32 does not produce complete exidx unwind information,
+            // so keep the .debug_frame which is relatively small and does
+            // include needed unwind information.
+            // See b/132992102 for details.
+            strip: {
+                keep_symbols_and_debug_frame: true,
+            },
         },
         arm64: {
             srcs: ["stubs_arm64.cpp"],
 
             version_script: ":libc.arm64.map",
+
+            strip: {
+                keep_symbols: true,
+            },
         },
         riscv64: {
             srcs: ["stubs_riscv64.cpp"],
 
             version_script: ":libc.riscv64.map",
+
+            strip: {
+                keep_symbols: true,
+            },
         },
     },
 
@@ -119,10 +135,6 @@ cc_library {
 
     system_shared_libs: [],
     stl: "none",
-
-    strip: {
-        keep_symbols: true,
-    },
 
     sanitize: {
         never: true,
