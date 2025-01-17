@@ -43,10 +43,15 @@ cc_library_shared {
     ldflags: [
         "-Wl,--exclude-libs,ALL",
         "-Wl,-soname,linux-vdso.so.1",
-
         // TODO(b/146399556): Use -z,separate-code to ensure that each segment's p_offset and
         // p_vaddr values are equal to work around problems with __libc_init_vdso in Bionic.
         "-Wl,-z,separate-code",
+        // Load image with the page size offset, so that we don't have zero-vaddr PT_LOAD segments.
+        // This is a workaround for the fact that Glibc doesn't properly support such VDSOs.
+        // See b/376574008.
+        // TODO(b/376574008): Page size may need to be tuned for
+        // go/android-dev/guide/practices/page-sizes unless linker automatically aligns it.
+        "-Wl,--image-base=0x4000",
         // We need sysv hash style to support vdso-parser:
         // https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/vDSO/parse_vdso.c
         "-Wl,--hash-style=both",
