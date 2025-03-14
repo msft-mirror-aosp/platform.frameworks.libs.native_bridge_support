@@ -42,6 +42,7 @@
     rtld_db_dlactivity;
     __native_bridge_config_static_tls;
     __native_bridge_get_host_pthread;
+    __loader_android_set_16kb_appcompat_mode;
   local:
     *;
 };
