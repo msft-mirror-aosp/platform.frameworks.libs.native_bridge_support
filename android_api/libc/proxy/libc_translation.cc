@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
+// TODO(ag/32743852): Apply this define more narrowly to malloc_usable_size
+// by pulling this to a separate file
+#define __BIONIC_DISABLE_MALLOC_USABLE_SIZE_FORTIFY_WARNINGS
+
 #include "berberis/guest_abi/function_wrappers.h"
 #include "berberis/proxy_loader/proxy_library_builder.h"
 #include "cxa_trampolines.h"
