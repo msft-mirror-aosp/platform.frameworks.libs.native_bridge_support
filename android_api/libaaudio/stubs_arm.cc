@@ -17,6 +17,8 @@
 // clang-format off
 #include "native_bridge_support/vdso/interceptable_functions.h"
 
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_addTag);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_clearTags);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_delete);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_openStream);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setAllowedCapturePolicy);
@@ -35,6 +37,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setInputPreset);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setIsContentSpatialized);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setPackageName);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setPerformanceMode);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setPresentationEndCallback);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setPrivacySensitive);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setSampleRate);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setSamplesPerFrame);
@@ -43,6 +46,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setSharingMode);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setSpatializationBehavior);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStreamBuilder_setUsage);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_close);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_destroyTags);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getAllowedCapturePolicy);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getBufferCapacityInFrames);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getBufferSizeInFrames);
@@ -50,6 +54,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getChannelCount);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getChannelMask);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getContentType);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getDeviceId);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getDeviceIds);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getDirection);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getFormat);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getFramesPerBurst);
@@ -60,6 +65,8 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getHardwareChannelCount);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getHardwareFormat);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getHardwareSampleRate);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getInputPreset);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getOffloadDelay);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getOffloadPadding);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getPerformanceMode);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getSampleRate);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getSamplesPerFrame);
@@ -73,6 +80,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_getXRunCount);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_isContentSpatialized);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_isMMapUsed);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_isPrivacySensitive);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_obtainTags);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_read);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_release);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_requestFlush);
@@ -80,15 +88,21 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_requestPause);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_requestStart);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_requestStop);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_setBufferSizeInFrames);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_setOffloadDelayPadding);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_setOffloadEndOfStream);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_waitForStateChange);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudioStream_write);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudio_convertResultToText);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudio_convertStreamStateToText);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudio_createStreamBuilder);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudio_getMMapPolicy);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudio_getPlatformMMapExclusivePolicy);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudio_getPlatformMMapPolicy);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AAudio_setMMapPolicy);
 
 static void __attribute__((constructor(0))) init_stub_library() {
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_addTag);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_clearTags);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_delete);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_openStream);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setAllowedCapturePolicy);
@@ -107,6 +121,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setIsContentSpatialized);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setPackageName);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setPerformanceMode);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setPresentationEndCallback);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setPrivacySensitive);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setSampleRate);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setSamplesPerFrame);
@@ -115,6 +130,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setSpatializationBehavior);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStreamBuilder_setUsage);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_close);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_destroyTags);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getAllowedCapturePolicy);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getBufferCapacityInFrames);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getBufferSizeInFrames);
@@ -122,6 +138,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getChannelMask);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getContentType);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getDeviceId);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getDeviceIds);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getDirection);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getFormat);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getFramesPerBurst);
@@ -132,6 +149,8 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getHardwareFormat);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getHardwareSampleRate);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getInputPreset);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getOffloadDelay);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getOffloadPadding);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getPerformanceMode);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getSampleRate);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_getSamplesPerFrame);
@@ -145,6 +164,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_isContentSpatialized);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_isMMapUsed);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_isPrivacySensitive);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_obtainTags);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_read);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_release);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_requestFlush);
@@ -152,12 +172,16 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_requestStart);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_requestStop);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_setBufferSizeInFrames);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_setOffloadDelayPadding);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_setOffloadEndOfStream);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_waitForStateChange);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudioStream_write);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudio_convertResultToText);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudio_convertStreamStateToText);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudio_createStreamBuilder);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudio_getMMapPolicy);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudio_getPlatformMMapExclusivePolicy);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudio_getPlatformMMapPolicy);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libaaudio.so", AAudio_setMMapPolicy);
 }
 // clang-format on

@@ -17,6 +17,9 @@
 // clang-format off
 #include "native_bridge_support/vdso/interceptable_functions.h"
 
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraCaptureSessionShared_logicalCamera_startStreaming);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraCaptureSessionShared_startStreaming);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraCaptureSessionShared_stopStreaming);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraCaptureSession_abortCaptures);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraCaptureSession_capture);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraCaptureSession_captureV2);
@@ -44,7 +47,9 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_delete);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_deleteCameraIdList);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_getCameraCharacteristics);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_getCameraIdList);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_isCameraDeviceSharingSupported);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_openCamera);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_openSharedCamera);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_registerAvailabilityCallback);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_registerExtendedAvailabilityCallback);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACameraManager_unregisterAvailabilityCallback);
@@ -91,6 +96,9 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACaptureSessionSharedOutput_create);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ACaptureSessionSharedOutput_remove);
 
 static void __attribute__((constructor(0))) init_stub_library() {
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraCaptureSessionShared_logicalCamera_startStreaming);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraCaptureSessionShared_startStreaming);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraCaptureSessionShared_stopStreaming);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraCaptureSession_abortCaptures);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraCaptureSession_capture);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraCaptureSession_captureV2);
@@ -118,7 +126,9 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_deleteCameraIdList);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_getCameraCharacteristics);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_getCameraIdList);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_isCameraDeviceSharingSupported);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_openCamera);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_openSharedCamera);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_registerAvailabilityCallback);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_registerExtendedAvailabilityCallback);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libcamera2ndk.so", ACameraManager_unregisterAvailabilityCallback);
