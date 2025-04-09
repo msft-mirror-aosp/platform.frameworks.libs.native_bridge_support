@@ -1,6 +1,14 @@
 {
 	"symbols" : 
 	{
+		"AAudioStreamBuilder_addTag" : 
+		{
+			"type" : "func AAudioStreamBuilder_addTag"
+		},
+		"AAudioStreamBuilder_clearTags" : 
+		{
+			"type" : "func AAudioStreamBuilder_clearTags"
+		},
 		"AAudioStreamBuilder_delete" : 
 		{
 			"type" : "func AAudioStreamBuilder_delete"
@@ -73,6 +81,10 @@
 		{
 			"type" : "func AAudioStreamBuilder_setPerformanceMode"
 		},
+		"AAudioStreamBuilder_setPresentationEndCallback" : 
+		{
+			"type" : "func AAudioStreamBuilder_setPresentationEndCallback"
+		},
 		"AAudioStreamBuilder_setPrivacySensitive" : 
 		{
 			"type" : "func AAudioStreamBuilder_setPrivacySensitive"
@@ -105,6 +117,10 @@
 		{
 			"type" : "func AAudioStream_close"
 		},
+		"AAudioStream_destroyTags" : 
+		{
+			"type" : "func AAudioStream_destroyTags"
+		},
 		"AAudioStream_getAllowedCapturePolicy" : 
 		{
 			"type" : "func AAudioStream_getAllowedCapturePolicy"
@@ -132,6 +148,10 @@
 		"AAudioStream_getDeviceId" : 
 		{
 			"type" : "func AAudioStream_getDeviceId"
+		},
+		"AAudioStream_getDeviceIds" : 
+		{
+			"type" : "func AAudioStream_getDeviceIds"
 		},
 		"AAudioStream_getDirection" : 
 		{
@@ -172,6 +192,14 @@
 		"AAudioStream_getInputPreset" : 
 		{
 			"type" : "func AAudioStream_getInputPreset"
+		},
+		"AAudioStream_getOffloadDelay" : 
+		{
+			"type" : "func AAudioStream_getOffloadDelay"
+		},
+		"AAudioStream_getOffloadPadding" : 
+		{
+			"type" : "func AAudioStream_getOffloadPadding"
 		},
 		"AAudioStream_getPerformanceMode" : 
 		{
@@ -225,6 +253,10 @@
 		{
 			"type" : "func AAudioStream_isPrivacySensitive"
 		},
+		"AAudioStream_obtainTags" : 
+		{
+			"type" : "func AAudioStream_obtainTags"
+		},
 		"AAudioStream_read" : 
 		{
 			"type" : "func AAudioStream_read"
@@ -253,6 +285,14 @@
 		{
 			"type" : "func AAudioStream_setBufferSizeInFrames"
 		},
+		"AAudioStream_setOffloadDelayPadding" : 
+		{
+			"type" : "func AAudioStream_setOffloadDelayPadding"
+		},
+		"AAudioStream_setOffloadEndOfStream" : 
+		{
+			"type" : "func AAudioStream_setOffloadEndOfStream"
+		},
 		"AAudioStream_waitForStateChange" : 
 		{
 			"type" : "func AAudioStream_waitForStateChange"
@@ -276,6 +316,14 @@
 		"AAudio_getMMapPolicy" : 
 		{
 			"type" : "func AAudio_getMMapPolicy"
+		},
+		"AAudio_getPlatformMMapExclusivePolicy" : 
+		{
+			"type" : "func AAudio_getPlatformMMapExclusivePolicy"
+		},
+		"AAudio_getPlatformMMapPolicy" : 
+		{
+			"type" : "func AAudio_getPlatformMMapPolicy"
 		},
 		"AAudio_setMMapPolicy" : 
 		{
@@ -330,6 +378,50 @@
 			"kind" : "pointer",
 			"pointee_type" : "func #2",
 			"size" : 32
+		},
+		"func #3" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamStruct*",
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #3*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #3",
+			"size" : 32
+		},
+		"func AAudioStreamBuilder_addTag" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamBuilderStruct*",
+				"unsigned char8 const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AAudioStreamBuilder_clearTags" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamBuilderStruct*"
+			],
+			"return_type" : "void",
+			"size" : 0
 		},
 		"func AAudioStreamBuilder_delete" : 
 		{
@@ -566,6 +658,20 @@
 			"return_type" : "void",
 			"size" : 0
 		},
+		"func AAudioStreamBuilder_setPresentationEndCallback" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamBuilderStruct*",
+				"func #3*",
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func AAudioStreamBuilder_setPrivacySensitive" : 
 		{
 			"has_variadic_args" : false,
@@ -669,6 +775,19 @@
 			"return_type" : "int32",
 			"size" : 0
 		},
+		"func AAudioStream_destroyTags" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamStruct*",
+				"unsigned char8**"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func AAudioStream_getAllowedCapturePolicy" : 
 		{
 			"has_variadic_args" : false,
@@ -749,6 +868,20 @@
 			"params" : 
 			[
 				"struct AAudioStreamStruct*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AAudioStream_getDeviceIds" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamStruct*",
+				"int32*",
+				"int32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -862,6 +995,30 @@
 			"size" : 0
 		},
 		"func AAudioStream_getInputPreset" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamStruct*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AAudioStream_getOffloadDelay" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamStruct*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AAudioStream_getOffloadPadding" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
@@ -1032,6 +1189,19 @@
 			"return_type" : "bool",
 			"size" : 0
 		},
+		"func AAudioStream_obtainTags" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamStruct*",
+				"unsigned char8***"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
 		"func AAudioStream_read" : 
 		{
 			"has_variadic_args" : false,
@@ -1120,6 +1290,32 @@
 			"return_type" : "int32",
 			"size" : 0
 		},
+		"func AAudioStream_setOffloadDelayPadding" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamStruct*",
+				"int32",
+				"int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AAudioStream_setOffloadEndOfStream" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AAudioStreamStruct*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
 		"func AAudioStream_waitForStateChange" : 
 		{
 			"has_variadic_args" : false,
@@ -1192,6 +1388,32 @@
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : [],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AAudio_getPlatformMMapExclusivePolicy" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"unsigned int32",
+				"int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AAudio_getPlatformMMapPolicy" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"unsigned int32",
+				"int32"
+			],
 			"return_type" : "int32",
 			"size" : 0
 		},
@@ -1279,6 +1501,24 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "unsigned char8 const",
+			"size" : 32
+		},
+		"unsigned char8*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "unsigned char8",
+			"size" : 32
+		},
+		"unsigned char8**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "unsigned char8*",
+			"size" : 32
+		},
+		"unsigned char8***" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "unsigned char8**",
 			"size" : 32
 		},
 		"unsigned int32" : 

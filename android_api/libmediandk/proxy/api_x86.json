@@ -1,6 +1,118 @@
 {
 	"symbols" : 
 	{
+		"ACodecAudioCapabilities_getBitrateRange" : 
+		{
+			"type" : "func ACodecAudioCapabilities_getBitrateRange"
+		},
+		"ACodecAudioCapabilities_getInputChannelCountRanges" : 
+		{
+			"type" : "func ACodecAudioCapabilities_getInputChannelCountRanges"
+		},
+		"ACodecAudioCapabilities_getMaxInputChannelCount" : 
+		{
+			"type" : "func ACodecAudioCapabilities_getMaxInputChannelCount"
+		},
+		"ACodecAudioCapabilities_getMinInputChannelCount" : 
+		{
+			"type" : "func ACodecAudioCapabilities_getMinInputChannelCount"
+		},
+		"ACodecAudioCapabilities_getSupportedSampleRateRanges" : 
+		{
+			"type" : "func ACodecAudioCapabilities_getSupportedSampleRateRanges"
+		},
+		"ACodecAudioCapabilities_getSupportedSampleRates" : 
+		{
+			"type" : "func ACodecAudioCapabilities_getSupportedSampleRates"
+		},
+		"ACodecAudioCapabilities_isSampleRateSupported" : 
+		{
+			"type" : "func ACodecAudioCapabilities_isSampleRateSupported"
+		},
+		"ACodecEncoderCapabilities_getComplexityRange" : 
+		{
+			"type" : "func ACodecEncoderCapabilities_getComplexityRange"
+		},
+		"ACodecEncoderCapabilities_getQualityRange" : 
+		{
+			"type" : "func ACodecEncoderCapabilities_getQualityRange"
+		},
+		"ACodecEncoderCapabilities_isBitrateModeSupported" : 
+		{
+			"type" : "func ACodecEncoderCapabilities_isBitrateModeSupported"
+		},
+		"ACodecPerformancePoint_covers" : 
+		{
+			"type" : "func ACodecPerformancePoint_covers"
+		},
+		"ACodecPerformancePoint_coversFormat" : 
+		{
+			"type" : "func ACodecPerformancePoint_coversFormat"
+		},
+		"ACodecPerformancePoint_create" : 
+		{
+			"type" : "func ACodecPerformancePoint_create"
+		},
+		"ACodecPerformancePoint_destroy" : 
+		{
+			"type" : "func ACodecPerformancePoint_destroy"
+		},
+		"ACodecPerformancePoint_equals" : 
+		{
+			"type" : "func ACodecPerformancePoint_equals"
+		},
+		"ACodecVideoCapabilities_areSizeAndRateSupported" : 
+		{
+			"type" : "func ACodecVideoCapabilities_areSizeAndRateSupported"
+		},
+		"ACodecVideoCapabilities_getAchievableFrameRatesFor" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getAchievableFrameRatesFor"
+		},
+		"ACodecVideoCapabilities_getBitrateRange" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getBitrateRange"
+		},
+		"ACodecVideoCapabilities_getHeightAlignment" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getHeightAlignment"
+		},
+		"ACodecVideoCapabilities_getNextSupportedPerformancePoint" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getNextSupportedPerformancePoint"
+		},
+		"ACodecVideoCapabilities_getSupportedFrameRates" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getSupportedFrameRates"
+		},
+		"ACodecVideoCapabilities_getSupportedFrameRatesFor" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getSupportedFrameRatesFor"
+		},
+		"ACodecVideoCapabilities_getSupportedHeights" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getSupportedHeights"
+		},
+		"ACodecVideoCapabilities_getSupportedHeightsFor" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getSupportedHeightsFor"
+		},
+		"ACodecVideoCapabilities_getSupportedWidths" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getSupportedWidths"
+		},
+		"ACodecVideoCapabilities_getSupportedWidthsFor" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getSupportedWidthsFor"
+		},
+		"ACodecVideoCapabilities_getWidthAlignment" : 
+		{
+			"type" : "func ACodecVideoCapabilities_getWidthAlignment"
+		},
+		"ACodecVideoCapabilities_isSizeSupported" : 
+		{
+			"type" : "func ACodecVideoCapabilities_isSizeSupported"
+		},
 		"AImageReader_acquireLatestImage" : 
 		{
 			"type" : "func AImageReader_acquireLatestImage"
@@ -64,6 +176,10 @@
 		"AImageReader_setImageListener" : 
 		{
 			"type" : "func AImageReader_setImageListener"
+		},
+		"AImageReader_setUsage" : 
+		{
+			"type" : "func AImageReader_setUsage"
 		},
 		"AImage_delete" : 
 		{
@@ -733,6 +849,134 @@
 		{
 			"type" : "func AMediaCodecCryptoInfo_setPattern"
 		},
+		"AMediaCodecInfo_FEATURE_AdaptivePlayback" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_DetachedSurface" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_DynamicColorAspects" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_DynamicTimestamp" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_EncodingStatistics" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_FrameParsing" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_HdrEditing" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_HlgEditing" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_IntraRefresh" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_LowLatency" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_MultipleFrames" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_PartialFrame" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_QpBounds" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_Roi" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_SecurePlayback" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_FEATURE_TunneledPlayback" : 
+		{
+			"type" : "char8 const*"
+		},
+		"AMediaCodecInfo_getAudioCapabilities" : 
+		{
+			"type" : "func AMediaCodecInfo_getAudioCapabilities"
+		},
+		"AMediaCodecInfo_getCanonicalName" : 
+		{
+			"type" : "func AMediaCodecInfo_getCanonicalName"
+		},
+		"AMediaCodecInfo_getEncoderCapabilities" : 
+		{
+			"type" : "func AMediaCodecInfo_getEncoderCapabilities"
+		},
+		"AMediaCodecInfo_getKind" : 
+		{
+			"type" : "func AMediaCodecInfo_getKind"
+		},
+		"AMediaCodecInfo_getMaxSupportedInstances" : 
+		{
+			"type" : "func AMediaCodecInfo_getMaxSupportedInstances"
+		},
+		"AMediaCodecInfo_getMediaCodecInfoType" : 
+		{
+			"type" : "func AMediaCodecInfo_getMediaCodecInfoType"
+		},
+		"AMediaCodecInfo_getMediaType" : 
+		{
+			"type" : "func AMediaCodecInfo_getMediaType"
+		},
+		"AMediaCodecInfo_getVideoCapabilities" : 
+		{
+			"type" : "func AMediaCodecInfo_getVideoCapabilities"
+		},
+		"AMediaCodecInfo_isFeatureRequired" : 
+		{
+			"type" : "func AMediaCodecInfo_isFeatureRequired"
+		},
+		"AMediaCodecInfo_isFeatureSupported" : 
+		{
+			"type" : "func AMediaCodecInfo_isFeatureSupported"
+		},
+		"AMediaCodecInfo_isFormatSupported" : 
+		{
+			"type" : "func AMediaCodecInfo_isFormatSupported"
+		},
+		"AMediaCodecInfo_isVendor" : 
+		{
+			"type" : "func AMediaCodecInfo_isVendor"
+		},
+		"AMediaCodecStore_findNextDecoderForFormat" : 
+		{
+			"type" : "func AMediaCodecStore_findNextDecoderForFormat"
+		},
+		"AMediaCodecStore_findNextEncoderForFormat" : 
+		{
+			"type" : "func AMediaCodecStore_findNextEncoderForFormat"
+		},
+		"AMediaCodecStore_getCodecInfo" : 
+		{
+			"type" : "func AMediaCodecStore_getCodecInfo"
+		},
+		"AMediaCodecStore_getSupportedMediaTypes" : 
+		{
+			"type" : "func AMediaCodecStore_getSupportedMediaTypes"
+		},
 		"AMediaCodec_configure" : 
 		{
 			"type" : "func AMediaCodec_configure"
@@ -1290,6 +1534,18 @@
 			"pointee_type" : "char8*",
 			"size" : 32
 		},
+		"char8[0]" : 
+		{
+			"element_type" : "char8",
+			"kind" : "array",
+			"size" : 0
+		},
+		"char8[11]" : 
+		{
+			"element_type" : "char8",
+			"kind" : "array",
+			"size" : 88
+		},
 		"class AImageReader::CallbackHandler" : 
 		{
 			"fields" : 
@@ -1395,7 +1651,7 @@
 				{
 					"name" : "_vptr$DataSourceBase",
 					"offset" : 0,
-					"type" : "func #7**"
+					"type" : "func #5**"
 				}
 			],
 			"inheritance" : [],
@@ -1409,7 +1665,7 @@
 				{
 					"name" : "_vptr$IDrmClient",
 					"offset" : 0,
-					"type" : "func #7**"
+					"type" : "func #5**"
 				}
 			],
 			"inheritance" : 
@@ -1418,16 +1674,6 @@
 			],
 			"kind" : "class",
 			"size" : 96
-		},
-		"class android::IGraphicBufferProducer" : 
-		{
-			"kind" : "incomplete"
-		},
-		"class android::IGraphicBufferProducer*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "class android::IGraphicBufferProducer",
-			"size" : 32
 		},
 		"class android::KeyedVector<android::String8, android::String8>" : 
 		{
@@ -1481,7 +1727,7 @@
 				{
 					"name" : "_vptr$List",
 					"offset" : 0,
-					"type" : "func #7**"
+					"type" : "func #5**"
 				},
 				{
 					"name" : "mpMiddle",
@@ -1530,7 +1776,7 @@
 				{
 					"name" : "_vptr$List",
 					"offset" : 0,
-					"type" : "func #7**"
+					"type" : "func #5**"
 				},
 				{
 					"name" : "mpMiddle",
@@ -1579,7 +1825,7 @@
 				{
 					"name" : "_vptr$List",
 					"offset" : 0,
-					"type" : "func #7**"
+					"type" : "func #5**"
 				},
 				{
 					"name" : "mpMiddle",
@@ -1917,20 +2163,6 @@
 			"kind" : "class",
 			"size" : 32
 		},
-		"class android::sp<android::IGraphicBufferProducer>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "m_ptr",
-					"offset" : 0,
-					"type" : "class android::IGraphicBufferProducer*"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "class",
-			"size" : 32
-		},
 		"class android::sp<android::MediaCodec>" : 
 		{
 			"fields" : 
@@ -1939,6 +2171,20 @@
 					"name" : "m_ptr",
 					"offset" : 0,
 					"type" : "struct android::MediaCodec*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 32
+		},
+		"class android::sp<android::MediaCodecInfo>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "m_ptr",
+					"offset" : 0,
+					"type" : "struct android::MediaCodecInfo*"
 				}
 			],
 			"inheritance" : [],
@@ -2031,6 +2277,28 @@
 			"kind" : "class",
 			"size" : 64
 		},
+		"class std::__1::__compressed_pair<ACodecPerformancePoint*, std::__1::allocator<ACodecPerformancePoint>>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__compressed_pair_elem<ACodecPerformancePoint*, int32, false>",
+				"struct std::__1::__compressed_pair_elem<std::__1::allocator<ACodecPerformancePoint>, int32, true>"
+			],
+			"kind" : "class",
+			"size" : 32
+		},
+		"class std::__1::__compressed_pair<AIntRange*, std::__1::allocator<AIntRange>>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__compressed_pair_elem<AIntRange*, int32, false>",
+				"struct std::__1::__compressed_pair_elem<std::__1::allocator<AIntRange>, int32, true>"
+			],
+			"kind" : "class",
+			"size" : 32
+		},
 		"class std::__1::__compressed_pair<android::CpuConsumer::LockedBuffer*, std::__1::default_delete<android::CpuConsumer::LockedBuffer>>" : 
 		{
 			"fields" : [],
@@ -2041,6 +2309,244 @@
 			],
 			"kind" : "class",
 			"size" : 32
+		},
+		"class std::__1::__compressed_pair<int32*, std::__1::allocator<int32>>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__compressed_pair_elem<int32*, int32, false>",
+				"struct std::__1::__compressed_pair_elem<std::__1::allocator<int32>, int32, true>"
+			],
+			"kind" : "class",
+			"size" : 32
+		},
+		"class std::__1::__compressed_pair<std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__rep, std::__1::allocator<char8>>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__compressed_pair_elem<std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__rep, int32, false>",
+				"struct std::__1::__compressed_pair_elem<std::__1::allocator<char8>, int32, true>"
+			],
+			"kind" : "class",
+			"size" : 96
+		},
+		"class std::__1::__shared_weak_count" : 
+		{
+			"kind" : "incomplete"
+		},
+		"class std::__1::__shared_weak_count*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "class std::__1::__shared_weak_count",
+			"size" : 32
+		},
+		"class std::__1::allocator<ACodecPerformancePoint>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__non_trivial_if<true, std::__1::allocator<ACodecPerformancePoint>>"
+			],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::allocator<AIntRange>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__non_trivial_if<true, std::__1::allocator<AIntRange>>"
+			],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::allocator<char8>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__non_trivial_if<true, std::__1::allocator<char8>>"
+			],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::allocator<int32>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__non_trivial_if<true, std::__1::allocator<int32>>"
+			],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__r_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair<std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__rep, std::__1::allocator<char8>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 96
+		},
+		"class std::__1::shared_ptr<ACodecAudioCapabilities const>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct ACodecAudioCapabilities const*"
+				},
+				{
+					"name" : "__cntrl_",
+					"offset" : 32,
+					"type" : "class std::__1::__shared_weak_count*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
+		},
+		"class std::__1::shared_ptr<ACodecEncoderCapabilities const>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct ACodecEncoderCapabilities const*"
+				},
+				{
+					"name" : "__cntrl_",
+					"offset" : 32,
+					"type" : "class std::__1::__shared_weak_count*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
+		},
+		"class std::__1::shared_ptr<ACodecVideoCapabilities const>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct ACodecVideoCapabilities const*"
+				},
+				{
+					"name" : "__cntrl_",
+					"offset" : 32,
+					"type" : "class std::__1::__shared_weak_count*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
+		},
+		"class std::__1::shared_ptr<android::AudioCapabilities>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct android::AudioCapabilities*"
+				},
+				{
+					"name" : "__cntrl_",
+					"offset" : 32,
+					"type" : "class std::__1::__shared_weak_count*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
+		},
+		"class std::__1::shared_ptr<android::CodecCapabilities>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct android::CodecCapabilities*"
+				},
+				{
+					"name" : "__cntrl_",
+					"offset" : 32,
+					"type" : "class std::__1::__shared_weak_count*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
+		},
+		"class std::__1::shared_ptr<android::EncoderCapabilities>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct android::EncoderCapabilities*"
+				},
+				{
+					"name" : "__cntrl_",
+					"offset" : 32,
+					"type" : "class std::__1::__shared_weak_count*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
+		},
+		"class std::__1::shared_ptr<android::VideoCapabilities::PerformancePoint const>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct android::VideoCapabilities::PerformancePoint const*"
+				},
+				{
+					"name" : "__cntrl_",
+					"offset" : 32,
+					"type" : "class std::__1::__shared_weak_count*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
+		},
+		"class std::__1::shared_ptr<android::VideoCapabilities>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct android::VideoCapabilities*"
+				},
+				{
+					"name" : "__cntrl_",
+					"offset" : 32,
+					"type" : "class std::__1::__shared_weak_count*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
 		},
 		"class std::__1::unique_ptr<android::CpuConsumer::LockedBuffer, std::__1::default_delete<android::CpuConsumer::LockedBuffer>>" : 
 		{
@@ -2055,6 +2561,78 @@
 			"inheritance" : [],
 			"kind" : "class",
 			"size" : 32
+		},
+		"class std::__1::vector<ACodecPerformancePoint, std::__1::allocator<ACodecPerformancePoint>>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__begin_",
+					"offset" : 0,
+					"type" : "struct ACodecPerformancePoint*"
+				},
+				{
+					"name" : "__end_",
+					"offset" : 32,
+					"type" : "struct ACodecPerformancePoint*"
+				},
+				{
+					"name" : "__end_cap_",
+					"offset" : 64,
+					"type" : "class std::__1::__compressed_pair<ACodecPerformancePoint*, std::__1::allocator<ACodecPerformancePoint>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 96
+		},
+		"class std::__1::vector<AIntRange, std::__1::allocator<AIntRange>>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__begin_",
+					"offset" : 0,
+					"type" : "struct AIntRange*"
+				},
+				{
+					"name" : "__end_",
+					"offset" : 32,
+					"type" : "struct AIntRange*"
+				},
+				{
+					"name" : "__end_cap_",
+					"offset" : 64,
+					"type" : "class std::__1::__compressed_pair<AIntRange*, std::__1::allocator<AIntRange>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 96
+		},
+		"class std::__1::vector<int32, std::__1::allocator<int32>>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__begin_",
+					"offset" : 0,
+					"type" : "int32*"
+				},
+				{
+					"name" : "__end_",
+					"offset" : 32,
+					"type" : "int32*"
+				},
+				{
+					"name" : "__end_cap_",
+					"offset" : 64,
+					"type" : "class std::__1::__compressed_pair<int32*, std::__1::allocator<int32>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 96
 		},
 		"float32" : 
 		{
@@ -2087,10 +2665,12 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaCodec*",
-				"void*"
+				"void*",
+				"int64",
+				"void*",
+				"unsigned int32"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #1*" : 
@@ -2106,12 +2686,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaDrm*",
-				"struct AMediaDrmByteArray const*",
-				"unsigned int32",
-				"int32",
-				"unsigned char8 const*",
-				"unsigned int32"
+				"struct AMediaCodec*",
+				"void*",
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2129,9 +2706,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaDrm*",
-				"struct AMediaDrmByteArray const*",
-				"int64"
+				"struct AMediaCodec*",
+				"void*",
+				"int32",
+				"struct AMediaCodecBufferInfo*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2149,11 +2727,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaDrm*",
-				"struct AMediaDrmByteArray const*",
-				"struct AMediaDrmKeyStatus const*",
-				"unsigned int32",
-				"bool"
+				"struct AMediaCodec*",
+				"void*",
+				"struct AMediaFormat*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2171,12 +2747,13 @@
 			"kind" : "function",
 			"params" : 
 			[
+				"struct AMediaCodec*",
 				"void*",
-				"int64",
-				"void*",
-				"unsigned int32"
+				"unsigned int32",
+				"int32",
+				"char8 const*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #13*" : 
@@ -2192,9 +2769,12 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"struct AMediaCodec*",
+				"void*",
+				"int64",
+				"int64"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #14*" : 
@@ -2210,7 +2790,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"void*",
+				"struct AImageReader*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2229,52 +2810,16 @@
 			"params" : 
 			[
 				"void*",
-				"int64"
+				"struct AImageReader*",
+				"struct AHardwareBuffer*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #16*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #16",
-			"size" : 32
-		},
-		"func #17" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int64*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #17*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #17",
-			"size" : 32
-		},
-		"func #18" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "unsigned int32",
-			"size" : 0
-		},
-		"func #18*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #18",
 			"size" : 32
 		},
 		"func #19" : 
@@ -2284,11 +2829,14 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"char8*",
+				"struct AMediaDrm*",
+				"struct AMediaDrmByteArray const*",
+				"unsigned int32",
+				"int32",
+				"unsigned char8 const*",
 				"unsigned int32"
 			],
-			"return_type" : "bool",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #19*" : 
@@ -2304,17 +2852,57 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaCodec*",
-				"void*",
-				"int32"
+				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #2*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #2",
+			"size" : 32
+		},
+		"func #20" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaDrm*",
+				"struct AMediaDrmByteArray const*",
+				"int64"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #20*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #20",
+			"size" : 32
+		},
+		"func #21" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaDrm*",
+				"struct AMediaDrmByteArray const*",
+				"struct AMediaDrmKeyStatus const*",
+				"unsigned int32",
+				"bool"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #21*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #21",
 			"size" : 32
 		},
 		"func #3" : 
@@ -2324,10 +2912,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaCodec*",
-				"void*",
-				"int32",
-				"struct AMediaCodecBufferInfo*"
+				"void*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2345,11 +2930,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaCodec*",
 				"void*",
-				"struct AMediaFormat*"
+				"int64"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #4*" : 
@@ -2363,21 +2947,20 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : 
-			[
-				"struct AMediaCodec*",
-				"void*",
-				"unsigned int32",
-				"int32",
-				"char8 const*"
-			],
-			"return_type" : "void",
+			"params" : [],
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #5*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #5",
+			"size" : 32
+		},
+		"func #5**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #5*",
 			"size" : 32
 		},
 		"func #6" : 
@@ -2387,12 +2970,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaCodec*",
 				"void*",
-				"int64",
-				"int64"
+				"int64*"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #6*" : 
@@ -2406,20 +2987,17 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
-			"return_type" : "int32",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func #7*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #7",
-			"size" : 32
-		},
-		"func #7**" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #7*",
 			"size" : 32
 		},
 		"func #8" : 
@@ -2430,9 +3008,10 @@
 			"params" : 
 			[
 				"void*",
-				"struct AImageReader*"
+				"char8*",
+				"unsigned int32"
 			],
-			"return_type" : "void",
+			"return_type" : "bool",
 			"size" : 0
 		},
 		"func #8*" : 
@@ -2448,9 +3027,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"struct AImageReader*",
-				"struct AHardwareBuffer*"
+				"struct AMediaCodec*",
+				"void*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2460,6 +3038,378 @@
 			"kind" : "pointer",
 			"pointee_type" : "func #9",
 			"size" : 32
+		},
+		"func ACodecAudioCapabilities_getBitrateRange" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecAudioCapabilities const*",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecAudioCapabilities_getInputChannelCountRanges" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecAudioCapabilities const*",
+				"struct AIntRange const**",
+				"unsigned int32*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecAudioCapabilities_getMaxInputChannelCount" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecAudioCapabilities const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecAudioCapabilities_getMinInputChannelCount" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecAudioCapabilities const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecAudioCapabilities_getSupportedSampleRateRanges" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecAudioCapabilities const*",
+				"struct AIntRange const**",
+				"unsigned int32*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecAudioCapabilities_getSupportedSampleRates" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecAudioCapabilities const*",
+				"int32 const**",
+				"unsigned int32*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecAudioCapabilities_isSampleRateSupported" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecAudioCapabilities const*",
+				"int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecEncoderCapabilities_getComplexityRange" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecEncoderCapabilities const*",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecEncoderCapabilities_getQualityRange" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecEncoderCapabilities const*",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecEncoderCapabilities_isBitrateModeSupported" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecEncoderCapabilities const*",
+				"unsigned int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecPerformancePoint_covers" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecPerformancePoint const*",
+				"struct ACodecPerformancePoint const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecPerformancePoint_coversFormat" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecPerformancePoint const*",
+				"struct AMediaFormat const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecPerformancePoint_create" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"int32",
+				"int32",
+				"int32"
+			],
+			"return_type" : "struct ACodecPerformancePoint*",
+			"size" : 0
+		},
+		"func ACodecPerformancePoint_destroy" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecPerformancePoint*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func ACodecPerformancePoint_equals" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecPerformancePoint const*",
+				"struct ACodecPerformancePoint const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_areSizeAndRateSupported" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"int32",
+				"int32",
+				"float64"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getAchievableFrameRatesFor" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"int32",
+				"int32",
+				"struct ADoubleRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getBitrateRange" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getHeightAlignment" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getNextSupportedPerformancePoint" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"struct ACodecPerformancePoint const**"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getSupportedFrameRates" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getSupportedFrameRatesFor" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"int32",
+				"int32",
+				"struct ADoubleRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getSupportedHeights" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getSupportedHeightsFor" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"int32",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getSupportedWidths" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getSupportedWidthsFor" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"int32",
+				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_getWidthAlignment" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ACodecVideoCapabilities_isSizeSupported" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecVideoCapabilities const*",
+				"int32",
+				"int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
 		},
 		"func AImageReader_acquireLatestImage" : 
 		{
@@ -2678,6 +3628,19 @@
 			[
 				"struct AImageReader*",
 				"struct AImageReader_ImageListener*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AImageReader_setUsage" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AImageReader*",
+				"unsigned int64"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -2994,6 +3957,208 @@
 				"struct cryptoinfo_pattern_t*"
 			],
 			"return_type" : "void",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_getAudioCapabilities" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*",
+				"struct ACodecAudioCapabilities const**"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_getCanonicalName" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*"
+			],
+			"return_type" : "char8 const*",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_getEncoderCapabilities" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*",
+				"struct ACodecEncoderCapabilities const**"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_getKind" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_getMaxSupportedInstances" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_getMediaCodecInfoType" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_getMediaType" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*"
+			],
+			"return_type" : "char8 const*",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_getVideoCapabilities" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*",
+				"struct ACodecVideoCapabilities const**"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_isFeatureRequired" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*",
+				"char8 const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_isFeatureSupported" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*",
+				"char8 const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_isFormatSupported" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*",
+				"struct AMediaFormat const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AMediaCodecInfo_isVendor" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecInfo const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AMediaCodecStore_findNextDecoderForFormat" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaFormat const*",
+				"struct AMediaCodecInfo const**"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AMediaCodecStore_findNextEncoderForFormat" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaFormat const*",
+				"struct AMediaCodecInfo const**"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AMediaCodecStore_getCodecInfo" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"char8 const*",
+				"struct AMediaCodecInfo const**"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AMediaCodecStore_getSupportedMediaTypes" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodecSupportedMediaType const**",
+				"unsigned int32*"
+			],
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func AMediaCodec_configure" : 
@@ -3366,7 +4531,7 @@
 			"params" : 
 			[
 				"struct AMediaCodec*",
-				"func #6*",
+				"func #14*",
 				"void*"
 			],
 			"return_type" : "unsigned int32",
@@ -3539,7 +4704,7 @@
 			"params" : 
 			[
 				"struct AMediaDataSource*",
-				"func #15*"
+				"func #3*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -3552,7 +4717,7 @@
 			"params" : 
 			[
 				"struct AMediaDataSource*",
-				"func #16*"
+				"func #4*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -3565,7 +4730,7 @@
 			"params" : 
 			[
 				"struct AMediaDataSource*",
-				"func #14*"
+				"func #2*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -3578,7 +4743,7 @@
 			"params" : 
 			[
 				"struct AMediaDataSource*",
-				"func #13*"
+				"func #1*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -3891,7 +5056,7 @@
 			"params" : 
 			[
 				"struct AMediaDrm*",
-				"func #10*"
+				"func #19*"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -3904,7 +5069,7 @@
 			"params" : 
 			[
 				"struct AMediaDrm*",
-				"func #11*"
+				"func #20*"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -3917,7 +5082,7 @@
 			"params" : 
 			[
 				"struct AMediaDrm*",
-				"func #12*"
+				"func #21*"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -4695,6 +5860,18 @@
 			"kind" : "const",
 			"size" : 32
 		},
+		"int32 const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "int32 const",
+			"size" : 32
+		},
+		"int32 const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "int32 const*",
+			"size" : 32
+		},
 		"int32*" : 
 		{
 			"kind" : "pointer",
@@ -4729,6 +5906,185 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "int64",
+			"size" : 32
+		},
+		"struct ACodecAudioCapabilities" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mAudioCaps",
+					"offset" : 0,
+					"type" : "class std::__1::shared_ptr<android::AudioCapabilities>"
+				},
+				{
+					"name" : "mSampleRates",
+					"offset" : 64,
+					"type" : "class std::__1::vector<int32, std::__1::allocator<int32>>"
+				},
+				{
+					"name" : "mSampleRateRanges",
+					"offset" : 160,
+					"type" : "class std::__1::vector<AIntRange, std::__1::allocator<AIntRange>>"
+				},
+				{
+					"name" : "mInputChannelCountRanges",
+					"offset" : 256,
+					"type" : "class std::__1::vector<AIntRange, std::__1::allocator<AIntRange>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 352
+		},
+		"struct ACodecAudioCapabilities const" : 
+		{
+			"base_type" : "struct ACodecAudioCapabilities",
+			"kind" : "const",
+			"size" : 352
+		},
+		"struct ACodecAudioCapabilities const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecAudioCapabilities const",
+			"size" : 32
+		},
+		"struct ACodecAudioCapabilities const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecAudioCapabilities const*",
+			"size" : 32
+		},
+		"struct ACodecEncoderCapabilities" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mEncoderCaps",
+					"offset" : 0,
+					"type" : "class std::__1::shared_ptr<android::EncoderCapabilities>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct ACodecEncoderCapabilities const" : 
+		{
+			"base_type" : "struct ACodecEncoderCapabilities",
+			"kind" : "const",
+			"size" : 64
+		},
+		"struct ACodecEncoderCapabilities const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecEncoderCapabilities const",
+			"size" : 32
+		},
+		"struct ACodecEncoderCapabilities const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecEncoderCapabilities const*",
+			"size" : 32
+		},
+		"struct ACodecPerformancePoint" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mPerformancePoint",
+					"offset" : 0,
+					"type" : "class std::__1::shared_ptr<android::VideoCapabilities::PerformancePoint const>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct ACodecPerformancePoint const" : 
+		{
+			"base_type" : "struct ACodecPerformancePoint",
+			"kind" : "const",
+			"size" : 64
+		},
+		"struct ACodecPerformancePoint const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecPerformancePoint const",
+			"size" : 32
+		},
+		"struct ACodecPerformancePoint const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecPerformancePoint const*",
+			"size" : 32
+		},
+		"struct ACodecPerformancePoint*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecPerformancePoint",
+			"size" : 32
+		},
+		"struct ACodecVideoCapabilities" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mVideoCaps",
+					"offset" : 0,
+					"type" : "class std::__1::shared_ptr<android::VideoCapabilities>"
+				},
+				{
+					"name" : "mPerformancePoints",
+					"offset" : 64,
+					"type" : "class std::__1::vector<ACodecPerformancePoint, std::__1::allocator<ACodecPerformancePoint>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct ACodecVideoCapabilities const" : 
+		{
+			"base_type" : "struct ACodecVideoCapabilities",
+			"kind" : "const",
+			"size" : 160
+		},
+		"struct ACodecVideoCapabilities const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecVideoCapabilities const",
+			"size" : 32
+		},
+		"struct ACodecVideoCapabilities const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ACodecVideoCapabilities const*",
+			"size" : 32
+		},
+		"struct ADoubleRange" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mLower",
+					"offset" : 0,
+					"type" : "float64"
+				},
+				{
+					"name" : "mUpper",
+					"offset" : 64,
+					"type" : "float64"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct ADoubleRange*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct ADoubleRange",
 			"size" : 32
 		},
 		"struct AHardwareBuffer" : 
@@ -4912,7 +6268,7 @@
 				{
 					"name" : "mUsage",
 					"offset" : 288,
-					"type" : "unsigned int64 const"
+					"type" : "unsigned int64"
 				},
 				{
 					"name" : "mMaxImages",
@@ -4950,43 +6306,38 @@
 					"type" : "unsigned int64"
 				},
 				{
-					"name" : "mProducer",
-					"offset" : 608,
-					"type" : "class android::sp<android::IGraphicBufferProducer>"
-				},
-				{
 					"name" : "mSurface",
-					"offset" : 640,
+					"offset" : 608,
 					"type" : "class android::sp<android::Surface>"
 				},
 				{
 					"name" : "mBufferItemConsumer",
-					"offset" : 672,
+					"offset" : 640,
 					"type" : "class android::sp<android::BufferItemConsumer>"
 				},
 				{
 					"name" : "mWindow",
-					"offset" : 704,
+					"offset" : 672,
 					"type" : "class android::sp<ANativeWindow>"
 				},
 				{
 					"name" : "mWindowHandle",
-					"offset" : 736,
+					"offset" : 704,
 					"type" : "struct native_handle*"
 				},
 				{
 					"name" : "mAcquiredImages",
-					"offset" : 768,
+					"offset" : 736,
 					"type" : "class android::List<AImage*>"
 				},
 				{
 					"name" : "mIsOpen",
-					"offset" : 832,
+					"offset" : 800,
 					"type" : "bool"
 				},
 				{
 					"name" : "mLock",
-					"offset" : 864,
+					"offset" : 832,
 					"type" : "class android::Mutex"
 				}
 			],
@@ -4995,13 +6346,13 @@
 				"class android::RefBase"
 			],
 			"kind" : "struct",
-			"size" : 896
+			"size" : 864
 		},
 		"struct AImageReader const" : 
 		{
 			"base_type" : "struct AImageReader",
 			"kind" : "const",
-			"size" : 896
+			"size" : 864
 		},
 		"struct AImageReader const*" : 
 		{
@@ -5099,7 +6450,7 @@
 				{
 					"name" : "onBufferRemoved",
 					"offset" : 32,
-					"type" : "func #9*"
+					"type" : "func #16*"
 				}
 			],
 			"inheritance" : [],
@@ -5124,7 +6475,7 @@
 				{
 					"name" : "onImageAvailable",
 					"offset" : 32,
-					"type" : "func #8*"
+					"type" : "func #15*"
 				}
 			],
 			"inheritance" : [],
@@ -5135,6 +6486,49 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "struct AImageReader_ImageListener",
+			"size" : 32
+		},
+		"struct AIntRange" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mLower",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "mUpper",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct AIntRange const" : 
+		{
+			"base_type" : "struct AIntRange",
+			"kind" : "const",
+			"size" : 64
+		},
+		"struct AIntRange const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AIntRange const",
+			"size" : 32
+		},
+		"struct AIntRange const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AIntRange const*",
+			"size" : 32
+		},
+		"struct AIntRange*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AIntRange",
 			"size" : 32
 		},
 		"struct AMediaCodec" : 
@@ -5174,7 +6568,7 @@
 				{
 					"name" : "mCallback",
 					"offset" : 192,
-					"type" : "func #1*"
+					"type" : "func #9*"
 				},
 				{
 					"name" : "mCallbackUserData",
@@ -5214,7 +6608,7 @@
 				{
 					"name" : "mFrameRenderedCallback",
 					"offset" : 544,
-					"type" : "func #6*"
+					"type" : "func #14*"
 				},
 				{
 					"name" : "mFrameRenderedCallbackUserData",
@@ -5329,6 +6723,68 @@
 			"pointee_type" : "struct AMediaCodecCryptoInfo",
 			"size" : 32
 		},
+		"struct AMediaCodecInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mName",
+					"offset" : 0,
+					"type" : "class std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>"
+				},
+				{
+					"name" : "mInfo",
+					"offset" : 96,
+					"type" : "class android::sp<android::MediaCodecInfo>"
+				},
+				{
+					"name" : "mMediaType",
+					"offset" : 128,
+					"type" : "class std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>"
+				},
+				{
+					"name" : "mCodecCaps",
+					"offset" : 224,
+					"type" : "class std::__1::shared_ptr<android::CodecCapabilities>"
+				},
+				{
+					"name" : "mAAudioCaps",
+					"offset" : 288,
+					"type" : "class std::__1::shared_ptr<ACodecAudioCapabilities const>"
+				},
+				{
+					"name" : "mAVideoCaps",
+					"offset" : 352,
+					"type" : "class std::__1::shared_ptr<ACodecVideoCapabilities const>"
+				},
+				{
+					"name" : "mAEncoderCaps",
+					"offset" : 416,
+					"type" : "class std::__1::shared_ptr<ACodecEncoderCapabilities const>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 480
+		},
+		"struct AMediaCodecInfo const" : 
+		{
+			"base_type" : "struct AMediaCodecInfo",
+			"kind" : "const",
+			"size" : 480
+		},
+		"struct AMediaCodecInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AMediaCodecInfo const",
+			"size" : 32
+		},
+		"struct AMediaCodecInfo const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AMediaCodecInfo const*",
+			"size" : 32
+		},
 		"struct AMediaCodecOnAsyncNotifyCallback" : 
 		{
 			"fields" : 
@@ -5336,27 +6792,64 @@
 				{
 					"name" : "onAsyncInputAvailable",
 					"offset" : 0,
-					"type" : "func #2*"
+					"type" : "func #10*"
 				},
 				{
 					"name" : "onAsyncOutputAvailable",
 					"offset" : 32,
-					"type" : "func #3*"
+					"type" : "func #11*"
 				},
 				{
 					"name" : "onAsyncFormatChanged",
 					"offset" : 64,
-					"type" : "func #4*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "onAsyncError",
 					"offset" : 96,
-					"type" : "func #5*"
+					"type" : "func #13*"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 128
+		},
+		"struct AMediaCodecSupportedMediaType" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mMediaType",
+					"offset" : 0,
+					"type" : "char8 const*"
+				},
+				{
+					"name" : "mMode",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct AMediaCodecSupportedMediaType const" : 
+		{
+			"base_type" : "struct AMediaCodecSupportedMediaType",
+			"kind" : "const",
+			"size" : 64
+		},
+		"struct AMediaCodecSupportedMediaType const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AMediaCodecSupportedMediaType const",
+			"size" : 32
+		},
+		"struct AMediaCodecSupportedMediaType const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AMediaCodecSupportedMediaType const*",
+			"size" : 32
 		},
 		"struct AMediaCrypto" : 
 		{
@@ -5390,22 +6883,22 @@
 				{
 					"name" : "readAt",
 					"offset" : 32,
-					"type" : "func #13*"
+					"type" : "func #1*"
 				},
 				{
 					"name" : "getSize",
 					"offset" : 64,
-					"type" : "func #14*"
+					"type" : "func #2*"
 				},
 				{
 					"name" : "close",
 					"offset" : 96,
-					"type" : "func #15*"
+					"type" : "func #3*"
 				},
 				{
 					"name" : "getAvailableSize",
 					"offset" : 128,
-					"type" : "func #16*"
+					"type" : "func #4*"
 				},
 				{
 					"name" : "mImpl",
@@ -5747,22 +7240,22 @@
 				{
 					"name" : "readAt",
 					"offset" : 0,
-					"type" : "func #13*"
+					"type" : "func #1*"
 				},
 				{
 					"name" : "getSize",
 					"offset" : 32,
-					"type" : "func #17*"
+					"type" : "func #6*"
 				},
 				{
 					"name" : "flags",
 					"offset" : 64,
-					"type" : "func #18*"
+					"type" : "func #7*"
 				},
 				{
 					"name" : "getUri",
 					"offset" : 96,
-					"type" : "func #19*"
+					"type" : "func #8*"
 				},
 				{
 					"name" : "handle",
@@ -5792,17 +7285,17 @@
 				{
 					"name" : "mEventListener",
 					"offset" : 64,
-					"type" : "func #10*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "mExpirationUpdateListener",
 					"offset" : 96,
-					"type" : "func #11*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "mKeysChangeListener",
 					"offset" : 128,
-					"type" : "func #12*"
+					"type" : "func #21*"
 				}
 			],
 			"inheritance" : 
@@ -5915,6 +7408,16 @@
 			"pointee_type" : "struct android::AMessage",
 			"size" : 32
 		},
+		"struct android::AudioCapabilities" : 
+		{
+			"kind" : "incomplete"
+		},
+		"struct android::AudioCapabilities*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct android::AudioCapabilities",
+			"size" : 32
+		},
 		"struct android::BufferItemConsumer::BufferFreedListener" : 
 		{
 			"fields" : 
@@ -5922,7 +7425,7 @@
 				{
 					"name" : "_vptr$BufferFreedListener",
 					"offset" : 0,
-					"type" : "func #7**"
+					"type" : "func #5**"
 				}
 			],
 			"inheritance" : 
@@ -5932,6 +7435,16 @@
 			"kind" : "struct",
 			"size" : 96
 		},
+		"struct android::CodecCapabilities" : 
+		{
+			"kind" : "incomplete"
+		},
+		"struct android::CodecCapabilities*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct android::CodecCapabilities",
+			"size" : 32
+		},
 		"struct android::ConsumerBase::FrameAvailableListener" : 
 		{
 			"fields" : 
@@ -5939,7 +7452,7 @@
 				{
 					"name" : "_vptr$FrameAvailableListener",
 					"offset" : 0,
-					"type" : "func #7**"
+					"type" : "func #5**"
 				}
 			],
 			"inheritance" : 
@@ -6044,6 +7557,16 @@
 			"pointee_type" : "struct android::CpuConsumer::LockedBuffer",
 			"size" : 32
 		},
+		"struct android::EncoderCapabilities" : 
+		{
+			"kind" : "incomplete"
+		},
+		"struct android::EncoderCapabilities*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct android::EncoderCapabilities",
+			"size" : 32
+		},
 		"struct android::ICrypto" : 
 		{
 			"kind" : "incomplete"
@@ -6074,6 +7597,16 @@
 			"pointee_type" : "struct android::MediaCodec",
 			"size" : 32
 		},
+		"struct android::MediaCodecInfo" : 
+		{
+			"kind" : "incomplete"
+		},
+		"struct android::MediaCodecInfo*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct android::MediaCodecInfo",
+			"size" : 32
+		},
 		"struct android::MediaMuxerBase" : 
 		{
 			"kind" : "incomplete"
@@ -6092,6 +7625,32 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "struct android::NuMediaExtractor",
+			"size" : 32
+		},
+		"struct android::VideoCapabilities" : 
+		{
+			"kind" : "incomplete"
+		},
+		"struct android::VideoCapabilities*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct android::VideoCapabilities",
+			"size" : 32
+		},
+		"struct android::VideoCapabilities::PerformancePoint" : 
+		{
+			"kind" : "incomplete"
+		},
+		"struct android::VideoCapabilities::PerformancePoint const" : 
+		{
+			"base_type" : "struct android::VideoCapabilities::PerformancePoint",
+			"kind" : "const",
+			"size" : 0
+		},
+		"struct android::VideoCapabilities::PerformancePoint const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct android::VideoCapabilities::PerformancePoint const",
 			"size" : 32
 		},
 		"struct android::key_value_pair_t" : 
@@ -6197,6 +7756,34 @@
 			"kind" : "struct",
 			"size" : 32
 		},
+		"struct std::__1::__compressed_pair_elem<ACodecPerformancePoint*, int32, false>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__value_",
+					"offset" : 0,
+					"type" : "struct ACodecPerformancePoint*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::__compressed_pair_elem<AIntRange*, int32, false>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__value_",
+					"offset" : 0,
+					"type" : "struct AIntRange*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
 		"struct std::__1::__compressed_pair_elem<android::CpuConsumer::LockedBuffer*, int32, false>" : 
 		{
 			"fields" : 
@@ -6211,6 +7798,74 @@
 			"kind" : "struct",
 			"size" : 32
 		},
+		"struct std::__1::__compressed_pair_elem<int32*, int32, false>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__value_",
+					"offset" : 0,
+					"type" : "int32*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::__compressed_pair_elem<std::__1::allocator<ACodecPerformancePoint>, int32, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"class std::__1::allocator<ACodecPerformancePoint>"
+			],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__compressed_pair_elem<std::__1::allocator<AIntRange>, int32, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"class std::__1::allocator<AIntRange>"
+			],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__compressed_pair_elem<std::__1::allocator<char8>, int32, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"class std::__1::allocator<char8>"
+			],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__compressed_pair_elem<std::__1::allocator<int32>, int32, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"class std::__1::allocator<int32>"
+			],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__compressed_pair_elem<std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__rep, int32, false>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__value_",
+					"offset" : 0,
+					"type" : "union std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__rep"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
 		"struct std::__1::__compressed_pair_elem<std::__1::default_delete<android::CpuConsumer::LockedBuffer>, int32, true>" : 
 		{
 			"fields" : [],
@@ -6221,12 +7876,152 @@
 			"kind" : "struct",
 			"size" : 8
 		},
+		"struct std::__1::__non_trivial_if<true, std::__1::allocator<ACodecPerformancePoint>>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__non_trivial_if<true, std::__1::allocator<AIntRange>>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__non_trivial_if<true, std::__1::allocator<char8>>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__non_trivial_if<true, std::__1::allocator<int32>>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__long" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__long::#18"
+				},
+				{
+					"name" : "__size_",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "__data_",
+					"offset" : 64,
+					"type" : "char8*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__long::#18" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__is_long_",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "__cap_",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__short" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__short::#17"
+				},
+				{
+					"name" : "__padding_",
+					"offset" : 8,
+					"type" : "char8[0]"
+				},
+				{
+					"name" : "__data_",
+					"offset" : 8,
+					"type" : "char8[11]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__short::#17" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__is_long_",
+					"offset" : 0,
+					"type" : "unsigned char8"
+				},
+				{
+					"name" : "__size_",
+					"offset" : 0,
+					"type" : "unsigned char8"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::char_traits<char8>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
 		"struct std::__1::default_delete<android::CpuConsumer::LockedBuffer>" : 
 		{
 			"fields" : [],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 8
+		},
+		"union std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__rep" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__s",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__short"
+				},
+				{
+					"name" : "__l",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__long"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
 		},
 		"unsigned char8" : 
 		{
