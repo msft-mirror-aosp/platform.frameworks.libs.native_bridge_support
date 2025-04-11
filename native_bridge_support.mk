@@ -127,6 +127,11 @@ NATIVE_BRIDGE_RS_ORIG_GUEST_LIBS += \
     libRSDriver \
     libnative_bridge_guest_libRSSupport
 
+# Non NativeBridge variant of libblasV8 is a required dep of libnative_bridge_guest_libRSSupport.
+# List this dependency explicitly so that this is included in Soong built system.img.
+# See b/376873507 for details.
+NATIVE_BRIDGE_PRODUCT_PACKAGES += libblasV8
+
 NATIVE_BRIDGE_PRODUCT_PACKAGES += \
     $(addsuffix .native_bridge,$(NATIVE_BRIDGE_RS_ORIG_GUEST_LIBS))
 
