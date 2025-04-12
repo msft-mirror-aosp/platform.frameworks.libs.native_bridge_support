@@ -6470,13 +6470,33 @@
 		},
 		"struct JNINativeMethod" : 
 		{
-			"kind" : "incomplete"
+			"fields" : 
+			[
+				{
+					"name" : "name",
+					"offset" : 0,
+					"type" : "unsigned char8 const*"
+				},
+				{
+					"name" : "signature",
+					"offset" : 32,
+					"type" : "unsigned char8 const*"
+				},
+				{
+					"name" : "fnPtr",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
 		},
 		"struct JNINativeMethod const" : 
 		{
 			"base_type" : "struct JNINativeMethod",
 			"kind" : "const",
-			"size" : 0
+			"size" : 96
 		},
 		"struct JNINativeMethod const*" : 
 		{

@@ -22,6 +22,9 @@
     "vkAllocateMemory": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkAntiLagUpdateAMD": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkBeginCommandBuffer": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -74,6 +77,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdBindDescriptorBufferEmbeddedSamplers2EXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdBindDescriptorSets2": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdBindDescriptorSets2KHR": {
@@ -202,13 +208,25 @@
     "vkCmdPreprocessGeneratedCommandsNV": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCmdPushConstants2": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCmdPushConstants2KHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdPushDescriptorSet": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdPushDescriptorSet2": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdPushDescriptorSet2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdPushDescriptorSetKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdPushDescriptorSetWithTemplate2": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdPushDescriptorSetWithTemplate2KHR": {
@@ -244,6 +262,18 @@
     "vkCmdSetPerformanceStreamMarkerINTEL": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCmdSetRenderingAttachmentLocations": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdSetRenderingAttachmentLocationsKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdSetRenderingInputAttachmentIndices": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdSetRenderingInputAttachmentIndicesKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCmdSetSampleLocationsEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -265,13 +295,22 @@
     "vkCopyAccelerationStructureToMemoryKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCopyImageToImage": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCopyImageToImageEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCopyImageToMemory": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCopyImageToMemoryEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCopyMemoryToAccelerationStructureKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCopyMemoryToImage": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCopyMemoryToImageEXT": {
@@ -401,6 +440,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCreateOpticalFlowSessionNV": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCreatePipelineBinariesKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCreatePipelineCache": {
@@ -580,6 +622,9 @@
     "vkDestroyPipeline": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkDestroyPipelineBinaryKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkDestroyPipelineCache": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -751,6 +796,9 @@
     "vkGetDeviceImageSparseMemoryRequirementsKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkGetDeviceImageSubresourceLayout": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkGetDeviceImageSubresourceLayoutKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -827,6 +875,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetImageSparseMemoryRequirements2KHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetImageSubresourceLayout2": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetImageSubresourceLayout2EXT": {
@@ -1018,6 +1069,9 @@
     "vkGetPhysicalDeviceVideoFormatPropertiesKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkGetPipelineBinaryDataKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkGetPipelineExecutableInternalRepresentationsKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -1033,6 +1087,9 @@
     "vkGetPipelineIndirectMemoryRequirementsNV": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkGetPipelineKeyKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkGetPipelinePropertiesEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -1040,6 +1097,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetQueueCheckpointDataNV": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetRenderingAreaGranularity": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetRenderingAreaGranularityKHR": {
@@ -1067,6 +1127,12 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetShaderModuleIdentifierEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetSwapchainGrallocUsage3ANDROID": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetSwapchainGrallocUsage4ANDROID": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetVideoSessionMemoryRequirementsKHR": {
@@ -1105,6 +1171,9 @@
     "vkLatencySleepNV": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkMapMemory2": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkMapMemory2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -1138,6 +1207,9 @@
     "vkRegisterDisplayEventEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkReleaseCapturedPipelineDataKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkReleaseSwapchainImagesEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -1168,7 +1240,13 @@
     "vkSignalSemaphoreKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkTransitionImageLayout": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkTransitionImageLayoutEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkUnmapMemory2": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkUnmapMemory2KHR": {

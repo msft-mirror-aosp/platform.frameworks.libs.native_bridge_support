@@ -69,9 +69,17 @@
 		{
 			"type" : "func vkCmdBindDescriptorSets"
 		},
+		"vkCmdBindDescriptorSets2" : 
+		{
+			"type" : "func vkCmdBindDescriptorSets2"
+		},
 		"vkCmdBindIndexBuffer" : 
 		{
 			"type" : "func vkCmdBindIndexBuffer"
+		},
+		"vkCmdBindIndexBuffer2" : 
+		{
+			"type" : "func vkCmdBindIndexBuffer2"
 		},
 		"vkCmdBindPipeline" : 
 		{
@@ -221,6 +229,26 @@
 		{
 			"type" : "func vkCmdPushConstants"
 		},
+		"vkCmdPushConstants2" : 
+		{
+			"type" : "func vkCmdPushConstants2"
+		},
+		"vkCmdPushDescriptorSet" : 
+		{
+			"type" : "func vkCmdPushDescriptorSet"
+		},
+		"vkCmdPushDescriptorSet2" : 
+		{
+			"type" : "func vkCmdPushDescriptorSet2"
+		},
+		"vkCmdPushDescriptorSetWithTemplate" : 
+		{
+			"type" : "func vkCmdPushDescriptorSetWithTemplate"
+		},
+		"vkCmdPushDescriptorSetWithTemplate2" : 
+		{
+			"type" : "func vkCmdPushDescriptorSetWithTemplate2"
+		},
 		"vkCmdResetEvent" : 
 		{
 			"type" : "func vkCmdResetEvent"
@@ -293,6 +321,10 @@
 		{
 			"type" : "func vkCmdSetFrontFace"
 		},
+		"vkCmdSetLineStipple" : 
+		{
+			"type" : "func vkCmdSetLineStipple"
+		},
 		"vkCmdSetLineWidth" : 
 		{
 			"type" : "func vkCmdSetLineWidth"
@@ -308,6 +340,14 @@
 		"vkCmdSetRasterizerDiscardEnable" : 
 		{
 			"type" : "func vkCmdSetRasterizerDiscardEnable"
+		},
+		"vkCmdSetRenderingAttachmentLocations" : 
+		{
+			"type" : "func vkCmdSetRenderingAttachmentLocations"
+		},
+		"vkCmdSetRenderingInputAttachmentIndices" : 
+		{
+			"type" : "func vkCmdSetRenderingInputAttachmentIndices"
 		},
 		"vkCmdSetScissor" : 
 		{
@@ -364,6 +404,18 @@
 		"vkCmdWriteTimestamp2" : 
 		{
 			"type" : "func vkCmdWriteTimestamp2"
+		},
+		"vkCopyImageToImage" : 
+		{
+			"type" : "func vkCopyImageToImage"
+		},
+		"vkCopyImageToMemory" : 
+		{
+			"type" : "func vkCopyImageToMemory"
+		},
+		"vkCopyMemoryToImage" : 
+		{
+			"type" : "func vkCopyMemoryToImage"
 		},
 		"vkCreateAndroidSurfaceKHR" : 
 		{
@@ -673,6 +725,10 @@
 		{
 			"type" : "func vkGetDeviceImageSparseMemoryRequirements"
 		},
+		"vkGetDeviceImageSubresourceLayout" : 
+		{
+			"type" : "func vkGetDeviceImageSubresourceLayout"
+		},
 		"vkGetDeviceMemoryCommitment" : 
 		{
 			"type" : "func vkGetDeviceMemoryCommitment"
@@ -720,6 +776,10 @@
 		"vkGetImageSubresourceLayout" : 
 		{
 			"type" : "func vkGetImageSubresourceLayout"
+		},
+		"vkGetImageSubresourceLayout2" : 
+		{
+			"type" : "func vkGetImageSubresourceLayout2"
 		},
 		"vkGetInstanceProcAddr" : 
 		{
@@ -837,6 +897,10 @@
 		{
 			"type" : "func vkGetRenderAreaGranularity"
 		},
+		"vkGetRenderingAreaGranularity" : 
+		{
+			"type" : "func vkGetRenderingAreaGranularity"
+		},
 		"vkGetSemaphoreCounterValue" : 
 		{
 			"type" : "func vkGetSemaphoreCounterValue"
@@ -852,6 +916,10 @@
 		"vkMapMemory" : 
 		{
 			"type" : "func vkMapMemory"
+		},
+		"vkMapMemory2" : 
+		{
+			"type" : "func vkMapMemory2"
 		},
 		"vkMergePipelineCaches" : 
 		{
@@ -913,6 +981,10 @@
 		{
 			"type" : "func vkSignalSemaphore"
 		},
+		"vkTransitionImageLayout" : 
+		{
+			"type" : "func vkTransitionImageLayout"
+		},
 		"vkTrimCommandPool" : 
 		{
 			"type" : "func vkTrimCommandPool"
@@ -920,6 +992,10 @@
 		"vkUnmapMemory" : 
 		{
 			"type" : "func vkUnmapMemory"
+		},
+		"vkUnmapMemory2" : 
+		{
+			"type" : "func vkUnmapMemory2"
 		},
 		"vkUpdateDescriptorSetWithTemplate" : 
 		{
@@ -1029,14 +1105,13 @@
 		},
 		"func #10" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
-				"struct ANativeWindow const*",
-				"int32",
-				"int32*"
+				"struct ANativeWindow*",
+				"int32"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1049,13 +1124,14 @@
 		},
 		"func #11" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"int32"
+				"struct ANativeWindowBuffer**",
+				"int32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1074,8 +1150,8 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer**",
-				"int32*"
+				"struct ANativeWindowBuffer*",
+				"int32"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1091,13 +1167,8 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : 
-			[
-				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer*",
-				"int32"
-			],
-			"return_type" : "int32",
+			"params" : [],
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #13*" : 
@@ -1173,7 +1244,10 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
+			"params" : 
+			[
+				"struct android_native_base_t*"
+			],
 			"return_type" : "void",
 			"size" : 0
 		},
@@ -1190,9 +1264,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct android_native_base_t*"
+				"struct ANativeWindow*",
+				"int32"
 			],
-			"return_type" : "void",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #6*" : 
@@ -1209,7 +1284,7 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"int32"
+				"struct ANativeWindowBuffer**"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1228,7 +1303,7 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer**"
+				"struct ANativeWindowBuffer*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1246,8 +1321,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer*"
+				"struct ANativeWindow const*",
+				"int32",
+				"int32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1505,6 +1581,19 @@
 			"return_type" : "void",
 			"size" : 0
 		},
+		"func vkCmdBindDescriptorSets2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"struct VkBindDescriptorSetsInfo const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func vkCmdBindIndexBuffer" : 
 		{
 			"has_variadic_args" : false,
@@ -1514,6 +1603,22 @@
 			[
 				"struct VkCommandBuffer_T*",
 				"struct VkBuffer_T*",
+				"unsigned int64",
+				"unsigned int32"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkCmdBindIndexBuffer2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"struct VkBuffer_T*",
+				"unsigned int64",
 				"unsigned int64",
 				"unsigned int32"
 			],
@@ -2096,6 +2201,78 @@
 			"return_type" : "void",
 			"size" : 0
 		},
+		"func vkCmdPushConstants2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"struct VkPushConstantsInfo const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkCmdPushDescriptorSet" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"unsigned int32",
+				"struct VkPipelineLayout_T*",
+				"unsigned int32",
+				"unsigned int32",
+				"struct VkWriteDescriptorSet const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkCmdPushDescriptorSet2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"struct VkPushDescriptorSetInfo const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkCmdPushDescriptorSetWithTemplate" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"struct VkDescriptorUpdateTemplate_T*",
+				"struct VkPipelineLayout_T*",
+				"unsigned int32",
+				"void const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkCmdPushDescriptorSetWithTemplate2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"struct VkPushDescriptorSetWithTemplateInfo const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func vkCmdResetEvent" : 
 		{
 			"has_variadic_args" : false,
@@ -2344,6 +2521,20 @@
 			"return_type" : "void",
 			"size" : 0
 		},
+		"func vkCmdSetLineStipple" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"unsigned int32",
+				"unsigned int16"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func vkCmdSetLineWidth" : 
 		{
 			"has_variadic_args" : false,
@@ -2392,6 +2583,32 @@
 			[
 				"struct VkCommandBuffer_T*",
 				"unsigned int32"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkCmdSetRenderingAttachmentLocations" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"struct VkRenderingAttachmentLocationInfo const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkCmdSetRenderingInputAttachmentIndices" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkCommandBuffer_T*",
+				"struct VkRenderingInputAttachmentIndexInfo const*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2607,6 +2824,45 @@
 				"unsigned int32"
 			],
 			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkCopyImageToImage" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"struct VkCopyImageToImageInfo const*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func vkCopyImageToMemory" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"struct VkCopyImageToMemoryInfo const*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func vkCopyMemoryToImage" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"struct VkCopyMemoryToImageInfo const*"
+			],
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func vkCreateAndroidSurfaceKHR" : 
@@ -3711,6 +3967,20 @@
 			"return_type" : "void",
 			"size" : 0
 		},
+		"func vkGetDeviceImageSubresourceLayout" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"struct VkDeviceImageSubresourceInfo const*",
+				"struct VkSubresourceLayout2*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func vkGetDeviceMemoryCommitment" : 
 		{
 			"has_variadic_args" : false,
@@ -3748,7 +4018,7 @@
 				"struct VkDevice_T*",
 				"char8 const*"
 			],
-			"return_type" : "func #5*",
+			"return_type" : "func #13*",
 			"size" : 0
 		},
 		"func vkGetDeviceQueue" : 
@@ -3879,6 +4149,21 @@
 			"return_type" : "void",
 			"size" : 0
 		},
+		"func vkGetImageSubresourceLayout2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"struct VkImage_T*",
+				"struct VkImageSubresource2 const*",
+				"struct VkSubresourceLayout2*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func vkGetInstanceProcAddr" : 
 		{
 			"has_variadic_args" : false,
@@ -3889,7 +4174,7 @@
 				"struct VkInstance_T*",
 				"char8 const*"
 			],
-			"return_type" : "func #5*",
+			"return_type" : "func #13*",
 			"size" : 0
 		},
 		"func vkGetMemoryAndroidHardwareBufferANDROID" : 
@@ -4300,6 +4585,20 @@
 			"return_type" : "void",
 			"size" : 0
 		},
+		"func vkGetRenderingAreaGranularity" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"struct VkRenderingAreaInfo const*",
+				"struct VkExtent2D*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func vkGetSemaphoreCounterValue" : 
 		{
 			"has_variadic_args" : false,
@@ -4355,6 +4654,20 @@
 				"unsigned int64",
 				"unsigned int64",
 				"unsigned int32",
+				"void**"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func vkMapMemory2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"struct VkMemoryMapInfo const*",
 				"void**"
 			],
 			"return_type" : "unsigned int32",
@@ -4570,6 +4883,20 @@
 			"return_type" : "unsigned int32",
 			"size" : 0
 		},
+		"func vkTransitionImageLayout" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"unsigned int32",
+				"struct VkHostImageLayoutTransitionInfo const*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
 		"func vkTrimCommandPool" : 
 		{
 			"has_variadic_args" : false,
@@ -4595,6 +4922,19 @@
 				"struct VkDeviceMemory_T*"
 			],
 			"return_type" : "void",
+			"size" : 0
+		},
+		"func vkUnmapMemory2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct VkDevice_T*",
+				"struct VkMemoryUnmapInfo const*"
+			],
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func vkUpdateDescriptorSetWithTemplate" : 
@@ -4770,52 +5110,52 @@
 				{
 					"name" : "setSwapInterval",
 					"offset" : 896,
-					"type" : "func #7*"
+					"type" : "func #6*"
 				},
 				{
 					"name" : "dequeueBuffer_DEPRECATED",
 					"offset" : 960,
-					"type" : "func #8*"
+					"type" : "func #7*"
 				},
 				{
 					"name" : "lockBuffer_DEPRECATED",
 					"offset" : 1024,
-					"type" : "func #9*"
+					"type" : "func #8*"
 				},
 				{
 					"name" : "queueBuffer_DEPRECATED",
 					"offset" : 1088,
-					"type" : "func #9*"
+					"type" : "func #8*"
 				},
 				{
 					"name" : "query",
 					"offset" : 1152,
-					"type" : "func #10*"
+					"type" : "func #9*"
 				},
 				{
 					"name" : "perform",
 					"offset" : 1216,
-					"type" : "func #11*"
+					"type" : "func #10*"
 				},
 				{
 					"name" : "cancelBuffer_DEPRECATED",
 					"offset" : 1280,
-					"type" : "func #9*"
+					"type" : "func #8*"
 				},
 				{
 					"name" : "dequeueBuffer",
 					"offset" : 1344,
-					"type" : "func #12*"
+					"type" : "func #11*"
 				},
 				{
 					"name" : "queueBuffer",
 					"offset" : 1408,
-					"type" : "func #13*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "cancelBuffer",
 					"offset" : 1472,
-					"type" : "func #13*"
+					"type" : "func #12*"
 				}
 			],
 			"inheritance" : [],
@@ -5418,6 +5758,72 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "struct VkBindBufferMemoryInfo const",
+			"size" : 64
+		},
+		"struct VkBindDescriptorSetsInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "stageFlags",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "layout",
+					"offset" : 192,
+					"type" : "struct VkPipelineLayout_T*"
+				},
+				{
+					"name" : "firstSet",
+					"offset" : 256,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "descriptorSetCount",
+					"offset" : 288,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pDescriptorSets",
+					"offset" : 320,
+					"type" : "struct VkDescriptorSet_T* const*"
+				},
+				{
+					"name" : "dynamicOffsetCount",
+					"offset" : 384,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pDynamicOffsets",
+					"offset" : 448,
+					"type" : "unsigned int32 const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 512
+		},
+		"struct VkBindDescriptorSetsInfo const" : 
+		{
+			"base_type" : "struct VkBindDescriptorSetsInfo",
+			"kind" : "const",
+			"size" : 512
+		},
+		"struct VkBindDescriptorSetsInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkBindDescriptorSetsInfo const",
 			"size" : 64
 		},
 		"struct VkBindImageMemoryInfo" : 
@@ -6946,6 +7352,184 @@
 			"pointee_type" : "struct VkCopyImageToBufferInfo2 const",
 			"size" : 64
 		},
+		"struct VkCopyImageToImageInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "flags",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "srcImage",
+					"offset" : 192,
+					"type" : "struct VkImage_T*"
+				},
+				{
+					"name" : "srcImageLayout",
+					"offset" : 256,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "dstImage",
+					"offset" : 320,
+					"type" : "struct VkImage_T*"
+				},
+				{
+					"name" : "dstImageLayout",
+					"offset" : 384,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "regionCount",
+					"offset" : 416,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pRegions",
+					"offset" : 448,
+					"type" : "struct VkImageCopy2 const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 512
+		},
+		"struct VkCopyImageToImageInfo const" : 
+		{
+			"base_type" : "struct VkCopyImageToImageInfo",
+			"kind" : "const",
+			"size" : 512
+		},
+		"struct VkCopyImageToImageInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkCopyImageToImageInfo const",
+			"size" : 64
+		},
+		"struct VkCopyImageToMemoryInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "flags",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "srcImage",
+					"offset" : 192,
+					"type" : "struct VkImage_T*"
+				},
+				{
+					"name" : "srcImageLayout",
+					"offset" : 256,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "regionCount",
+					"offset" : 288,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pRegions",
+					"offset" : 320,
+					"type" : "struct VkImageToMemoryCopy const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 384
+		},
+		"struct VkCopyImageToMemoryInfo const" : 
+		{
+			"base_type" : "struct VkCopyImageToMemoryInfo",
+			"kind" : "const",
+			"size" : 384
+		},
+		"struct VkCopyImageToMemoryInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkCopyImageToMemoryInfo const",
+			"size" : 64
+		},
+		"struct VkCopyMemoryToImageInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "flags",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "dstImage",
+					"offset" : 192,
+					"type" : "struct VkImage_T*"
+				},
+				{
+					"name" : "dstImageLayout",
+					"offset" : 256,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "regionCount",
+					"offset" : 288,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pRegions",
+					"offset" : 320,
+					"type" : "struct VkMemoryToImageCopy const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 384
+		},
+		"struct VkCopyMemoryToImageInfo const" : 
+		{
+			"base_type" : "struct VkCopyMemoryToImageInfo",
+			"kind" : "const",
+			"size" : 384
+		},
+		"struct VkCopyMemoryToImageInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkCopyMemoryToImageInfo const",
+			"size" : 64
+		},
 		"struct VkDependencyInfo" : 
 		{
 			"fields" : 
@@ -7727,6 +8311,47 @@
 			"pointee_type" : "struct VkDeviceImageMemoryRequirements const",
 			"size" : 64
 		},
+		"struct VkDeviceImageSubresourceInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "pCreateInfo",
+					"offset" : 128,
+					"type" : "struct VkImageCreateInfo const*"
+				},
+				{
+					"name" : "pSubresource",
+					"offset" : 192,
+					"type" : "struct VkImageSubresource2 const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct VkDeviceImageSubresourceInfo const" : 
+		{
+			"base_type" : "struct VkDeviceImageSubresourceInfo",
+			"kind" : "const",
+			"size" : 256
+		},
+		"struct VkDeviceImageSubresourceInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkDeviceImageSubresourceInfo const",
+			"size" : 64
+		},
 		"struct VkDeviceMemoryOpaqueCaptureAddressInfo" : 
 		{
 			"fields" : 
@@ -8486,6 +9111,57 @@
 			"pointee_type" : "struct VkGraphicsPipelineCreateInfo const",
 			"size" : 64
 		},
+		"struct VkHostImageLayoutTransitionInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "image",
+					"offset" : 128,
+					"type" : "struct VkImage_T*"
+				},
+				{
+					"name" : "oldLayout",
+					"offset" : 192,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "newLayout",
+					"offset" : 224,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "subresourceRange",
+					"offset" : 256,
+					"type" : "struct VkImageSubresourceRange"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 448
+		},
+		"struct VkHostImageLayoutTransitionInfo const" : 
+		{
+			"base_type" : "struct VkHostImageLayoutTransitionInfo",
+			"kind" : "const",
+			"size" : 448
+		},
+		"struct VkHostImageLayoutTransitionInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkHostImageLayoutTransitionInfo const",
+			"size" : 64
+		},
 		"struct VkImageBlit" : 
 		{
 			"fields" : 
@@ -9208,6 +9884,42 @@
 			"pointee_type" : "struct VkImageSubresource const",
 			"size" : 64
 		},
+		"struct VkImageSubresource2" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void*"
+				},
+				{
+					"name" : "imageSubresource",
+					"offset" : 128,
+					"type" : "struct VkImageSubresource"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct VkImageSubresource2 const" : 
+		{
+			"base_type" : "struct VkImageSubresource2",
+			"kind" : "const",
+			"size" : 256
+		},
+		"struct VkImageSubresource2 const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkImageSubresource2 const",
+			"size" : 64
+		},
 		"struct VkImageSubresourceLayers" : 
 		{
 			"fields" : 
@@ -9281,6 +9993,67 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "struct VkImageSubresourceRange const",
+			"size" : 64
+		},
+		"struct VkImageToMemoryCopy" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "pHostPointer",
+					"offset" : 128,
+					"type" : "void*"
+				},
+				{
+					"name" : "memoryRowLength",
+					"offset" : 192,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "memoryImageHeight",
+					"offset" : 224,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "imageSubresource",
+					"offset" : 256,
+					"type" : "struct VkImageSubresourceLayers"
+				},
+				{
+					"name" : "imageOffset",
+					"offset" : 384,
+					"type" : "struct VkOffset3D"
+				},
+				{
+					"name" : "imageExtent",
+					"offset" : 480,
+					"type" : "struct VkExtent3D"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 576
+		},
+		"struct VkImageToMemoryCopy const" : 
+		{
+			"base_type" : "struct VkImageToMemoryCopy",
+			"kind" : "const",
+			"size" : 576
+		},
+		"struct VkImageToMemoryCopy const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkImageToMemoryCopy const",
 			"size" : 64
 		},
 		"struct VkImageViewCreateInfo" : 
@@ -9740,6 +10513,57 @@
 			"kind" : "array",
 			"size" : 2048
 		},
+		"struct VkMemoryMapInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "flags",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "memory",
+					"offset" : 192,
+					"type" : "struct VkDeviceMemory_T*"
+				},
+				{
+					"name" : "offset",
+					"offset" : 256,
+					"type" : "unsigned int64"
+				},
+				{
+					"name" : "size",
+					"offset" : 320,
+					"type" : "unsigned int64"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 384
+		},
+		"struct VkMemoryMapInfo const" : 
+		{
+			"base_type" : "struct VkMemoryMapInfo",
+			"kind" : "const",
+			"size" : 384
+		},
+		"struct VkMemoryMapInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkMemoryMapInfo const",
+			"size" : 64
+		},
 		"struct VkMemoryRequirements" : 
 		{
 			"fields" : 
@@ -9800,6 +10624,67 @@
 			"pointee_type" : "struct VkMemoryRequirements2",
 			"size" : 64
 		},
+		"struct VkMemoryToImageCopy" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "pHostPointer",
+					"offset" : 128,
+					"type" : "void const*"
+				},
+				{
+					"name" : "memoryRowLength",
+					"offset" : 192,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "memoryImageHeight",
+					"offset" : 224,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "imageSubresource",
+					"offset" : 256,
+					"type" : "struct VkImageSubresourceLayers"
+				},
+				{
+					"name" : "imageOffset",
+					"offset" : 384,
+					"type" : "struct VkOffset3D"
+				},
+				{
+					"name" : "imageExtent",
+					"offset" : 480,
+					"type" : "struct VkExtent3D"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 576
+		},
+		"struct VkMemoryToImageCopy const" : 
+		{
+			"base_type" : "struct VkMemoryToImageCopy",
+			"kind" : "const",
+			"size" : 576
+		},
+		"struct VkMemoryToImageCopy const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkMemoryToImageCopy const",
+			"size" : 64
+		},
 		"struct VkMemoryType" : 
 		{
 			"fields" : 
@@ -9824,6 +10709,47 @@
 			"element_type" : "struct VkMemoryType",
 			"kind" : "array",
 			"size" : 2048
+		},
+		"struct VkMemoryUnmapInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "flags",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "memory",
+					"offset" : 192,
+					"type" : "struct VkDeviceMemory_T*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct VkMemoryUnmapInfo const" : 
+		{
+			"base_type" : "struct VkMemoryUnmapInfo",
+			"kind" : "const",
+			"size" : 256
+		},
+		"struct VkMemoryUnmapInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkMemoryUnmapInfo const",
+			"size" : 64
 		},
 		"struct VkOffset2D" : 
 		{
@@ -12243,6 +13169,169 @@
 			"pointee_type" : "struct VkPushConstantRange const",
 			"size" : 64
 		},
+		"struct VkPushConstantsInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "layout",
+					"offset" : 128,
+					"type" : "struct VkPipelineLayout_T*"
+				},
+				{
+					"name" : "stageFlags",
+					"offset" : 192,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "offset",
+					"offset" : 224,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "size",
+					"offset" : 256,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pValues",
+					"offset" : 320,
+					"type" : "void const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 384
+		},
+		"struct VkPushConstantsInfo const" : 
+		{
+			"base_type" : "struct VkPushConstantsInfo",
+			"kind" : "const",
+			"size" : 384
+		},
+		"struct VkPushConstantsInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkPushConstantsInfo const",
+			"size" : 64
+		},
+		"struct VkPushDescriptorSetInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "stageFlags",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "layout",
+					"offset" : 192,
+					"type" : "struct VkPipelineLayout_T*"
+				},
+				{
+					"name" : "set",
+					"offset" : 256,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "descriptorWriteCount",
+					"offset" : 288,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pDescriptorWrites",
+					"offset" : 320,
+					"type" : "struct VkWriteDescriptorSet const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 384
+		},
+		"struct VkPushDescriptorSetInfo const" : 
+		{
+			"base_type" : "struct VkPushDescriptorSetInfo",
+			"kind" : "const",
+			"size" : 384
+		},
+		"struct VkPushDescriptorSetInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkPushDescriptorSetInfo const",
+			"size" : 64
+		},
+		"struct VkPushDescriptorSetWithTemplateInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "descriptorUpdateTemplate",
+					"offset" : 128,
+					"type" : "struct VkDescriptorUpdateTemplate_T*"
+				},
+				{
+					"name" : "layout",
+					"offset" : 192,
+					"type" : "struct VkPipelineLayout_T*"
+				},
+				{
+					"name" : "set",
+					"offset" : 256,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pData",
+					"offset" : 320,
+					"type" : "void const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 384
+		},
+		"struct VkPushDescriptorSetWithTemplateInfo const" : 
+		{
+			"base_type" : "struct VkPushDescriptorSetWithTemplateInfo",
+			"kind" : "const",
+			"size" : 384
+		},
+		"struct VkPushDescriptorSetWithTemplateInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkPushDescriptorSetWithTemplateInfo const",
+			"size" : 64
+		},
 		"struct VkQueryPoolCreateInfo" : 
 		{
 			"fields" : 
@@ -12642,6 +13731,62 @@
 			"pointee_type" : "struct VkRenderPass_T*",
 			"size" : 64
 		},
+		"struct VkRenderingAreaInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "viewMask",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "colorAttachmentCount",
+					"offset" : 160,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pColorAttachmentFormats",
+					"offset" : 192,
+					"type" : "unsigned int32 const*"
+				},
+				{
+					"name" : "depthAttachmentFormat",
+					"offset" : 256,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "stencilAttachmentFormat",
+					"offset" : 288,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 320
+		},
+		"struct VkRenderingAreaInfo const" : 
+		{
+			"base_type" : "struct VkRenderingAreaInfo",
+			"kind" : "const",
+			"size" : 320
+		},
+		"struct VkRenderingAreaInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkRenderingAreaInfo const",
+			"size" : 64
+		},
 		"struct VkRenderingAttachmentInfo" : 
 		{
 			"fields" : 
@@ -12713,6 +13858,47 @@
 			"pointee_type" : "struct VkRenderingAttachmentInfo const",
 			"size" : 64
 		},
+		"struct VkRenderingAttachmentLocationInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "colorAttachmentCount",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pColorAttachmentLocations",
+					"offset" : 192,
+					"type" : "unsigned int32 const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct VkRenderingAttachmentLocationInfo const" : 
+		{
+			"base_type" : "struct VkRenderingAttachmentLocationInfo",
+			"kind" : "const",
+			"size" : 256
+		},
+		"struct VkRenderingAttachmentLocationInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkRenderingAttachmentLocationInfo const",
+			"size" : 64
+		},
 		"struct VkRenderingInfo" : 
 		{
 			"fields" : 
@@ -12782,6 +13968,57 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "struct VkRenderingInfo const",
+			"size" : 64
+		},
+		"struct VkRenderingInputAttachmentIndexInfo" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void const*"
+				},
+				{
+					"name" : "colorAttachmentCount",
+					"offset" : 128,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pColorAttachmentInputIndices",
+					"offset" : 192,
+					"type" : "unsigned int32 const*"
+				},
+				{
+					"name" : "pDepthInputAttachmentIndex",
+					"offset" : 256,
+					"type" : "unsigned int32 const*"
+				},
+				{
+					"name" : "pStencilInputAttachmentIndex",
+					"offset" : 320,
+					"type" : "unsigned int32 const*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 384
+		},
+		"struct VkRenderingInputAttachmentIndexInfo const" : 
+		{
+			"base_type" : "struct VkRenderingInputAttachmentIndexInfo",
+			"kind" : "const",
+			"size" : 384
+		},
+		"struct VkRenderingInputAttachmentIndexInfo const*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkRenderingInputAttachmentIndexInfo const",
 			"size" : 64
 		},
 		"struct VkResolveImageInfo2" : 
@@ -14319,6 +15556,36 @@
 			"pointee_type" : "struct VkSubresourceLayout",
 			"size" : 64
 		},
+		"struct VkSubresourceLayout2" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "sType",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "pNext",
+					"offset" : 64,
+					"type" : "void*"
+				},
+				{
+					"name" : "subresourceLayout",
+					"offset" : 128,
+					"type" : "struct VkSubresourceLayout"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 448
+		},
+		"struct VkSubresourceLayout2*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct VkSubresourceLayout2",
+			"size" : 64
+		},
 		"struct VkSurfaceCapabilitiesKHR" : 
 		{
 			"fields" : 
@@ -14785,12 +16052,12 @@
 				{
 					"name" : "incRef",
 					"offset" : 320,
-					"type" : "func #6*"
+					"type" : "func #5*"
 				},
 				{
 					"name" : "decRef",
 					"offset" : 384,
-					"type" : "func #6*"
+					"type" : "func #5*"
 				}
 			],
 			"inheritance" : [],
@@ -14922,6 +16189,12 @@
 			"element_type" : "unsigned char8",
 			"kind" : "array",
 			"size" : 128
+		},
+		"unsigned int16" : 
+		{
+			"kind" : "int",
+			"signed" : false,
+			"size" : 16
 		},
 		"unsigned int32" : 
 		{
