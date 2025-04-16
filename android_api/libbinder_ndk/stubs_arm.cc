@@ -17,17 +17,29 @@
 // clang-format off
 #include "native_bridge_support/vdso/interceptable_functions.h"
 
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderProcess_disableBackgroundScheduling);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderProcess_handlePolledCommands);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderProcess_isThreadPoolStarted);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderProcess_joinThreadPool);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderProcess_setThreadPoolMaxThreadCount);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderProcess_setupPolling);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderProcess_startThreadPool);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_Accessor_asBinder);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_Accessor_delegateAccessor);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_Accessor_delete);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_Accessor_fromBinder);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_Accessor_new);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_ConnectionInfo_delete);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_ConnectionInfo_new);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_registerAccessorProvider);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ABinderRpc_unregisterAccessorProvider);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_Class_define);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_Class_disableInterfaceTokenHeader);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_Class_getDescriptor);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_Class_getFunctionName);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_Class_setHandleShellCommand);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_Class_setOnDump);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_Class_setTransactionCodeToFunctionNameMap);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_DeathRecipient_delete);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_DeathRecipient_new);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(AIBinder_DeathRecipient_setOnUnlinked);
@@ -206,17 +218,29 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(_Z26AParcel_viewPlatformParcelPK7AParcel);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_Z27AIBinder_fromPlatformBinderRKN7android2spINS_7IBinderEEE);
 
 static void __attribute__((constructor(0))) init_stub_library() {
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderProcess_disableBackgroundScheduling);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderProcess_handlePolledCommands);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderProcess_isThreadPoolStarted);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderProcess_joinThreadPool);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderProcess_setThreadPoolMaxThreadCount);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderProcess_setupPolling);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderProcess_startThreadPool);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_Accessor_asBinder);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_Accessor_delegateAccessor);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_Accessor_delete);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_Accessor_fromBinder);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_Accessor_new);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_ConnectionInfo_delete);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_ConnectionInfo_new);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_registerAccessorProvider);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", ABinderRpc_unregisterAccessorProvider);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_Class_define);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_Class_disableInterfaceTokenHeader);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_Class_getDescriptor);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_Class_getFunctionName);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_Class_setHandleShellCommand);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_Class_setOnDump);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_Class_setTransactionCodeToFunctionNameMap);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_DeathRecipient_delete);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_DeathRecipient_new);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libbinder_ndk.so", AIBinder_DeathRecipient_setOnUnlinked);
