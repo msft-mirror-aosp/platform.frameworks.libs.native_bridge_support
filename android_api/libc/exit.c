@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
+#include <pthread.h>
 #include <unistd.h>
+
+#include "private/bionic_defs.h"
 
 extern void __cxa_finalize(void* dso_handle);
 extern void native_bridge_exit(int status);
@@ -27,6 +30,12 @@ void exit(int status) {
   // __cxa_finalize() for guest objects, then __cxa_thread_finalize() (and after that we would do
   // __cxa_finalize() for host objects, of course).
   // TODO(b/65052237): Fix that with bionic refactoring?
+
+  // Behave consistently when exit is called from multiple threads.
+  // https://austingroupbugs.net/view.php?id=1845
+  static pthread_mutex_t g_exit_mutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
+
+  pthread_mutex_lock(&g_exit_mutex);
   __cxa_finalize(NULL);
   native_bridge_exit(status);
   __builtin_unreachable();
