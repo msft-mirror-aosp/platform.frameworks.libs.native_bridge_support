@@ -122,9 +122,17 @@ func PlatformTypes() map[string]cpp_types.Type {
 		"StdVideoDecodeH265PictureInfoFlags":   cpp_types.IntType,  // That's actually a struct with bitfields, but it's compatible with int32_t.
 		"StdVideoDecodeH265ReferenceInfo":      cpp_types.VoidType, // Treat as opaque type for now.
 		"StdVideoDecodeH265ReferenceInfoFlags": cpp_types.IntType,  // That's actually a struct with bitfields, but it's compatible with int32_t.
-		"StdVideoEncodeH264PictureInfo":        cpp_types.VoidType, // Treat as opaque type for now.
-		"StdVideoEncodeH264PictureInfoFlags":   cpp_types.IntType,  // That's actually a struct with bitfields, but it's compatible with int32_t.
-		"StdVideoEncodeH264RefListModEntry":    cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeAV1DecoderModelInfo":    cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeAV1ExtensionHeader":     cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeAV1OperatingPointInfoFlags":     cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeAV1OperatingPointInfo":          cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeAV1PictureInfoFlags":            cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeAV1PictureInfo":                 cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeAV1ReferenceInfoFlags":          cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeAV1ReferenceInfo":               cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeH264PictureInfo":                cpp_types.VoidType, // Treat as opaque type for now.
+		"StdVideoEncodeH264PictureInfoFlags":           cpp_types.IntType,  // That's actually a struct with bitfields, but it's compatible with int32_t.
+		"StdVideoEncodeH264RefListModEntry":            cpp_types.VoidType, // Treat as opaque type for now.
 		"StdVideoEncodeH264RefMemMgmtCtrlOperations":   cpp_types.VoidType, // Treat as opaque type for now.
 		"StdVideoEncodeH264RefMgmtFlags":               cpp_types.IntType,  // That's actually a struct with bitfields, but it's compatible with int32_t.
 		"StdVideoEncodeH264RefPicMarkingEntry":         cpp_types.VoidType, // Treat as opaque type for now.
@@ -191,6 +199,9 @@ func PlatformTypes() map[string]cpp_types.Type {
 		"StdVideoDecodeAV1PictureInfo":			cpp_types.VoidType, // Treat as opaque type for now.
 		"StdVideoDecodeAV1ReferenceInfo":		cpp_types.VoidType, // Treat as opaque type for now.
 		"StdVideoDecodeAV1ReferenceInfoFlags":		cpp_types.IntType,
+		"StdVideoVP9Profile":                           cpp_types.IntType,
+		"StdVideoVP9Level":                             cpp_types.IntType,
+	        "StdVideoDecodeVP9PictureInfo":                 cpp_types.IntType,
 		"uint8_t":                                      cpp_types.UInt8TType,
 		"uint16_t":                                     cpp_types.UInt16TType,
 		"uint32_t":                                     cpp_types.UInt32TType,

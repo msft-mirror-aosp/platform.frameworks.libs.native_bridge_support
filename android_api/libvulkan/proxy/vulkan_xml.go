@@ -43,6 +43,12 @@ type registry struct {
 		ID       int64  `xml:"number,attr"`
 		Requires []struct {
 			EnumFields []enumFieldInfo `xml:"enum"`
+			Types      []struct {
+				Name string `xml:"name,attr"`
+			} `xml:"type"`
+			Commands []struct {
+				Name string `xml:"name,attr"`
+			} `xml:"command"`
 		} `xml:"require"`
 	} `xml:"extensions>extension"`
 	Features []struct {
@@ -217,9 +223,17 @@ var known_types = map[string]string{
 	"StdVideoDecodeH265PictureInfoFlags":   "vk_video/vulkan_video_codec_h265std_decode.h",
 	"StdVideoDecodeH265ReferenceInfo":      "vk_video/vulkan_video_codec_h265std_decode.h",
 	"StdVideoDecodeH265ReferenceInfoFlags": "vk_video/vulkan_video_codec_h265std_decode.h",
-	"StdVideoEncodeH264PictureInfo":        "vk_video/vulkan_video_codec_h264std_encode.h",
-	"StdVideoEncodeH264PictureInfoFlags":   "vk_video/vulkan_video_codec_h264std_encode.h",
-	"StdVideoEncodeH264RefListModEntry":    "vk_video/vulkan_video_codec_h264std_encode.h",
+	"StdVideoEncodeAV1DecoderModelInfo":    "vk_video/vulkan_video_codec_av1std_encode.h",
+	"StdVideoEncodeAV1ExtensionHeader":     "vk_video/vulkan_video_codec_av1std_encode.h",
+	"StdVideoEncodeAV1OperatingPointInfoFlags":     "vk_video/vulkan_video_codec_av1std_encode.h",
+	"StdVideoEncodeAV1OperatingPointInfo":          "vk_video/vulkan_video_codec_av1std_encode.h",
+	"StdVideoEncodeAV1PictureInfoFlags":            "vk_video/vulkan_video_codec_av1std_encode.h",
+	"StdVideoEncodeAV1PictureInfo":                 "vk_video/vulkan_video_codec_av1std_encode.h",
+	"StdVideoEncodeAV1ReferenceInfoFlags":          "vk_video/vulkan_video_codec_av1std_encode.h",
+	"StdVideoEncodeAV1ReferenceInfo":               "vk_video/vulkan_video_codec_av1std_encode.h",
+	"StdVideoEncodeH264PictureInfo":                "vk_video/vulkan_video_codec_h264std_encode.h",
+	"StdVideoEncodeH264PictureInfoFlags":           "vk_video/vulkan_video_codec_h264std_encode.h",
+	"StdVideoEncodeH264RefListModEntry":            "vk_video/vulkan_video_codec_h264std_encode.h",
 	"StdVideoEncodeH264RefMemMgmtCtrlOperations":   "vk_video/vulkan_video_codec_h264std_encode.h",
 	"StdVideoEncodeH264RefMgmtFlags":               "vk_video/vulkan_video_codec_h264std_encode.h",
 	"StdVideoEncodeH264RefPicMarkingEntry":         "vk_video/vulkan_video_codec_h264std_encode.h",
@@ -285,6 +299,9 @@ var known_types = map[string]string{
 	"StdVideoAV1SequenceHeader":                    "vk_video/vulkan_video_codec_av1std.h",
 	"StdVideoDecodeAV1PictureInfo":                 "vk_video/vulkan_video_codec_av1std_decode.h",
 	"StdVideoDecodeAV1ReferenceInfo":               "vk_video/vulkan_video_codec_av1std_decode.h",
+	"StdVideoVP9Profile":                           "vk_video/vulkan_video_codec_vp9std.h",
+	"StdVideoVP9Level":                             "vk_video/vulkan_video_codec_vp9std.h",
+	"StdVideoDecodeVP9PictureInfo":                 "vk_video/vulkan_video_codec_vp9std_decode.h",
 	"uint8_t":                                      "vk_platform",
 	"uint16_t":                                     "vk_platform",
 	"uint32_t":                                     "vk_platform",
@@ -532,8 +549,35 @@ func Unmarshal(data []byte) (*registry, error) {
 	return &registry, nil
 }
 
+var forbiddenExtensionsList = []string{"VK_NV_cluster_acceleration_structure", "VK_NV_partitioned_acceleration_structure", "VK_EXT_device_generated_commands", "VK_VALVE_extension_612"}
+
 func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types map[string]cpp_types.Type, sorted_command_names []string, commands map[string]cpp_types.Type, extensions map[string]int64, err error) {
 	types = vulkan_types.PlatformTypes()
+
+	forbiddenExtensionsMap := make(map[string]bool)
+	for _, extName := range forbiddenExtensionsList {
+		forbiddenExtensionsMap[extName] = true
+	}
+
+	forbiddenElementsSet := make(map[string]bool)
+
+	// Populate forbiddenElementsSet from extension requirements
+	for _, ext := range registry.Extensions {
+		if forbiddenExtensionsMap[ext.Name] {
+			for _, req := range ext.Requires {
+				for _, enumField := range req.EnumFields {
+					forbiddenElementsSet[enumField.Name] = true
+				}
+				for _, typeReq := range req.Types {
+					forbiddenElementsSet[typeReq.Name] = true
+				}
+				for _, cmdReq := range req.Commands {
+					forbiddenElementsSet[cmdReq.Name] = true
+				}
+			}
+		}
+	}
+
 	// Note that we don't pre-calculate values for enums during initial parsing because vk.xml
 	// [ab]uses "enum" to define non-integer constants and integers defined-as-C-expression, too.
 	// E.g. "VK_LOD_CLAMP_NONE" as "1000.0f" or VK_QUEUE_FAMILY_FOREIGN_EXT as "(~0U-2)".
@@ -568,6 +612,9 @@ func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types m
 		xml_types_list = next_xml_types_list
 		next_xml_types_list = []*typeInfo{}
 		for _, xml_type := range xml_types_list {
+			if forbiddenElementsSet[xml_type.Name] {
+				continue // Skip forbidden type
+			}
 			if _, ok := types[xml_type.Name]; ok {
 				if xml_type.Category == "vk_platform" {
 					continue
@@ -630,6 +677,13 @@ func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types m
 		if xml_type.Category == "struct" && xml_type.StructExtends != "" {
 			for _, name := range strings.Split(xml_type.StructExtends, ",") {
 				var extended_with *[]cpp_types.Type
+				if forbiddenElementsSet[xml_type.Name] {
+					continue
+				}
+				if forbiddenElementsSet[name] {
+					continue
+				}
+
 				if types[name].Kind(cpp_types.FirstArch) == cpp_types.Alias {
 					extended_with = &types[name].Elem(cpp_types.FirstArch).(*extendedStruct).extended_with
 				} else {
@@ -673,6 +727,11 @@ func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types m
 	commands = make(map[string]cpp_types.Type)
 	for index := range registry.Commands {
 		command := registry.Commands[index]
+
+		if forbiddenElementsSet[command.Name] {
+			continue // Skip forbidden command
+		}
+
 		// We'll link aliases below, after the final commands are constructed.
 		if command.Alias != "" {
 			continue
@@ -725,6 +784,9 @@ func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types m
 	extensions = make(map[string]int64)
 	for extension_idx := range registry.Extensions {
 		extension := &registry.Extensions[extension_idx]
+		if forbiddenExtensionsMap[extension.Name] {
+			continue // Skip forbidden extension
+		}
 		extensions_spec := int64(-1)
 		for requires_idx := range extension.Requires {
 			requires := &extension.Requires[requires_idx]
