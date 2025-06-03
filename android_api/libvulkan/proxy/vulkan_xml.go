@@ -77,6 +77,7 @@ type typeInfo struct {
 
 type enumInfo struct {
 	Name       string          `xml:"name,attr"`
+	Bitwidth   string          `xml:"bitwidth,attr"`
 	EnumFields []enumFieldInfo `xml:"enum"`
 }
 
@@ -279,11 +280,11 @@ var known_types = map[string]string{
 	"StdVideoH265SubLayerHrdParameters":            "vk_video/vulkan_video_codec_h265std.h",
 	"StdVideoH265VideoParameterSet":                "vk_video/vulkan_video_codec_h265std.h",
 	"StdVideoH265VpsFlags":                         "vk_video/vulkan_video_codec_h265std.h",
-	"StdVideoAV1Profile":				"vk_video/vulkan_video_codec_av1std.h",
-	"StdVideoAV1Level":				"vk_video/vulkan_video_codec_av1std.h",
-	"StdVideoAV1SequenceHeader":			"vk_video/vulkan_video_codec_av1std.h",
-	"StdVideoDecodeAV1PictureInfo":			"vk_video/vulkan_video_codec_av1std_decode.h",
-	"StdVideoDecodeAV1ReferenceInfo":		"vk_video/vulkan_video_codec_av1std_decode.h",
+	"StdVideoAV1Profile":                           "vk_video/vulkan_video_codec_av1std.h",
+	"StdVideoAV1Level":                             "vk_video/vulkan_video_codec_av1std.h",
+	"StdVideoAV1SequenceHeader":                    "vk_video/vulkan_video_codec_av1std.h",
+	"StdVideoDecodeAV1PictureInfo":                 "vk_video/vulkan_video_codec_av1std_decode.h",
+	"StdVideoDecodeAV1ReferenceInfo":               "vk_video/vulkan_video_codec_av1std_decode.h",
 	"uint8_t":                                      "vk_platform",
 	"uint16_t":                                     "vk_platform",
 	"uint32_t":                                     "vk_platform",
@@ -537,7 +538,7 @@ func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types m
 	// [ab]uses "enum" to define non-integer constants and integers defined-as-C-expression, too.
 	// E.g. "VK_LOD_CLAMP_NONE" as "1000.0f" or VK_QUEUE_FAMILY_FOREIGN_EXT as "(~0U-2)".
 	// We return "raw" string value here and only parse them on as-needed basis.
-	enum_values, enum_types, err := parseEnumValues(registry)
+	enum_base_types, enum_values, enum_types, err := parseEnumValues(registry)
 	if err != nil {
 		return nil, nil, nil, nil, nil, err
 	}
@@ -597,7 +598,7 @@ func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types m
 				}
 				continue
 			case "enum":
-				c_type, err = vulkanEnumTypeFromXML(xml_type, enum_values, enum_types)
+				c_type, err = vulkanEnumTypeFromXML(xml_type, enum_base_types, enum_values, enum_types)
 			case "funcpointer":
 				c_type, err = vulkanFuncPoiterTypeFromXML(xml_type, types)
 			case "handle":
@@ -868,26 +869,28 @@ func vulkanDefineTypeFromXML(typе *typeInfo) error {
 	return errors.New("Unknown define \"" + typе.Name + "\"")
 }
 
-func vulkanEnumTypeFromXML(typе *typeInfo, enum_values map[string]*enumFieldInfo, enum_types map[string][]*enumFieldInfo) (cpp_types.Type, error) {
+func vulkanEnumTypeFromXML(typе *typeInfo, enum_base_types map[string]cpp_types.Type, enum_values map[string]*enumFieldInfo, enum_types map[string][]*enumFieldInfo) (cpp_types.Type, error) {
 	fits_in_int32 := true
 	fits_in_uint32 := true
 	// Duplicate logic from Khronos's generator.py: use int32_t if everything fits into int32_t,
 	// then uint32_t, then int64_t.
-	basetype := cpp_types.Int32TType
-	for _, element := range enum_types[typе.Name] {
-		value, err := enumFieldValue(element, enum_values)
-		if err != nil {
-			return nil, err
+	basetype, basetype_found := enum_base_types[typе.Name]
+	if !basetype_found {
+		for _, element := range enum_types[typе.Name] {
+			value, err := enumFieldValue(element, enum_values)
+			if err != nil {
+				return nil, err
+			}
+			if int64(int32(value)) != value {
+				fits_in_int32 = false
+			}
+			if int64(uint32(value)) != value {
+				fits_in_uint32 = false
+			}
 		}
-		if int64(int32(value)) != value {
-			fits_in_int32 = false
-		}
-		if int64(uint32(value)) != value {
-			fits_in_uint32 = false
-		}
-	}
-	if !fits_in_int32 {
-		if fits_in_uint32 {
+		if fits_in_int32 {
+			basetype = cpp_types.Int32TType
+		} else if fits_in_uint32 {
 			basetype = cpp_types.UInt32TType
 		} else {
 			basetype = cpp_types.Int64TType
@@ -1256,16 +1259,24 @@ func elementFromRawXML(element_name string, raw_XML string) (string, error) {
 		raw_XML, opening_tag)[1], closing_tag)[0], nil
 }
 
-func parseEnumValues(registry *registry) (map[string]*enumFieldInfo, map[string][]*enumFieldInfo, error) {
+func parseEnumValues(registry *registry) (map[string]cpp_types.Type, map[string]*enumFieldInfo, map[string][]*enumFieldInfo, error) {
+	enum_base_types := make(map[string]cpp_types.Type)
 	enum_values := make(map[string]*enumFieldInfo)
 	enum_types := make(map[string][]*enumFieldInfo)
 
 	for enum_idx := range registry.Enums {
 		enum := &registry.Enums[enum_idx]
+		if enum.Bitwidth != "" {
+			if enum.Bitwidth == "64" {
+				enum_base_types[enum.Name] = cpp_types.Int64TType
+			} else {
+				return nil, nil, nil, errors.New("Unknown bitwidth value \"" + enum.Bitwidth + "\"")
+			}
+		}
 		for enum_field_idx := range enum.EnumFields {
 			enum_field := &enum.EnumFields[enum_field_idx]
 			if _, ok := enum_values[enum_field.Name]; ok {
-				return nil, nil, errors.New("Duplicated enum value \"" + enum.Name + "\"")
+				return nil, nil, nil, errors.New("Duplicated enum value \"" + enum.Name + "\"")
 			}
 			enum_values[enum_field.Name] = enum_field
 			if value, ok := enum_types[enum.Name]; ok {
@@ -1281,7 +1292,7 @@ func parseEnumValues(registry *registry) (map[string]*enumFieldInfo, map[string]
 			enum_field := &feature.EnumFields[enum_field_idx]
 			if enum_field.Extends != "" {
 				if _, ok := enum_values[enum_field.Name]; ok {
-					return nil, nil, errors.New("Duplicated enum value \"" + enum_field.Name + "\"")
+					return nil, nil, nil, errors.New("Duplicated enum value \"" + enum_field.Name + "\"")
 				}
 				enum_values[enum_field.Name] = enum_field
 				enum_types[enum_field.Extends] = append(enum_types[enum_field.Extends], enum_field)
@@ -1312,7 +1323,7 @@ func parseEnumValues(registry *registry) (map[string]*enumFieldInfo, map[string]
 						if value == old_value && err1 == nil && err2 == nil {
 							continue
 						}
-						return nil, nil, errors.New("Duplicated enum value \"" + enum_field.Name + "\"")
+						return nil, nil, nil, errors.New("Duplicated enum value \"" + enum_field.Name + "\"")
 					}
 					enum_values[enum_field.Name] = enum_field
 					enum_types[enum_field.Extends] = append(enum_types[enum_field.Extends], enum_field)
@@ -1320,7 +1331,7 @@ func parseEnumValues(registry *registry) (map[string]*enumFieldInfo, map[string]
 			}
 		}
 	}
-	return enum_values, enum_types, nil
+	return enum_base_types, enum_values, enum_types, nil
 }
 
 func enumFieldValue(enum_field *enumFieldInfo, all_enum_fields map[string]*enumFieldInfo) (int64, error) {
