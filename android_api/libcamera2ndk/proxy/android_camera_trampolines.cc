@@ -380,6 +380,16 @@ camera_status_t DoThunk_ACameraManager_openCamera(ACameraManager* manager,
   return ACameraManager_openCamera(manager, cameraId, host_callbacks, device);
 }
 
+camera_status_t DoThunk_ACameraManager_openSharedCamera(ACameraManager* manager,
+                                                        const char* cameraId,
+                                                        ACameraDevice_StateCallbacks* callbacks,
+                                                        ACameraDevice** device,
+                                                        bool* primaryClient) {
+  ACameraDevice_StateCallbacks host_callbacks_holder;
+  auto host_callbacks = ToHostACameraDevice_StateCallbacks(callbacks, &host_callbacks_holder);
+  return ACameraManager_openSharedCamera(manager, cameraId, host_callbacks, device, primaryClient);
+}
+
 camera_status_t DoThunk_ACameraManager_registerAvailabilityCallback(
     ACameraManager* opaque_manager,
     const ACameraManager_AvailabilityCallbacks* guest_callback) {

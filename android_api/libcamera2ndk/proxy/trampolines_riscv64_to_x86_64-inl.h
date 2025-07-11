@@ -32,7 +32,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"ACameraManager_getCameraIdList", GetTrampolineFunc<auto(void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"ACameraManager_isCameraDeviceSharingSupported", GetTrampolineFunc<auto(void*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"ACameraManager_openCamera", GetTrampolineFunc<auto(void*, void*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(DoThunk_ACameraManager_openCamera)},
-{"ACameraManager_openSharedCamera", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
+{"ACameraManager_openSharedCamera", GetTrampolineFunc<auto(void*, void*, void*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(DoThunk_ACameraManager_openSharedCamera)},
 {"ACameraManager_registerAvailabilityCallback", GetTrampolineFunc<auto(void*, void*) -> uint32_t>(), reinterpret_cast<void*>(DoThunk_ACameraManager_registerAvailabilityCallback)},
 {"ACameraManager_registerExtendedAvailabilityCallback", GetTrampolineFunc<auto(void*, void*) -> uint32_t>(), reinterpret_cast<void*>(DoThunk_ACameraManager_registerExtendedAvailabilityCallback)},
 {"ACameraManager_unregisterAvailabilityCallback", GetTrampolineFunc<auto(void*, void*) -> uint32_t>(), reinterpret_cast<void*>(DoThunk_ACameraManager_unregisterAvailabilityCallback)},

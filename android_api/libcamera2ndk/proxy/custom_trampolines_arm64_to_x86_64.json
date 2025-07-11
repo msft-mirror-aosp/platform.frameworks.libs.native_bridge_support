@@ -33,6 +33,9 @@
     "ACameraManager_openCamera": {
       "call_method": "custom_thunk"
     },
+    "ACameraManager_openSharedCamera": {
+      "call_method": "custom_thunk"
+    },
     "ACameraManager_registerAvailabilityCallback": {
       "call_method": "custom_thunk"
     },
