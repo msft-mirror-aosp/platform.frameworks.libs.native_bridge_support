@@ -40,6 +40,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"getnameinfo", GetTrampolineFunc<auto(void*, int32_t, void*, int32_t, void*, int32_t, int32_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"gettimeofday", GetTrampolineFunc<auto(void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"longjmp", GetTrampolineFunc<auto(void*, int32_t) -> void>(), reinterpret_cast<void*>(DoThunk_longjmp)},
+{"memchr", GetTrampolineFunc<auto(void*, int32_t, size_t) -> void*>(), reinterpret_cast<void*>(NULL)},
 {"memcmp", GetTrampolineFunc<auto(void*, void*, int32_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"memcpy", GetTrampolineFunc<auto(void*, void*, int32_t) -> void*>(), reinterpret_cast<void*>(NULL)},
 {"memset", GetTrampolineFunc<auto(void*, int32_t, int32_t) -> void*>(), reinterpret_cast<void*>(NULL)},
