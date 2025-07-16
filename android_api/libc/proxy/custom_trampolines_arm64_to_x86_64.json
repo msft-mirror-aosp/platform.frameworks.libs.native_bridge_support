@@ -264,6 +264,12 @@
       "is_compatible": true,
       "signature": "ppii"
     },
+    "memchr": {
+      "call_method": "default",
+      "comment": "performance optimization",
+      "is_compatible": true,
+      "signature": "ppiz"
+    },
     "memcpy": {
       "call_method": "default",
       "comment": "performance optimization",
