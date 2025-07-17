@@ -115,6 +115,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(pthread_sigqueue);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(setjmp);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(siglongjmp);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(sigsetjmp);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(strlen);
 DEFINE_INTERCEPTABLE_STUB_VARIABLE(environ);
 
 static void __attribute__((constructor(0))) init_stub_library() {
@@ -216,6 +217,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", setjmp);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", siglongjmp);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", sigsetjmp);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", strlen);
   INIT_INTERCEPTABLE_STUB_VARIABLE("libc.so", environ);
 }
 // clang-format on

@@ -601,6 +601,12 @@
       "call_method": "custom_thunk",
       "header": "setjump.h",
       "signature": "ipi"
+    },
+    "strlen": {
+      "call_method": "default",
+      "comment": "performance optimization",
+      "is_compatible": true,
+      "signature": "zp"
     }
   },
   "types": {}

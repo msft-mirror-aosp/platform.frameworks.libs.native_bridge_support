@@ -609,6 +609,12 @@
       "header": "setjump.h",
       "signature": "ipi"
     },
+    "strlen": {
+      "call_method": "default",
+      "comment": "performance optimization",
+      "is_compatible": true,
+      "signature": "zp"
+    },
     "time": {
       "call_method": "default",
       "comment": "See description for clock_gettime",
