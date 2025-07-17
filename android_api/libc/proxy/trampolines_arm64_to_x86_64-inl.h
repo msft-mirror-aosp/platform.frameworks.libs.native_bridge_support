@@ -99,6 +99,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"setjmp", GetTrampolineFunc<auto(void*) -> int32_t>(), reinterpret_cast<void*>(DoThunk_setjmp)},
 {"siglongjmp", GetTrampolineFunc<auto(void*, int32_t) -> void>(), reinterpret_cast<void*>(DoThunk_siglongjmp)},
 {"sigsetjmp", GetTrampolineFunc<auto(void*, int32_t) -> int32_t>(), reinterpret_cast<void*>(DoThunk_sigsetjmp)},
+{"strlen", GetTrampolineFunc<auto(void*) -> size_t>(), reinterpret_cast<void*>(NULL)},
 {"time", GetTrampolineFunc<auto(void*) -> long>(), reinterpret_cast<void*>(NULL)},
 };  // kKnownTrampolines
 const KnownVariable kKnownVariables[] = {
