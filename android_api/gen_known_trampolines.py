@@ -259,8 +259,23 @@ def main(argv):
   args = parser.parse_args()
 
   library = args.library
-  guest_api = json.load(open(args.guest_api_descr_file))
-  host_api = json.load(open(args.host_api_descr_file))
+
+  # TODO(b/433437617): Current libc api jsons are unused and break api analysis. We clear them to
+  # prevent this from happening. We should change the implementation of trampolines generation to
+  # use these jsons to generate input and output trampoline types.
+  if library == "libc":
+    guest_api = {
+      "symbols": {},
+      "types": {}
+    }
+    host_api = {
+      "symbols": {},
+      "types": {}
+    }
+  else:
+    guest_api = json.load(open(args.guest_api_descr_file))
+    host_api = json.load(open(args.host_api_descr_file))
+
   custom_api = json.load(open(args.custom_trampolines_descr_file))
 
   api_analysis.mark_incompatible_and_custom_api(
