@@ -90,7 +90,7 @@ def _get_type_str(guest_api, type_name, is_return_type):
                                     'auto(*)(%s) -> %s')
 
   # Handle pointers and references to objects.
-  if kind == 'pointer' or kind == 'reference' or kind == 'rvalue_reference':
+  if kind in ['pointer', 'reference', 'rvalue_reference', 'union']:
     return 'void*'
 
   if kind == 'const':
@@ -131,13 +131,12 @@ def _get_default_trampoline(symbol, guest_api):
   trampoline = 'GetTrampolineFunc<'
 
   if 'type' in guest_api['symbols'][symbol]:
-    if 'signature' in guest_api['symbols'][symbol]:
-      raise Exception(('custom signature must not be defined for'
-                       ' a symbol with defined type: %s') % symbol)
-
     type_name = guest_api['symbols'][symbol]['type']
     params_str = _get_type_str(guest_api, type_name, False)
   else:
+    if 'signature' not in guest_api['symbols'][symbol]:
+      raise Exception(('This symbol is not defined in api jsons.'
+                       ' Please define a custom signature: %s') % symbol)
     custom_signature = guest_api['symbols'][symbol].get('signature', None)
     assert custom_signature
     params_str = _get_function_type_str_from_signature(custom_signature)
@@ -260,21 +259,8 @@ def main(argv):
 
   library = args.library
 
-  # TODO(b/433437617): Current libc api jsons are unused and break api analysis. We clear them to
-  # prevent this from happening. We should change the implementation of trampolines generation to
-  # use these jsons to generate input and output trampoline types.
-  if library == "libc":
-    guest_api = {
-      "symbols": {},
-      "types": {}
-    }
-    host_api = {
-      "symbols": {},
-      "types": {}
-    }
-  else:
-    guest_api = json.load(open(args.guest_api_descr_file))
-    host_api = json.load(open(args.host_api_descr_file))
+  guest_api = json.load(open(args.guest_api_descr_file))
+  host_api = json.load(open(args.host_api_descr_file))
 
   custom_api = json.load(open(args.custom_trampolines_descr_file))
 

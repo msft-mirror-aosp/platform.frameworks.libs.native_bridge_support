@@ -429,9 +429,12 @@ def _override_custom_symbol_properties(guest_api, custom_api):
       # This may override 'call_method' for function-type symbol.
       # But should not override 'is_compatible', which is only used
       # when symbol isn't present in guest_api.
-      assert 'is_compatible' not in custom_descr, ('The symbol %s is already '
-                                                   'compatible: remove the '
-                                                   'override') % custom_symbol
+      # If custom_trampolines should always override symbols we don't care
+      # if the symbol is already compatible.
+      if not custom_config.get('ignore_non_custom', False):
+        assert 'is_compatible' not in custom_descr, ('The symbol %s is already '
+                                                    'compatible: remove the '
+                                                    'override') % custom_symbol
       if 'is_custom_compatible' in custom_descr:
         custom_descr['is_compatible'] = custom_descr['is_custom_compatible']
       guest_api['symbols'][custom_symbol].update(custom_descr)
