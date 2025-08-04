@@ -131,6 +131,8 @@ def _get_default_trampoline(symbol, guest_api):
   trampoline = 'GetTrampolineFunc<'
 
   if 'type' in guest_api['symbols'][symbol]:
+    if 'signature' in guest_api['symbols'][symbol] and guest_api['symbols'][symbol]['call_method'] == "default":
+      print(('WARNING: default symbol has both a defined type and a signature: %s') % symbol)
     type_name = guest_api['symbols'][symbol]['type']
     params_str = _get_type_str(guest_api, type_name, False)
   else:
