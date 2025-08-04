@@ -20,8 +20,7 @@
       "reason_for_compatible": [
         "struct __pthread_cleanup_t has pointer to ",
         "function. TODO(levarum): Is this an issue?"
-      ],
-      "signature": "vpi"
+      ]
     },
     "__pthread_cleanup_push": {
       "call_method": "custom_trampoline",
@@ -31,38 +30,32 @@
     "__system_properties_init": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "i"
+      "is_compatible": true
     },
     "__system_property_add": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "ipupu"
+      "is_compatible": true
     },
     "__system_property_area_init": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "i"
+      "is_compatible": true
     },
     "__system_property_area_serial": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "u"
+      "is_compatible": true
     },
     "__system_property_find": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "pp"
+      "is_compatible": true
     },
     "__system_property_find_nth": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "pu"
+      "is_compatible": true
     },
     "__system_property_foreach": {
       "call_method": "custom_trampoline",
@@ -72,14 +65,12 @@
     "__system_property_get": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "__system_property_read": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "ippp"
+      "is_compatible": true
     },
     "__system_property_read_callback": {
       "call_method": "custom_trampoline",
@@ -89,38 +80,32 @@
     "__system_property_serial": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "up"
+      "is_compatible": true
     },
     "__system_property_set": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "__system_property_set_filename": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "ip"
+      "is_compatible": true
     },
     "__system_property_update": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "ippu"
+      "is_compatible": true
     },
     "__system_property_wait": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "ipupp"
+      "is_compatible": true
     },
     "__system_property_wait_any": {
       "call_method": "default",
       "header": "sys/system_properties.h",
-      "is_compatible": true,
-      "signature": "uu"
+      "is_compatible": true
     },
     "_longjmp": {
       "call_method": "custom_thunk",
@@ -140,64 +125,54 @@
         "structures which are supposed to be freed with freeaddrinfo"
       ],
       "header": "resolv_netid.h",
-      "is_compatible": true,
-      "signature": "ipppuup"
+      "is_compatible": true
     },
     "android_getaddrinfofornetcontext": {
       "call_method": "default",
       "comment": "See description for android_getaddrinfofornet",
       "header": "resolv_netid.h",
-      "is_compatible": true,
-      "signature": "ippppp"
+      "is_compatible": true
     },
     "android_mallopt": {
       "call_method": "default",
-      "is_compatible": true,
-      "signature": "iipz"
+      "is_compatible": true
     },
     "android_set_abort_message": {
       "call_method": "default",
       "header": "android/set_abort_message.h",
-      "is_compatible": true,
-      "signature": "vp"
+      "is_compatible": true
     },
     "android_crash_detail_register": {
       "call_method": "default",
       "header": "android/crash_detail.h",
-      "is_compatible": true,
-      "signature": "ppipi"
+      "is_compatible": true
     },
     "android_crash_detail_unregister": {
       "call_method": "default",
       "header": "android/crash_detail.h",
-      "is_compatible": true,
-      "signature": "vp"
+      "is_compatible": true
     },
     "android_crash_detail_replace_data": {
       "call_method": "default",
       "header": "android/crash_detail.h",
-      "is_compatible": true,
-      "signature": "vppi"
+      "is_compatible": true
     },
     "android_crash_detail_replace_name": {
       "call_method": "default",
       "header": "android/crash_detail.h",
-      "is_compatible": true,
-      "signature": "vppi"
+      "is_compatible": true
     },
     "clock_gettime": {
       "call_method": "default",
       "comment": "clock_gettime uses call to vdso symbol to avoid doing syscall, this is why we want to proxy it to the host library",
       "header": "sys/time.h",
-      "is_compatible": true,
-      "signature": "iip"
+      "is_compatible": true
     },
     "clock_getres": {
       "call_method": "default",
       "comment": "See description for clock_gettime",
       "header": "sys/time.h",
-      "is_compatible": true,
-      "signature": "iip"
+      "is_compatible": true
     },
     "environ": {
       "call_method": "do_not_call",
@@ -208,50 +183,43 @@
       "call_method": "default",
       "comment": "See description for android_getaddrinfofornet",
       "header": "netdb.h",
-      "is_compatible": true,
-      "signature": "vp"
+      "is_compatible": true
     },
     "gai_strerror": {
       "call_method": "default",
       "comment": "See description for android_getaddrinfofornet",
       "header": "netdb.h",
-      "is_compatible": true,
-      "signature": "pi"
+      "is_compatible": true
     },
     "getaddrinfo": {
       "call_method": "default",
       "comment": "See description for android_getaddrinfofornet",
       "header": "netdb.h",
-      "is_compatible": true,
-      "signature": "ipppp"
+      "is_compatible": true
     },
     "gethostbyaddr": {
       "call_method": "default",
       "comment": "See description for android_getaddrinfofornet",
       "header": "netdb.h",
-      "is_compatible": true,
-      "signature": "ppii"
+      "is_compatible": true
     },
     "gethostbyname": {
       "call_method": "default",
       "comment": "See description for android_getaddrinfofornet",
       "header": "netdb.h",
-      "is_compatible": true,
-      "signature": "pp"
+      "is_compatible": true
     },
     "getnameinfo": {
       "call_method": "default",
       "comment": "See description for android_getaddrinfofornet",
       "header": "netdb.h",
-      "is_compatible": true,
-      "signature": "ipipipii"
+      "is_compatible": true
     },
     "gettimeofday": {
       "call_method": "default",
       "comment": "See description for clock_gettime",
       "header": "sys/time.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "longjmp": {
       "call_method": "custom_thunk",
@@ -384,110 +352,92 @@
     "pthread_attr_destroy": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ip"
+      "is_compatible": true
     },
     "pthread_attr_getdetachstate": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "pthread_attr_getguardsize": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "pthread_attr_getinheritsched": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "pthread_attr_getschedparam": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "pthread_attr_getschedpolicy": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "pthread_attr_getscope": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "pthread_attr_getstack": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ippp"
+      "is_compatible": true
     },
     "pthread_attr_getstacksize": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "pthread_attr_init": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ip"
+      "is_compatible": true
     },
     "pthread_attr_setdetachstate": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipi"
+      "is_compatible": true
     },
     "pthread_attr_setguardsize": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipz"
+      "is_compatible": true
     },
     "pthread_attr_setinheritsched": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipi"
+      "is_compatible": true
     },
     "pthread_attr_setschedparam": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipp"
+      "is_compatible": true
     },
     "pthread_attr_setschedpolicy": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipi"
+      "is_compatible": true
     },
     "pthread_attr_setscope": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipi"
+      "is_compatible": true
     },
     "pthread_attr_setstack": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ippz"
+      "is_compatible": true
     },
     "pthread_attr_setstacksize": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ipz"
+      "is_compatible": true
     },
     "pthread_create": {
       "call_method": "custom_trampoline",
@@ -497,14 +447,12 @@
     "pthread_detach": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "il"
+      "is_compatible": true
     },
     "pthread_exit": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "vp"
+      "is_compatible": true
     },
     "pthread_getattr_np": {
       "call_method": "custom_trampoline",
@@ -514,32 +462,27 @@
     "pthread_getcpuclockid": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ilp"
+      "is_compatible": true
     },
     "pthread_getname_np": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ilpl"
+      "is_compatible": true
     },
     "pthread_getschedparam": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ilpp"
+      "is_compatible": true
     },
     "pthread_getspecific": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "pi"
+      "is_compatible": true
     },
     "pthread_gettid_np": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "il"
+      "is_compatible": true
     },
     "pthread_join": {
       "call_method": "custom_trampoline",
@@ -555,44 +498,37 @@
     "pthread_key_delete": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ii"
+      "is_compatible": true
     },
     "pthread_kill": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ili"
+      "is_compatible": true
     },
     "pthread_setname_np": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ilp"
+      "is_compatible": true
     },
     "pthread_setschedparam": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ilip"
+      "is_compatible": true
     },
     "pthread_setschedprio": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ili"
+      "is_compatible": true
     },
     "pthread_setspecific": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "iip"
+      "is_compatible": true
     },
     "pthread_sigqueue": {
       "call_method": "default",
       "header": "pthread.h",
-      "is_compatible": true,
-      "signature": "ilip"
+      "is_compatible": true
     },
     "setjmp": {
       "call_method": "custom_thunk",
@@ -619,8 +555,7 @@
       "call_method": "default",
       "comment": "See description for clock_gettime",
       "header": "sys/time.h",
-      "is_compatible": true,
-      "signature": "lp"
+      "is_compatible": true
     }
   },
   "types": {}
