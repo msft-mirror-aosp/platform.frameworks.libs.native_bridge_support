@@ -139,13 +139,15 @@ def _get_default_trampoline(symbol, guest_api):
     params_str = _get_function_type_str_from_signature(custom_signature)
   elif symbol_has_type:
     if symbol_has_signature and symbol_call_method == 'default':
-      print(('INFO: default symbol has both a defined type and a signature: %s') % symbol)
+      raise Exception(('Default symbol has both a defined type and a signature: %s') % symbol)
     type_name = guest_api['symbols'][symbol]['type']
     params_str = _get_type_str(guest_api, type_name, False)
   else:
     if not symbol_has_signature:
       raise Exception(('This symbol is not defined in api jsons.'
                        ' Please define a custom signature: %s') % symbol)
+    if symbol_call_method == "default":
+      print(('INFO: this symbol uses a manually written signature: %s') % symbol)
     custom_signature = guest_api['symbols'][symbol].get('signature', None)
     assert custom_signature
     params_str = _get_function_type_str_from_signature(custom_signature)
