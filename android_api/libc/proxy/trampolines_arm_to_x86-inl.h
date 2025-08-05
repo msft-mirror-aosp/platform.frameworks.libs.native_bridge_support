@@ -95,9 +95,9 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"pthread_setschedprio", GetTrampolineFunc<auto(int32_t, int32_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"pthread_setspecific", GetTrampolineFunc<auto(int32_t, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"pthread_sigqueue", GetTrampolineFunc<auto(int32_t, int32_t, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
-{"setjmp", GetTrampolineFunc<auto(void) -> void>(), reinterpret_cast<void*>(DoThunk_setjmp)},
-{"siglongjmp", GetTrampolineFunc<auto(void) -> void>(), reinterpret_cast<void*>(DoThunk_siglongjmp)},
-{"sigsetjmp", GetTrampolineFunc<auto(void) -> void>(), reinterpret_cast<void*>(DoThunk_sigsetjmp)},
+{"setjmp", GetTrampolineFunc<auto(void*) -> int32_t>(), reinterpret_cast<void*>(DoThunk_setjmp)},
+{"siglongjmp", GetTrampolineFunc<auto(void*, int32_t) -> void>(), reinterpret_cast<void*>(DoThunk_siglongjmp)},
+{"sigsetjmp", GetTrampolineFunc<auto(void*, int32_t) -> int32_t>(), reinterpret_cast<void*>(DoThunk_sigsetjmp)},
 {"strlen", GetTrampolineFunc<auto(void*) -> size_t>(), reinterpret_cast<void*>(NULL)},
 };  // kKnownTrampolines
 const KnownVariable kKnownVariables[] = {
