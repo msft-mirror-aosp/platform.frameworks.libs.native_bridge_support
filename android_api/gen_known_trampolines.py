@@ -128,17 +128,26 @@ def _get_function_type_str_from_signature(signature):
 
 
 def _get_default_trampoline(symbol, guest_api):
-  trampoline = 'GetTrampolineFunc<'
+  symbol_call_method = guest_api['symbols'][symbol]['call_method']
+  symbol_has_signature = 'signature' in guest_api['symbols'][symbol]
+  symbol_has_type = 'type' in guest_api['symbols'][symbol]
 
-  if 'type' in guest_api['symbols'][symbol]:
-    if 'signature' in guest_api['symbols'][symbol] and guest_api['symbols'][symbol]['call_method'] == "default":
-      print(('WARNING: default symbol has both a defined type and a signature: %s') % symbol)
+  trampoline = 'GetTrampolineFunc<'
+  if symbol_call_method == "custom_thunk" and symbol_has_signature:
+    custom_signature = guest_api['symbols'][symbol].get('signature', None)
+    assert custom_signature
+    params_str = _get_function_type_str_from_signature(custom_signature)
+  elif symbol_has_type:
+    if symbol_has_signature and symbol_call_method == 'default':
+      raise Exception(('Default symbol has both a defined type and a signature: %s') % symbol)
     type_name = guest_api['symbols'][symbol]['type']
     params_str = _get_type_str(guest_api, type_name, False)
   else:
-    if 'signature' not in guest_api['symbols'][symbol]:
+    if not symbol_has_signature:
       raise Exception(('This symbol is not defined in api jsons.'
                        ' Please define a custom signature: %s') % symbol)
+    if symbol_call_method == "default":
+      print(('INFO: this symbol uses a manually written signature: %s') % symbol)
     custom_signature = guest_api['symbols'][symbol].get('signature', None)
     assert custom_signature
     params_str = _get_function_type_str_from_signature(custom_signature)

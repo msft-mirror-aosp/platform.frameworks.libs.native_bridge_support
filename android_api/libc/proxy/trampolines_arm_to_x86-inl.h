@@ -39,8 +39,8 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"longjmp", GetTrampolineFunc<auto(void*, int32_t) -> void>(), reinterpret_cast<void*>(DoThunk_longjmp)},
 {"memchr", GetTrampolineFunc<auto(void*, int32_t, uint32_t) -> void*>(), reinterpret_cast<void*>(NULL)},
 {"memcmp", GetTrampolineFunc<auto(void) -> void>(), reinterpret_cast<void*>(NULL)},
-{"memcpy", GetTrampolineFunc<auto(void*, void*, int32_t) -> void*>(), reinterpret_cast<void*>(NULL)},
-{"memset", GetTrampolineFunc<auto(void*, int32_t, int32_t) -> void*>(), reinterpret_cast<void*>(NULL)},
+{"memcpy", GetTrampolineFunc<auto(void*, void*, size_t) -> void*>(), reinterpret_cast<void*>(NULL)},
+{"memset", GetTrampolineFunc<auto(void*, int32_t, size_t) -> void*>(), reinterpret_cast<void*>(NULL)},
 {"native_bridge___cxa_thread_atexit_impl", DoCustomTrampoline_native_bridge___cxa_thread_atexit_impl, reinterpret_cast<void*>(DoBadThunk)},
 {"native_bridge_aligned_alloc", GetTrampolineFunc<auto(size_t, size_t) -> void*>(), reinterpret_cast<void*>(aligned_alloc)},
 {"native_bridge_calloc", GetTrampolineFunc<auto(size_t, size_t) -> void*>(), reinterpret_cast<void*>(calloc)},
@@ -95,9 +95,9 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"pthread_setschedprio", GetTrampolineFunc<auto(int32_t, int32_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"pthread_setspecific", GetTrampolineFunc<auto(int32_t, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"pthread_sigqueue", GetTrampolineFunc<auto(int32_t, int32_t, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
-{"setjmp", GetTrampolineFunc<auto(void) -> void>(), reinterpret_cast<void*>(DoThunk_setjmp)},
-{"siglongjmp", GetTrampolineFunc<auto(void) -> void>(), reinterpret_cast<void*>(DoThunk_siglongjmp)},
-{"sigsetjmp", GetTrampolineFunc<auto(void) -> void>(), reinterpret_cast<void*>(DoThunk_sigsetjmp)},
+{"setjmp", GetTrampolineFunc<auto(void*) -> int32_t>(), reinterpret_cast<void*>(DoThunk_setjmp)},
+{"siglongjmp", GetTrampolineFunc<auto(void*, int32_t) -> void>(), reinterpret_cast<void*>(DoThunk_siglongjmp)},
+{"sigsetjmp", GetTrampolineFunc<auto(void*, int32_t) -> int32_t>(), reinterpret_cast<void*>(DoThunk_sigsetjmp)},
 {"strlen", GetTrampolineFunc<auto(void*) -> size_t>(), reinterpret_cast<void*>(NULL)},
 };  // kKnownTrampolines
 const KnownVariable kKnownVariables[] = {
