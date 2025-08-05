@@ -439,6 +439,22 @@ def _override_custom_symbol_properties(guest_api, custom_api):
         custom_descr['is_compatible'] = custom_descr['is_custom_compatible']
       guest_api['symbols'][custom_symbol].update(custom_descr)
 
+  for custom_symbol, custom_descr in custom_api['symbols'].items():
+    # If a custom symbol has a 'guest_api_symbol' entry, this entry states the name of
+    # a guest api symbol which has the type that this custom trampoline can use, instead
+    # of taking the type from a manually written signature.
+    guest_api_symbol_name = custom_descr.get('guest_api_symbol', None)
+    if guest_api_symbol_name:
+      guest_api_symbol = guest_api['symbols'].get(guest_api_symbol_name, None)
+      if not guest_api_symbol:
+        raise Exception(('This custom thunk tries to take the type from'
+                       ' an api json symbol which does not exist: %s') % custom_symbol)
+      json_symbol_type = guest_api_symbol.get('type', None)
+      if not json_symbol_type:
+        raise Exception(('This custom thunk tries to take the type from'
+                       ' an api json symbol which does not have a type entry: %s') % custom_symbol)
+      guest_api['symbols'][custom_symbol]['type'] = guest_api_symbol['type']
+
   if custom_config.get('ignore_non_custom', False):
     for symbol, descr in guest_api['symbols'].items():
       if symbol not in custom_api['symbols']:
