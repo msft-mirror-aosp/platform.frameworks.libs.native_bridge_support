@@ -228,9 +228,13 @@
     },
     "memset": {
       "call_method": "default",
-      "comment": "performance optimization",
+      "comment": [
+        "performance optimization",
+        "memset is an ifunc, so there is no entry for this symbol in api json.",
+        "Therefore, we need to use a manual signature."
+      ],
       "is_compatible": true,
-      "signature": "ppii"
+      "signature": "ppiz"
     },
     "memchr": {
       "call_method": "default",
@@ -240,9 +244,13 @@
     },
     "memcpy": {
       "call_method": "default",
-      "comment": "performance optimization",
+      "comment": [
+        "performance optimization",
+        "memcpy is an ifunc, so there is no entry for this symbol in api json.",
+        "Therefore, we need to use a manual signature."
+      ],
       "is_compatible": true,
-      "signature": "pppi"
+      "signature": "pppz"
     },
     "memcmp": {
       "call_method": "default",
