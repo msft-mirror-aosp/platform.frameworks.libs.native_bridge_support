@@ -245,29 +245,29 @@
     "native_bridge_aligned_alloc": {
       "call_method": "custom_thunk",
       "custom_thunk": "aligned_alloc",
+      "guest_api_symbol": "aligned_alloc",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "pzz"
+      "is_compatible": true
     },
     "native_bridge_calloc": {
       "call_method": "custom_thunk",
       "custom_thunk": "calloc",
+      "guest_api_symbol": "calloc",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "pzz"
+      "is_compatible": true
     },
     "native_bridge_exit": {
       "call_method": "custom_thunk",
       "custom_thunk": "exit",
-      "header": "stdlib.h",
-      "signature": "vi"
+      "guest_api_symbol": "exit",
+      "header": "stdlib.h"
     },
     "native_bridge_free": {
       "call_method": "custom_thunk",
       "custom_thunk": "free",
+      "guest_api_symbol": "free",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "vp"
+      "is_compatible": true
     },
     "native_bridge_mallinfo": {
       "call_method": "custom_trampoline",
@@ -276,23 +276,23 @@
     "native_bridge_malloc": {
       "call_method": "custom_thunk",
       "custom_thunk": "malloc",
+      "guest_api_symbol": "malloc",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "pz"
+      "is_compatible": true
     },
     "native_bridge_malloc_disable": {
       "call_method": "custom_thunk",
       "custom_thunk": "malloc_disable",
+      "guest_api_symbol": "malloc_disable",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "v"
+      "is_compatible": true
     },
     "native_bridge_malloc_enable": {
       "call_method": "custom_thunk",
       "custom_thunk": "malloc_enable",
+      "guest_api_symbol": "malloc_enable",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "v"
+      "is_compatible": true
     },
     "native_bridge_malloc_info_helper": {
       "call_method": "custom_trampoline"
@@ -305,51 +305,51 @@
     "native_bridge_malloc_usable_size": {
       "call_method": "custom_thunk",
       "custom_thunk": "malloc_usable_size",
+      "guest_api_symbol": "malloc_usable_size",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "zp"
+      "is_compatible": true
     },
     "native_bridge_mallopt": {
       "call_method": "custom_thunk",
       "custom_thunk": "mallopt",
+      "guest_api_symbol": "mallopt",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "iii"
+      "is_compatible": true
     },
     "native_bridge_memalign": {
       "call_method": "custom_thunk",
       "custom_thunk": "memalign",
+      "guest_api_symbol": "memalign",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "pzz"
+      "is_compatible": true
     },
     "native_bridge_posix_memalign": {
       "call_method": "custom_thunk",
       "custom_thunk": "posix_memalign",
+      "guest_api_symbol": "posix_memalign",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "ipzz"
+      "is_compatible": true
     },
     "native_bridge_pvalloc": {
       "call_method": "custom_thunk",
       "custom_thunk": "pvalloc",
+      "guest_api_symbol": "pvalloc",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "pz"
+      "is_compatible": true
     },
     "native_bridge_realloc": {
       "call_method": "custom_thunk",
       "custom_thunk": "realloc",
+      "guest_api_symbol": "realloc",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "ppz"
+      "is_compatible": true
     },
     "native_bridge_valloc": {
       "call_method": "custom_thunk",
       "custom_thunk": "valloc",
+      "guest_api_symbol": "valloc",
       "header": "malloc.h",
-      "is_compatible": true,
-      "signature": "pz"
+      "is_compatible": true
     },
     "pthread_attr_destroy": {
       "call_method": "default",
