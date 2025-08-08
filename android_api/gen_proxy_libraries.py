@@ -54,7 +54,6 @@ class ProxyGenerator:
     self._init_lib('libbinder_ndk')
 
     self._init_lib('libc', stubs_ext='cpp', location='apex/com.android.runtime')
-    self._init_lib('libm', stubs_ext='cpp', location='apex/com.android.runtime')
 
     self._init_lib('libcamera2ndk')
     self._init_lib('libEGL')
@@ -109,7 +108,7 @@ class ProxyGenerator:
     self._build('aosp_x86_64', 'gen_vulkan')
 
   def generate_json_files_for_arch(self, arch, path_template, library):
-    optional_bionic_path = "bionic/" if library == "libc" or library == 'libm' else ""
+    optional_bionic_path = "bionic/" if library == "libc" else ""
     library_path = path_template % (self.android_tree_root,
                                     self.proxy_libraries[library]['location'], optional_bionic_path + library)
 

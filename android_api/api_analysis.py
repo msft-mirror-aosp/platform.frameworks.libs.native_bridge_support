@@ -288,7 +288,6 @@ class APIComparator(object):
                     'atomic',
                     'char',
                     'class',
-                    'complex',
                     'const',
                     'incomplete',
                     'int',
