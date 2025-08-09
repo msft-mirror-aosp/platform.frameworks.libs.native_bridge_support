@@ -69,7 +69,6 @@ NATIVE_BRIDGE_ORIG_GUEST_LIBS := \
     libdl_android.bootstrap \
     libicu.bootstrap \
     liblog \
-    libm.bootstrap \
     libsqlite \
     libssl \
     libstdc++ \
@@ -93,6 +92,7 @@ NATIVE_BRIDGE_MODIFIED_GUEST_LIBS := \
     libGLESv2 \
     libGLESv3 \
     libjnigraphics \
+    libm \
     libmediandk \
     libnativehelper \
     libnativewindow \
