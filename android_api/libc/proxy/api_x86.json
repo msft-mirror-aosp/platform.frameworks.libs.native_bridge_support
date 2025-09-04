@@ -33159,7 +33159,7 @@
 					"type" : "char8"
 				},
 				{
-					"name" : "bionic_systrace_disabled",
+					"name" : "bionic_systrace_enabled",
 					"offset" : 23112,
 					"type" : "char8"
 				},
