@@ -32071,7 +32071,7 @@
 					"type" : "unsigned char8"
 				},
 				{
-					"name" : "bionic_systrace_enabled",
+					"name" : "bionic_systrace_disabled",
 					"offset" : 23112,
 					"type" : "unsigned char8"
 				},
