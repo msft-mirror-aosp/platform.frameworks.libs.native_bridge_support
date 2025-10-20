@@ -54,7 +54,7 @@ extern "C" void __libc_init_main_thread_late() {
 
   // There's currently no way for the guest to query the host's stack guard
   // cookie, so just generate a new one.
-  __libc_safe_arc4random_buf(&__stack_chk_guard, sizeof(__stack_chk_guard));
+  __libc_arc4random_buf_or_die(&__stack_chk_guard, sizeof(__stack_chk_guard));
   __init_tcb_stack_guard(__get_bionic_tcb());
 }
 

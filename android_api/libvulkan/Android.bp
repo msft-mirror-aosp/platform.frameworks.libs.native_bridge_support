@@ -83,7 +83,11 @@ blueprint_go_binary {
     name: "gen_vulkan",
     srcs: ["proxy/gen_vulkan.go"],
     testSrcs: ["proxy/gen_vulkan_test.go"],
-    deps: ["vulkan_xml"],
+    deps: [
+        "cpp_types",
+        "vulkan_types",
+        "vulkan_xml",
+    ],
 }
 
 filegroup {
