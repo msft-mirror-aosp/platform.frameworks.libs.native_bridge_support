@@ -320,15 +320,11 @@ var known_types = map[string]string{
 // We don't really parse defines since we don't have a full-blown compiler.
 // Instead we rely on the fact that there are very few defines in vk.xml and just verify that they match out assumptions.
 var known_defines = map[string]string{
-	"VK_MAKE_VERSION": "// DEPRECATED: This define is deprecated. VK_MAKE_API_VERSION should be used instead.\n" +
-		"#define <name>VK_MAKE_VERSION</name>(major, minor, patch) \\\n" +
+	"VK_MAKE_VERSION": "\n#define <name>VK_MAKE_VERSION</name>(major, minor, patch) \\\n" +
 		"    ((((uint32_t)(major)) &lt;&lt; 22U) | (((uint32_t)(minor)) &lt;&lt; 12U) | ((uint32_t)(patch)))",
-	"VK_VERSION_MAJOR": "// DEPRECATED: This define is deprecated. VK_API_VERSION_MAJOR should be used instead.\n" +
-		"#define <name>VK_VERSION_MAJOR</name>(version) ((uint32_t)(version) &gt;&gt; 22U)",
-	"VK_VERSION_MINOR": "// DEPRECATED: This define is deprecated. VK_API_VERSION_MINOR should be used instead.\n" +
-		"#define <name>VK_VERSION_MINOR</name>(version) (((uint32_t)(version) &gt;&gt; 12U) &amp; 0x3FFU)",
-	"VK_VERSION_PATCH": "// DEPRECATED: This define is deprecated. VK_API_VERSION_PATCH should be used instead.\n" +
-		"#define <name>VK_VERSION_PATCH</name>(version) ((uint32_t)(version) &amp; 0xFFFU)",
+	"VK_VERSION_MAJOR": "\n#define <name>VK_VERSION_MAJOR</name>(version) ((uint32_t)(version) &gt;&gt; 22U)",
+	"VK_VERSION_MINOR": "\n#define <name>VK_VERSION_MINOR</name>(version) (((uint32_t)(version) &gt;&gt; 12U) &amp; 0x3FFU)",
+	"VK_VERSION_PATCH": "\n#define <name>VK_VERSION_PATCH</name>(version) ((uint32_t)(version) &amp; 0xFFFU)",
 
 	"VK_MAKE_API_VERSION": "#define <name>VK_MAKE_API_VERSION</name>(variant, major, minor, patch) \\\n" +
 		"    ((((uint32_t)(variant)) &lt;&lt; 29U) | (((uint32_t)(major)) &lt;&lt; 22U) | (((uint32_t)(minor)) &lt;&lt; 12U) | ((uint32_t)(patch)))",
@@ -338,8 +334,7 @@ var known_defines = map[string]string{
 	"VK_API_VERSION_PATCH":   "#define <name>VK_API_VERSION_PATCH</name>(version) ((uint32_t)(version) &amp; 0xFFFU)",
 
 	"VKSC_API_VARIANT": "// Vulkan SC variant number\n#define <name>VKSC_API_VARIANT</name> 1",
-	"VK_API_VERSION": "// DEPRECATED: This define has been removed. Specific version defines (e.g. VK_API_VERSION_1_0), or the VK_MAKE_VERSION macro, should be used instead.\n" +
-		"//#define <name>VK_API_VERSION</name> <type>VK_MAKE_API_VERSION</type>(0, 1, 0, 0) // Patch version should always be set to 0",
+	"VK_API_VERSION": "\n//#define <name>VK_API_VERSION</name> <type>VK_MAKE_API_VERSION</type>(0, 1, 0, 0) // Patch version should always be set to 0",
 	"VK_API_VERSION_1_0": "// Vulkan 1.0 version number\n" +
 		"#define <name>VK_API_VERSION_1_0</name> <type>VK_MAKE_API_VERSION</type>(0, 1, 0, 0)// Patch version should always be set to 0",
 	"VK_API_VERSION_1_1": "// Vulkan 1.1 version number\n" +
@@ -549,7 +544,7 @@ func Unmarshal(data []byte) (*registry, error) {
 	return &registry, nil
 }
 
-var forbiddenExtensionsList = []string{"VK_NV_cluster_acceleration_structure", "VK_NV_partitioned_acceleration_structure", "VK_EXT_device_generated_commands", "VK_VALVE_extension_612"}
+var forbiddenExtensionsList = []string{"VK_NV_cluster_acceleration_structure", "VK_NV_partitioned_acceleration_structure", "VK_EXT_device_generated_commands", "VK_VALVE_extension_612", "VK_ARM_data_graph", "VK_OHOS_surface"}
 
 func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types map[string]cpp_types.Type, sorted_command_names []string, commands map[string]cpp_types.Type, extensions map[string]int64, err error) {
 	types = vulkan_types.PlatformTypes()
@@ -852,6 +847,12 @@ func vulkanBaseTypeFromXML(typе *typeInfo) (cpp_types.Type, error) {
 			return nil, errors.New("Unexpected define \"" + typе.Name + "\": \"" + typе.RawXML + "\"\"")
 		}
 		return cpp_types.PointerType(cpp_types.OpaqueType("__IOSurface")), nil
+	}
+	if typе.Name == "OHNativeWindow" {
+		if RawXML != "typedef struct NativeWindow <name>OHNativeWindow</name>;" {
+			return nil, errors.New("Unexpected define \"" + typе.Name + "\": \"" + typе.RawXML + "\"\"")
+		}
+		return cpp_types.OpaqueType(typе.Name), nil
 	}
 	if RawXML == fmt.Sprintf("struct <name>%s</name>;", typе.Name) {
 		return cpp_types.OpaqueType(typе.Name), nil
