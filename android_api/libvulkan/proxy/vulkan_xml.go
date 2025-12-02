@@ -544,7 +544,7 @@ func Unmarshal(data []byte) (*registry, error) {
 	return &registry, nil
 }
 
-var forbiddenExtensionsList = []string{"VK_NV_cluster_acceleration_structure", "VK_NV_partitioned_acceleration_structure", "VK_EXT_device_generated_commands", "VK_VALVE_extension_612", "VK_ARM_data_graph", "VK_OHOS_surface"}
+var forbiddenExtensionsList = []string{"VK_NV_cluster_acceleration_structure", "VK_NV_partitioned_acceleration_structure", "VK_EXT_device_generated_commands", "VK_VALVE_extension_612", "VK_ARM_data_graph", "VK_OHOS_surface", "VK_QCOM_data_graph_model", "VK_EXT_present_timing", "VK_OHOS_external_memory", "VK_OHOS_native_buffer", "VK_ARM_performance_counters_by_region"}
 
 func VulkanTypesfromXML(registry *registry) (sorted_type_names []string, types map[string]cpp_types.Type, sorted_command_names []string, commands map[string]cpp_types.Type, extensions map[string]int64, err error) {
 	types = vulkan_types.PlatformTypes()
