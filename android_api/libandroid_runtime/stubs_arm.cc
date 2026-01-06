@@ -393,7 +393,6 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android13nativeDestroyEPv);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android14AndroidRuntime10getRuntimeEv);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android14AndroidRuntime11onVmCreatedEP7_JNIEnv);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android14AndroidRuntime14parseExtraOptsEPcPKc);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android14AndroidRuntime15NewStringLatin1EP7_JNIEnvPKc);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android14AndroidRuntime15javaThreadShellEPv);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android14AndroidRuntime16createJavaThreadEPKcPFvPvES3_);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android14AndroidRuntime16toSlashClassNameEPKc);
@@ -1863,7 +1862,6 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", _ZN7android14AndroidRuntime10getRuntimeEv);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", _ZN7android14AndroidRuntime11onVmCreatedEP7_JNIEnv);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", _ZN7android14AndroidRuntime14parseExtraOptsEPcPKc);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", _ZN7android14AndroidRuntime15NewStringLatin1EP7_JNIEnvPKc);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", _ZN7android14AndroidRuntime15javaThreadShellEPv);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", _ZN7android14AndroidRuntime16createJavaThreadEPKcPFvPvES3_);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", _ZN7android14AndroidRuntime16toSlashClassNameEPKc);

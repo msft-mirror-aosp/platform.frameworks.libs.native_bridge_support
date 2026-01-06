@@ -376,7 +376,6 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"_ZN7android14AndroidRuntime10getRuntimeEv", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"_ZN7android14AndroidRuntime11onVmCreatedEP7_JNIEnv", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"_ZN7android14AndroidRuntime14parseExtraOptsEPcPKc", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
-{"_ZN7android14AndroidRuntime15NewStringLatin1EP7_JNIEnvPKc", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"_ZN7android14AndroidRuntime15javaThreadShellEPv", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"_ZN7android14AndroidRuntime16createJavaThreadEPKcPFvPvES3_", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"_ZN7android14AndroidRuntime16toSlashClassNameEPKc", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
