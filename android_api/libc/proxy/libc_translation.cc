@@ -18,6 +18,8 @@
 // by pulling this to a separate file
 #define __BIONIC_DISABLE_MALLOC_USABLE_SIZE_FORTIFY_WARNINGS
 
+#include <stdlib.h>
+
 #include "berberis/guest_abi/function_wrappers.h"
 #include "berberis/proxy_loader/proxy_library_builder.h"
 #include "cxa_trampolines.h"
