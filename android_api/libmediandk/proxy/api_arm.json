@@ -37,6 +37,10 @@
 		{
 			"type" : "func ACodecEncoderCapabilities_getQualityRange"
 		},
+		"ACodecEncoderCapabilities_getSupportedLayeringSchemas" : 
+		{
+			"type" : "func ACodecEncoderCapabilities_getSupportedLayeringSchemas"
+		},
 		"ACodecEncoderCapabilities_isBitrateModeSupported" : 
 		{
 			"type" : "func ACodecEncoderCapabilities_isBitrateModeSupported"
@@ -173,9 +177,25 @@
 		{
 			"type" : "func AImageReader_setBufferRemovedListener"
 		},
+		"AImageReader_setDefaultAHardwareBufferFormat" : 
+		{
+			"type" : "func AImageReader_setDefaultAHardwareBufferFormat"
+		},
+		"AImageReader_setDefaultBufferDataSpace" : 
+		{
+			"type" : "func AImageReader_setDefaultBufferDataSpace"
+		},
+		"AImageReader_setDefaultBufferSize" : 
+		{
+			"type" : "func AImageReader_setDefaultBufferSize"
+		},
 		"AImageReader_setImageListener" : 
 		{
 			"type" : "func AImageReader_setImageListener"
+		},
+		"AImageReader_setMaxImages" : 
+		{
+			"type" : "func AImageReader_setMaxImages"
 		},
 		"AImageReader_setUsage" : 
 		{
@@ -228,6 +248,10 @@
 		"AImage_getTimestamp" : 
 		{
 			"type" : "func AImage_getTimestamp"
+		},
+		"AImage_getTransform" : 
+		{
+			"type" : "func AImage_getTransform"
 		},
 		"AImage_getWidth" : 
 		{
@@ -441,6 +465,10 @@
 		{
 			"type" : "unsigned char8 const*"
 		},
+		"AMEDIAFORMAT_KEY_CSD_VVC" : 
+		{
+			"type" : "unsigned char8 const*"
+		},
 		"AMEDIAFORMAT_KEY_D263" : 
 		{
 			"type" : "unsigned char8 const*"
@@ -526,6 +554,10 @@
 			"type" : "unsigned char8 const*"
 		},
 		"AMEDIAFORMAT_KEY_HEIGHT" : 
+		{
+			"type" : "unsigned char8 const*"
+		},
+		"AMEDIAFORMAT_KEY_HORIZONTAL_FLIP" : 
 		{
 			"type" : "unsigned char8 const*"
 		},
@@ -1636,7 +1668,7 @@
 				{
 					"name" : "mVector",
 					"offset" : 0,
-					"type" : "class android::SortedVector<android::key_value_pair_t>"
+					"type" : "class android::SortedVector<android::key_value_pair_t<unsigned int32, unsigned int32>>"
 				}
 			],
 			"inheritance" : [],
@@ -1859,7 +1891,7 @@
 			"kind" : "class",
 			"size" : 160
 		},
-		"class android::SortedVector<android::key_value_pair_t>" : 
+		"class android::SortedVector<android::key_value_pair_t<unsigned int32, unsigned int32>>" : 
 		{
 			"fields" : [],
 			"inheritance" : 
@@ -2217,60 +2249,75 @@
 			"kind" : "class",
 			"size" : 64
 		},
-		"class std::__1::__compressed_pair<ACodecPerformancePoint*, std::__1::allocator<ACodecPerformancePoint>>" : 
+		"class std::__1::__compressed_pair_padding<ACodecPerformancePoint*, true>" : 
 		{
 			"fields" : [],
-			"inheritance" : 
-			[
-				"struct std::__1::__compressed_pair_elem<ACodecPerformancePoint*, int32, false>",
-				"struct std::__1::__compressed_pair_elem<std::__1::allocator<ACodecPerformancePoint>, int32, true>"
-			],
+			"inheritance" : [],
 			"kind" : "class",
-			"size" : 32
+			"size" : 8
 		},
-		"class std::__1::__compressed_pair<AIntRange*, std::__1::allocator<AIntRange>>" : 
+		"class std::__1::__compressed_pair_padding<AIntRange*, true>" : 
 		{
 			"fields" : [],
-			"inheritance" : 
-			[
-				"struct std::__1::__compressed_pair_elem<AIntRange*, int32, false>",
-				"struct std::__1::__compressed_pair_elem<std::__1::allocator<AIntRange>, int32, true>"
-			],
+			"inheritance" : [],
 			"kind" : "class",
-			"size" : 32
+			"size" : 8
 		},
-		"class std::__1::__compressed_pair<android::CpuConsumer::LockedBuffer*, std::__1::default_delete<android::CpuConsumer::LockedBuffer>>" : 
+		"class std::__1::__compressed_pair_padding<android::CpuConsumer::LockedBuffer*, true>" : 
 		{
 			"fields" : [],
-			"inheritance" : 
-			[
-				"struct std::__1::__compressed_pair_elem<android::CpuConsumer::LockedBuffer*, int32, false>",
-				"struct std::__1::__compressed_pair_elem<std::__1::default_delete<android::CpuConsumer::LockedBuffer>, int32, true>"
-			],
+			"inheritance" : [],
 			"kind" : "class",
-			"size" : 32
+			"size" : 8
 		},
-		"class std::__1::__compressed_pair<int32*, std::__1::allocator<int32>>" : 
+		"class std::__1::__compressed_pair_padding<int32*, true>" : 
 		{
 			"fields" : [],
-			"inheritance" : 
-			[
-				"struct std::__1::__compressed_pair_elem<int32*, int32, false>",
-				"struct std::__1::__compressed_pair_elem<std::__1::allocator<int32>, int32, true>"
-			],
+			"inheritance" : [],
 			"kind" : "class",
-			"size" : 32
+			"size" : 8
 		},
-		"class std::__1::__compressed_pair<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, std::__1::allocator<unsigned char8>>" : 
+		"class std::__1::__compressed_pair_padding<std::__1::allocator<ACodecPerformancePoint>, true>" : 
 		{
 			"fields" : [],
-			"inheritance" : 
-			[
-				"struct std::__1::__compressed_pair_elem<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, int32, false>",
-				"struct std::__1::__compressed_pair_elem<std::__1::allocator<unsigned char8>, int32, true>"
-			],
+			"inheritance" : [],
 			"kind" : "class",
-			"size" : 96
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::allocator<AIntRange>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::allocator<int32>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::allocator<unsigned char8>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::default_delete<android::CpuConsumer::LockedBuffer>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
 		},
 		"class std::__1::__shared_weak_count" : 
 		{
@@ -2327,9 +2374,9 @@
 			"fields" : 
 			[
 				{
-					"name" : "__r_",
+					"name" : "",
 					"offset" : 0,
-					"type" : "class std::__1::__compressed_pair<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, std::__1::allocator<unsigned char8>>"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::#9"
 				}
 			],
 			"inheritance" : [],
@@ -2493,9 +2540,9 @@
 			"fields" : 
 			[
 				{
-					"name" : "__ptr_",
+					"name" : "",
 					"offset" : 0,
-					"type" : "class std::__1::__compressed_pair<android::CpuConsumer::LockedBuffer*, std::__1::default_delete<android::CpuConsumer::LockedBuffer>>"
+					"type" : "struct std::__1::unique_ptr<android::CpuConsumer::LockedBuffer, std::__1::default_delete<android::CpuConsumer::LockedBuffer>>::#26"
 				}
 			],
 			"inheritance" : [],
@@ -2517,9 +2564,9 @@
 					"type" : "struct ACodecPerformancePoint*"
 				},
 				{
-					"name" : "__end_cap_",
+					"name" : "",
 					"offset" : 64,
-					"type" : "class std::__1::__compressed_pair<ACodecPerformancePoint*, std::__1::allocator<ACodecPerformancePoint>>"
+					"type" : "struct std::__1::vector<ACodecPerformancePoint, std::__1::allocator<ACodecPerformancePoint>>::#14"
 				}
 			],
 			"inheritance" : [],
@@ -2541,9 +2588,9 @@
 					"type" : "struct AIntRange*"
 				},
 				{
-					"name" : "__end_cap_",
+					"name" : "",
 					"offset" : 64,
-					"type" : "class std::__1::__compressed_pair<AIntRange*, std::__1::allocator<AIntRange>>"
+					"type" : "struct std::__1::vector<AIntRange, std::__1::allocator<AIntRange>>::#13"
 				}
 			],
 			"inheritance" : [],
@@ -2565,9 +2612,9 @@
 					"type" : "int32*"
 				},
 				{
-					"name" : "__end_cap_",
+					"name" : "",
 					"offset" : 64,
-					"type" : "class std::__1::__compressed_pair<int32*, std::__1::allocator<int32>>"
+					"type" : "struct std::__1::vector<int32, std::__1::allocator<int32>>::#12"
 				}
 			],
 			"inheritance" : [],
@@ -2619,110 +2666,6 @@
 			"pointee_type" : "func #1",
 			"size" : 32
 		},
-		"func #10" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct AMediaCodec*",
-				"void*",
-				"int32"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #10*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #10",
-			"size" : 32
-		},
-		"func #11" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct AMediaCodec*",
-				"void*",
-				"int32",
-				"struct AMediaCodecBufferInfo*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #11*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #11",
-			"size" : 32
-		},
-		"func #12" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct AMediaCodec*",
-				"void*",
-				"struct AMediaFormat*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #12*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #12",
-			"size" : 32
-		},
-		"func #13" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct AMediaCodec*",
-				"void*",
-				"unsigned int32",
-				"int32",
-				"unsigned char8 const*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #13*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #13",
-			"size" : 32
-		},
-		"func #14" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct AMediaCodec*",
-				"void*",
-				"int64",
-				"int64"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #14*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #14",
-			"size" : 32
-		},
 		"func #15" : 
 		{
 			"has_variadic_args" : false,
@@ -2730,8 +2673,12 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"struct AImageReader*"
+				"struct AMediaDrm*",
+				"struct AMediaDrmByteArray const*",
+				"unsigned int32",
+				"int32",
+				"unsigned char8 const*",
+				"unsigned int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2749,9 +2696,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"struct AImageReader*",
-				"struct AHardwareBuffer*"
+				"struct AMediaDrm*",
+				"struct AMediaDrmByteArray const*",
+				"int64"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2762,7 +2709,7 @@
 			"pointee_type" : "func #16",
 			"size" : 32
 		},
-		"func #19" : 
+		"func #17" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
@@ -2771,10 +2718,48 @@
 			[
 				"struct AMediaDrm*",
 				"struct AMediaDrmByteArray const*",
+				"struct AMediaDrmKeyStatus const*",
 				"unsigned int32",
-				"int32",
-				"unsigned char8 const*",
-				"unsigned int32"
+				"bool"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #17*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #17",
+			"size" : 32
+		},
+		"func #18" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodec*",
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #18*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #18",
+			"size" : 32
+		},
+		"func #19" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodec*",
+				"void*",
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2810,9 +2795,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaDrm*",
-				"struct AMediaDrmByteArray const*",
-				"int64"
+				"struct AMediaCodec*",
+				"void*",
+				"int32",
+				"struct AMediaCodecBufferInfo*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2830,11 +2816,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AMediaDrm*",
-				"struct AMediaDrmByteArray const*",
-				"struct AMediaDrmKeyStatus const*",
-				"unsigned int32",
-				"bool"
+				"struct AMediaCodec*",
+				"void*",
+				"struct AMediaFormat*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -2843,6 +2827,88 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #21",
+			"size" : 32
+		},
+		"func #22" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodec*",
+				"void*",
+				"unsigned int32",
+				"int32",
+				"unsigned char8 const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #22*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #22",
+			"size" : 32
+		},
+		"func #23" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AMediaCodec*",
+				"void*",
+				"int64",
+				"int64"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #23*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #23",
+			"size" : 32
+		},
+		"func #24" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"struct AImageReader*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #24*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #24",
+			"size" : 32
+		},
+		"func #25" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"struct AImageReader*",
+				"struct AHardwareBuffer*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #25*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #25",
 			"size" : 32
 		},
 		"func #3" : 
@@ -2960,25 +3026,6 @@
 			"pointee_type" : "func #8",
 			"size" : 32
 		},
-		"func #9" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct AMediaCodec*",
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #9*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #9",
-			"size" : 32
-		},
 		"func ACodecAudioCapabilities_getBitrateRange" : 
 		{
 			"has_variadic_args" : false,
@@ -3093,6 +3140,20 @@
 			[
 				"struct ACodecEncoderCapabilities const*",
 				"struct AIntRange*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func ACodecEncoderCapabilities_getSupportedLayeringSchemas" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ACodecEncoderCapabilities const*",
+				"unsigned char8 const* const**",
+				"unsigned int32*"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -3559,6 +3620,46 @@
 			"return_type" : "unsigned int32",
 			"size" : 0
 		},
+		"func AImageReader_setDefaultAHardwareBufferFormat" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AImageReader*",
+				"int32"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AImageReader_setDefaultBufferDataSpace" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AImageReader*",
+				"int32"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AImageReader_setDefaultBufferSize" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AImageReader*",
+				"int32",
+				"int32"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
 		"func AImageReader_setImageListener" : 
 		{
 			"has_variadic_args" : false,
@@ -3568,6 +3669,19 @@
 			[
 				"struct AImageReader*",
 				"struct AImageReader_ImageListener*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AImageReader_setMaxImages" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AImageReader*",
+				"int32"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -3740,6 +3854,19 @@
 			[
 				"struct AImage const*",
 				"int64*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func AImage_getTransform" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AImage*",
+				"int32*"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -4471,7 +4598,7 @@
 			"params" : 
 			[
 				"struct AMediaCodec*",
-				"func #14*",
+				"func #23*",
 				"void*"
 			],
 			"return_type" : "unsigned int32",
@@ -4996,7 +5123,7 @@
 			"params" : 
 			[
 				"struct AMediaDrm*",
-				"func #19*"
+				"func #15*"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -5009,7 +5136,7 @@
 			"params" : 
 			[
 				"struct AMediaDrm*",
-				"func #20*"
+				"func #16*"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -5022,7 +5149,7 @@
 			"params" : 
 			[
 				"struct AMediaDrm*",
-				"func #21*"
+				"func #17*"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -6098,25 +6225,30 @@
 					"type" : "unsigned int32"
 				},
 				{
-					"name" : "mIsClosed",
+					"name" : "mCropRect",
 					"offset" : 384,
+					"type" : "struct AImageCropRect const"
+				},
+				{
+					"name" : "mIsClosed",
+					"offset" : 512,
 					"type" : "bool"
 				},
 				{
 					"name" : "mLock",
-					"offset" : 416,
+					"offset" : 544,
 					"type" : "class android::Mutex"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
-			"size" : 448
+			"size" : 576
 		},
 		"struct AImage const" : 
 		{
 			"base_type" : "struct AImage",
 			"kind" : "const",
-			"size" : 448
+			"size" : 576
 		},
 		"struct AImage const*" : 
 		{
@@ -6165,6 +6297,12 @@
 			"kind" : "struct",
 			"size" : 128
 		},
+		"struct AImageCropRect const" : 
+		{
+			"base_type" : "struct AImageCropRect",
+			"kind" : "const",
+			"size" : 128
+		},
 		"struct AImageCropRect*" : 
 		{
 			"kind" : "pointer",
@@ -6193,12 +6331,12 @@
 				{
 					"name" : "mWidth",
 					"offset" : 192,
-					"type" : "int32 const"
+					"type" : "int32"
 				},
 				{
 					"name" : "mHeight",
 					"offset" : 224,
-					"type" : "int32 const"
+					"type" : "int32"
 				},
 				{
 					"name" : "mFormat",
@@ -6213,7 +6351,7 @@
 				{
 					"name" : "mMaxImages",
 					"offset" : 384,
-					"type" : "int32 const"
+					"type" : "int32"
 				},
 				{
 					"name" : "mNumPlanes",
@@ -6390,7 +6528,7 @@
 				{
 					"name" : "onBufferRemoved",
 					"offset" : 32,
-					"type" : "func #16*"
+					"type" : "func #25*"
 				}
 			],
 			"inheritance" : [],
@@ -6415,7 +6553,7 @@
 				{
 					"name" : "onImageAvailable",
 					"offset" : 32,
-					"type" : "func #15*"
+					"type" : "func #24*"
 				}
 			],
 			"inheritance" : [],
@@ -6508,7 +6646,7 @@
 				{
 					"name" : "mCallback",
 					"offset" : 192,
-					"type" : "func #9*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "mCallbackUserData",
@@ -6548,7 +6686,7 @@
 				{
 					"name" : "mFrameRenderedCallback",
 					"offset" : 544,
-					"type" : "func #14*"
+					"type" : "func #23*"
 				},
 				{
 					"name" : "mFrameRenderedCallbackUserData",
@@ -6732,22 +6870,22 @@
 				{
 					"name" : "onAsyncInputAvailable",
 					"offset" : 0,
-					"type" : "func #10*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "onAsyncOutputAvailable",
 					"offset" : 32,
-					"type" : "func #11*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "onAsyncFormatChanged",
 					"offset" : 64,
-					"type" : "func #12*"
+					"type" : "func #21*"
 				},
 				{
 					"name" : "onAsyncError",
 					"offset" : 96,
-					"type" : "func #13*"
+					"type" : "func #22*"
 				}
 			],
 			"inheritance" : [],
@@ -7225,17 +7363,17 @@
 				{
 					"name" : "mEventListener",
 					"offset" : 64,
-					"type" : "func #19*"
+					"type" : "func #15*"
 				},
 				{
 					"name" : "mExpirationUpdateListener",
 					"offset" : 96,
-					"type" : "func #20*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "mKeysChangeListener",
 					"offset" : 128,
-					"type" : "func #21*"
+					"type" : "func #17*"
 				}
 			],
 			"inheritance" : 
@@ -7593,10 +7731,6 @@
 			"pointee_type" : "struct android::VideoCapabilities::PerformancePoint const",
 			"size" : 32
 		},
-		"struct android::key_value_pair_t" : 
-		{
-			"kind" : "incomplete"
-		},
 		"struct android::key_value_pair_t<android::String8, android::String8>" : 
 		{
 			"fields" : 
@@ -7615,6 +7749,10 @@
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 64
+		},
+		"struct android::key_value_pair_t<unsigned int32, unsigned int32>" : 
+		{
+			"kind" : "incomplete"
 		},
 		"struct cryptoinfo_pattern_t" : 
 		{
@@ -7696,126 +7834,6 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct std::__1::__compressed_pair_elem<ACodecPerformancePoint*, int32, false>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value_",
-					"offset" : 0,
-					"type" : "struct ACodecPerformancePoint*"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 32
-		},
-		"struct std::__1::__compressed_pair_elem<AIntRange*, int32, false>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value_",
-					"offset" : 0,
-					"type" : "struct AIntRange*"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 32
-		},
-		"struct std::__1::__compressed_pair_elem<android::CpuConsumer::LockedBuffer*, int32, false>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value_",
-					"offset" : 0,
-					"type" : "struct android::CpuConsumer::LockedBuffer*"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 32
-		},
-		"struct std::__1::__compressed_pair_elem<int32*, int32, false>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value_",
-					"offset" : 0,
-					"type" : "int32*"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 32
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::allocator<ACodecPerformancePoint>, int32, true>" : 
-		{
-			"fields" : [],
-			"inheritance" : 
-			[
-				"class std::__1::allocator<ACodecPerformancePoint>"
-			],
-			"kind" : "struct",
-			"size" : 8
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::allocator<AIntRange>, int32, true>" : 
-		{
-			"fields" : [],
-			"inheritance" : 
-			[
-				"class std::__1::allocator<AIntRange>"
-			],
-			"kind" : "struct",
-			"size" : 8
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::allocator<int32>, int32, true>" : 
-		{
-			"fields" : [],
-			"inheritance" : 
-			[
-				"class std::__1::allocator<int32>"
-			],
-			"kind" : "struct",
-			"size" : 8
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::allocator<unsigned char8>, int32, true>" : 
-		{
-			"fields" : [],
-			"inheritance" : 
-			[
-				"class std::__1::allocator<unsigned char8>"
-			],
-			"kind" : "struct",
-			"size" : 8
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, int32, false>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value_",
-					"offset" : 0,
-					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 96
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::default_delete<android::CpuConsumer::LockedBuffer>, int32, true>" : 
-		{
-			"fields" : [],
-			"inheritance" : 
-			[
-				"struct std::__1::default_delete<android::CpuConsumer::LockedBuffer>"
-			],
-			"kind" : "struct",
-			"size" : 8
-		},
 		"struct std::__1::__non_trivial_if<true, std::__1::allocator<ACodecPerformancePoint>>" : 
 		{
 			"fields" : [],
@@ -7844,6 +7862,42 @@
 			"kind" : "struct",
 			"size" : 8
 		},
+		"struct std::__1::__padding<0>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::#9" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__rep_",
+					"offset" : 0,
+					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep"
+				},
+				{
+					"name" : "__padding1_903_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, true>"
+				},
+				{
+					"name" : "__alloc_",
+					"offset" : 0,
+					"type" : "class std::__1::allocator<unsigned char8>"
+				},
+				{
+					"name" : "__padding2_903_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::allocator<unsigned char8>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
 		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long" : 
 		{
 			"fields" : 
@@ -7851,7 +7905,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#18"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#11"
 				},
 				{
 					"name" : "__size_",
@@ -7868,7 +7922,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#18" : 
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#11" : 
 		{
 			"fields" : 
 			[
@@ -7894,12 +7948,12 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#17"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#10"
 				},
 				{
 					"name" : "__padding_",
-					"offset" : 8,
-					"type" : "unsigned char8[0]"
+					"offset" : 0,
+					"type" : "struct std::__1::__padding<0>"
 				},
 				{
 					"name" : "__data_",
@@ -7911,7 +7965,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#17" : 
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#10" : 
 		{
 			"fields" : 
 			[
@@ -7943,6 +7997,122 @@
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 8
+		},
+		"struct std::__1::unique_ptr<android::CpuConsumer::LockedBuffer, std::__1::default_delete<android::CpuConsumer::LockedBuffer>>::#26" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "struct android::CpuConsumer::LockedBuffer*"
+				},
+				{
+					"name" : "__padding1_152_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<android::CpuConsumer::LockedBuffer*, true>"
+				},
+				{
+					"name" : "__deleter_",
+					"offset" : 0,
+					"type" : "struct std::__1::default_delete<android::CpuConsumer::LockedBuffer>"
+				},
+				{
+					"name" : "__padding2_152_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::default_delete<android::CpuConsumer::LockedBuffer>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::vector<ACodecPerformancePoint, std::__1::allocator<ACodecPerformancePoint>>::#14" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__cap_",
+					"offset" : 0,
+					"type" : "struct ACodecPerformancePoint*"
+				},
+				{
+					"name" : "__padding1_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<ACodecPerformancePoint*, true>"
+				},
+				{
+					"name" : "__alloc_",
+					"offset" : 0,
+					"type" : "class std::__1::allocator<ACodecPerformancePoint>"
+				},
+				{
+					"name" : "__padding2_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::allocator<ACodecPerformancePoint>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::vector<AIntRange, std::__1::allocator<AIntRange>>::#13" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__cap_",
+					"offset" : 0,
+					"type" : "struct AIntRange*"
+				},
+				{
+					"name" : "__padding1_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<AIntRange*, true>"
+				},
+				{
+					"name" : "__alloc_",
+					"offset" : 0,
+					"type" : "class std::__1::allocator<AIntRange>"
+				},
+				{
+					"name" : "__padding2_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::allocator<AIntRange>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::vector<int32, std::__1::allocator<int32>>::#12" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__cap_",
+					"offset" : 0,
+					"type" : "int32*"
+				},
+				{
+					"name" : "__padding1_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<int32*, true>"
+				},
+				{
+					"name" : "__alloc_",
+					"offset" : 0,
+					"type" : "class std::__1::allocator<int32>"
+				},
+				{
+					"name" : "__padding2_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::allocator<int32>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
 		},
 		"union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep" : 
 		{
@@ -7993,6 +8163,12 @@
 			"pointee_type" : "unsigned char8 const* const",
 			"size" : 32
 		},
+		"unsigned char8 const* const**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "unsigned char8 const* const*",
+			"size" : 32
+		},
 		"unsigned char8 const**" : 
 		{
 			"kind" : "pointer",
@@ -8010,12 +8186,6 @@
 			"kind" : "pointer",
 			"pointee_type" : "unsigned char8*",
 			"size" : 32
-		},
-		"unsigned char8[0]" : 
-		{
-			"element_type" : "unsigned char8",
-			"kind" : "array",
-			"size" : 0
 		},
 		"unsigned char8[11]" : 
 		{

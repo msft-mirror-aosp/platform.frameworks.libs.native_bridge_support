@@ -183,7 +183,7 @@
 		},
 		"__free_hook" : 
 		{
-			"type" : "func #362* volatile"
+			"type" : "func #455* volatile"
 		},
 		"__fseterr" : 
 		{
@@ -363,11 +363,11 @@
 		},
 		"__malloc_hook" : 
 		{
-			"type" : "func #270* volatile"
+			"type" : "func #233* volatile"
 		},
 		"__memalign_hook" : 
 		{
-			"type" : "func #204* volatile"
+			"type" : "func #172* volatile"
 		},
 		"__memchr_chk" : 
 		{
@@ -631,7 +631,7 @@
 		},
 		"__realloc_hook" : 
 		{
-			"type" : "func #366* volatile"
+			"type" : "func #459* volatile"
 		},
 		"__reboot" : 
 		{
@@ -1385,10 +1385,6 @@
 		{
 			"type" : "func c32rtomb"
 		},
-		"call_once" : 
-		{
-			"type" : "func call_once"
-		},
 		"calloc" : 
 		{
 			"type" : "func calloc"
@@ -1739,7 +1735,7 @@
 		},
 		"error_print_progname" : 
 		{
-			"type" : "func #135*"
+			"type" : "func #103*"
 		},
 		"errx" : 
 		{
@@ -2028,6 +2024,14 @@
 		"free" : 
 		{
 			"type" : "func free"
+		},
+		"free_aligned_sized" : 
+		{
+			"type" : "func free_aligned_sized"
+		},
+		"free_sized" : 
+		{
+			"type" : "func free_sized"
 		},
 		"freeaddrinfo" : 
 		{
@@ -3464,10 +3468,6 @@
 		"pause" : 
 		{
 			"type" : "func pause"
-		},
-		"pclose" : 
-		{
-			"type" : "func pclose"
 		},
 		"perror" : 
 		{
@@ -5165,10 +5165,6 @@
 		{
 			"type" : "func strtold"
 		},
-		"strtold_l" : 
-		{
-			"type" : "func strtold_l"
-		},
 		"strtoll" : 
 		{
 			"type" : "func strtoll"
@@ -6325,7 +6321,7 @@
 				{
 					"name" : "start_routine",
 					"offset" : 384,
-					"type" : "func #257*"
+					"type" : "func #211*"
 				},
 				{
 					"name" : "start_routine_arg",
@@ -6480,7 +6476,7 @@
 				{
 					"name" : "func",
 					"offset" : 0,
-					"type" : "func #234*"
+					"type" : "func #202*"
 				},
 				{
 					"name" : "arg",
@@ -6576,7 +6572,7 @@
 			[
 				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #100*" : 
@@ -6592,11 +6588,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"char8*",
 				"int32"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #101*" : 
@@ -6605,160 +6599,19 @@
 			"pointee_type" : "func #101",
 			"size" : 32
 		},
-		"func #102" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #102*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #102",
-			"size" : 32
-		},
 		"func #103" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
+			"params" : [],
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #103*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #103",
-			"size" : 32
-		},
-		"func #104" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #104*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #104",
-			"size" : 32
-		},
-		"func #105" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #105*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #105",
-			"size" : 32
-		},
-		"func #106" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #106*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #106",
-			"size" : 32
-		},
-		"func #107" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #107*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #107",
-			"size" : 32
-		},
-		"func #108" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #108*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #108",
-			"size" : 32
-		},
-		"func #109" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #109*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #109",
 			"size" : 32
 		},
 		"func #11" : 
@@ -6781,142 +6634,6 @@
 			"pointee_type" : "func #11",
 			"size" : 32
 		},
-		"func #110" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #110*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #110",
-			"size" : 32
-		},
-		"func #111" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #111*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #111",
-			"size" : 32
-		},
-		"func #112" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #112*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #112",
-			"size" : 32
-		},
-		"func #113" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #113*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #113",
-			"size" : 32
-		},
-		"func #114" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #114*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #114",
-			"size" : 32
-		},
-		"func #115" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #115*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #115",
-			"size" : 32
-		},
-		"func #116" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #116*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #116",
-			"size" : 32
-		},
 		"func #117" : 
 		{
 			"has_variadic_args" : false,
@@ -6924,11 +6641,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"char8*",
-				"int32"
+				"unsigned int32",
+				"unsigned int32",
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #117*" : 
@@ -6944,11 +6661,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"int32",
 				"int32"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #118*" : 
@@ -6964,17 +6679,21 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"char8 const*",
-				"int32"
+				"struct android_fdtrack_event*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #119*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #119",
+			"size" : 32
+		},
+		"func #119**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #119*",
 			"size" : 32
 		},
 		"func #12" : 
@@ -6993,200 +6712,6 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #12",
-			"size" : 32
-		},
-		"func #120" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #120*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #120",
-			"size" : 32
-		},
-		"func #121" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #121*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #121",
-			"size" : 32
-		},
-		"func #122" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #122*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #122",
-			"size" : 32
-		},
-		"func #123" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #123*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #123",
-			"size" : 32
-		},
-		"func #124" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #124*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #124",
-			"size" : 32
-		},
-		"func #125" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #125*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #125",
-			"size" : 32
-		},
-		"func #126" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #126*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #126",
-			"size" : 32
-		},
-		"func #127" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #127*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #127",
-			"size" : 32
-		},
-		"func #128" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #128*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #128",
-			"size" : 32
-		},
-		"func #129" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #129*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #129",
 			"size" : 32
 		},
 		"func #13" : 
@@ -7209,97 +6734,6 @@
 			"pointee_type" : "func #13",
 			"size" : 32
 		},
-		"func #130" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #130*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #130",
-			"size" : 32
-		},
-		"func #131" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #131*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #131",
-			"size" : 32
-		},
-		"func #132" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #132*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #132",
-			"size" : 32
-		},
-		"func #133" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"int32"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #133*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #133",
-			"size" : 32
-		},
-		"func #135" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #135*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #135",
-			"size" : 32
-		},
 		"func #14" : 
 		{
 			"has_variadic_args" : false,
@@ -7320,24 +6754,114 @@
 			"pointee_type" : "func #14",
 			"size" : 32
 		},
-		"func #149" : 
+		"func #142" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
-				"unsigned int32",
-				"unsigned int32",
+				"void const*",
+				"void const*",
 				"void*"
 			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #142*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #142",
+			"size" : 32
+		},
+		"func #143" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void const*",
+				"void const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #143*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #143",
+			"size" : 32
+		},
+		"func #144" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
 			"return_type" : "void",
 			"size" : 0
 		},
-		"func #149*" : 
+		"func #144*" : 
 		{
 			"kind" : "pointer",
-			"pointee_type" : "func #149",
+			"pointee_type" : "func #144",
+			"size" : 32
+		},
+		"func #145" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #145*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #145",
+			"size" : 32
+		},
+		"func #146" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct _Unwind_Context*",
+				"void*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func #146*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #146",
+			"size" : 32
+		},
+		"func #147" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void const*",
+				"void const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #147*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #147",
 			"size" : 32
 		},
 		"func #15" : 
@@ -7367,9 +6891,14 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"int32"
+				"struct sockaddr* const*",
+				"unsigned char8 const**",
+				"int32*",
+				"unsigned char8*",
+				"int32",
+				"int32*"
 			],
-			"return_type" : "void",
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func #150*" : 
@@ -7385,21 +6914,20 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct android_fdtrack_event*"
+				"struct sockaddr const*",
+				"unsigned char8 const*",
+				"int32",
+				"unsigned char8*",
+				"int32",
+				"int32*"
 			],
-			"return_type" : "void",
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func #151*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #151",
-			"size" : 32
-		},
-		"func #151**" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #151*",
 			"size" : 32
 		},
 		"func #16" : 
@@ -7418,6 +6946,164 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #16",
+			"size" : 32
+		},
+		"func #160" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"char8 const*",
+				"int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #160*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #160",
+			"size" : 32
+		},
+		"func #161" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #161*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #161",
+			"size" : 32
+		},
+		"func #162" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "struct dirent*",
+			"size" : 0
+		},
+		"func #162*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #162",
+			"size" : 32
+		},
+		"func #163" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"char8 const*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #163*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #163",
+			"size" : 32
+		},
+		"func #164" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"char8 const*",
+				"struct stat*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #164*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #164",
+			"size" : 32
+		},
+		"func #165" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"int64",
+				"int32"
+			],
+			"return_type" : "int64",
+			"size" : 0
+		},
+		"func #165*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #165",
+			"size" : 32
+		},
+		"func #167" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct sockaddr* const*",
+				"unsigned char8 const**",
+				"int32*",
+				"unsigned char8*",
+				"int32",
+				"int32*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func #167*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #167",
+			"size" : 32
+		},
+		"func #168" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct sockaddr const*",
+				"unsigned char8 const*",
+				"int32",
+				"unsigned char8*",
+				"int32",
+				"int32*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func #168*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #168",
 			"size" : 32
 		},
 		"func #17" : 
@@ -7440,27 +7126,7 @@
 			"pointee_type" : "func #17",
 			"size" : 32
 		},
-		"func #174" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void const*",
-				"void const*",
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #174*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #174",
-			"size" : 32
-		},
-		"func #175" : 
+		"func #171" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
@@ -7473,25 +7139,75 @@
 			"return_type" : "int32",
 			"size" : 0
 		},
-		"func #175*" : 
+		"func #171*" : 
 		{
 			"kind" : "pointer",
-			"pointee_type" : "func #175",
+			"pointee_type" : "func #171",
 			"size" : 32
 		},
-		"func #176" : 
+		"func #172" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
+			"params" : 
+			[
+				"unsigned int32",
+				"unsigned int32",
+				"void const*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #172*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #172",
+			"size" : 32
+		},
+		"func #172* volatile" : 
+		{
+			"base_type" : "func #172*",
+			"kind" : "volatile",
+			"size" : 32
+		},
+		"func #173" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"void*",
+				"unsigned int32",
+				"void*"
+			],
 			"return_type" : "void",
 			"size" : 0
 		},
-		"func #176*" : 
+		"func #173*" : 
 		{
 			"kind" : "pointer",
-			"pointee_type" : "func #176",
+			"pointee_type" : "func #173",
+			"size" : 32
+		},
+		"func #174" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #174*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #174",
 			"size" : 32
 		},
 		"func #177" : 
@@ -7501,7 +7217,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"struct _ftsent const**",
+				"struct _ftsent const**"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -7519,10 +7236,12 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct _Unwind_Context*",
-				"void*"
+				"char8 const*",
+				"struct stat const*",
+				"int32",
+				"struct FTW*"
 			],
-			"return_type" : "unsigned int32",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #178*" : 
@@ -7536,12 +7255,8 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : 
-			[
-				"void const*",
-				"void const*"
-			],
-			"return_type" : "int32",
+			"params" : [],
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #179*" : 
@@ -7570,27 +7285,23 @@
 			"pointee_type" : "func #18",
 			"size" : 32
 		},
-		"func #182" : 
+		"func #180" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
-				"struct sockaddr* const*",
-				"unsigned char8 const**",
-				"int32*",
-				"unsigned char8*",
-				"int32",
-				"int32*"
+				"void const*",
+				"void const*"
 			],
-			"return_type" : "unsigned int32",
+			"return_type" : "int32",
 			"size" : 0
 		},
-		"func #182*" : 
+		"func #180*" : 
 		{
 			"kind" : "pointer",
-			"pointee_type" : "func #182",
+			"pointee_type" : "func #180",
 			"size" : 32
 		},
 		"func #183" : 
@@ -7600,20 +7311,35 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct sockaddr const*",
-				"unsigned char8 const*",
-				"int32",
-				"unsigned char8*",
-				"int32",
-				"int32*"
+				"union sigval"
 			],
-			"return_type" : "unsigned int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #183*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #183",
+			"size" : 32
+		},
+		"func #185" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"int32",
+				"struct siginfo*",
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #185*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #185",
 			"size" : 32
 		},
 		"func #19" : 
@@ -7636,133 +7362,13 @@
 			"pointee_type" : "func #19",
 			"size" : 32
 		},
-		"func #192" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #192*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #192",
-			"size" : 32
-		},
-		"func #193" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #193*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #193",
-			"size" : 32
-		},
-		"func #194" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "struct dirent*",
-			"size" : 0
-		},
-		"func #194*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #194",
-			"size" : 32
-		},
-		"func #195" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"char8 const*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #195*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #195",
-			"size" : 32
-		},
-		"func #196" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"char8 const*",
-				"struct stat*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #196*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #196",
-			"size" : 32
-		},
-		"func #197" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int64",
-				"int32"
-			],
-			"return_type" : "int64",
-			"size" : 0
-		},
-		"func #197*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #197",
-			"size" : 32
-		},
 		"func #199" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : 
-			[
-				"struct sockaddr* const*",
-				"unsigned char8 const**",
-				"int32*",
-				"unsigned char8*",
-				"int32",
-				"int32*"
-			],
-			"return_type" : "unsigned int32",
+			"params" : [],
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #199*" : 
@@ -7796,20 +7402,51 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct sockaddr const*",
-				"unsigned char8 const*",
-				"int32",
-				"unsigned char8*",
-				"int32",
-				"int32*"
+				"void*"
 			],
-			"return_type" : "unsigned int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #200*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #200",
+			"size" : 32
+		},
+		"func #201" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #201*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #201",
+			"size" : 32
+		},
+		"func #202" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #202*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #202",
 			"size" : 32
 		},
 		"func #203" : 
@@ -7819,10 +7456,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void const*",
-				"void const*"
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #203*" : 
@@ -7838,9 +7474,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"unsigned int32",
-				"unsigned int32",
-				"void const*"
+				"void*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -7851,12 +7485,6 @@
 			"pointee_type" : "func #204",
 			"size" : 32
 		},
-		"func #204* volatile" : 
-		{
-			"base_type" : "func #204*",
-			"kind" : "volatile",
-			"size" : 32
-		},
 		"func #205" : 
 		{
 			"has_variadic_args" : false,
@@ -7864,12 +7492,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"void*",
-				"unsigned int32",
 				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #205*" : 
@@ -7887,13 +7512,49 @@
 			[
 				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #206*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #206",
+			"size" : 32
+		},
+		"func #207" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #207*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #207",
+			"size" : 32
+		},
+		"func #208" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #208*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #208",
 			"size" : 32
 		},
 		"func #209" : 
@@ -7903,10 +7564,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct _ftsent const**",
-				"struct _ftsent const**"
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #209*" : 
@@ -7942,12 +7602,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"char8 const*",
-				"struct stat const*",
-				"int32",
-				"struct FTW*"
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #210*" : 
@@ -7961,8 +7618,11 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #211*" : 
@@ -7978,16 +7638,51 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void const*",
-				"void const*"
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #212*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #212",
+			"size" : 32
+		},
+		"func #213" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #213*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #213",
+			"size" : 32
+		},
+		"func #214" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #214*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #214",
 			"size" : 32
 		},
 		"func #215" : 
@@ -7997,15 +7692,33 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"union sigval"
+				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #215*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #215",
+			"size" : 32
+		},
+		"func #216" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #216*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #216",
 			"size" : 32
 		},
 		"func #217" : 
@@ -8015,17 +7728,51 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"int32",
-				"struct siginfo*",
 				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #217*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #217",
+			"size" : 32
+		},
+		"func #218" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #218*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #218",
+			"size" : 32
+		},
+		"func #219" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #219*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #219",
 			"size" : 32
 		},
 		"func #22" : 
@@ -8048,6 +7795,188 @@
 			"pointee_type" : "func #22",
 			"size" : 32
 		},
+		"func #220" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #220*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #220",
+			"size" : 32
+		},
+		"func #221" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #221*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #221",
+			"size" : 32
+		},
+		"func #222" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #222*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #222",
+			"size" : 32
+		},
+		"func #223" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #223*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #223",
+			"size" : 32
+		},
+		"func #224" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #224*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #224",
+			"size" : 32
+		},
+		"func #225" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #225*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #225",
+			"size" : 32
+		},
+		"func #226" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #226*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #226",
+			"size" : 32
+		},
+		"func #227" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #227*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #227",
+			"size" : 32
+		},
+		"func #228" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #228*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #228",
+			"size" : 32
+		},
+		"func #229" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"void*",
+				"char8*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #229*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #229",
+			"size" : 32
+		},
 		"func #23" : 
 		{
 			"has_variadic_args" : false,
@@ -8068,13 +7997,39 @@
 			"pointee_type" : "func #23",
 			"size" : 32
 		},
+		"func #230" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct __sFILE*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #230*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #230",
+			"size" : 32
+		},
 		"func #231" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
+			"params" : 
+			[
+				"struct sockaddr* const*",
+				"unsigned char8 const**",
+				"int32*",
+				"unsigned char8*",
+				"int32",
+				"int32*"
+			],
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func #231*" : 
@@ -8108,7 +8063,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"unsigned int32",
+				"void const*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -8119,6 +8075,12 @@
 			"pointee_type" : "func #233",
 			"size" : 32
 		},
+		"func #233* volatile" : 
+		{
+			"base_type" : "func #233*",
+			"kind" : "volatile",
+			"size" : 32
+		},
 		"func #234" : 
 		{
 			"has_variadic_args" : false,
@@ -8126,7 +8088,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"int32"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -8135,96 +8097,6 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #234",
-			"size" : 32
-		},
-		"func #235" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #235*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #235",
-			"size" : 32
-		},
-		"func #236" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #236*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #236",
-			"size" : 32
-		},
-		"func #237" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #237*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #237",
-			"size" : 32
-		},
-		"func #238" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #238*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #238",
-			"size" : 32
-		},
-		"func #239" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #239*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #239",
 			"size" : 32
 		},
 		"func #24" : 
@@ -8245,96 +8117,6 @@
 			"pointee_type" : "func #24",
 			"size" : 32
 		},
-		"func #240" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #240*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #240",
-			"size" : 32
-		},
-		"func #241" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #241*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #241",
-			"size" : 32
-		},
-		"func #242" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #242*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #242",
-			"size" : 32
-		},
-		"func #243" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #243*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #243",
-			"size" : 32
-		},
-		"func #244" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #244*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #244",
-			"size" : 32
-		},
 		"func #245" : 
 		{
 			"has_variadic_args" : false,
@@ -8342,9 +8124,12 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"void*",
+				"char8 const*",
+				"char8 const*",
+				"unsigned int32"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #245*" : 
@@ -8360,9 +8145,10 @@
 			"kind" : "function",
 			"params" : 
 			[
+				"void*",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #246*" : 
@@ -8378,33 +8164,16 @@
 			"kind" : "function",
 			"params" : 
 			[
+				"struct prop_info const*",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #247*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #247",
-			"size" : 32
-		},
-		"func #248" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #248*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #248",
 			"size" : 32
 		},
 		"func #249" : 
@@ -8414,9 +8183,14 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"struct sockaddr const*",
+				"unsigned char8 const*",
+				"int32",
+				"unsigned char8*",
+				"int32",
+				"int32*"
 			],
-			"return_type" : "void*",
+			"return_type" : "unsigned int32",
 			"size" : 0
 		},
 		"func #249*" : 
@@ -8445,42 +8219,6 @@
 			"pointee_type" : "func #25",
 			"size" : 32
 		},
-		"func #250" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #250*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #250",
-			"size" : 32
-		},
-		"func #251" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #251*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #251",
-			"size" : 32
-		},
 		"func #252" : 
 		{
 			"has_variadic_args" : false,
@@ -8490,31 +8228,13 @@
 			[
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #252*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #252",
-			"size" : 32
-		},
-		"func #253" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #253*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #253",
 			"size" : 32
 		},
 		"func #254" : 
@@ -8524,9 +8244,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"int32"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #254*" : 
@@ -8542,87 +8262,17 @@
 			"kind" : "function",
 			"params" : 
 			[
+				"int32",
+				"struct siginfo*",
 				"void*"
 			],
-			"return_type" : "void*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #255*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #255",
-			"size" : 32
-		},
-		"func #256" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #256*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #256",
-			"size" : 32
-		},
-		"func #257" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #257*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #257",
-			"size" : 32
-		},
-		"func #258" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #258*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #258",
-			"size" : 32
-		},
-		"func #259" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #259*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #259",
 			"size" : 32
 		},
 		"func #26" : 
@@ -8645,196 +8295,6 @@
 			"pointee_type" : "func #26",
 			"size" : 32
 		},
-		"func #260" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #260*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #260",
-			"size" : 32
-		},
-		"func #261" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"void*",
-				"char8*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #261*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #261",
-			"size" : 32
-		},
-		"func #262" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct __sFILE*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #262*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #262",
-			"size" : 32
-		},
-		"func #263" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #263*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #263",
-			"size" : 32
-		},
-		"func #264" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #264*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #264",
-			"size" : 32
-		},
-		"func #265" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #265*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #265",
-			"size" : 32
-		},
-		"func #266" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #266*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #266",
-			"size" : 32
-		},
-		"func #267" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #267*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #267",
-			"size" : 32
-		},
-		"func #268" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct sockaddr* const*",
-				"unsigned char8 const**",
-				"int32*",
-				"unsigned char8*",
-				"int32",
-				"int32*"
-			],
-			"return_type" : "unsigned int32",
-			"size" : 0
-		},
-		"func #268*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #268",
-			"size" : 32
-		},
-		"func #269" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #269*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #269",
-			"size" : 32
-		},
 		"func #27" : 
 		{
 			"has_variadic_args" : false,
@@ -8855,49 +8315,6 @@
 			"pointee_type" : "func #27",
 			"size" : 32
 		},
-		"func #270" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"unsigned int32",
-				"void const*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #270*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #270",
-			"size" : 32
-		},
-		"func #270* volatile" : 
-		{
-			"base_type" : "func #270*",
-			"kind" : "volatile",
-			"size" : 32
-		},
-		"func #271" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"int32"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #271*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #271",
-			"size" : 32
-		},
 		"func #28" : 
 		{
 			"has_variadic_args" : false,
@@ -8914,106 +8331,6 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #28",
-			"size" : 32
-		},
-		"func #282" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"char8 const*",
-				"char8 const*",
-				"unsigned int32"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #282*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #282",
-			"size" : 32
-		},
-		"func #283" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #283*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #283",
-			"size" : 32
-		},
-		"func #284" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct prop_info const*",
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #284*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #284",
-			"size" : 32
-		},
-		"func #286" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct sockaddr const*",
-				"unsigned char8 const*",
-				"int32",
-				"unsigned char8*",
-				"int32",
-				"int32*"
-			],
-			"return_type" : "unsigned int32",
-			"size" : 0
-		},
-		"func #286*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #286",
-			"size" : 32
-		},
-		"func #289" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #289*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #289",
 			"size" : 32
 		},
 		"func #29" : 
@@ -9034,44 +8351,6 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #29",
-			"size" : 32
-		},
-		"func #291" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"int32"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #291*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #291",
-			"size" : 32
-		},
-		"func #292" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"int32",
-				"struct siginfo*",
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #292*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #292",
 			"size" : 32
 		},
 		"func #30" : 
@@ -9192,36 +8471,6 @@
 			"pointee_type" : "func #35",
 			"size" : 32
 		},
-		"func #358" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #358*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #358",
-			"size" : 32
-		},
-		"func #359" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #359*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #359",
-			"size" : 32
-		},
 		"func #36" : 
 		{
 			"has_variadic_args" : false,
@@ -9238,190 +8487,6 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #36",
-			"size" : 32
-		},
-		"func #360" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"void*",
-				"unsigned int32",
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #360*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #360",
-			"size" : 32
-		},
-		"func #361" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void const*",
-				"void const*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #361*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #361",
-			"size" : 32
-		},
-		"func #362" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"void const*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #362*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #362",
-			"size" : 32
-		},
-		"func #362* volatile" : 
-		{
-			"base_type" : "func #362*",
-			"kind" : "volatile",
-			"size" : 32
-		},
-		"func #363" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #363*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #363",
-			"size" : 32
-		},
-		"func #365" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"char8 const*",
-				"struct stat64 const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #365*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #365",
-			"size" : 32
-		},
-		"func #366" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"unsigned int32",
-				"void const*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #366*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #366",
-			"size" : 32
-		},
-		"func #366* volatile" : 
-		{
-			"base_type" : "func #366*",
-			"kind" : "volatile",
-			"size" : 32
-		},
-		"func #367" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
-			"size" : 0
-		},
-		"func #367*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #367",
-			"size" : 32
-		},
-		"func #368" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct dirent const*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #368*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #368",
-			"size" : 32
-		},
-		"func #369" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct dirent const**",
-				"struct dirent const**"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #369*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #369",
 			"size" : 32
 		},
 		"func #37" : 
@@ -9444,193 +8509,6 @@
 			"pointee_type" : "func #37",
 			"size" : 32
 		},
-		"func #370" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void const*",
-				"unsigned int32",
-				"int32"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #370*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #370",
-			"size" : 32
-		},
-		"func #371" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #371*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #371",
-			"size" : 32
-		},
-		"func #372" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"char8 const*",
-				"struct stat const*",
-				"int32"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #372*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #372",
-			"size" : 32
-		},
-		"func #373" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void const*",
-				"void const*"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #373*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #373",
-			"size" : 32
-		},
-		"func #374" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #374*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #374",
-			"size" : 32
-		},
-		"func #374**" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #374*",
-			"size" : 32
-		},
-		"func #375" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"int32",
-				"char8**",
-				"char8**"
-			],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func #375*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #375",
-			"size" : 32
-		},
-		"func #376" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"int32",
-				"char8**",
-				"char8**"
-			],
-			"return_type" : "void",
-			"size" : 0
-		},
-		"func #376*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #376",
-			"size" : 32
-		},
-		"func #376**" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #376*",
-			"size" : 32
-		},
-		"func #378" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct sockaddr* const*",
-				"unsigned char8 const**",
-				"int32*",
-				"unsigned char8*",
-				"int32",
-				"int32*"
-			],
-			"return_type" : "unsigned int32",
-			"size" : 0
-		},
-		"func #378*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #378",
-			"size" : 32
-		},
-		"func #379" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct sockaddr const*",
-				"unsigned char8 const*",
-				"int32",
-				"unsigned char8*",
-				"int32",
-				"int32*"
-			],
-			"return_type" : "unsigned int32",
-			"size" : 0
-		},
-		"func #379*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #379",
-			"size" : 32
-		},
 		"func #38" : 
 		{
 			"has_variadic_args" : false,
@@ -9649,24 +8527,6 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #38",
-			"size" : 32
-		},
-		"func #382" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "bool",
-			"size" : 0
-		},
-		"func #382*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #382",
 			"size" : 32
 		},
 		"func #39" : 
@@ -9823,6 +8683,165 @@
 			"pointee_type" : "func #45",
 			"size" : 32
 		},
+		"func #451" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #451*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #451",
+			"size" : 32
+		},
+		"func #452" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #452*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #452",
+			"size" : 32
+		},
+		"func #453" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"void*",
+				"unsigned int32",
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #453*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #453",
+			"size" : 32
+		},
+		"func #454" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void const*",
+				"void const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #454*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #454",
+			"size" : 32
+		},
+		"func #455" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"void const*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #455*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #455",
+			"size" : 32
+		},
+		"func #455* volatile" : 
+		{
+			"base_type" : "func #455*",
+			"kind" : "volatile",
+			"size" : 32
+		},
+		"func #456" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #456*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #456",
+			"size" : 32
+		},
+		"func #458" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"char8 const*",
+				"struct stat64 const*",
+				"int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #458*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #458",
+			"size" : 32
+		},
+		"func #459" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"unsigned int32",
+				"void const*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #459*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #459",
+			"size" : 32
+		},
+		"func #459* volatile" : 
+		{
+			"base_type" : "func #459*",
+			"kind" : "volatile",
+			"size" : 32
+		},
 		"func #46" : 
 		{
 			"has_variadic_args" : false,
@@ -9843,6 +8862,202 @@
 			"pointee_type" : "func #46",
 			"size" : 32
 		},
+		"func #460" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "void*",
+			"size" : 0
+		},
+		"func #460*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #460",
+			"size" : 32
+		},
+		"func #461" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct dirent const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #461*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #461",
+			"size" : 32
+		},
+		"func #462" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct dirent const**",
+				"struct dirent const**"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #462*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #462",
+			"size" : 32
+		},
+		"func #463" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void const*",
+				"unsigned int32",
+				"int32"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #463*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #463",
+			"size" : 32
+		},
+		"func #464" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #464*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #464",
+			"size" : 32
+		},
+		"func #465" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"char8 const*",
+				"struct stat const*",
+				"int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #465*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #465",
+			"size" : 32
+		},
+		"func #466" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void const*",
+				"void const*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #466*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #466",
+			"size" : 32
+		},
+		"func #467" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #467*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #467",
+			"size" : 32
+		},
+		"func #467**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #467*",
+			"size" : 32
+		},
+		"func #468" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"int32",
+				"char8**",
+				"char8**"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #468*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #468",
+			"size" : 32
+		},
+		"func #469" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"int32",
+				"char8**",
+				"char8**"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func #469*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #469",
+			"size" : 32
+		},
+		"func #469**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #469*",
+			"size" : 32
+		},
 		"func #47" : 
 		{
 			"has_variadic_args" : false,
@@ -9861,6 +9076,70 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #47",
+			"size" : 32
+		},
+		"func #471" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct sockaddr* const*",
+				"unsigned char8 const**",
+				"int32*",
+				"unsigned char8*",
+				"int32",
+				"int32*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func #471*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #471",
+			"size" : 32
+		},
+		"func #472" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct sockaddr const*",
+				"unsigned char8 const*",
+				"int32",
+				"unsigned char8*",
+				"int32",
+				"int32*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
+		"func #472*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #472",
+			"size" : 32
+		},
+		"func #475" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*"
+			],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func #475*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #475",
 			"size" : 32
 		},
 		"func #48" : 
@@ -11055,7 +10334,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #178*",
+				"func #146*",
 				"void*"
 			],
 			"return_type" : "unsigned int32",
@@ -11228,7 +10507,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #363*",
+				"func #456*",
 				"void*",
 				"void*"
 			],
@@ -11254,7 +10533,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #234*",
+				"func #202*",
 				"void*",
 				"void*"
 			],
@@ -11979,8 +11258,8 @@
 			"params" : 
 			[
 				"void*",
-				"func #374*",
-				"func #375*",
+				"func #467*",
+				"func #468*",
 				"struct structors_array_t const* const"
 			],
 			"return_type" : "void",
@@ -11994,7 +11273,7 @@
 			"params" : 
 			[
 				"int32",
-				"func #360*",
+				"func #453*",
 				"void*"
 			],
 			"return_type" : "void",
@@ -12007,8 +11286,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #283*",
-				"func #283*"
+				"func #246*",
+				"func #246*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -12020,7 +11299,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #371*"
+				"func #464*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -12793,7 +12072,7 @@
 			"params" : 
 			[
 				"struct __pthread_cleanup_t*",
-				"func #232*",
+				"func #200*",
 				"void*"
 			],
 			"return_type" : "void",
@@ -12970,9 +12249,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #211*",
-				"func #211*",
-				"func #211*",
+				"func #179*",
+				"func #179*",
+				"func #179*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -13254,7 +12533,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #199*"
+				"func #167*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -13266,7 +12545,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #200*"
+				"func #168*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -13973,7 +13252,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #284*",
+				"func #247*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -14014,7 +13293,7 @@
 			"params" : 
 			[
 				"struct prop_info const*",
-				"func #282*",
+				"func #245*",
 				"void*"
 			],
 			"return_type" : "void",
@@ -14283,7 +13562,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #262*"
+				"func #230*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -14663,8 +13942,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #151**",
-				"func #151*"
+				"func #119**",
+				"func #119*"
 			],
 			"return_type" : "bool",
 			"size" : 0
@@ -14885,7 +14164,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #382*",
+				"func #475*",
 				"void*"
 			],
 			"return_type" : "bool",
@@ -15016,8 +14295,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct tm const* restrict",
-				"char8* restrict"
+				"struct tm const*",
+				"char8*"
 			],
 			"return_type" : "char8*",
 			"size" : 0
@@ -15042,7 +14321,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #176*"
+				"func #144*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -15222,9 +14501,9 @@
 			"params" : 
 			[
 				"int32",
-				"func #271*"
+				"func #234*"
 			],
-			"return_type" : "func #271*",
+			"return_type" : "func #234*",
 			"size" : 0
 		},
 		"func bsearch" : 
@@ -15238,7 +14517,7 @@
 				"void const*",
 				"unsigned int32",
 				"unsigned int32",
-				"func #361*"
+				"func #454*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -15294,19 +14573,6 @@
 				"struct mbstate_t*"
 			],
 			"return_type" : "unsigned int32",
-			"size" : 0
-		},
-		"func call_once" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"int32*",
-				"func #267*"
-			],
-			"return_type" : "void",
 			"size" : 0
 		},
 		"func calloc" : 
@@ -15624,7 +14890,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #177*",
+				"func #145*",
 				"void*",
 				"int32",
 				"void*"
@@ -15957,7 +15223,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #205*",
+				"func #173*",
 				"void*"
 			],
 			"return_type" : "void",
@@ -17248,6 +16514,33 @@
 			"return_type" : "void",
 			"size" : 0
 		},
+		"func free_aligned_sized" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"unsigned int32",
+				"unsigned int32"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func free_sized" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"unsigned int32"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
 		"func freeaddrinfo" : 
 		{
 			"has_variadic_args" : false,
@@ -17606,7 +16899,7 @@
 			[
 				"char8* const*",
 				"int32",
-				"func #209*"
+				"func #177*"
 			],
 			"return_type" : "struct FTS*",
 			"size" : 0
@@ -17645,7 +16938,7 @@
 			"params" : 
 			[
 				"char8 const*",
-				"func #372*",
+				"func #465*",
 				"int32"
 			],
 			"return_type" : "int32",
@@ -17659,7 +16952,7 @@
 			"params" : 
 			[
 				"char8 const*",
-				"func #365*",
+				"func #458*",
 				"int32"
 			],
 			"return_type" : "int32",
@@ -17685,10 +16978,10 @@
 			"params" : 
 			[
 				"void const*",
-				"func #263*",
-				"func #264*",
-				"func #265*",
-				"func #266*"
+				"func #9*",
+				"func #11*",
+				"func #10*",
+				"func #8*"
 			],
 			"return_type" : "struct __sFILE*",
 			"size" : 0
@@ -17703,7 +16996,7 @@
 				"void const*",
 				"func #17*",
 				"func #19*",
-				"func #197*",
+				"func #165*",
 				"func #16*"
 			],
 			"return_type" : "struct __sFILE*",
@@ -18893,7 +18186,7 @@
 			[
 				"char8 const* restrict",
 				"int32",
-				"func #192*",
+				"func #160*",
 				"struct glob_t* restrict"
 			],
 			"return_type" : "int32",
@@ -20102,7 +19395,7 @@
 				"void const*",
 				"unsigned int32*",
 				"unsigned int32",
-				"func #203*"
+				"func #171*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20344,7 +19637,7 @@
 				"void*",
 				"unsigned int32*",
 				"unsigned int32",
-				"func #179*"
+				"func #147*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -20501,7 +19794,7 @@
 			[
 				"unsigned int32",
 				"unsigned int32",
-				"func #149*",
+				"func #117*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -20695,8 +19988,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void* restrict",
-				"void const* restrict",
+				"void*",
+				"void const*",
 				"int32",
 				"unsigned int32"
 			],
@@ -20843,8 +20136,13 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
+			"params" : 
+			[
+				"void*",
+				"unsigned int32",
+				"unsigned char8*"
+			],
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func mkdir" : 
@@ -21424,7 +20722,7 @@
 			"params" : 
 			[
 				"char8 const*",
-				"func #210*",
+				"func #178*",
 				"int32",
 				"int32"
 			],
@@ -21636,18 +20934,6 @@
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : [],
-			"return_type" : "int32",
-			"size" : 0
-		},
-		"func pclose" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"struct __sFILE*"
-			],
 			"return_type" : "int32",
 			"size" : 0
 		},
@@ -22490,9 +21776,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #211*",
-				"func #211*",
-				"func #211*"
+				"func #179*",
+				"func #179*",
+				"func #179*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -23077,7 +22363,7 @@
 			[
 				"int32*",
 				"struct pthread_attr_t const*",
-				"func #367*",
+				"func #460*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -23233,7 +22519,7 @@
 			"params" : 
 			[
 				"int32*",
-				"func #269*"
+				"func #232*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -23487,7 +22773,7 @@
 			"params" : 
 			[
 				"int32*",
-				"func #359*"
+				"func #452*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -24188,7 +23474,7 @@
 				"void*",
 				"unsigned int32",
 				"unsigned int32",
-				"func #212*"
+				"func #180*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -24203,7 +23489,7 @@
 				"void*",
 				"unsigned int32",
 				"unsigned int32",
-				"func #174*",
+				"func #142*",
 				"void*"
 			],
 			"return_type" : "void",
@@ -24725,8 +24011,8 @@
 			[
 				"char8 const*",
 				"struct dirent***",
-				"func #368*",
-				"func #369*"
+				"func #461*",
+				"func #462*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -24741,8 +24027,8 @@
 				"int32",
 				"char8 const*",
 				"struct dirent***",
-				"func #368*",
-				"func #369*"
+				"func #461*",
+				"func #462*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -26022,9 +25308,9 @@
 			"params" : 
 			[
 				"int32",
-				"func #133*"
+				"func #101*"
 			],
-			"return_type" : "func #133*",
+			"return_type" : "func #101*",
 			"size" : 0
 		},
 		"func signalfd" : 
@@ -26153,9 +25439,9 @@
 			"params" : 
 			[
 				"int32",
-				"func #150*"
+				"func #118*"
 			],
-			"return_type" : "func #150*",
+			"return_type" : "func #118*",
 			"size" : 0
 		},
 		"func sigsetjmp" : 
@@ -26659,10 +25945,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"char8*",
+				"char8* restrict",
 				"unsigned int32",
-				"char8 const*",
-				"struct tm const*"
+				"char8 const* restrict",
+				"struct tm const* restrict"
 			],
 			"return_type" : "unsigned int32",
 			"size" : 0
@@ -26690,8 +25976,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"char8* restrict",
-				"char8 const* restrict",
+				"char8*",
+				"char8 const*",
 				"unsigned int32"
 			],
 			"return_type" : "unsigned int32",
@@ -26704,8 +25990,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"char8* restrict",
-				"char8 const* restrict",
+				"char8*",
+				"char8 const*",
 				"unsigned int32"
 			],
 			"return_type" : "unsigned int32",
@@ -27043,20 +26329,6 @@
 			"return_type" : "float64",
 			"size" : 0
 		},
-		"func strtold_l" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"char8 const*",
-				"char8**",
-				"struct __locale_t*"
-			],
-			"return_type" : "float64",
-			"size" : 0
-		},
 		"func strtoll" : 
 		{
 			"has_variadic_args" : false,
@@ -27322,9 +26594,9 @@
 			"params" : 
 			[
 				"int32",
-				"func #271*"
+				"func #234*"
 			],
-			"return_type" : "func #271*",
+			"return_type" : "func #234*",
 			"size" : 0
 		},
 		"func tcdrain" : 
@@ -27477,7 +26749,7 @@
 			[
 				"void const*",
 				"void**",
-				"func #175*"
+				"func #143*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -27490,7 +26762,7 @@
 			"params" : 
 			[
 				"void*",
-				"func #206*"
+				"func #174*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -27538,7 +26810,7 @@
 			[
 				"void const*",
 				"void* const*",
-				"func #373*"
+				"func #466*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -27565,7 +26837,7 @@
 			"params" : 
 			[
 				"int32*",
-				"func #289*",
+				"func #252*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -28000,7 +27272,7 @@
 			[
 				"void const*",
 				"void**",
-				"func #175*"
+				"func #143*"
 			],
 			"return_type" : "void*",
 			"size" : 0
@@ -28013,7 +27285,7 @@
 			"params" : 
 			[
 				"int32*",
-				"func #132*"
+				"func #100*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -28089,7 +27361,7 @@
 			"params" : 
 			[
 				"void const*",
-				"func #370*"
+				"func #463*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -29382,7 +28654,7 @@
 				"int32",
 				"unsigned int32"
 			],
-			"return_type" : "int32 const*",
+			"return_type" : "int32*",
 			"size" : 0
 		},
 		"func wmemcmp" : 
@@ -29406,8 +28678,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"int32* restrict",
-				"int32 const* restrict",
+				"int32*",
+				"int32 const*",
 				"unsigned int32"
 			],
 			"return_type" : "int32*",
@@ -29434,8 +28706,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"int32* restrict",
-				"int32 const* restrict",
+				"int32*",
+				"int32 const*",
 				"unsigned int32"
 			],
 			"return_type" : "int32*",
@@ -29749,7 +29021,7 @@
 				{
 					"name" : "fts_compar",
 					"offset" : 256,
-					"type" : "func #209*"
+					"type" : "func #177*"
 				},
 				{
 					"name" : "fts_options",
@@ -29876,41 +29148,6 @@
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 64
-		},
-		"struct __hsearch" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "offset_basis",
-					"offset" : 0,
-					"type" : "unsigned int32"
-				},
-				{
-					"name" : "index_mask",
-					"offset" : 32,
-					"type" : "unsigned int32"
-				},
-				{
-					"name" : "entries_used",
-					"offset" : 64,
-					"type" : "unsigned int32"
-				},
-				{
-					"name" : "entries",
-					"offset" : 96,
-					"type" : "struct entry*"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 128
-		},
-		"struct __hsearch*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "struct __hsearch",
-			"size" : 32
 		},
 		"struct __iconv_t" : 
 		{
@@ -30266,12 +29503,12 @@
 				{
 					"name" : "sigmask",
 					"offset" : 128,
-					"type" : "union __posix_spawnattr::#134"
+					"type" : "union __posix_spawnattr::#102"
 				},
 				{
 					"name" : "sigdefault",
 					"offset" : 192,
-					"type" : "union __posix_spawnattr::#134"
+					"type" : "union __posix_spawnattr::#102"
 				}
 			],
 			"inheritance" : [],
@@ -30314,7 +29551,7 @@
 				{
 					"name" : "__cleanup_routine",
 					"offset" : 32,
-					"type" : "func #232*"
+					"type" : "func #200*"
 				},
 				{
 					"name" : "__cleanup_arg",
@@ -30486,17 +29723,17 @@
 				{
 					"name" : "sort_list",
 					"offset" : 3040,
-					"type" : "struct __res_state::#285[10]"
+					"type" : "struct __res_state::#248[10]"
 				},
 				{
 					"name" : "qhook",
 					"offset" : 3680,
-					"type" : "func #268*"
+					"type" : "func #231*"
 				},
 				{
 					"name" : "rhook",
 					"offset" : 3712,
-					"type" : "func #286*"
+					"type" : "func #249*"
 				},
 				{
 					"name" : "res_h_errno",
@@ -30526,7 +29763,7 @@
 				{
 					"name" : "_u",
 					"offset" : 3904,
-					"type" : "union __res_state::#287"
+					"type" : "union __res_state::#250"
 				},
 				{
 					"name" : "rstatic",
@@ -30550,7 +29787,7 @@
 			"kind" : "const",
 			"size" : 32
 		},
-		"struct __res_state::#181" : 
+		"struct __res_state::#149" : 
 		{
 			"fields" : 
 			[
@@ -30569,13 +29806,13 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __res_state::#181[10]" : 
+		"struct __res_state::#149[10]" : 
 		{
-			"element_type" : "struct __res_state::#181",
+			"element_type" : "struct __res_state::#149",
 			"kind" : "array",
 			"size" : 640
 		},
-		"struct __res_state::#184::#185" : 
+		"struct __res_state::#152::#153" : 
 		{
 			"fields" : 
 			[
@@ -30604,7 +29841,7 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct __res_state::#198" : 
+		"struct __res_state::#166" : 
 		{
 			"fields" : 
 			[
@@ -30623,13 +29860,13 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __res_state::#198[10]" : 
+		"struct __res_state::#166[10]" : 
 		{
-			"element_type" : "struct __res_state::#198",
+			"element_type" : "struct __res_state::#166",
 			"kind" : "array",
 			"size" : 640
 		},
-		"struct __res_state::#201::#202" : 
+		"struct __res_state::#169::#170" : 
 		{
 			"fields" : 
 			[
@@ -30658,7 +29895,7 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct __res_state::#285" : 
+		"struct __res_state::#248" : 
 		{
 			"fields" : 
 			[
@@ -30677,13 +29914,13 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __res_state::#285[10]" : 
+		"struct __res_state::#248[10]" : 
 		{
-			"element_type" : "struct __res_state::#285",
+			"element_type" : "struct __res_state::#248",
 			"kind" : "array",
 			"size" : 640
 		},
-		"struct __res_state::#287::#288" : 
+		"struct __res_state::#250::#251" : 
 		{
 			"fields" : 
 			[
@@ -30712,7 +29949,7 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct __res_state::#377" : 
+		"struct __res_state::#470" : 
 		{
 			"fields" : 
 			[
@@ -30731,13 +29968,13 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __res_state::#377[10]" : 
+		"struct __res_state::#470[10]" : 
 		{
-			"element_type" : "struct __res_state::#377",
+			"element_type" : "struct __res_state::#470",
 			"kind" : "array",
 			"size" : 640
 		},
-		"struct __res_state::#380::#381" : 
+		"struct __res_state::#473::#474" : 
 		{
 			"fields" : 
 			[
@@ -30878,22 +30115,22 @@
 				{
 					"name" : "_close",
 					"offset" : 256,
-					"type" : "func #116*"
+					"type" : "func #96*"
 				},
 				{
 					"name" : "_read",
 					"offset" : 288,
-					"type" : "func #117*"
+					"type" : "func #97*"
 				},
 				{
 					"name" : "_seek",
 					"offset" : 320,
-					"type" : "func #118*"
+					"type" : "func #98*"
 				},
 				{
 					"name" : "_write",
 					"offset" : 352,
-					"type" : "func #119*"
+					"type" : "func #99*"
 				},
 				{
 					"name" : "_ext",
@@ -30921,17 +30158,17 @@
 					"type" : "unsigned char8[1]"
 				},
 				{
-					"name" : "_lb",
+					"name" : "fgetln_buffer",
 					"offset" : 544,
 					"type" : "struct __sbuf"
 				},
 				{
-					"name" : "_blksize",
+					"name" : "_unused_0",
 					"offset" : 608,
 					"type" : "int32"
 				},
 				{
-					"name" : "_unused_0",
+					"name" : "_unused_1",
 					"offset" : 640,
 					"type" : "int32"
 				}
@@ -30977,7 +30214,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#138" : 
+		"struct __sifields::#106" : 
 		{
 			"fields" : 
 			[
@@ -30996,7 +30233,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#139" : 
+		"struct __sifields::#107" : 
 		{
 			"fields" : 
 			[
@@ -31025,7 +30262,7 @@
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#140" : 
+		"struct __sifields::#108" : 
 		{
 			"fields" : 
 			[
@@ -31049,7 +30286,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#141" : 
+		"struct __sifields::#109" : 
 		{
 			"fields" : 
 			[
@@ -31083,7 +30320,7 @@
 			"kind" : "struct",
 			"size" : 160
 		},
-		"struct __sifields::#142" : 
+		"struct __sifields::#110" : 
 		{
 			"fields" : 
 			[
@@ -31095,14 +30332,14 @@
 				{
 					"name" : "",
 					"offset" : 32,
-					"type" : "union __sifields::#142::#143"
+					"type" : "union __sifields::#110::#111"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#142::#143::#144" : 
+		"struct __sifields::#110::#111::#112" : 
 		{
 			"fields" : 
 			[
@@ -31126,7 +30363,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#142::#143::#145" : 
+		"struct __sifields::#110::#111::#113" : 
 		{
 			"fields" : 
 			[
@@ -31145,7 +30382,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#142::#143::#146" : 
+		"struct __sifields::#110::#111::#114" : 
 		{
 			"fields" : 
 			[
@@ -31169,7 +30406,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#147" : 
+		"struct __sifields::#115" : 
 		{
 			"fields" : 
 			[
@@ -31188,7 +30425,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#148" : 
+		"struct __sifields::#116" : 
 		{
 			"fields" : 
 			[
@@ -31212,7 +30449,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#220" : 
+		"struct __sifields::#188" : 
 		{
 			"fields" : 
 			[
@@ -31231,7 +30468,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#221" : 
+		"struct __sifields::#189" : 
 		{
 			"fields" : 
 			[
@@ -31260,7 +30497,7 @@
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#222" : 
+		"struct __sifields::#190" : 
 		{
 			"fields" : 
 			[
@@ -31284,7 +30521,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#223" : 
+		"struct __sifields::#191" : 
 		{
 			"fields" : 
 			[
@@ -31318,7 +30555,7 @@
 			"kind" : "struct",
 			"size" : 160
 		},
-		"struct __sifields::#224" : 
+		"struct __sifields::#192" : 
 		{
 			"fields" : 
 			[
@@ -31330,14 +30567,14 @@
 				{
 					"name" : "",
 					"offset" : 32,
-					"type" : "union __sifields::#224::#225"
+					"type" : "union __sifields::#192::#193"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#224::#225::#226" : 
+		"struct __sifields::#192::#193::#194" : 
 		{
 			"fields" : 
 			[
@@ -31361,7 +30598,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#224::#225::#227" : 
+		"struct __sifields::#192::#193::#195" : 
 		{
 			"fields" : 
 			[
@@ -31380,7 +30617,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#224::#225::#228" : 
+		"struct __sifields::#192::#193::#196" : 
 		{
 			"fields" : 
 			[
@@ -31404,7 +30641,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#229" : 
+		"struct __sifields::#197" : 
 		{
 			"fields" : 
 			[
@@ -31423,7 +30660,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#230" : 
+		"struct __sifields::#198" : 
 		{
 			"fields" : 
 			[
@@ -31447,7 +30684,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#295" : 
+		"struct __sifields::#258" : 
 		{
 			"fields" : 
 			[
@@ -31466,7 +30703,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#296" : 
+		"struct __sifields::#259" : 
 		{
 			"fields" : 
 			[
@@ -31494,6 +30731,663 @@
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 128
+		},
+		"struct __sifields::#260" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#261" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#262" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#262::#263"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#262::#263::#264" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#262::#263::#265" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#262::#263::#266" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#267" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#268" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#271" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#272" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#273" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#274" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#275" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#275::#276"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#275::#276::#277" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#275::#276::#278" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#275::#276::#279" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#280" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#281" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#284" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#285" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#286" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#287" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#288" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#288::#289"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#288::#289::#290" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#288::#289::#291" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#288::#289::#292" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#293" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#294" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
 		},
 		"struct __sifields::#297" : 
 		{
@@ -31508,6 +31402,54 @@
 					"name" : "_uid",
 					"offset" : 32,
 					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#298" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#299" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
 				},
 				{
 					"name" : "_sigval",
@@ -31519,7 +31461,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#298" : 
+		"struct __sifields::#300" : 
 		{
 			"fields" : 
 			[
@@ -31553,7 +31495,7 @@
 			"kind" : "struct",
 			"size" : 160
 		},
-		"struct __sifields::#299" : 
+		"struct __sifields::#301" : 
 		{
 			"fields" : 
 			[
@@ -31565,14 +31507,14 @@
 				{
 					"name" : "",
 					"offset" : 32,
-					"type" : "union __sifields::#299::#300"
+					"type" : "union __sifields::#301::#302"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#299::#300::#301" : 
+		"struct __sifields::#301::#302::#303" : 
 		{
 			"fields" : 
 			[
@@ -31596,7 +31538,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#299::#300::#302" : 
+		"struct __sifields::#301::#302::#304" : 
 		{
 			"fields" : 
 			[
@@ -31615,7 +31557,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#299::#300::#303" : 
+		"struct __sifields::#301::#302::#305" : 
 		{
 			"fields" : 
 			[
@@ -31639,7 +31581,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#304" : 
+		"struct __sifields::#306" : 
 		{
 			"fields" : 
 			[
@@ -31658,7 +31600,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#305" : 
+		"struct __sifields::#307" : 
 		{
 			"fields" : 
 			[
@@ -31681,54 +31623,6 @@
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 96
-		},
-		"struct __sifields::#308" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_pid",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_uid",
-					"offset" : 32,
-					"type" : "unsigned int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 64
-		},
-		"struct __sifields::#309" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_tid",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_overrun",
-					"offset" : 32,
-					"type" : "int32"
-				},
-				{
-					"name" : "_sigval",
-					"offset" : 64,
-					"type" : "union sigval"
-				},
-				{
-					"name" : "_sys_private",
-					"offset" : 96,
-					"type" : "int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 128
 		},
 		"struct __sifields::#310" : 
 		{
@@ -31743,6 +31637,54 @@
 					"name" : "_uid",
 					"offset" : 32,
 					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#311" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#312" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
 				},
 				{
 					"name" : "_sigval",
@@ -31754,7 +31696,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#311" : 
+		"struct __sifields::#313" : 
 		{
 			"fields" : 
 			[
@@ -31788,7 +31730,7 @@
 			"kind" : "struct",
 			"size" : 160
 		},
-		"struct __sifields::#312" : 
+		"struct __sifields::#314" : 
 		{
 			"fields" : 
 			[
@@ -31800,14 +31742,14 @@
 				{
 					"name" : "",
 					"offset" : 32,
-					"type" : "union __sifields::#312::#313"
+					"type" : "union __sifields::#314::#315"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#312::#313::#314" : 
+		"struct __sifields::#314::#315::#316" : 
 		{
 			"fields" : 
 			[
@@ -31831,7 +31773,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#312::#313::#315" : 
+		"struct __sifields::#314::#315::#317" : 
 		{
 			"fields" : 
 			[
@@ -31850,7 +31792,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#312::#313::#316" : 
+		"struct __sifields::#314::#315::#318" : 
 		{
 			"fields" : 
 			[
@@ -31874,7 +31816,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#317" : 
+		"struct __sifields::#319" : 
 		{
 			"fields" : 
 			[
@@ -31893,7 +31835,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#318" : 
+		"struct __sifields::#320" : 
 		{
 			"fields" : 
 			[
@@ -31916,54 +31858,6 @@
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 96
-		},
-		"struct __sifields::#321" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_pid",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_uid",
-					"offset" : 32,
-					"type" : "unsigned int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 64
-		},
-		"struct __sifields::#322" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_tid",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_overrun",
-					"offset" : 32,
-					"type" : "int32"
-				},
-				{
-					"name" : "_sigval",
-					"offset" : 64,
-					"type" : "union sigval"
-				},
-				{
-					"name" : "_sys_private",
-					"offset" : 96,
-					"type" : "int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 128
 		},
 		"struct __sifields::#323" : 
 		{
@@ -31978,6 +31872,54 @@
 					"name" : "_uid",
 					"offset" : 32,
 					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#324" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#325" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
 				},
 				{
 					"name" : "_sigval",
@@ -31989,7 +31931,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#324" : 
+		"struct __sifields::#326" : 
 		{
 			"fields" : 
 			[
@@ -32023,7 +31965,7 @@
 			"kind" : "struct",
 			"size" : 160
 		},
-		"struct __sifields::#325" : 
+		"struct __sifields::#327" : 
 		{
 			"fields" : 
 			[
@@ -32035,14 +31977,14 @@
 				{
 					"name" : "",
 					"offset" : 32,
-					"type" : "union __sifields::#325::#326"
+					"type" : "union __sifields::#327::#328"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#325::#326::#327" : 
+		"struct __sifields::#327::#328::#329" : 
 		{
 			"fields" : 
 			[
@@ -32066,7 +32008,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#325::#326::#328" : 
+		"struct __sifields::#327::#328::#330" : 
 		{
 			"fields" : 
 			[
@@ -32085,7 +32027,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#325::#326::#329" : 
+		"struct __sifields::#327::#328::#331" : 
 		{
 			"fields" : 
 			[
@@ -32109,7 +32051,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#330" : 
+		"struct __sifields::#332" : 
 		{
 			"fields" : 
 			[
@@ -32128,7 +32070,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#331" : 
+		"struct __sifields::#333" : 
 		{
 			"fields" : 
 			[
@@ -32151,54 +32093,6 @@
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 96
-		},
-		"struct __sifields::#334" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_pid",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_uid",
-					"offset" : 32,
-					"type" : "unsigned int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 64
-		},
-		"struct __sifields::#335" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_tid",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_overrun",
-					"offset" : 32,
-					"type" : "int32"
-				},
-				{
-					"name" : "_sigval",
-					"offset" : 64,
-					"type" : "union sigval"
-				},
-				{
-					"name" : "_sys_private",
-					"offset" : 96,
-					"type" : "int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 128
 		},
 		"struct __sifields::#336" : 
 		{
@@ -32213,200 +32107,13 @@
 					"name" : "_uid",
 					"offset" : 32,
 					"type" : "unsigned int32"
-				},
-				{
-					"name" : "_sigval",
-					"offset" : 64,
-					"type" : "union sigval"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
-			"size" : 96
+			"size" : 64
 		},
 		"struct __sifields::#337" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_pid",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_uid",
-					"offset" : 32,
-					"type" : "unsigned int32"
-				},
-				{
-					"name" : "_status",
-					"offset" : 64,
-					"type" : "int32"
-				},
-				{
-					"name" : "_utime",
-					"offset" : 96,
-					"type" : "int32"
-				},
-				{
-					"name" : "_stime",
-					"offset" : 128,
-					"type" : "int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 160
-		},
-		"struct __sifields::#338" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_addr",
-					"offset" : 0,
-					"type" : "void*"
-				},
-				{
-					"name" : "",
-					"offset" : 32,
-					"type" : "union __sifields::#338::#339"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 128
-		},
-		"struct __sifields::#338::#339::#340" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_dummy_bnd",
-					"offset" : 0,
-					"type" : "char8[4]"
-				},
-				{
-					"name" : "_lower",
-					"offset" : 32,
-					"type" : "void*"
-				},
-				{
-					"name" : "_upper",
-					"offset" : 64,
-					"type" : "void*"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 96
-		},
-		"struct __sifields::#338::#339::#341" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_dummy_pkey",
-					"offset" : 0,
-					"type" : "char8[4]"
-				},
-				{
-					"name" : "_pkey",
-					"offset" : 32,
-					"type" : "unsigned int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 64
-		},
-		"struct __sifields::#338::#339::#342" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_data",
-					"offset" : 0,
-					"type" : "unsigned int32"
-				},
-				{
-					"name" : "_type",
-					"offset" : 32,
-					"type" : "unsigned int32"
-				},
-				{
-					"name" : "_flags",
-					"offset" : 64,
-					"type" : "unsigned int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 96
-		},
-		"struct __sifields::#343" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_band",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_fd",
-					"offset" : 32,
-					"type" : "int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 64
-		},
-		"struct __sifields::#344" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_call_addr",
-					"offset" : 0,
-					"type" : "void*"
-				},
-				{
-					"name" : "_syscall",
-					"offset" : 32,
-					"type" : "int32"
-				},
-				{
-					"name" : "_arch",
-					"offset" : 64,
-					"type" : "unsigned int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 96
-		},
-		"struct __sifields::#347" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "_pid",
-					"offset" : 0,
-					"type" : "int32"
-				},
-				{
-					"name" : "_uid",
-					"offset" : 32,
-					"type" : "unsigned int32"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 64
-		},
-		"struct __sifields::#348" : 
 		{
 			"fields" : 
 			[
@@ -32435,7 +32142,7 @@
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#349" : 
+		"struct __sifields::#338" : 
 		{
 			"fields" : 
 			[
@@ -32459,7 +32166,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#350" : 
+		"struct __sifields::#339" : 
 		{
 			"fields" : 
 			[
@@ -32493,7 +32200,7 @@
 			"kind" : "struct",
 			"size" : 160
 		},
-		"struct __sifields::#351" : 
+		"struct __sifields::#340" : 
 		{
 			"fields" : 
 			[
@@ -32505,14 +32212,14 @@
 				{
 					"name" : "",
 					"offset" : 32,
-					"type" : "union __sifields::#351::#352"
+					"type" : "union __sifields::#340::#341"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct __sifields::#351::#352::#353" : 
+		"struct __sifields::#340::#341::#342" : 
 		{
 			"fields" : 
 			[
@@ -32536,7 +32243,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#351::#352::#354" : 
+		"struct __sifields::#340::#341::#343" : 
 		{
 			"fields" : 
 			[
@@ -32555,7 +32262,7 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#351::#352::#355" : 
+		"struct __sifields::#340::#341::#344" : 
 		{
 			"fields" : 
 			[
@@ -32579,7 +32286,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct __sifields::#356" : 
+		"struct __sifields::#345" : 
 		{
 			"fields" : 
 			[
@@ -32598,7 +32305,1887 @@
 			"kind" : "struct",
 			"size" : 64
 		},
-		"struct __sifields::#357" : 
+		"struct __sifields::#346" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#349" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#350" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#351" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#352" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#353" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#353::#354"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#353::#354::#355" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#353::#354::#356" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#353::#354::#357" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#358" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#359" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#362" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#363" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#364" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#365" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#366" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#366::#367"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#366::#367::#368" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#366::#367::#369" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#366::#367::#370" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#371" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#372" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#375" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#376" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#377" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#378" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#379" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#379::#380"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#379::#380::#381" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#379::#380::#382" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#379::#380::#383" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#384" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#385" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#388" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#389" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#390" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#391" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#392" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#392::#393"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#392::#393::#394" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#392::#393::#395" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#392::#393::#396" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#397" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#398" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#401" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#402" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#403" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#404" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#405" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#405::#406"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#405::#406::#407" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#405::#406::#408" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#405::#406::#409" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#410" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#411" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#414" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#415" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#416" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#417" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#418" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#418::#419"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#418::#419::#420" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#418::#419::#421" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#418::#419::#422" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#423" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#424" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#427" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#428" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#429" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#430" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#431" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#431::#432"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#431::#432::#433" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#431::#432::#434" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#431::#432::#435" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#436" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#437" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_call_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "_syscall",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_arch",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#440" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#441" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_tid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_overrun",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				},
+				{
+					"name" : "_sys_private",
+					"offset" : 96,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#442" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_sigval",
+					"offset" : 64,
+					"type" : "union sigval"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#443" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_pid",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_uid",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_status",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_utime",
+					"offset" : 96,
+					"type" : "int32"
+				},
+				{
+					"name" : "_stime",
+					"offset" : 128,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 160
+		},
+		"struct __sifields::#444" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_addr",
+					"offset" : 0,
+					"type" : "void*"
+				},
+				{
+					"name" : "",
+					"offset" : 32,
+					"type" : "union __sifields::#444::#445"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct __sifields::#444::#445::#446" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_bnd",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_lower",
+					"offset" : 32,
+					"type" : "void*"
+				},
+				{
+					"name" : "_upper",
+					"offset" : 64,
+					"type" : "void*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#444::#445::#447" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_dummy_pkey",
+					"offset" : 0,
+					"type" : "char8[4]"
+				},
+				{
+					"name" : "_pkey",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#444::#445::#448" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_data",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_type",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "_flags",
+					"offset" : 64,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct __sifields::#449" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_band",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_fd",
+					"offset" : 32,
+					"type" : "int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 64
+		},
+		"struct __sifields::#450" : 
 		{
 			"fields" : 
 			[
@@ -32851,7 +34438,7 @@
 				{
 					"name" : "data",
 					"offset" : 64,
-					"type" : "union android_fdtrack_event::#162"
+					"type" : "union android_fdtrack_event::#136"
 				}
 			],
 			"inheritance" : [],
@@ -32864,7 +34451,7 @@
 			"pointee_type" : "struct android_fdtrack_event",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#152::#153" : 
+		"struct android_fdtrack_event::#120::#121" : 
 		{
 			"fields" : 
 			[
@@ -32878,7 +34465,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#154::#155" : 
+		"struct android_fdtrack_event::#122::#123" : 
 		{
 			"fields" : 
 			[
@@ -32892,7 +34479,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#156::#157" : 
+		"struct android_fdtrack_event::#124::#125" : 
 		{
 			"fields" : 
 			[
@@ -32906,7 +34493,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#158::#159" : 
+		"struct android_fdtrack_event::#126::#127" : 
 		{
 			"fields" : 
 			[
@@ -32920,7 +34507,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#160::#161" : 
+		"struct android_fdtrack_event::#128::#129" : 
 		{
 			"fields" : 
 			[
@@ -32934,7 +34521,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#162::#163" : 
+		"struct android_fdtrack_event::#130::#131" : 
 		{
 			"fields" : 
 			[
@@ -32948,7 +34535,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#164::#165" : 
+		"struct android_fdtrack_event::#132::#133" : 
 		{
 			"fields" : 
 			[
@@ -32962,7 +34549,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#166::#167" : 
+		"struct android_fdtrack_event::#134::#135" : 
 		{
 			"fields" : 
 			[
@@ -32976,7 +34563,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#168::#169" : 
+		"struct android_fdtrack_event::#136::#137" : 
 		{
 			"fields" : 
 			[
@@ -32990,7 +34577,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#170::#171" : 
+		"struct android_fdtrack_event::#138::#139" : 
 		{
 			"fields" : 
 			[
@@ -33004,7 +34591,7 @@
 			"kind" : "struct",
 			"size" : 32
 		},
-		"struct android_fdtrack_event::#172::#173" : 
+		"struct android_fdtrack_event::#140::#141" : 
 		{
 			"fields" : 
 			[
@@ -33055,7 +34642,7 @@
 				{
 					"name" : "qhook",
 					"offset" : 192,
-					"type" : "func #268*"
+					"type" : "func #231*"
 				}
 			],
 			"inheritance" : [],
@@ -33159,7 +34746,7 @@
 					"type" : "char8"
 				},
 				{
-					"name" : "bionic_systrace_disabled",
+					"name" : "bionic_systrace_enabled",
 					"offset" : 23112,
 					"type" : "char8"
 				},
@@ -33598,32 +35185,32 @@
 				{
 					"name" : "gl_errfunc",
 					"offset" : 160,
-					"type" : "func #192*"
+					"type" : "func #160*"
 				},
 				{
 					"name" : "gl_closedir",
 					"offset" : 192,
-					"type" : "func #193*"
+					"type" : "func #161*"
 				},
 				{
 					"name" : "gl_readdir",
 					"offset" : 224,
-					"type" : "func #194*"
+					"type" : "func #162*"
 				},
 				{
 					"name" : "gl_opendir",
 					"offset" : 256,
-					"type" : "func #195*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "gl_lstat",
 					"offset" : 288,
-					"type" : "func #196*"
+					"type" : "func #164*"
 				},
 				{
 					"name" : "gl_stat",
 					"offset" : 320,
-					"type" : "func #196*"
+					"type" : "func #164*"
 				}
 			],
 			"inheritance" : [],
@@ -33793,9 +35380,9 @@
 			"fields" : 
 			[
 				{
-					"name" : "__hsearch",
+					"name" : "__opaque",
 					"offset" : 0,
-					"type" : "struct __hsearch*"
+					"type" : "void*"
 				}
 			],
 			"inheritance" : [],
@@ -33865,7 +35452,7 @@
 				{
 					"name" : "ifa_ifu",
 					"offset" : 160,
-					"type" : "union ifaddrs::#364"
+					"type" : "union ifaddrs::#457"
 				},
 				{
 					"name" : "ifa_data",
@@ -33915,7 +35502,7 @@
 				{
 					"name" : "in6_u",
 					"offset" : 0,
-					"type" : "union in6_addr::#188"
+					"type" : "union in6_addr::#158"
 				}
 			],
 			"inheritance" : [],
@@ -34546,7 +36133,7 @@
 				{
 					"name" : "callback",
 					"offset" : 32,
-					"type" : "func #261*"
+					"type" : "func #229*"
 				},
 				{
 					"name" : "cb_data",
@@ -34769,7 +36356,7 @@
 				{
 					"name" : "",
 					"offset" : 32,
-					"type" : "union prop_info::#278"
+					"type" : "union prop_info::#243"
 				},
 				{
 					"name" : "name",
@@ -34799,7 +36386,7 @@
 			"pointee_type" : "struct prop_info",
 			"size" : 32
 		},
-		"struct prop_info::#272::#273" : 
+		"struct prop_info::#235::#236" : 
 		{
 			"fields" : 
 			[
@@ -34818,7 +36405,7 @@
 			"kind" : "struct",
 			"size" : 480
 		},
-		"struct prop_info::#274::#275" : 
+		"struct prop_info::#237::#238" : 
 		{
 			"fields" : 
 			[
@@ -34837,7 +36424,7 @@
 			"kind" : "struct",
 			"size" : 480
 		},
-		"struct prop_info::#276::#277" : 
+		"struct prop_info::#239::#240" : 
 		{
 			"fields" : 
 			[
@@ -34856,7 +36443,7 @@
 			"kind" : "struct",
 			"size" : 480
 		},
-		"struct prop_info::#278::#279" : 
+		"struct prop_info::#241::#242" : 
 		{
 			"fields" : 
 			[
@@ -34875,7 +36462,7 @@
 			"kind" : "struct",
 			"size" : 480
 		},
-		"struct prop_info::#280::#281" : 
+		"struct prop_info::#243::#244" : 
 		{
 			"fields" : 
 			[
@@ -35586,7 +37173,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "union sigaction::#216"
+					"type" : "union sigaction::#184"
 				},
 				{
 					"name" : "sa_mask",
@@ -35601,7 +37188,7 @@
 				{
 					"name" : "sa_restorer",
 					"offset" : 96,
-					"type" : "func #231*"
+					"type" : "func #199*"
 				}
 			],
 			"inheritance" : [],
@@ -35633,7 +37220,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "union sigaction64::#290"
+					"type" : "union sigaction64::#253"
 				},
 				{
 					"name" : "sa_flags",
@@ -35643,7 +37230,7 @@
 				{
 					"name" : "sa_restorer",
 					"offset" : 64,
-					"type" : "func #358*"
+					"type" : "func #451*"
 				},
 				{
 					"name" : "sa_mask",
@@ -35737,7 +37324,7 @@
 				{
 					"name" : "_sigev_un",
 					"offset" : 96,
-					"type" : "union sigevent::#213"
+					"type" : "union sigevent::#181"
 				}
 			],
 			"inheritance" : [],
@@ -35750,14 +37337,14 @@
 			"pointee_type" : "struct sigevent",
 			"size" : 32
 		},
-		"struct sigevent::#213::#214" : 
+		"struct sigevent::#181::#182" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "_function",
 					"offset" : 0,
-					"type" : "func #215*"
+					"type" : "func #183*"
 				},
 				{
 					"name" : "_attribute",
@@ -35776,7 +37363,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "union siginfo::#345"
+					"type" : "union siginfo::#308"
 				}
 			],
 			"inheritance" : [],
@@ -35801,7 +37388,7 @@
 			"pointee_type" : "struct siginfo",
 			"size" : 32
 		},
-		"struct siginfo::#136::#137" : 
+		"struct siginfo::#104::#105" : 
 		{
 			"fields" : 
 			[
@@ -35830,7 +37417,7 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct siginfo::#218::#219" : 
+		"struct siginfo::#186::#187" : 
 		{
 			"fields" : 
 			[
@@ -35859,7 +37446,7 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct siginfo::#293::#294" : 
+		"struct siginfo::#256::#257" : 
 		{
 			"fields" : 
 			[
@@ -35888,7 +37475,7 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct siginfo::#306::#307" : 
+		"struct siginfo::#269::#270" : 
 		{
 			"fields" : 
 			[
@@ -35917,7 +37504,7 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct siginfo::#319::#320" : 
+		"struct siginfo::#282::#283" : 
 		{
 			"fields" : 
 			[
@@ -35946,7 +37533,7 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct siginfo::#332::#333" : 
+		"struct siginfo::#295::#296" : 
 		{
 			"fields" : 
 			[
@@ -35975,7 +37562,297 @@
 			"kind" : "struct",
 			"size" : 256
 		},
-		"struct siginfo::#345::#346" : 
+		"struct siginfo::#308::#309" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#321::#322" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#334::#335" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#347::#348" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#360::#361" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#373::#374" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#386::#387" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#399::#400" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#412::#413" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#425::#426" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "si_signo",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_errno",
+					"offset" : 32,
+					"type" : "int32"
+				},
+				{
+					"name" : "si_code",
+					"offset" : 64,
+					"type" : "int32"
+				},
+				{
+					"name" : "_sifields",
+					"offset" : 96,
+					"type" : "union __sifields"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct siginfo::#438::#439" : 
 		{
 			"fields" : 
 			[
@@ -36179,7 +38056,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "union sockaddr_storage::#207"
+					"type" : "union sockaddr_storage::#175"
 				}
 			],
 			"inheritance" : [],
@@ -36192,7 +38069,7 @@
 			"pointee_type" : "struct sockaddr_storage",
 			"size" : 32
 		},
-		"struct sockaddr_storage::#207::#208" : 
+		"struct sockaddr_storage::#175::#176" : 
 		{
 			"fields" : 
 			[
@@ -36223,12 +38100,12 @@
 				{
 					"name" : "addr",
 					"offset" : 32,
-					"type" : "union sort_list::#189"
+					"type" : "union sort_list::#159"
 				},
 				{
 					"name" : "mask",
 					"offset" : 160,
-					"type" : "union sort_list::#189"
+					"type" : "union sort_list::#159"
 				}
 			],
 			"inheritance" : [],
@@ -36597,17 +38474,17 @@
 				{
 					"name" : "preinit_array",
 					"offset" : 0,
-					"type" : "func #376**"
+					"type" : "func #469**"
 				},
 				{
 					"name" : "init_array",
 					"offset" : 32,
-					"type" : "func #376**"
+					"type" : "func #469**"
 				},
 				{
 					"name" : "fini_array",
 					"offset" : 64,
-					"type" : "func #374**"
+					"type" : "func #467**"
 				},
 				{
 					"name" : "preinit_array_count",
@@ -37237,7 +39114,7 @@
 			"pointee_type" : "struct winsize",
 			"size" : 32
 		},
-		"union __posix_spawnattr::#134" : 
+		"union __posix_spawnattr::#102" : 
 		{
 			"fields" : 
 			[
@@ -37256,7 +39133,7 @@
 			"kind" : "union",
 			"size" : 64
 		},
-		"union __res_state::#184" : 
+		"union __res_state::#152" : 
 		{
 			"fields" : 
 			[
@@ -37268,14 +39145,14 @@
 				{
 					"name" : "_ext",
 					"offset" : 0,
-					"type" : "struct __res_state::#184::#185"
+					"type" : "struct __res_state::#152::#153"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 384
 		},
-		"union __res_state::#201" : 
+		"union __res_state::#169" : 
 		{
 			"fields" : 
 			[
@@ -37287,14 +39164,14 @@
 				{
 					"name" : "_ext",
 					"offset" : 0,
-					"type" : "struct __res_state::#201::#202"
+					"type" : "struct __res_state::#169::#170"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 384
 		},
-		"union __res_state::#287" : 
+		"union __res_state::#250" : 
 		{
 			"fields" : 
 			[
@@ -37306,14 +39183,14 @@
 				{
 					"name" : "_ext",
 					"offset" : 0,
-					"type" : "struct __res_state::#287::#288"
+					"type" : "struct __res_state::#250::#251"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 384
 		},
-		"union __res_state::#380" : 
+		"union __res_state::#473" : 
 		{
 			"fields" : 
 			[
@@ -37325,7 +39202,7 @@
 				{
 					"name" : "_ext",
 					"offset" : 0,
-					"type" : "struct __res_state::#380::#381"
+					"type" : "struct __res_state::#473::#474"
 				}
 			],
 			"inheritance" : [],
@@ -37339,44 +39216,44 @@
 				{
 					"name" : "_kill",
 					"offset" : 0,
-					"type" : "struct __sifields::#347"
+					"type" : "struct __sifields::#336"
 				},
 				{
 					"name" : "_timer",
 					"offset" : 0,
-					"type" : "struct __sifields::#348"
+					"type" : "struct __sifields::#337"
 				},
 				{
 					"name" : "_rt",
 					"offset" : 0,
-					"type" : "struct __sifields::#349"
+					"type" : "struct __sifields::#338"
 				},
 				{
 					"name" : "_sigchld",
 					"offset" : 0,
-					"type" : "struct __sifields::#350"
+					"type" : "struct __sifields::#339"
 				},
 				{
 					"name" : "_sigfault",
 					"offset" : 0,
-					"type" : "struct __sifields::#351"
+					"type" : "struct __sifields::#340"
 				},
 				{
 					"name" : "_sigpoll",
 					"offset" : 0,
-					"type" : "struct __sifields::#356"
+					"type" : "struct __sifields::#345"
 				},
 				{
 					"name" : "_sigsys",
 					"offset" : 0,
-					"type" : "struct __sifields::#357"
+					"type" : "struct __sifields::#346"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 160
 		},
-		"union __sifields::#142::#143" : 
+		"union __sifields::#110::#111" : 
 		{
 			"fields" : 
 			[
@@ -37393,24 +39270,24 @@
 				{
 					"name" : "_addr_bnd",
 					"offset" : 0,
-					"type" : "struct __sifields::#142::#143::#144"
+					"type" : "struct __sifields::#110::#111::#112"
 				},
 				{
 					"name" : "_addr_pkey",
 					"offset" : 0,
-					"type" : "struct __sifields::#142::#143::#145"
+					"type" : "struct __sifields::#110::#111::#113"
 				},
 				{
 					"name" : "_perf",
 					"offset" : 0,
-					"type" : "struct __sifields::#142::#143::#146"
+					"type" : "struct __sifields::#110::#111::#114"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 96
 		},
-		"union __sifields::#224::#225" : 
+		"union __sifields::#192::#193" : 
 		{
 			"fields" : 
 			[
@@ -37427,24 +39304,24 @@
 				{
 					"name" : "_addr_bnd",
 					"offset" : 0,
-					"type" : "struct __sifields::#224::#225::#226"
+					"type" : "struct __sifields::#192::#193::#194"
 				},
 				{
 					"name" : "_addr_pkey",
 					"offset" : 0,
-					"type" : "struct __sifields::#224::#225::#227"
+					"type" : "struct __sifields::#192::#193::#195"
 				},
 				{
 					"name" : "_perf",
 					"offset" : 0,
-					"type" : "struct __sifields::#224::#225::#228"
+					"type" : "struct __sifields::#192::#193::#196"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 96
 		},
-		"union __sifields::#299::#300" : 
+		"union __sifields::#262::#263" : 
 		{
 			"fields" : 
 			[
@@ -37461,24 +39338,24 @@
 				{
 					"name" : "_addr_bnd",
 					"offset" : 0,
-					"type" : "struct __sifields::#299::#300::#301"
+					"type" : "struct __sifields::#262::#263::#264"
 				},
 				{
 					"name" : "_addr_pkey",
 					"offset" : 0,
-					"type" : "struct __sifields::#299::#300::#302"
+					"type" : "struct __sifields::#262::#263::#265"
 				},
 				{
 					"name" : "_perf",
 					"offset" : 0,
-					"type" : "struct __sifields::#299::#300::#303"
+					"type" : "struct __sifields::#262::#263::#266"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 96
 		},
-		"union __sifields::#312::#313" : 
+		"union __sifields::#275::#276" : 
 		{
 			"fields" : 
 			[
@@ -37495,24 +39372,24 @@
 				{
 					"name" : "_addr_bnd",
 					"offset" : 0,
-					"type" : "struct __sifields::#312::#313::#314"
+					"type" : "struct __sifields::#275::#276::#277"
 				},
 				{
 					"name" : "_addr_pkey",
 					"offset" : 0,
-					"type" : "struct __sifields::#312::#313::#315"
+					"type" : "struct __sifields::#275::#276::#278"
 				},
 				{
 					"name" : "_perf",
 					"offset" : 0,
-					"type" : "struct __sifields::#312::#313::#316"
+					"type" : "struct __sifields::#275::#276::#279"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 96
 		},
-		"union __sifields::#325::#326" : 
+		"union __sifields::#288::#289" : 
 		{
 			"fields" : 
 			[
@@ -37529,24 +39406,24 @@
 				{
 					"name" : "_addr_bnd",
 					"offset" : 0,
-					"type" : "struct __sifields::#325::#326::#327"
+					"type" : "struct __sifields::#288::#289::#290"
 				},
 				{
 					"name" : "_addr_pkey",
 					"offset" : 0,
-					"type" : "struct __sifields::#325::#326::#328"
+					"type" : "struct __sifields::#288::#289::#291"
 				},
 				{
 					"name" : "_perf",
 					"offset" : 0,
-					"type" : "struct __sifields::#325::#326::#329"
+					"type" : "struct __sifields::#288::#289::#292"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 96
 		},
-		"union __sifields::#338::#339" : 
+		"union __sifields::#301::#302" : 
 		{
 			"fields" : 
 			[
@@ -37563,24 +39440,24 @@
 				{
 					"name" : "_addr_bnd",
 					"offset" : 0,
-					"type" : "struct __sifields::#338::#339::#340"
+					"type" : "struct __sifields::#301::#302::#303"
 				},
 				{
 					"name" : "_addr_pkey",
 					"offset" : 0,
-					"type" : "struct __sifields::#338::#339::#341"
+					"type" : "struct __sifields::#301::#302::#304"
 				},
 				{
 					"name" : "_perf",
 					"offset" : 0,
-					"type" : "struct __sifields::#338::#339::#342"
+					"type" : "struct __sifields::#301::#302::#305"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 96
 		},
-		"union __sifields::#351::#352" : 
+		"union __sifields::#314::#315" : 
 		{
 			"fields" : 
 			[
@@ -37597,178 +39474,518 @@
 				{
 					"name" : "_addr_bnd",
 					"offset" : 0,
-					"type" : "struct __sifields::#351::#352::#353"
+					"type" : "struct __sifields::#314::#315::#316"
 				},
 				{
 					"name" : "_addr_pkey",
 					"offset" : 0,
-					"type" : "struct __sifields::#351::#352::#354"
+					"type" : "struct __sifields::#314::#315::#317"
 				},
 				{
 					"name" : "_perf",
 					"offset" : 0,
-					"type" : "struct __sifields::#351::#352::#355"
+					"type" : "struct __sifields::#314::#315::#318"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 96
 		},
-		"union android_fdtrack_event::#152" : 
+		"union __sifields::#327::#328" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#327::#328::#329"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#327::#328::#330"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#327::#328::#331"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#340::#341" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#340::#341::#342"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#340::#341::#343"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#340::#341::#344"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#353::#354" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#353::#354::#355"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#353::#354::#356"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#353::#354::#357"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#366::#367" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#366::#367::#368"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#366::#367::#369"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#366::#367::#370"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#379::#380" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#379::#380::#381"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#379::#380::#382"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#379::#380::#383"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#392::#393" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#392::#393::#394"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#392::#393::#395"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#392::#393::#396"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#405::#406" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#405::#406::#407"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#405::#406::#408"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#405::#406::#409"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#418::#419" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#418::#419::#420"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#418::#419::#421"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#418::#419::#422"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#431::#432" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#431::#432::#433"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#431::#432::#434"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#431::#432::#435"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union __sifields::#444::#445" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_trapno",
+					"offset" : 0,
+					"type" : "int32"
+				},
+				{
+					"name" : "_addr_lsb",
+					"offset" : 0,
+					"type" : "int16"
+				},
+				{
+					"name" : "_addr_bnd",
+					"offset" : 0,
+					"type" : "struct __sifields::#444::#445::#446"
+				},
+				{
+					"name" : "_addr_pkey",
+					"offset" : 0,
+					"type" : "struct __sifields::#444::#445::#447"
+				},
+				{
+					"name" : "_perf",
+					"offset" : 0,
+					"type" : "struct __sifields::#444::#445::#448"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union android_fdtrack_event::#120" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#152::#153"
+					"type" : "struct android_fdtrack_event::#120::#121"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#154" : 
+		"union android_fdtrack_event::#122" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#154::#155"
+					"type" : "struct android_fdtrack_event::#122::#123"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#156" : 
+		"union android_fdtrack_event::#124" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#156::#157"
+					"type" : "struct android_fdtrack_event::#124::#125"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#158" : 
+		"union android_fdtrack_event::#126" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#158::#159"
+					"type" : "struct android_fdtrack_event::#126::#127"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#160" : 
+		"union android_fdtrack_event::#128" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#160::#161"
+					"type" : "struct android_fdtrack_event::#128::#129"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#162" : 
+		"union android_fdtrack_event::#130" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#162::#163"
+					"type" : "struct android_fdtrack_event::#130::#131"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#164" : 
+		"union android_fdtrack_event::#132" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#164::#165"
+					"type" : "struct android_fdtrack_event::#132::#133"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#166" : 
+		"union android_fdtrack_event::#134" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#166::#167"
+					"type" : "struct android_fdtrack_event::#134::#135"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#168" : 
+		"union android_fdtrack_event::#136" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#168::#169"
+					"type" : "struct android_fdtrack_event::#136::#137"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#170" : 
+		"union android_fdtrack_event::#138" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#170::#171"
+					"type" : "struct android_fdtrack_event::#138::#139"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union android_fdtrack_event::#172" : 
+		"union android_fdtrack_event::#140" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "create",
 					"offset" : 0,
-					"type" : "struct android_fdtrack_event::#172::#173"
+					"type" : "struct android_fdtrack_event::#140::#141"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union ifaddrs::#364" : 
+		"union ifaddrs::#457" : 
 		{
 			"fields" : 
 			[
@@ -37787,7 +40004,7 @@
 			"kind" : "union",
 			"size" : 32
 		},
-		"union in6_addr::#180" : 
+		"union in6_addr::#148" : 
 		{
 			"fields" : 
 			[
@@ -37811,7 +40028,7 @@
 			"kind" : "union",
 			"size" : 128
 		},
-		"union in6_addr::#186" : 
+		"union in6_addr::#154" : 
 		{
 			"fields" : 
 			[
@@ -37835,7 +40052,7 @@
 			"kind" : "union",
 			"size" : 128
 		},
-		"union in6_addr::#188" : 
+		"union in6_addr::#156" : 
 		{
 			"fields" : 
 			[
@@ -37859,7 +40076,7 @@
 			"kind" : "union",
 			"size" : 128
 		},
-		"union in6_addr::#190" : 
+		"union in6_addr::#158" : 
 		{
 			"fields" : 
 			[
@@ -37902,7 +40119,7 @@
 			"kind" : "union",
 			"size" : 736
 		},
-		"union prop_info::#272" : 
+		"union prop_info::#235" : 
 		{
 			"fields" : 
 			[
@@ -37914,14 +40131,14 @@
 				{
 					"name" : "long_property",
 					"offset" : 0,
-					"type" : "struct prop_info::#272::#273"
+					"type" : "struct prop_info::#235::#236"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 736
 		},
-		"union prop_info::#274" : 
+		"union prop_info::#237" : 
 		{
 			"fields" : 
 			[
@@ -37933,14 +40150,14 @@
 				{
 					"name" : "long_property",
 					"offset" : 0,
-					"type" : "struct prop_info::#274::#275"
+					"type" : "struct prop_info::#237::#238"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 736
 		},
-		"union prop_info::#276" : 
+		"union prop_info::#239" : 
 		{
 			"fields" : 
 			[
@@ -37952,14 +40169,14 @@
 				{
 					"name" : "long_property",
 					"offset" : 0,
-					"type" : "struct prop_info::#276::#277"
+					"type" : "struct prop_info::#239::#240"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 736
 		},
-		"union prop_info::#278" : 
+		"union prop_info::#241" : 
 		{
 			"fields" : 
 			[
@@ -37971,14 +40188,14 @@
 				{
 					"name" : "long_property",
 					"offset" : 0,
-					"type" : "struct prop_info::#278::#279"
+					"type" : "struct prop_info::#241::#242"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 736
 		},
-		"union prop_info::#280" : 
+		"union prop_info::#243" : 
 		{
 			"fields" : 
 			[
@@ -37990,7 +40207,7 @@
 				{
 					"name" : "long_property",
 					"offset" : 0,
-					"type" : "struct prop_info::#280::#281"
+					"type" : "struct prop_info::#243::#244"
 				}
 			],
 			"inheritance" : [],
@@ -38032,45 +40249,45 @@
 			"kind" : "array",
 			"size" : 4096
 		},
-		"union sigaction64::#290" : 
+		"union sigaction64::#253" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "sa_handler",
 					"offset" : 0,
-					"type" : "func #291*"
+					"type" : "func #254*"
 				},
 				{
 					"name" : "sa_sigaction",
 					"offset" : 0,
-					"type" : "func #292*"
+					"type" : "func #255*"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union sigaction::#216" : 
+		"union sigaction::#184" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "sa_handler",
 					"offset" : 0,
-					"type" : "func #133*"
+					"type" : "func #101*"
 				},
 				{
 					"name" : "sa_sigaction",
 					"offset" : 0,
-					"type" : "func #217*"
+					"type" : "func #185*"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 32
 		},
-		"union sigevent::#213" : 
+		"union sigevent::#181" : 
 		{
 			"fields" : 
 			[
@@ -38087,21 +40304,21 @@
 				{
 					"name" : "_sigev_thread",
 					"offset" : 0,
-					"type" : "struct sigevent::#213::#214"
+					"type" : "struct sigevent::#181::#182"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 416
 		},
-		"union siginfo::#136" : 
+		"union siginfo::#104" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct siginfo::#136::#137"
+					"type" : "struct siginfo::#104::#105"
 				},
 				{
 					"name" : "_si_pad",
@@ -38113,14 +40330,14 @@
 			"kind" : "union",
 			"size" : 1024
 		},
-		"union siginfo::#218" : 
+		"union siginfo::#186" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct siginfo::#218::#219"
+					"type" : "struct siginfo::#186::#187"
 				},
 				{
 					"name" : "_si_pad",
@@ -38132,14 +40349,14 @@
 			"kind" : "union",
 			"size" : 1024
 		},
-		"union siginfo::#293" : 
+		"union siginfo::#256" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct siginfo::#293::#294"
+					"type" : "struct siginfo::#256::#257"
 				},
 				{
 					"name" : "_si_pad",
@@ -38151,14 +40368,14 @@
 			"kind" : "union",
 			"size" : 1024
 		},
-		"union siginfo::#306" : 
+		"union siginfo::#269" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct siginfo::#306::#307"
+					"type" : "struct siginfo::#269::#270"
 				},
 				{
 					"name" : "_si_pad",
@@ -38170,14 +40387,14 @@
 			"kind" : "union",
 			"size" : 1024
 		},
-		"union siginfo::#319" : 
+		"union siginfo::#282" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct siginfo::#319::#320"
+					"type" : "struct siginfo::#282::#283"
 				},
 				{
 					"name" : "_si_pad",
@@ -38189,14 +40406,14 @@
 			"kind" : "union",
 			"size" : 1024
 		},
-		"union siginfo::#332" : 
+		"union siginfo::#295" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct siginfo::#332::#333"
+					"type" : "struct siginfo::#295::#296"
 				},
 				{
 					"name" : "_si_pad",
@@ -38208,14 +40425,204 @@
 			"kind" : "union",
 			"size" : 1024
 		},
-		"union siginfo::#345" : 
+		"union siginfo::#308" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct siginfo::#345::#346"
+					"type" : "struct siginfo::#308::#309"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#321" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#321::#322"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#334" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#334::#335"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#347" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#347::#348"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#360" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#360::#361"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#373" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#373::#374"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#386" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#386::#387"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#399" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#399::#400"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#412" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#412::#413"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#425" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#425::#426"
+				},
+				{
+					"name" : "_si_pad",
+					"offset" : 0,
+					"type" : "int32[32]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 1024
+		},
+		"union siginfo::#438" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct siginfo::#438::#439"
 				},
 				{
 					"name" : "_si_pad",
@@ -38252,14 +40659,14 @@
 			"kind" : "const",
 			"size" : 32
 		},
-		"union sockaddr_storage::#207" : 
+		"union sockaddr_storage::#175" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct sockaddr_storage::#207::#208"
+					"type" : "struct sockaddr_storage::#175::#176"
 				},
 				{
 					"name" : "__align",
@@ -38271,7 +40678,7 @@
 			"kind" : "union",
 			"size" : 1024
 		},
-		"union sort_list::#187" : 
+		"union sort_list::#155" : 
 		{
 			"fields" : 
 			[
@@ -38290,7 +40697,7 @@
 			"kind" : "union",
 			"size" : 128
 		},
-		"union sort_list::#189" : 
+		"union sort_list::#157" : 
 		{
 			"fields" : 
 			[
@@ -38309,7 +40716,7 @@
 			"kind" : "union",
 			"size" : 128
 		},
-		"union sort_list::#191" : 
+		"union sort_list::#159" : 
 		{
 			"fields" : 
 			[
@@ -38578,12 +40985,6 @@
 			"pointee_type" : "void const",
 			"size" : 32
 		},
-		"void const* restrict" : 
-		{
-			"base_type" : "void const*",
-			"kind" : "restrict",
-			"size" : 32
-		},
 		"void volatile" : 
 		{
 			"base_type" : "void",
@@ -38612,12 +41013,6 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "void* const",
-			"size" : 32
-		},
-		"void* restrict" : 
-		{
-			"base_type" : "void*",
-			"kind" : "restrict",
 			"size" : 32
 		},
 		"void**" : 
