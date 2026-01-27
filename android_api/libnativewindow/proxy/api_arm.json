@@ -133,6 +133,10 @@
 		{
 			"type" : "func ANativeWindow_getWidth"
 		},
+		"ANativeWindow_isProducerThrottlingEnabled" : 
+		{
+			"type" : "func ANativeWindow_isProducerThrottlingEnabled"
+		},
 		"ANativeWindow_lock" : 
 		{
 			"type" : "func ANativeWindow_lock"
@@ -217,6 +221,10 @@
 		{
 			"type" : "func ANativeWindow_setPerformInterceptor"
 		},
+		"ANativeWindow_setProducerThrottlingEnabled" : 
+		{
+			"type" : "func ANativeWindow_setProducerThrottlingEnabled"
+		},
 		"ANativeWindow_setQueueBufferInterceptor" : 
 		{
 			"type" : "func ANativeWindow_setQueueBufferInterceptor"
@@ -293,6 +301,12 @@
 			"kind" : "int",
 			"signed" : false,
 			"size" : 8
+		},
+		"bool*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "bool",
+			"size" : 32
 		},
 		"char8" : 
 		{
@@ -384,10 +398,10 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"func #4*",
+				"func #2*",
 				"void*",
-				"struct ANativeWindowBuffer**",
-				"int32*"
+				"struct ANativeWindowBuffer*",
+				"int32"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -406,8 +420,10 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer**",
-				"int32*"
+				"func #5*",
+				"void*",
+				"int32",
+				"struct std::__va_list"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -426,10 +442,8 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"func #2*",
-				"void*",
-				"struct ANativeWindowBuffer*",
-				"int32"
+				"int32",
+				"struct std::__va_list"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -450,8 +464,8 @@
 				"struct ANativeWindow*",
 				"func #7*",
 				"void*",
-				"int32",
-				"struct std::__va_list"
+				"struct ANativeWindowBuffer**",
+				"int32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -470,8 +484,8 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"int32",
-				"struct std::__va_list"
+				"struct ANativeWindowBuffer**",
+				"int32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -915,6 +929,19 @@
 			"return_type" : "int32",
 			"size" : 0
 		},
+		"func ANativeWindow_isProducerThrottlingEnabled" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ANativeWindow*",
+				"bool*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
 		"func ANativeWindow_lock" : 
 		{
 			"has_variadic_args" : false,
@@ -1138,7 +1165,7 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"func #3*",
+				"func #6*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -1194,8 +1221,21 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"func #6*",
+				"func #4*",
 				"void*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func ANativeWindow_setProducerThrottlingEnabled" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ANativeWindow*",
+				"bool"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1208,7 +1248,7 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"func #5*",
+				"func #3*",
 				"void*"
 			],
 			"return_type" : "int32",

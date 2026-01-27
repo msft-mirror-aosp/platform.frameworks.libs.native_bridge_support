@@ -23467,27 +23467,27 @@
 				{
 					"name" : "DestroyJavaVM",
 					"offset" : 96,
-					"type" : "func #655*"
+					"type" : "func #1077*"
 				},
 				{
 					"name" : "AttachCurrentThread",
 					"offset" : 128,
-					"type" : "func #656*"
+					"type" : "func #1078*"
 				},
 				{
 					"name" : "DetachCurrentThread",
 					"offset" : 160,
-					"type" : "func #655*"
+					"type" : "func #1077*"
 				},
 				{
 					"name" : "GetEnv",
 					"offset" : 192,
-					"type" : "func #872*"
+					"type" : "func #1079*"
 				},
 				{
 					"name" : "AttachCurrentThreadAsDaemon",
 					"offset" : 224,
-					"type" : "func #656*"
+					"type" : "func #1078*"
 				}
 			],
 			"inheritance" : [],
