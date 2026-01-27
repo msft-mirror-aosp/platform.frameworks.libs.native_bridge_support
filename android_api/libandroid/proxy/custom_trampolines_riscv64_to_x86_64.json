@@ -81,6 +81,18 @@
       "reason_for_compatible": [
         "It's opaque structure in public API (used as a handle)"
       ]
+    },
+    "struct AActivityManager_ProcessObserver*": {
+      "force_compatible": true,
+      "reason_for_compatible": [
+        "It's opaque structure in public API (used as a handle)"
+      ]
+    },
+    "struct ANativeService*": {
+      "force_compatible": true,
+      "reason_for_compatible": [
+        "It's opaque structure in public API (used as a handle)"
+      ]
     }
   }
 }
