@@ -1,6 +1,22 @@
 {
 	"symbols" : 
 	{
+		"_ZN3com7android8graphics9libvulkan5flags9provider_E" : 
+		{
+			"type" : "class std::__1::unique_ptr<com::android::graphics::libvulkan::flags::flag_provider_interface, std::__1::default_delete<com::android::graphics::libvulkan::flags::flag_provider_interface>>"
+		},
+		"_ZN7android7sysprop16VulkanProperties10oem_layersEv" : 
+		{
+			"type" : "func _ZN7android7sysprop16VulkanProperties10oem_layersEv"
+		},
+		"_ZN7android7sysprop16VulkanProperties15platform_layersEv" : 
+		{
+			"type" : "func _ZN7android7sysprop16VulkanProperties15platform_layersEv"
+		},
+		"_ZTVN3com7android8graphics9libvulkan5flags13flag_providerE" : 
+		{
+			"type" : "void*"
+		},
 		"android_convertGralloc0To1Usage" : 
 		{
 			"type" : "func android_convertGralloc0To1Usage"
@@ -8,6 +24,50 @@
 		"android_convertGralloc1To0Usage" : 
 		{
 			"type" : "func android_convertGralloc1To0Usage"
+		},
+		"com_android_graphics_libvulkan_flags_ext_private_data_swapchain" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_ext_private_data_swapchain"
+		},
+		"com_android_graphics_libvulkan_flags_khr_swapchain_maintenance1" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_khr_swapchain_maintenance1"
+		},
+		"com_android_graphics_libvulkan_flags_oem_and_platform_layers" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_oem_and_platform_layers"
+		},
+		"com_android_graphics_libvulkan_flags_present_id2_khr" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_present_id2_khr"
+		},
+		"com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext"
+		},
+		"com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext2" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext2"
+		},
+		"com_android_graphics_libvulkan_flags_present_timing_ext" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_present_timing_ext"
+		},
+		"com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext"
+		},
+		"com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format"
+		},
+		"com_android_graphics_libvulkan_flags_vk_khr_present_wait2" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_vk_khr_present_wait2"
+		},
+		"com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api" : 
+		{
+			"type" : "func com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api"
 		},
 		"vkAcquireNextImage2KHR" : 
 		{
@@ -1016,6 +1076,110 @@
 	},
 	"types" : 
 	{
+		"bool" : 
+		{
+			"kind" : "int",
+			"signed" : false,
+			"size" : 8
+		},
+		"class com::android::graphics::libvulkan::flags::flag_provider_interface" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_vptr$flag_provider_interface",
+					"offset" : 0,
+					"type" : "func #18**"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 32
+		},
+		"class com::android::graphics::libvulkan::flags::flag_provider_interface*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "class com::android::graphics::libvulkan::flags::flag_provider_interface",
+			"size" : 32
+		},
+		"class std::__1::__compressed_pair_padding<com::android::graphics::libvulkan::flags::flag_provider_interface*, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::allocator<unsigned char8>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::default_delete<com::android::graphics::libvulkan::flags::flag_provider_interface>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::allocator<unsigned char8>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__non_trivial_if<true, std::__1::allocator<unsigned char8>>"
+			],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::#14"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 96
+		},
+		"class std::__1::optional<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__optional_move_assign_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>",
+				"struct std::__1::__sfinae_ctor_base<true, true>",
+				"struct std::__1::__sfinae_assign_base<true, true>"
+			],
+			"kind" : "class",
+			"size" : 128
+		},
+		"class std::__1::unique_ptr<com::android::graphics::libvulkan::flags::flag_provider_interface, std::__1::default_delete<com::android::graphics::libvulkan::flags::flag_provider_interface>>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct std::__1::unique_ptr<com::android::graphics::libvulkan::flags::flag_provider_interface, std::__1::default_delete<com::android::graphics::libvulkan::flags::flag_provider_interface>>::#19"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 32
+		},
 		"float32" : 
 		{
 			"kind" : "float",
@@ -1070,13 +1234,14 @@
 		},
 		"func #10" : 
 		{
-			"has_variadic_args" : true,
+			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
-				"struct ANativeWindow*",
-				"int32"
+				"struct ANativeWindow const*",
+				"int32",
+				"int32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1089,14 +1254,13 @@
 		},
 		"func #11" : 
 		{
-			"has_variadic_args" : false,
+			"has_variadic_args" : true,
 			"is_virtual_method" : false,
 			"kind" : "function",
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer**",
-				"int32*"
+				"int32"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1115,8 +1279,8 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer*",
-				"int32"
+				"struct ANativeWindowBuffer**",
+				"int32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1129,18 +1293,43 @@
 		},
 		"func #13" : 
 		{
-			"calling_convention" : "aapcs-vfp",
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
-			"return_type" : "void",
+			"params" : 
+			[
+				"struct ANativeWindow*",
+				"struct ANativeWindowBuffer*",
+				"int32"
+			],
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #13*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #13",
+			"size" : 32
+		},
+		"func #18" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func #18*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #18",
+			"size" : 32
+		},
+		"func #18**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #18*",
 			"size" : 32
 		},
 		"func #2" : 
@@ -1210,13 +1399,11 @@
 		},
 		"func #5" : 
 		{
+			"calling_convention" : "aapcs-vfp",
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : 
-			[
-				"struct android_native_base_t*"
-			],
+			"params" : [],
 			"return_type" : "void",
 			"size" : 0
 		},
@@ -1233,10 +1420,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct ANativeWindow*",
-				"int32"
+				"struct android_native_base_t*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #6*" : 
@@ -1253,7 +1439,7 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer**"
+				"int32"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1272,7 +1458,7 @@
 			"params" : 
 			[
 				"struct ANativeWindow*",
-				"struct ANativeWindowBuffer*"
+				"struct ANativeWindowBuffer**"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1290,9 +1476,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct ANativeWindow const*",
-				"int32",
-				"int32*"
+				"struct ANativeWindow*",
+				"struct ANativeWindowBuffer*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -1302,6 +1487,24 @@
 			"kind" : "pointer",
 			"pointee_type" : "func #9",
 			"size" : 32
+		},
+		"func _ZN7android7sysprop16VulkanProperties10oem_layersEv" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "class std::__1::optional<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>>",
+			"size" : 0
+		},
+		"func _ZN7android7sysprop16VulkanProperties15platform_layersEv" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "class std::__1::optional<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>>",
+			"size" : 0
 		},
 		"func android_convertGralloc0To1Usage" : 
 		{
@@ -1328,6 +1531,105 @@
 				"unsigned int64"
 			],
 			"return_type" : "int32",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_ext_private_data_swapchain" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_khr_swapchain_maintenance1" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_oem_and_platform_layers" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_present_id2_khr" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_present_timing_ext" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_vk_khr_present_wait2" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : [],
+			"return_type" : "bool",
 			"size" : 0
 		},
 		"func vkAcquireNextImage2KHR" : 
@@ -4170,7 +4472,7 @@
 				"struct VkDevice_T*",
 				"unsigned char8 const*"
 			],
-			"return_type" : "func #13*",
+			"return_type" : "func #5*",
 			"size" : 0
 		},
 		"func vkGetDeviceQueue" : 
@@ -4337,7 +4639,7 @@
 				"struct VkInstance_T*",
 				"unsigned char8 const*"
 			],
-			"return_type" : "func #13*",
+			"return_type" : "func #5*",
 			"size" : 0
 		},
 		"func vkGetMemoryAndroidHardwareBufferANDROID" : 
@@ -5318,52 +5620,52 @@
 				{
 					"name" : "setSwapInterval",
 					"offset" : 544,
-					"type" : "func #6*"
+					"type" : "func #7*"
 				},
 				{
 					"name" : "dequeueBuffer_DEPRECATED",
 					"offset" : 576,
-					"type" : "func #7*"
+					"type" : "func #8*"
 				},
 				{
 					"name" : "lockBuffer_DEPRECATED",
 					"offset" : 608,
-					"type" : "func #8*"
+					"type" : "func #9*"
 				},
 				{
 					"name" : "queueBuffer_DEPRECATED",
 					"offset" : 640,
-					"type" : "func #8*"
+					"type" : "func #9*"
 				},
 				{
 					"name" : "query",
 					"offset" : 672,
-					"type" : "func #9*"
+					"type" : "func #10*"
 				},
 				{
 					"name" : "perform",
 					"offset" : 704,
-					"type" : "func #10*"
+					"type" : "func #11*"
 				},
 				{
 					"name" : "cancelBuffer_DEPRECATED",
 					"offset" : 736,
-					"type" : "func #8*"
+					"type" : "func #9*"
 				},
 				{
 					"name" : "dequeueBuffer",
 					"offset" : 768,
-					"type" : "func #11*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "queueBuffer",
 					"offset" : 800,
-					"type" : "func #12*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "cancelBuffer",
 					"offset" : 832,
-					"type" : "func #12*"
+					"type" : "func #13*"
 				}
 			],
 			"inheritance" : [],
@@ -15728,12 +16030,12 @@
 				{
 					"name" : "incRef",
 					"offset" : 192,
-					"type" : "func #5*"
+					"type" : "func #6*"
 				},
 				{
 					"name" : "decRef",
 					"offset" : 224,
-					"type" : "func #5*"
+					"type" : "func #6*"
 				}
 			],
 			"inheritance" : [],
@@ -15785,6 +16087,261 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "struct native_handle const",
+			"size" : 32
+		},
+		"struct std::__1::__non_trivial_if<true, std::__1::allocator<unsigned char8>>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__optional_copy_assign_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__optional_move_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>"
+			],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct std::__1::__optional_copy_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__optional_storage_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>"
+			],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct std::__1::__optional_destruct_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "union std::__1::__optional_destruct_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>::#17"
+				},
+				{
+					"name" : "__engaged_",
+					"offset" : 96,
+					"type" : "bool"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct std::__1::__optional_move_assign_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__optional_copy_assign_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>"
+			],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct std::__1::__optional_move_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__optional_copy_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>"
+			],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct std::__1::__optional_storage_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__optional_destruct_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>"
+			],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct std::__1::__padding<0>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__sfinae_assign_base<true, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__sfinae_ctor_base<true, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::#14" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__rep_",
+					"offset" : 0,
+					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep"
+				},
+				{
+					"name" : "__padding1_903_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, true>"
+				},
+				{
+					"name" : "__alloc_",
+					"offset" : 0,
+					"type" : "class std::__1::allocator<unsigned char8>"
+				},
+				{
+					"name" : "__padding2_903_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::allocator<unsigned char8>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#16"
+				},
+				{
+					"name" : "__size_",
+					"offset" : 32,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "__data_",
+					"offset" : 64,
+					"type" : "unsigned char8*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#16" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__is_long_",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "__cap_",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#15"
+				},
+				{
+					"name" : "__padding_",
+					"offset" : 0,
+					"type" : "struct std::__1::__padding<0>"
+				},
+				{
+					"name" : "__data_",
+					"offset" : 8,
+					"type" : "unsigned char8[11]"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
+		},
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#15" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__is_long_",
+					"offset" : 0,
+					"type" : "unsigned char8"
+				},
+				{
+					"name" : "__size_",
+					"offset" : 0,
+					"type" : "unsigned char8"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::char_traits<unsigned char8>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::default_delete<com::android::graphics::libvulkan::flags::flag_provider_interface>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::unique_ptr<com::android::graphics::libvulkan::flags::flag_provider_interface, std::__1::default_delete<com::android::graphics::libvulkan::flags::flag_provider_interface>>::#19" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__ptr_",
+					"offset" : 0,
+					"type" : "class com::android::graphics::libvulkan::flags::flag_provider_interface*"
+				},
+				{
+					"name" : "__padding1_152_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<com::android::graphics::libvulkan::flags::flag_provider_interface*, true>"
+				},
+				{
+					"name" : "__deleter_",
+					"offset" : 0,
+					"type" : "struct std::__1::default_delete<com::android::graphics::libvulkan::flags::flag_provider_interface>"
+				},
+				{
+					"name" : "__padding2_152_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::default_delete<com::android::graphics::libvulkan::flags::flag_provider_interface>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
 			"size" : 32
 		},
 		"union VkClearColorValue" : 
@@ -15854,6 +16411,44 @@
 			"pointee_type" : "union VkClearValue const",
 			"size" : 32
 		},
+		"union std::__1::__optional_destruct_base<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>, false>::#17" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__null_state_",
+					"offset" : 0,
+					"type" : "unsigned char8"
+				},
+				{
+					"name" : "__val_",
+					"offset" : 0,
+					"type" : "class std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
+		"union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__s",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short"
+				},
+				{
+					"name" : "__l",
+					"offset" : 0,
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 96
+		},
 		"unsigned char8" : 
 		{
 			"kind" : "char",
@@ -15883,6 +16478,18 @@
 			"kind" : "pointer",
 			"pointee_type" : "unsigned char8 const* const",
 			"size" : 32
+		},
+		"unsigned char8*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "unsigned char8",
+			"size" : 32
+		},
+		"unsigned char8[11]" : 
+		{
+			"element_type" : "unsigned char8",
+			"kind" : "array",
+			"size" : 88
 		},
 		"unsigned char8[16]" : 
 		{

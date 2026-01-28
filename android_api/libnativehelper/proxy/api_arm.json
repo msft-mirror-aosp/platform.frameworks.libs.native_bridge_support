@@ -23545,1147 +23545,1147 @@
 				{
 					"name" : "GetVersion",
 					"offset" : 128,
-					"type" : "func #437*"
+					"type" : "func #657*"
 				},
 				{
 					"name" : "DefineClass",
 					"offset" : 160,
-					"type" : "func #438*"
+					"type" : "func #658*"
 				},
 				{
 					"name" : "FindClass",
 					"offset" : 192,
-					"type" : "func #439*"
+					"type" : "func #659*"
 				},
 				{
 					"name" : "FromReflectedMethod",
 					"offset" : 224,
-					"type" : "func #440*"
+					"type" : "func #660*"
 				},
 				{
 					"name" : "FromReflectedField",
 					"offset" : 256,
-					"type" : "func #441*"
+					"type" : "func #661*"
 				},
 				{
 					"name" : "ToReflectedMethod",
 					"offset" : 288,
-					"type" : "func #442*"
+					"type" : "func #662*"
 				},
 				{
 					"name" : "GetSuperclass",
 					"offset" : 320,
-					"type" : "func #443*"
+					"type" : "func #663*"
 				},
 				{
 					"name" : "IsAssignableFrom",
 					"offset" : 352,
-					"type" : "func #444*"
+					"type" : "func #664*"
 				},
 				{
 					"name" : "ToReflectedField",
 					"offset" : 384,
-					"type" : "func #445*"
+					"type" : "func #665*"
 				},
 				{
 					"name" : "Throw",
 					"offset" : 416,
-					"type" : "func #446*"
+					"type" : "func #666*"
 				},
 				{
 					"name" : "ThrowNew",
 					"offset" : 448,
-					"type" : "func #447*"
+					"type" : "func #667*"
 				},
 				{
 					"name" : "ExceptionOccurred",
 					"offset" : 480,
-					"type" : "func #448*"
+					"type" : "func #668*"
 				},
 				{
 					"name" : "ExceptionDescribe",
 					"offset" : 512,
-					"type" : "func #449*"
+					"type" : "func #669*"
 				},
 				{
 					"name" : "ExceptionClear",
 					"offset" : 544,
-					"type" : "func #449*"
+					"type" : "func #669*"
 				},
 				{
 					"name" : "FatalError",
 					"offset" : 576,
-					"type" : "func #450*"
+					"type" : "func #670*"
 				},
 				{
 					"name" : "PushLocalFrame",
 					"offset" : 608,
-					"type" : "func #451*"
+					"type" : "func #671*"
 				},
 				{
 					"name" : "PopLocalFrame",
 					"offset" : 640,
-					"type" : "func #452*"
+					"type" : "func #672*"
 				},
 				{
 					"name" : "NewGlobalRef",
 					"offset" : 672,
-					"type" : "func #452*"
+					"type" : "func #672*"
 				},
 				{
 					"name" : "DeleteGlobalRef",
 					"offset" : 704,
-					"type" : "func #453*"
+					"type" : "func #673*"
 				},
 				{
 					"name" : "DeleteLocalRef",
 					"offset" : 736,
-					"type" : "func #453*"
+					"type" : "func #673*"
 				},
 				{
 					"name" : "IsSameObject",
 					"offset" : 768,
-					"type" : "func #454*"
+					"type" : "func #674*"
 				},
 				{
 					"name" : "NewLocalRef",
 					"offset" : 800,
-					"type" : "func #452*"
+					"type" : "func #672*"
 				},
 				{
 					"name" : "EnsureLocalCapacity",
 					"offset" : 832,
-					"type" : "func #451*"
+					"type" : "func #671*"
 				},
 				{
 					"name" : "AllocObject",
 					"offset" : 864,
-					"type" : "func #455*"
+					"type" : "func #675*"
 				},
 				{
 					"name" : "NewObject",
 					"offset" : 896,
-					"type" : "func #456*"
+					"type" : "func #676*"
 				},
 				{
 					"name" : "NewObjectV",
 					"offset" : 928,
-					"type" : "func #457*"
+					"type" : "func #677*"
 				},
 				{
 					"name" : "NewObjectA",
 					"offset" : 960,
-					"type" : "func #458*"
+					"type" : "func #678*"
 				},
 				{
 					"name" : "GetObjectClass",
 					"offset" : 992,
-					"type" : "func #459*"
+					"type" : "func #679*"
 				},
 				{
 					"name" : "IsInstanceOf",
 					"offset" : 1024,
-					"type" : "func #460*"
+					"type" : "func #680*"
 				},
 				{
 					"name" : "GetMethodID",
 					"offset" : 1056,
-					"type" : "func #461*"
+					"type" : "func #681*"
 				},
 				{
 					"name" : "CallObjectMethod",
 					"offset" : 1088,
-					"type" : "func #462*"
+					"type" : "func #682*"
 				},
 				{
 					"name" : "CallObjectMethodV",
 					"offset" : 1120,
-					"type" : "func #463*"
+					"type" : "func #683*"
 				},
 				{
 					"name" : "CallObjectMethodA",
 					"offset" : 1152,
-					"type" : "func #464*"
+					"type" : "func #684*"
 				},
 				{
 					"name" : "CallBooleanMethod",
 					"offset" : 1184,
-					"type" : "func #465*"
+					"type" : "func #685*"
 				},
 				{
 					"name" : "CallBooleanMethodV",
 					"offset" : 1216,
-					"type" : "func #466*"
+					"type" : "func #686*"
 				},
 				{
 					"name" : "CallBooleanMethodA",
 					"offset" : 1248,
-					"type" : "func #467*"
+					"type" : "func #687*"
 				},
 				{
 					"name" : "CallByteMethod",
 					"offset" : 1280,
-					"type" : "func #468*"
+					"type" : "func #688*"
 				},
 				{
 					"name" : "CallByteMethodV",
 					"offset" : 1312,
-					"type" : "func #469*"
+					"type" : "func #689*"
 				},
 				{
 					"name" : "CallByteMethodA",
 					"offset" : 1344,
-					"type" : "func #470*"
+					"type" : "func #690*"
 				},
 				{
 					"name" : "CallCharMethod",
 					"offset" : 1376,
-					"type" : "func #471*"
+					"type" : "func #691*"
 				},
 				{
 					"name" : "CallCharMethodV",
 					"offset" : 1408,
-					"type" : "func #472*"
+					"type" : "func #692*"
 				},
 				{
 					"name" : "CallCharMethodA",
 					"offset" : 1440,
-					"type" : "func #473*"
+					"type" : "func #693*"
 				},
 				{
 					"name" : "CallShortMethod",
 					"offset" : 1472,
-					"type" : "func #474*"
+					"type" : "func #694*"
 				},
 				{
 					"name" : "CallShortMethodV",
 					"offset" : 1504,
-					"type" : "func #475*"
+					"type" : "func #695*"
 				},
 				{
 					"name" : "CallShortMethodA",
 					"offset" : 1536,
-					"type" : "func #476*"
+					"type" : "func #696*"
 				},
 				{
 					"name" : "CallIntMethod",
 					"offset" : 1568,
-					"type" : "func #477*"
+					"type" : "func #697*"
 				},
 				{
 					"name" : "CallIntMethodV",
 					"offset" : 1600,
-					"type" : "func #478*"
+					"type" : "func #698*"
 				},
 				{
 					"name" : "CallIntMethodA",
 					"offset" : 1632,
-					"type" : "func #479*"
+					"type" : "func #699*"
 				},
 				{
 					"name" : "CallLongMethod",
 					"offset" : 1664,
-					"type" : "func #480*"
+					"type" : "func #700*"
 				},
 				{
 					"name" : "CallLongMethodV",
 					"offset" : 1696,
-					"type" : "func #481*"
+					"type" : "func #701*"
 				},
 				{
 					"name" : "CallLongMethodA",
 					"offset" : 1728,
-					"type" : "func #482*"
+					"type" : "func #702*"
 				},
 				{
 					"name" : "CallFloatMethod",
 					"offset" : 1760,
-					"type" : "func #483*"
+					"type" : "func #703*"
 				},
 				{
 					"name" : "CallFloatMethodV",
 					"offset" : 1792,
-					"type" : "func #484*"
+					"type" : "func #704*"
 				},
 				{
 					"name" : "CallFloatMethodA",
 					"offset" : 1824,
-					"type" : "func #485*"
+					"type" : "func #705*"
 				},
 				{
 					"name" : "CallDoubleMethod",
 					"offset" : 1856,
-					"type" : "func #486*"
+					"type" : "func #706*"
 				},
 				{
 					"name" : "CallDoubleMethodV",
 					"offset" : 1888,
-					"type" : "func #487*"
+					"type" : "func #707*"
 				},
 				{
 					"name" : "CallDoubleMethodA",
 					"offset" : 1920,
-					"type" : "func #488*"
+					"type" : "func #708*"
 				},
 				{
 					"name" : "CallVoidMethod",
 					"offset" : 1952,
-					"type" : "func #489*"
+					"type" : "func #709*"
 				},
 				{
 					"name" : "CallVoidMethodV",
 					"offset" : 1984,
-					"type" : "func #490*"
+					"type" : "func #710*"
 				},
 				{
 					"name" : "CallVoidMethodA",
 					"offset" : 2016,
-					"type" : "func #491*"
+					"type" : "func #711*"
 				},
 				{
 					"name" : "CallNonvirtualObjectMethod",
 					"offset" : 2048,
-					"type" : "func #492*"
+					"type" : "func #712*"
 				},
 				{
 					"name" : "CallNonvirtualObjectMethodV",
 					"offset" : 2080,
-					"type" : "func #493*"
+					"type" : "func #713*"
 				},
 				{
 					"name" : "CallNonvirtualObjectMethodA",
 					"offset" : 2112,
-					"type" : "func #494*"
+					"type" : "func #714*"
 				},
 				{
 					"name" : "CallNonvirtualBooleanMethod",
 					"offset" : 2144,
-					"type" : "func #495*"
+					"type" : "func #715*"
 				},
 				{
 					"name" : "CallNonvirtualBooleanMethodV",
 					"offset" : 2176,
-					"type" : "func #496*"
+					"type" : "func #716*"
 				},
 				{
 					"name" : "CallNonvirtualBooleanMethodA",
 					"offset" : 2208,
-					"type" : "func #497*"
+					"type" : "func #717*"
 				},
 				{
 					"name" : "CallNonvirtualByteMethod",
 					"offset" : 2240,
-					"type" : "func #498*"
+					"type" : "func #718*"
 				},
 				{
 					"name" : "CallNonvirtualByteMethodV",
 					"offset" : 2272,
-					"type" : "func #499*"
+					"type" : "func #719*"
 				},
 				{
 					"name" : "CallNonvirtualByteMethodA",
 					"offset" : 2304,
-					"type" : "func #500*"
+					"type" : "func #720*"
 				},
 				{
 					"name" : "CallNonvirtualCharMethod",
 					"offset" : 2336,
-					"type" : "func #501*"
+					"type" : "func #721*"
 				},
 				{
 					"name" : "CallNonvirtualCharMethodV",
 					"offset" : 2368,
-					"type" : "func #502*"
+					"type" : "func #722*"
 				},
 				{
 					"name" : "CallNonvirtualCharMethodA",
 					"offset" : 2400,
-					"type" : "func #503*"
+					"type" : "func #723*"
 				},
 				{
 					"name" : "CallNonvirtualShortMethod",
 					"offset" : 2432,
-					"type" : "func #504*"
+					"type" : "func #724*"
 				},
 				{
 					"name" : "CallNonvirtualShortMethodV",
 					"offset" : 2464,
-					"type" : "func #505*"
+					"type" : "func #725*"
 				},
 				{
 					"name" : "CallNonvirtualShortMethodA",
 					"offset" : 2496,
-					"type" : "func #506*"
+					"type" : "func #726*"
 				},
 				{
 					"name" : "CallNonvirtualIntMethod",
 					"offset" : 2528,
-					"type" : "func #507*"
+					"type" : "func #727*"
 				},
 				{
 					"name" : "CallNonvirtualIntMethodV",
 					"offset" : 2560,
-					"type" : "func #508*"
+					"type" : "func #728*"
 				},
 				{
 					"name" : "CallNonvirtualIntMethodA",
 					"offset" : 2592,
-					"type" : "func #509*"
+					"type" : "func #729*"
 				},
 				{
 					"name" : "CallNonvirtualLongMethod",
 					"offset" : 2624,
-					"type" : "func #510*"
+					"type" : "func #730*"
 				},
 				{
 					"name" : "CallNonvirtualLongMethodV",
 					"offset" : 2656,
-					"type" : "func #511*"
+					"type" : "func #731*"
 				},
 				{
 					"name" : "CallNonvirtualLongMethodA",
 					"offset" : 2688,
-					"type" : "func #512*"
+					"type" : "func #732*"
 				},
 				{
 					"name" : "CallNonvirtualFloatMethod",
 					"offset" : 2720,
-					"type" : "func #513*"
+					"type" : "func #733*"
 				},
 				{
 					"name" : "CallNonvirtualFloatMethodV",
 					"offset" : 2752,
-					"type" : "func #514*"
+					"type" : "func #734*"
 				},
 				{
 					"name" : "CallNonvirtualFloatMethodA",
 					"offset" : 2784,
-					"type" : "func #515*"
+					"type" : "func #735*"
 				},
 				{
 					"name" : "CallNonvirtualDoubleMethod",
 					"offset" : 2816,
-					"type" : "func #516*"
+					"type" : "func #736*"
 				},
 				{
 					"name" : "CallNonvirtualDoubleMethodV",
 					"offset" : 2848,
-					"type" : "func #517*"
+					"type" : "func #737*"
 				},
 				{
 					"name" : "CallNonvirtualDoubleMethodA",
 					"offset" : 2880,
-					"type" : "func #518*"
+					"type" : "func #738*"
 				},
 				{
 					"name" : "CallNonvirtualVoidMethod",
 					"offset" : 2912,
-					"type" : "func #519*"
+					"type" : "func #739*"
 				},
 				{
 					"name" : "CallNonvirtualVoidMethodV",
 					"offset" : 2944,
-					"type" : "func #520*"
+					"type" : "func #740*"
 				},
 				{
 					"name" : "CallNonvirtualVoidMethodA",
 					"offset" : 2976,
-					"type" : "func #521*"
+					"type" : "func #741*"
 				},
 				{
 					"name" : "GetFieldID",
 					"offset" : 3008,
-					"type" : "func #522*"
+					"type" : "func #742*"
 				},
 				{
 					"name" : "GetObjectField",
 					"offset" : 3040,
-					"type" : "func #523*"
+					"type" : "func #743*"
 				},
 				{
 					"name" : "GetBooleanField",
 					"offset" : 3072,
-					"type" : "func #524*"
+					"type" : "func #744*"
 				},
 				{
 					"name" : "GetByteField",
 					"offset" : 3104,
-					"type" : "func #525*"
+					"type" : "func #745*"
 				},
 				{
 					"name" : "GetCharField",
 					"offset" : 3136,
-					"type" : "func #526*"
+					"type" : "func #746*"
 				},
 				{
 					"name" : "GetShortField",
 					"offset" : 3168,
-					"type" : "func #527*"
+					"type" : "func #747*"
 				},
 				{
 					"name" : "GetIntField",
 					"offset" : 3200,
-					"type" : "func #528*"
+					"type" : "func #748*"
 				},
 				{
 					"name" : "GetLongField",
 					"offset" : 3232,
-					"type" : "func #529*"
+					"type" : "func #749*"
 				},
 				{
 					"name" : "GetFloatField",
 					"offset" : 3264,
-					"type" : "func #530*"
+					"type" : "func #750*"
 				},
 				{
 					"name" : "GetDoubleField",
 					"offset" : 3296,
-					"type" : "func #531*"
+					"type" : "func #751*"
 				},
 				{
 					"name" : "SetObjectField",
 					"offset" : 3328,
-					"type" : "func #532*"
+					"type" : "func #752*"
 				},
 				{
 					"name" : "SetBooleanField",
 					"offset" : 3360,
-					"type" : "func #533*"
+					"type" : "func #753*"
 				},
 				{
 					"name" : "SetByteField",
 					"offset" : 3392,
-					"type" : "func #534*"
+					"type" : "func #754*"
 				},
 				{
 					"name" : "SetCharField",
 					"offset" : 3424,
-					"type" : "func #535*"
+					"type" : "func #755*"
 				},
 				{
 					"name" : "SetShortField",
 					"offset" : 3456,
-					"type" : "func #536*"
+					"type" : "func #756*"
 				},
 				{
 					"name" : "SetIntField",
 					"offset" : 3488,
-					"type" : "func #537*"
+					"type" : "func #757*"
 				},
 				{
 					"name" : "SetLongField",
 					"offset" : 3520,
-					"type" : "func #538*"
+					"type" : "func #758*"
 				},
 				{
 					"name" : "SetFloatField",
 					"offset" : 3552,
-					"type" : "func #539*"
+					"type" : "func #759*"
 				},
 				{
 					"name" : "SetDoubleField",
 					"offset" : 3584,
-					"type" : "func #540*"
+					"type" : "func #760*"
 				},
 				{
 					"name" : "GetStaticMethodID",
 					"offset" : 3616,
-					"type" : "func #461*"
+					"type" : "func #681*"
 				},
 				{
 					"name" : "CallStaticObjectMethod",
 					"offset" : 3648,
-					"type" : "func #456*"
+					"type" : "func #676*"
 				},
 				{
 					"name" : "CallStaticObjectMethodV",
 					"offset" : 3680,
-					"type" : "func #457*"
+					"type" : "func #677*"
 				},
 				{
 					"name" : "CallStaticObjectMethodA",
 					"offset" : 3712,
-					"type" : "func #458*"
+					"type" : "func #678*"
 				},
 				{
 					"name" : "CallStaticBooleanMethod",
 					"offset" : 3744,
-					"type" : "func #541*"
+					"type" : "func #761*"
 				},
 				{
 					"name" : "CallStaticBooleanMethodV",
 					"offset" : 3776,
-					"type" : "func #542*"
+					"type" : "func #762*"
 				},
 				{
 					"name" : "CallStaticBooleanMethodA",
 					"offset" : 3808,
-					"type" : "func #543*"
+					"type" : "func #763*"
 				},
 				{
 					"name" : "CallStaticByteMethod",
 					"offset" : 3840,
-					"type" : "func #544*"
+					"type" : "func #764*"
 				},
 				{
 					"name" : "CallStaticByteMethodV",
 					"offset" : 3872,
-					"type" : "func #545*"
+					"type" : "func #765*"
 				},
 				{
 					"name" : "CallStaticByteMethodA",
 					"offset" : 3904,
-					"type" : "func #546*"
+					"type" : "func #766*"
 				},
 				{
 					"name" : "CallStaticCharMethod",
 					"offset" : 3936,
-					"type" : "func #547*"
+					"type" : "func #767*"
 				},
 				{
 					"name" : "CallStaticCharMethodV",
 					"offset" : 3968,
-					"type" : "func #548*"
+					"type" : "func #768*"
 				},
 				{
 					"name" : "CallStaticCharMethodA",
 					"offset" : 4000,
-					"type" : "func #549*"
+					"type" : "func #769*"
 				},
 				{
 					"name" : "CallStaticShortMethod",
 					"offset" : 4032,
-					"type" : "func #550*"
+					"type" : "func #770*"
 				},
 				{
 					"name" : "CallStaticShortMethodV",
 					"offset" : 4064,
-					"type" : "func #551*"
+					"type" : "func #771*"
 				},
 				{
 					"name" : "CallStaticShortMethodA",
 					"offset" : 4096,
-					"type" : "func #552*"
+					"type" : "func #772*"
 				},
 				{
 					"name" : "CallStaticIntMethod",
 					"offset" : 4128,
-					"type" : "func #553*"
+					"type" : "func #773*"
 				},
 				{
 					"name" : "CallStaticIntMethodV",
 					"offset" : 4160,
-					"type" : "func #554*"
+					"type" : "func #774*"
 				},
 				{
 					"name" : "CallStaticIntMethodA",
 					"offset" : 4192,
-					"type" : "func #555*"
+					"type" : "func #775*"
 				},
 				{
 					"name" : "CallStaticLongMethod",
 					"offset" : 4224,
-					"type" : "func #556*"
+					"type" : "func #776*"
 				},
 				{
 					"name" : "CallStaticLongMethodV",
 					"offset" : 4256,
-					"type" : "func #557*"
+					"type" : "func #777*"
 				},
 				{
 					"name" : "CallStaticLongMethodA",
 					"offset" : 4288,
-					"type" : "func #558*"
+					"type" : "func #778*"
 				},
 				{
 					"name" : "CallStaticFloatMethod",
 					"offset" : 4320,
-					"type" : "func #559*"
+					"type" : "func #779*"
 				},
 				{
 					"name" : "CallStaticFloatMethodV",
 					"offset" : 4352,
-					"type" : "func #560*"
+					"type" : "func #780*"
 				},
 				{
 					"name" : "CallStaticFloatMethodA",
 					"offset" : 4384,
-					"type" : "func #561*"
+					"type" : "func #781*"
 				},
 				{
 					"name" : "CallStaticDoubleMethod",
 					"offset" : 4416,
-					"type" : "func #562*"
+					"type" : "func #782*"
 				},
 				{
 					"name" : "CallStaticDoubleMethodV",
 					"offset" : 4448,
-					"type" : "func #563*"
+					"type" : "func #783*"
 				},
 				{
 					"name" : "CallStaticDoubleMethodA",
 					"offset" : 4480,
-					"type" : "func #564*"
+					"type" : "func #784*"
 				},
 				{
 					"name" : "CallStaticVoidMethod",
 					"offset" : 4512,
-					"type" : "func #565*"
+					"type" : "func #785*"
 				},
 				{
 					"name" : "CallStaticVoidMethodV",
 					"offset" : 4544,
-					"type" : "func #566*"
+					"type" : "func #786*"
 				},
 				{
 					"name" : "CallStaticVoidMethodA",
 					"offset" : 4576,
-					"type" : "func #567*"
+					"type" : "func #787*"
 				},
 				{
 					"name" : "GetStaticFieldID",
 					"offset" : 4608,
-					"type" : "func #522*"
+					"type" : "func #742*"
 				},
 				{
 					"name" : "GetStaticObjectField",
 					"offset" : 4640,
-					"type" : "func #568*"
+					"type" : "func #788*"
 				},
 				{
 					"name" : "GetStaticBooleanField",
 					"offset" : 4672,
-					"type" : "func #569*"
+					"type" : "func #789*"
 				},
 				{
 					"name" : "GetStaticByteField",
 					"offset" : 4704,
-					"type" : "func #570*"
+					"type" : "func #790*"
 				},
 				{
 					"name" : "GetStaticCharField",
 					"offset" : 4736,
-					"type" : "func #571*"
+					"type" : "func #791*"
 				},
 				{
 					"name" : "GetStaticShortField",
 					"offset" : 4768,
-					"type" : "func #572*"
+					"type" : "func #792*"
 				},
 				{
 					"name" : "GetStaticIntField",
 					"offset" : 4800,
-					"type" : "func #573*"
+					"type" : "func #793*"
 				},
 				{
 					"name" : "GetStaticLongField",
 					"offset" : 4832,
-					"type" : "func #574*"
+					"type" : "func #794*"
 				},
 				{
 					"name" : "GetStaticFloatField",
 					"offset" : 4864,
-					"type" : "func #575*"
+					"type" : "func #795*"
 				},
 				{
 					"name" : "GetStaticDoubleField",
 					"offset" : 4896,
-					"type" : "func #576*"
+					"type" : "func #796*"
 				},
 				{
 					"name" : "SetStaticObjectField",
 					"offset" : 4928,
-					"type" : "func #577*"
+					"type" : "func #797*"
 				},
 				{
 					"name" : "SetStaticBooleanField",
 					"offset" : 4960,
-					"type" : "func #578*"
+					"type" : "func #798*"
 				},
 				{
 					"name" : "SetStaticByteField",
 					"offset" : 4992,
-					"type" : "func #579*"
+					"type" : "func #799*"
 				},
 				{
 					"name" : "SetStaticCharField",
 					"offset" : 5024,
-					"type" : "func #580*"
+					"type" : "func #800*"
 				},
 				{
 					"name" : "SetStaticShortField",
 					"offset" : 5056,
-					"type" : "func #581*"
+					"type" : "func #801*"
 				},
 				{
 					"name" : "SetStaticIntField",
 					"offset" : 5088,
-					"type" : "func #582*"
+					"type" : "func #802*"
 				},
 				{
 					"name" : "SetStaticLongField",
 					"offset" : 5120,
-					"type" : "func #583*"
+					"type" : "func #803*"
 				},
 				{
 					"name" : "SetStaticFloatField",
 					"offset" : 5152,
-					"type" : "func #584*"
+					"type" : "func #804*"
 				},
 				{
 					"name" : "SetStaticDoubleField",
 					"offset" : 5184,
-					"type" : "func #585*"
+					"type" : "func #805*"
 				},
 				{
 					"name" : "NewString",
 					"offset" : 5216,
-					"type" : "func #586*"
+					"type" : "func #806*"
 				},
 				{
 					"name" : "GetStringLength",
 					"offset" : 5248,
-					"type" : "func #587*"
+					"type" : "func #807*"
 				},
 				{
 					"name" : "GetStringChars",
 					"offset" : 5280,
-					"type" : "func #588*"
+					"type" : "func #808*"
 				},
 				{
 					"name" : "ReleaseStringChars",
 					"offset" : 5312,
-					"type" : "func #589*"
+					"type" : "func #809*"
 				},
 				{
 					"name" : "NewStringUTF",
 					"offset" : 5344,
-					"type" : "func #590*"
+					"type" : "func #810*"
 				},
 				{
 					"name" : "GetStringUTFLength",
 					"offset" : 5376,
-					"type" : "func #587*"
+					"type" : "func #807*"
 				},
 				{
 					"name" : "GetStringUTFChars",
 					"offset" : 5408,
-					"type" : "func #591*"
+					"type" : "func #811*"
 				},
 				{
 					"name" : "ReleaseStringUTFChars",
 					"offset" : 5440,
-					"type" : "func #592*"
+					"type" : "func #812*"
 				},
 				{
 					"name" : "GetArrayLength",
 					"offset" : 5472,
-					"type" : "func #593*"
+					"type" : "func #813*"
 				},
 				{
 					"name" : "NewObjectArray",
 					"offset" : 5504,
-					"type" : "func #594*"
+					"type" : "func #814*"
 				},
 				{
 					"name" : "GetObjectArrayElement",
 					"offset" : 5536,
-					"type" : "func #595*"
+					"type" : "func #815*"
 				},
 				{
 					"name" : "SetObjectArrayElement",
 					"offset" : 5568,
-					"type" : "func #596*"
+					"type" : "func #816*"
 				},
 				{
 					"name" : "NewBooleanArray",
 					"offset" : 5600,
-					"type" : "func #597*"
+					"type" : "func #817*"
 				},
 				{
 					"name" : "NewByteArray",
 					"offset" : 5632,
-					"type" : "func #598*"
+					"type" : "func #818*"
 				},
 				{
 					"name" : "NewCharArray",
 					"offset" : 5664,
-					"type" : "func #599*"
+					"type" : "func #819*"
 				},
 				{
 					"name" : "NewShortArray",
 					"offset" : 5696,
-					"type" : "func #600*"
+					"type" : "func #820*"
 				},
 				{
 					"name" : "NewIntArray",
 					"offset" : 5728,
-					"type" : "func #601*"
+					"type" : "func #821*"
 				},
 				{
 					"name" : "NewLongArray",
 					"offset" : 5760,
-					"type" : "func #602*"
+					"type" : "func #822*"
 				},
 				{
 					"name" : "NewFloatArray",
 					"offset" : 5792,
-					"type" : "func #603*"
+					"type" : "func #823*"
 				},
 				{
 					"name" : "NewDoubleArray",
 					"offset" : 5824,
-					"type" : "func #604*"
+					"type" : "func #824*"
 				},
 				{
 					"name" : "GetBooleanArrayElements",
 					"offset" : 5856,
-					"type" : "func #605*"
+					"type" : "func #825*"
 				},
 				{
 					"name" : "GetByteArrayElements",
 					"offset" : 5888,
-					"type" : "func #606*"
+					"type" : "func #826*"
 				},
 				{
 					"name" : "GetCharArrayElements",
 					"offset" : 5920,
-					"type" : "func #607*"
+					"type" : "func #827*"
 				},
 				{
 					"name" : "GetShortArrayElements",
 					"offset" : 5952,
-					"type" : "func #608*"
+					"type" : "func #828*"
 				},
 				{
 					"name" : "GetIntArrayElements",
 					"offset" : 5984,
-					"type" : "func #609*"
+					"type" : "func #829*"
 				},
 				{
 					"name" : "GetLongArrayElements",
 					"offset" : 6016,
-					"type" : "func #610*"
+					"type" : "func #830*"
 				},
 				{
 					"name" : "GetFloatArrayElements",
 					"offset" : 6048,
-					"type" : "func #611*"
+					"type" : "func #831*"
 				},
 				{
 					"name" : "GetDoubleArrayElements",
 					"offset" : 6080,
-					"type" : "func #612*"
+					"type" : "func #832*"
 				},
 				{
 					"name" : "ReleaseBooleanArrayElements",
 					"offset" : 6112,
-					"type" : "func #613*"
+					"type" : "func #833*"
 				},
 				{
 					"name" : "ReleaseByteArrayElements",
 					"offset" : 6144,
-					"type" : "func #614*"
+					"type" : "func #834*"
 				},
 				{
 					"name" : "ReleaseCharArrayElements",
 					"offset" : 6176,
-					"type" : "func #615*"
+					"type" : "func #835*"
 				},
 				{
 					"name" : "ReleaseShortArrayElements",
 					"offset" : 6208,
-					"type" : "func #616*"
+					"type" : "func #836*"
 				},
 				{
 					"name" : "ReleaseIntArrayElements",
 					"offset" : 6240,
-					"type" : "func #617*"
+					"type" : "func #837*"
 				},
 				{
 					"name" : "ReleaseLongArrayElements",
 					"offset" : 6272,
-					"type" : "func #618*"
+					"type" : "func #838*"
 				},
 				{
 					"name" : "ReleaseFloatArrayElements",
 					"offset" : 6304,
-					"type" : "func #619*"
+					"type" : "func #839*"
 				},
 				{
 					"name" : "ReleaseDoubleArrayElements",
 					"offset" : 6336,
-					"type" : "func #620*"
+					"type" : "func #840*"
 				},
 				{
 					"name" : "GetBooleanArrayRegion",
 					"offset" : 6368,
-					"type" : "func #621*"
+					"type" : "func #841*"
 				},
 				{
 					"name" : "GetByteArrayRegion",
 					"offset" : 6400,
-					"type" : "func #622*"
+					"type" : "func #842*"
 				},
 				{
 					"name" : "GetCharArrayRegion",
 					"offset" : 6432,
-					"type" : "func #623*"
+					"type" : "func #843*"
 				},
 				{
 					"name" : "GetShortArrayRegion",
 					"offset" : 6464,
-					"type" : "func #624*"
+					"type" : "func #844*"
 				},
 				{
 					"name" : "GetIntArrayRegion",
 					"offset" : 6496,
-					"type" : "func #625*"
+					"type" : "func #845*"
 				},
 				{
 					"name" : "GetLongArrayRegion",
 					"offset" : 6528,
-					"type" : "func #626*"
+					"type" : "func #846*"
 				},
 				{
 					"name" : "GetFloatArrayRegion",
 					"offset" : 6560,
-					"type" : "func #627*"
+					"type" : "func #847*"
 				},
 				{
 					"name" : "GetDoubleArrayRegion",
 					"offset" : 6592,
-					"type" : "func #628*"
+					"type" : "func #848*"
 				},
 				{
 					"name" : "SetBooleanArrayRegion",
 					"offset" : 6624,
-					"type" : "func #629*"
+					"type" : "func #849*"
 				},
 				{
 					"name" : "SetByteArrayRegion",
 					"offset" : 6656,
-					"type" : "func #630*"
+					"type" : "func #850*"
 				},
 				{
 					"name" : "SetCharArrayRegion",
 					"offset" : 6688,
-					"type" : "func #631*"
+					"type" : "func #851*"
 				},
 				{
 					"name" : "SetShortArrayRegion",
 					"offset" : 6720,
-					"type" : "func #632*"
+					"type" : "func #852*"
 				},
 				{
 					"name" : "SetIntArrayRegion",
 					"offset" : 6752,
-					"type" : "func #633*"
+					"type" : "func #853*"
 				},
 				{
 					"name" : "SetLongArrayRegion",
 					"offset" : 6784,
-					"type" : "func #634*"
+					"type" : "func #854*"
 				},
 				{
 					"name" : "SetFloatArrayRegion",
 					"offset" : 6816,
-					"type" : "func #635*"
+					"type" : "func #855*"
 				},
 				{
 					"name" : "SetDoubleArrayRegion",
 					"offset" : 6848,
-					"type" : "func #636*"
+					"type" : "func #856*"
 				},
 				{
 					"name" : "RegisterNatives",
 					"offset" : 6880,
-					"type" : "func #637*"
+					"type" : "func #857*"
 				},
 				{
 					"name" : "UnregisterNatives",
 					"offset" : 6912,
-					"type" : "func #638*"
+					"type" : "func #858*"
 				},
 				{
 					"name" : "MonitorEnter",
 					"offset" : 6944,
-					"type" : "func #639*"
+					"type" : "func #859*"
 				},
 				{
 					"name" : "MonitorExit",
 					"offset" : 6976,
-					"type" : "func #639*"
+					"type" : "func #859*"
 				},
 				{
 					"name" : "GetJavaVM",
 					"offset" : 7008,
-					"type" : "func #640*"
+					"type" : "func #860*"
 				},
 				{
 					"name" : "GetStringRegion",
 					"offset" : 7040,
-					"type" : "func #644*"
+					"type" : "func #861*"
 				},
 				{
 					"name" : "GetStringUTFRegion",
 					"offset" : 7072,
-					"type" : "func #645*"
+					"type" : "func #862*"
 				},
 				{
 					"name" : "GetPrimitiveArrayCritical",
 					"offset" : 7104,
-					"type" : "func #646*"
+					"type" : "func #863*"
 				},
 				{
 					"name" : "ReleasePrimitiveArrayCritical",
 					"offset" : 7136,
-					"type" : "func #647*"
+					"type" : "func #864*"
 				},
 				{
 					"name" : "GetStringCritical",
 					"offset" : 7168,
-					"type" : "func #588*"
+					"type" : "func #808*"
 				},
 				{
 					"name" : "ReleaseStringCritical",
 					"offset" : 7200,
-					"type" : "func #589*"
+					"type" : "func #809*"
 				},
 				{
 					"name" : "NewWeakGlobalRef",
 					"offset" : 7232,
-					"type" : "func #648*"
+					"type" : "func #865*"
 				},
 				{
 					"name" : "DeleteWeakGlobalRef",
 					"offset" : 7264,
-					"type" : "func #649*"
+					"type" : "func #866*"
 				},
 				{
 					"name" : "ExceptionCheck",
 					"offset" : 7296,
-					"type" : "func #650*"
+					"type" : "func #867*"
 				},
 				{
 					"name" : "NewDirectByteBuffer",
 					"offset" : 7328,
-					"type" : "func #651*"
+					"type" : "func #868*"
 				},
 				{
 					"name" : "GetDirectBufferAddress",
 					"offset" : 7360,
-					"type" : "func #652*"
+					"type" : "func #869*"
 				},
 				{
 					"name" : "GetDirectBufferCapacity",
 					"offset" : 7392,
-					"type" : "func #653*"
+					"type" : "func #870*"
 				},
 				{
 					"name" : "GetObjectRefType",
 					"offset" : 7424,
-					"type" : "func #654*"
+					"type" : "func #871*"
 				}
 			],
 			"inheritance" : [],

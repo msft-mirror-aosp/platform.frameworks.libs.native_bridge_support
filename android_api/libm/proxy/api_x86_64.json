@@ -4696,7 +4696,7 @@
 				{
 					"name" : "__x87",
 					"offset" : 0,
-					"type" : "struct fenv_t::#1"
+					"type" : "struct fenv_t::#2"
 				},
 				{
 					"name" : "__mxcsr",

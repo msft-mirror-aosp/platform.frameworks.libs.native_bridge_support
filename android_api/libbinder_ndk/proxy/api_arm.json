@@ -105,6 +105,14 @@
 		{
 			"type" : "func AIBinder_DeathRecipient_setOnUnlinked"
 		},
+		"AIBinder_FrozenStateChangeCallback_delete" : 
+		{
+			"type" : "func AIBinder_FrozenStateChangeCallback_delete"
+		},
+		"AIBinder_FrozenStateChangeCallback_new" : 
+		{
+			"type" : "func AIBinder_FrozenStateChangeCallback_new"
+		},
 		"AIBinder_Weak_clone" : 
 		{
 			"type" : "func AIBinder_Weak_clone"
@@ -124,6 +132,10 @@
 		"AIBinder_Weak_promote" : 
 		{
 			"type" : "func AIBinder_Weak_promote"
+		},
+		"AIBinder_addFrozenStateChangeCallback" : 
+		{
+			"type" : "func AIBinder_addFrozenStateChangeCallback"
 		},
 		"AIBinder_associateClass" : 
 		{
@@ -193,6 +205,14 @@
 		{
 			"type" : "func AIBinder_isRemote"
 		},
+		"AIBinder_isSystemStable" : 
+		{
+			"type" : "func AIBinder_isSystemStable"
+		},
+		"AIBinder_isVendorStable" : 
+		{
+			"type" : "func AIBinder_isVendorStable"
+		},
 		"AIBinder_linkToDeath" : 
 		{
 			"type" : "func AIBinder_linkToDeath"
@@ -225,6 +245,14 @@
 		{
 			"type" : "func AIBinder_prepareTransaction"
 		},
+		"AIBinder_removeFrozenStateChangeCallback" : 
+		{
+			"type" : "func AIBinder_removeFrozenStateChangeCallback"
+		},
+		"AIBinder_requiresVintfDeclaration" : 
+		{
+			"type" : "func AIBinder_requiresVintfDeclaration"
+		},
 		"AIBinder_setExtension" : 
 		{
 			"type" : "func AIBinder_setExtension"
@@ -232,6 +260,10 @@
 		"AIBinder_setInheritRt" : 
 		{
 			"type" : "func AIBinder_setInheritRt"
+		},
+		"AIBinder_setMinRpcThreads" : 
+		{
+			"type" : "func AIBinder_setMinRpcThreads"
 		},
 		"AIBinder_setMinSchedulerPolicy" : 
 		{
@@ -272,6 +304,10 @@
 		"AParcel_getAllowFds" : 
 		{
 			"type" : "func AParcel_getAllowFds"
+		},
+		"AParcel_getDataCapacity" : 
+		{
+			"type" : "func AParcel_getDataCapacity"
 		},
 		"AParcel_getDataPosition" : 
 		{
@@ -388,6 +424,10 @@
 		"AParcel_reset" : 
 		{
 			"type" : "func AParcel_reset"
+		},
+		"AParcel_setDataCapacity" : 
+		{
+			"type" : "func AParcel_setDataCapacity"
 		},
 		"AParcel_setDataPosition" : 
 		{
@@ -521,6 +561,14 @@
 		{
 			"type" : "func APersistableBundle_getBooleanVectorKeys"
 		},
+		"APersistableBundle_getByteVector" : 
+		{
+			"type" : "func APersistableBundle_getByteVector"
+		},
+		"APersistableBundle_getByteVectorKeys" : 
+		{
+			"type" : "func APersistableBundle_getByteVectorKeys"
+		},
 		"APersistableBundle_getDouble" : 
 		{
 			"type" : "func APersistableBundle_getDouble"
@@ -609,6 +657,10 @@
 		{
 			"type" : "func APersistableBundle_putBooleanVector"
 		},
+		"APersistableBundle_putByteVector" : 
+		{
+			"type" : "func APersistableBundle_putByteVector"
+		},
 		"APersistableBundle_putDouble" : 
 		{
 			"type" : "func APersistableBundle_putDouble"
@@ -673,6 +725,10 @@
 		{
 			"type" : "func AServiceManager_checkService"
 		},
+		"AServiceManager_checkServiceAccess" : 
+		{
+			"type" : "func AServiceManager_checkServiceAccess"
+		},
 		"AServiceManager_forEachDeclaredInstance" : 
 		{
 			"type" : "func AServiceManager_forEachDeclaredInstance"
@@ -712,6 +768,10 @@
 		"AServiceManager_registerLazyService" : 
 		{
 			"type" : "func AServiceManager_registerLazyService"
+		},
+		"AServiceManager_registerLazyServiceWithFlags" : 
+		{
+			"type" : "func AServiceManager_registerLazyServiceWithFlags"
 		},
 		"AServiceManager_setActiveServicesCallback" : 
 		{
@@ -894,7 +954,24 @@
 				{
 					"name" : "_vptr$DeathRecipient",
 					"offset" : 0,
-					"type" : "func #4**"
+					"type" : "func #1**"
+				}
+			],
+			"inheritance" : 
+			[
+				"class android::RefBase"
+			],
+			"kind" : "class",
+			"size" : 96
+		},
+		"class android::IBinder::FrozenStateChangeCallback" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "_vptr$FrozenStateChangeCallback",
+					"offset" : 0,
+					"type" : "func #1**"
 				}
 			],
 			"inheritance" : 
@@ -1019,6 +1096,26 @@
 			"pointee_type" : "class android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>",
 			"size" : 32
 		},
+		"class android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "m_ptr",
+					"offset" : 0,
+					"type" : "struct AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 32
+		},
+		"class android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "class android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>",
+			"size" : 32
+		},
 		"class android::sp<android::IBinder>" : 
 		{
 			"fields" : 
@@ -1083,6 +1180,25 @@
 			"kind" : "class",
 			"size" : 64
 		},
+		"class android::wp<AIBinder_FrozenStateChangeCallback>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "m_ptr",
+					"offset" : 0,
+					"type" : "struct AIBinder_FrozenStateChangeCallback*"
+				},
+				{
+					"name" : "m_refs",
+					"offset" : 32,
+					"type" : "class android::RefBase::weakref_type*"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 64
+		},
 		"class android::wp<android::IBinder>" : 
 		{
 			"fields" : 
@@ -1102,27 +1218,47 @@
 			"kind" : "class",
 			"size" : 64
 		},
-		"class std::__1::__compressed_pair<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*, std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>>" : 
+		"class std::__1::__compressed_pair_padding<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*, true>" : 
 		{
 			"fields" : [],
-			"inheritance" : 
-			[
-				"struct std::__1::__compressed_pair_elem<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*, int32, false>",
-				"struct std::__1::__compressed_pair_elem<std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>, int32, true>"
-			],
+			"inheritance" : [],
 			"kind" : "class",
-			"size" : 32
+			"size" : 8
 		},
-		"class std::__1::__compressed_pair<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, std::__1::allocator<unsigned char8>>" : 
+		"class std::__1::__compressed_pair_padding<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>*, true>" : 
 		{
 			"fields" : [],
-			"inheritance" : 
-			[
-				"struct std::__1::__compressed_pair_elem<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, int32, false>",
-				"struct std::__1::__compressed_pair_elem<std::__1::allocator<unsigned char8>, int32, true>"
-			],
+			"inheritance" : [],
 			"kind" : "class",
-			"size" : 96
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::allocator<unsigned char8>, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
+		},
+		"class std::__1::__compressed_pair_padding<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, true>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 8
 		},
 		"class std::__1::__shared_weak_count" : 
 		{
@@ -1139,19 +1275,19 @@
 			"fields" : [],
 			"inheritance" : 
 			[
-				"class std::__1::__variant_detail::__copy_constructor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>"
+				"class std::__1::__variant_detail::__copy_constructor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>"
 			],
 			"kind" : "class",
 			"size" : 928
 		},
-		"class std::__1::__variant_detail::__base<unsigned int32, sockaddr_vm, sockaddr_un, sockaddr_in>" : 
+		"class std::__1::__variant_detail::__base<0, sockaddr_vm, sockaddr_un, sockaddr_in>" : 
 		{
 			"fields" : 
 			[
 				{
 					"name" : "__data",
 					"offset" : 0,
-					"type" : "union std::__1::__variant_detail::__union<unsigned int32, unsigned int32, sockaddr_vm, sockaddr_un, sockaddr_in>"
+					"type" : "union std::__1::__variant_detail::__union<0, 0, sockaddr_vm, sockaddr_un, sockaddr_in>"
 				},
 				{
 					"name" : "__index",
@@ -1163,22 +1299,22 @@
 			"kind" : "class",
 			"size" : 928
 		},
-		"class std::__1::__variant_detail::__copy_assignment<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>" : 
+		"class std::__1::__variant_detail::__copy_assignment<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>" : 
 		{
 			"fields" : [],
 			"inheritance" : 
 			[
-				"class std::__1::__variant_detail::__move_assignment<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>"
+				"class std::__1::__variant_detail::__move_assignment<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>"
 			],
 			"kind" : "class",
 			"size" : 928
 		},
-		"class std::__1::__variant_detail::__copy_constructor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>" : 
+		"class std::__1::__variant_detail::__copy_constructor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>" : 
 		{
 			"fields" : [],
 			"inheritance" : 
 			[
-				"class std::__1::__variant_detail::__move_constructor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>"
+				"class std::__1::__variant_detail::__move_constructor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>"
 			],
 			"kind" : "class",
 			"size" : 928
@@ -1188,17 +1324,17 @@
 			"fields" : [],
 			"inheritance" : 
 			[
-				"class std::__1::__variant_detail::__dtor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>"
+				"class std::__1::__variant_detail::__dtor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>"
 			],
 			"kind" : "class",
 			"size" : 928
 		},
-		"class std::__1::__variant_detail::__dtor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>" : 
+		"class std::__1::__variant_detail::__dtor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>" : 
 		{
 			"fields" : [],
 			"inheritance" : 
 			[
-				"class std::__1::__variant_detail::__base<unsigned int32, sockaddr_vm, sockaddr_un, sockaddr_in>"
+				"class std::__1::__variant_detail::__base<0, sockaddr_vm, sockaddr_un, sockaddr_in>"
 			],
 			"kind" : "class",
 			"size" : 928
@@ -1208,12 +1344,12 @@
 			"fields" : [],
 			"inheritance" : 
 			[
-				"class std::__1::__variant_detail::__copy_assignment<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>"
+				"class std::__1::__variant_detail::__copy_assignment<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>"
 			],
 			"kind" : "class",
 			"size" : 928
 		},
-		"class std::__1::__variant_detail::__move_assignment<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>" : 
+		"class std::__1::__variant_detail::__move_assignment<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>" : 
 		{
 			"fields" : [],
 			"inheritance" : 
@@ -1223,7 +1359,7 @@
 			"kind" : "class",
 			"size" : 928
 		},
-		"class std::__1::__variant_detail::__move_constructor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, unsigned int32>" : 
+		"class std::__1::__variant_detail::__move_constructor<std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>, 0>" : 
 		{
 			"fields" : [],
 			"inheritance" : 
@@ -1243,6 +1379,16 @@
 			"kind" : "class",
 			"size" : 8
 		},
+		"class std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct std::__1::__non_trivial_if<true, std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>>"
+			],
+			"kind" : "class",
+			"size" : 8
+		},
 		"class std::__1::allocator<unsigned char8>" : 
 		{
 			"fields" : [],
@@ -1258,9 +1404,9 @@
 			"fields" : 
 			[
 				{
-					"name" : "__r_",
+					"name" : "",
 					"offset" : 0,
-					"type" : "class std::__1::__compressed_pair<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, std::__1::allocator<unsigned char8>>"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::#7"
 				}
 			],
 			"inheritance" : [],
@@ -1320,9 +1466,33 @@
 					"type" : "class android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*"
 				},
 				{
-					"name" : "__end_cap_",
+					"name" : "",
 					"offset" : 64,
-					"type" : "class std::__1::__compressed_pair<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*, std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>>"
+					"type" : "struct std::__1::vector<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>, std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>>::#18"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "class",
+			"size" : 96
+		},
+		"class std::__1::vector<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>, std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__begin_",
+					"offset" : 0,
+					"type" : "class android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>*"
+				},
+				{
+					"name" : "__end_",
+					"offset" : 32,
+					"type" : "class android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>*"
+				},
+				{
+					"name" : "",
+					"offset" : 64,
+					"type" : "struct std::__1::vector<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>, std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>>::#12"
 				}
 			],
 			"inheritance" : [],
@@ -1413,11 +1583,8 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : 
-			[
-				"void*"
-			],
-			"return_type" : "void*",
+			"params" : [],
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #1*" : 
@@ -1426,10 +1593,10 @@
 			"pointee_type" : "func #1",
 			"size" : 32
 		},
-		"func #1* const" : 
+		"func #1**" : 
 		{
-			"base_type" : "func #1*",
-			"kind" : "const",
+			"kind" : "pointer",
+			"pointee_type" : "func #1*",
 			"size" : 32
 		},
 		"func #10" : 
@@ -1439,11 +1606,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
 				"int32",
-				"unsigned char8**"
+				"void*"
 			],
-			"return_type" : "bool",
+			"return_type" : "unsigned char8*",
 			"size" : 0
 		},
 		"func #10*" : 
@@ -1460,10 +1626,9 @@
 			"params" : 
 			[
 				"void*",
-				"int32",
-				"int64**"
+				"bool"
 			],
-			"return_type" : "bool",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #11*" : 
@@ -1472,23 +1637,10 @@
 			"pointee_type" : "func #11",
 			"size" : 32
 		},
-		"func #12" : 
+		"func #11* const" : 
 		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32"
-			],
-			"return_type" : "bool",
-			"size" : 0
-		},
-		"func #12*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #12",
+			"base_type" : "func #11*",
+			"kind" : "const",
 			"size" : 32
 		},
 		"func #13" : 
@@ -1498,11 +1650,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AParcel const*",
-				"void*",
-				"unsigned int32"
+				"unsigned char8 const*",
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #13*" : 
@@ -1520,7 +1671,7 @@
 			[
 				"void*",
 				"int32",
-				"float32**"
+				"unsigned int32**"
 			],
 			"return_type" : "bool",
 			"size" : 0
@@ -1536,20 +1687,19 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
-			"return_type" : "int32",
+			"params" : 
+			[
+				"void*",
+				"int32",
+				"unsigned int64**"
+			],
+			"return_type" : "bool",
 			"size" : 0
 		},
 		"func #15*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #15",
-			"size" : 32
-		},
-		"func #15**" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #15*",
 			"size" : 32
 		},
 		"func #16" : 
@@ -1560,10 +1710,9 @@
 			"params" : 
 			[
 				"unsigned char8 const*",
-				"struct AIBinder*",
 				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "struct ABinderRpc_ConnectionInfo*",
 			"size" : 0
 		},
 		"func #16*" : 
@@ -1579,7 +1728,6 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"unsigned char8 const*",
 				"void*"
 			],
 			"return_type" : "void",
@@ -1591,26 +1739,6 @@
 			"pointee_type" : "func #17",
 			"size" : 32
 		},
-		"func #18" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"void const*",
-				"unsigned int32",
-				"int32*"
-			],
-			"return_type" : "unsigned char8 const*",
-			"size" : 0
-		},
-		"func #18*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #18",
-			"size" : 32
-		},
 		"func #19" : 
 		{
 			"has_variadic_args" : false,
@@ -1619,7 +1747,6 @@
 			"params" : 
 			[
 				"void*",
-				"unsigned int32",
 				"int32",
 				"unsigned char8**"
 			],
@@ -1641,7 +1768,7 @@
 			[
 				"void*"
 			],
-			"return_type" : "void",
+			"return_type" : "void*",
 			"size" : 0
 		},
 		"func #2*" : 
@@ -1665,7 +1792,7 @@
 			[
 				"void*",
 				"int32",
-				"unsigned int64**"
+				"unsigned char16**"
 			],
 			"return_type" : "bool",
 			"size" : 0
@@ -1684,8 +1811,7 @@
 			"params" : 
 			[
 				"void*",
-				"int32",
-				"unsigned char16**"
+				"int32"
 			],
 			"return_type" : "bool",
 			"size" : 0
@@ -1704,8 +1830,9 @@
 			"params" : 
 			[
 				"void*",
+				"unsigned int32",
 				"int32",
-				"float64**"
+				"unsigned char8**"
 			],
 			"return_type" : "bool",
 			"size" : 0
@@ -1723,10 +1850,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"unsigned char8 const*",
-				"void*"
+				"struct AParcel const*",
+				"void*",
+				"unsigned int32"
 			],
-			"return_type" : "struct ABinderRpc_Accessor*",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #23*" : 
@@ -1742,7 +1870,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*"
+				"void*",
+				"unsigned int32",
+				"bool"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -1760,10 +1890,10 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void const*",
-				"unsigned int32"
+				"unsigned char8 const*",
+				"void*"
 			],
-			"return_type" : "bool",
+			"return_type" : "struct ABinderRpc_Accessor*",
 			"size" : 0
 		},
 		"func #25*" : 
@@ -1779,9 +1909,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"int32",
-				"int32**"
+				"void const*",
+				"unsigned int32"
 			],
 			"return_type" : "bool",
 			"size" : 0
@@ -1799,11 +1928,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AParcel*",
-				"void const*",
-				"unsigned int32"
+				"void*",
+				"int32",
+				"int64**"
 			],
-			"return_type" : "int32",
+			"return_type" : "bool",
 			"size" : 0
 		},
 		"func #27*" : 
@@ -1817,19 +1946,20 @@
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : 
-			[
-				"void*",
-				"int32",
-				"unsigned int32**"
-			],
-			"return_type" : "bool",
+			"params" : [],
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #28*" : 
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #28",
+			"size" : 32
+		},
+		"func #28**" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #28*",
 			"size" : 32
 		},
 		"func #29" : 
@@ -1840,9 +1970,10 @@
 			"params" : 
 			[
 				"unsigned char8 const*",
+				"struct AIBinder*",
 				"void*"
 			],
-			"return_type" : "struct ABinderRpc_ConnectionInfo*",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #29*" : 
@@ -1858,12 +1989,9 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AIBinder*",
-				"unsigned int32",
-				"struct AParcel const*",
-				"struct AParcel*"
+				"void*"
 			],
-			"return_type" : "int32",
+			"return_type" : "void",
 			"size" : 0
 		},
 		"func #3*" : 
@@ -1885,10 +2013,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"bool",
-				"void*"
+				"struct AParcel*",
+				"void const*",
+				"unsigned int32"
 			],
-			"return_type" : "bool",
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func #30*" : 
@@ -1904,9 +2033,8 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"void*",
-				"int32",
-				"char8**"
+				"bool",
+				"void*"
 			],
 			"return_type" : "bool",
 			"size" : 0
@@ -1925,10 +2053,10 @@
 			"params" : 
 			[
 				"void*",
-				"unsigned int32",
-				"bool"
+				"int32",
+				"int32**"
 			],
-			"return_type" : "void",
+			"return_type" : "bool",
 			"size" : 0
 		},
 		"func #32*" : 
@@ -1937,12 +2065,98 @@
 			"pointee_type" : "func #32",
 			"size" : 32
 		},
+		"func #33" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"int32",
+				"float32**"
+			],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func #33*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #33",
+			"size" : 32
+		},
+		"func #34" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void const*",
+				"unsigned int32",
+				"int32*"
+			],
+			"return_type" : "unsigned char8 const*",
+			"size" : 0
+		},
+		"func #34*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #34",
+			"size" : 32
+		},
+		"func #35" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"int32",
+				"char8**"
+			],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func #35*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #35",
+			"size" : 32
+		},
+		"func #36" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"void*",
+				"int32",
+				"float64**"
+			],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func #36*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "func #36",
+			"size" : 32
+		},
 		"func #4" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,
 			"kind" : "function",
-			"params" : [],
+			"params" : 
+			[
+				"struct AIBinder*",
+				"unsigned int32",
+				"struct AParcel const*",
+				"struct AParcel*"
+			],
 			"return_type" : "int32",
 			"size" : 0
 		},
@@ -1952,10 +2166,10 @@
 			"pointee_type" : "func #4",
 			"size" : 32
 		},
-		"func #4**" : 
+		"func #4* const" : 
 		{
-			"kind" : "pointer",
-			"pointee_type" : "func #4*",
+			"base_type" : "func #4*",
+			"kind" : "const",
 			"size" : 32
 		},
 		"func #5" : 
@@ -2000,25 +2214,6 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "func #6",
-			"size" : 32
-		},
-		"func #9" : 
-		{
-			"has_variadic_args" : false,
-			"is_virtual_method" : false,
-			"kind" : "function",
-			"params" : 
-			[
-				"int32",
-				"void*"
-			],
-			"return_type" : "unsigned char8*",
-			"size" : 0
-		},
-		"func #9*" : 
-		{
-			"kind" : "pointer",
-			"pointee_type" : "func #9",
 			"size" : 32
 		},
 		"func ABinderProcess_disableBackgroundScheduling" : 
@@ -2152,9 +2347,9 @@
 			"params" : 
 			[
 				"unsigned char8 const*",
-				"func #29*",
+				"func #16*",
 				"void*",
-				"func #24*"
+				"func #17*"
 			],
 			"return_type" : "struct ABinderRpc_Accessor*",
 			"size" : 0
@@ -2191,11 +2386,11 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #23*",
+				"func #25*",
 				"unsigned char8 const* const* const",
 				"unsigned int32",
 				"void*",
-				"func #24*"
+				"func #17*"
 			],
 			"return_type" : "struct ABinderRpc_AccessorProvider*",
 			"size" : 0
@@ -2220,9 +2415,9 @@
 			"params" : 
 			[
 				"unsigned char8 const*",
-				"func #1*",
 				"func #2*",
-				"func #3*"
+				"func #3*",
+				"func #4*"
 			],
 			"return_type" : "struct AIBinder_Class*",
 			"size" : 0
@@ -2258,7 +2453,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"struct AIBinder_Class*",
+				"struct AIBinder_Class const*",
 				"unsigned int32"
 			],
 			"return_type" : "unsigned char8 const*",
@@ -2298,7 +2493,7 @@
 			"params" : 
 			[
 				"struct AIBinder_Class*",
-				"unsigned char8 const**",
+				"unsigned char8 const* const*",
 				"unsigned int32"
 			],
 			"return_type" : "void",
@@ -2323,7 +2518,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #2*"
+				"func #3*"
 			],
 			"return_type" : "struct AIBinder_DeathRecipient*",
 			"size" : 0
@@ -2336,9 +2531,34 @@
 			"params" : 
 			[
 				"struct AIBinder_DeathRecipient*",
-				"func #2*"
+				"func #3*"
 			],
 			"return_type" : "void",
+			"size" : 0
+		},
+		"func AIBinder_FrozenStateChangeCallback_delete" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AIBinder_FrozenStateChangeCallback*"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func AIBinder_FrozenStateChangeCallback_new" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"func #11*",
+				"func #3*"
+			],
+			"return_type" : "struct AIBinder_FrozenStateChangeCallback*",
 			"size" : 0
 		},
 		"func AIBinder_Weak_clone" : 
@@ -2400,6 +2620,20 @@
 				"struct AIBinder_Weak*"
 			],
 			"return_type" : "struct AIBinder*",
+			"size" : 0
+		},
+		"func AIBinder_addFrozenStateChangeCallback" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AIBinder*",
+				"struct AIBinder_FrozenStateChangeCallback*",
+				"void*"
+			],
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func AIBinder_associateClass" : 
@@ -2600,6 +2834,30 @@
 			"return_type" : "bool",
 			"size" : 0
 		},
+		"func AIBinder_isSystemStable" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AIBinder*"
+			],
+			"return_type" : "bool",
+			"size" : 0
+		},
+		"func AIBinder_isVendorStable" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AIBinder*"
+			],
+			"return_type" : "bool",
+			"size" : 0
+		},
 		"func AIBinder_linkToDeath" : 
 		{
 			"has_variadic_args" : false,
@@ -2701,6 +2959,32 @@
 			"return_type" : "int32",
 			"size" : 0
 		},
+		"func AIBinder_removeFrozenStateChangeCallback" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AIBinder*",
+				"struct AIBinder_FrozenStateChangeCallback*",
+				"void*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AIBinder_requiresVintfDeclaration" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AIBinder*"
+			],
+			"return_type" : "bool",
+			"size" : 0
+		},
 		"func AIBinder_setExtension" : 
 		{
 			"has_variadic_args" : false,
@@ -2725,6 +3009,19 @@
 				"bool"
 			],
 			"return_type" : "void",
+			"size" : 0
+		},
+		"func AIBinder_setMinRpcThreads" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AIBinder*",
+				"unsigned int16"
+			],
+			"return_type" : "int32",
 			"size" : 0
 		},
 		"func AIBinder_setMinSchedulerPolicy" : 
@@ -2858,6 +3155,18 @@
 			"return_type" : "bool",
 			"size" : 0
 		},
+		"func AParcel_getDataCapacity" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AParcel const*"
+			],
+			"return_type" : "unsigned int32",
+			"size" : 0
+		},
 		"func AParcel_getDataPosition" : 
 		{
 			"has_variadic_args" : false,
@@ -2931,8 +3240,8 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #12*",
-				"func #32*"
+				"func #21*",
+				"func #24*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -2959,7 +3268,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #31*"
+				"func #35*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -2986,7 +3295,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #21*"
+				"func #20*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3013,7 +3322,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #22*"
+				"func #36*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3040,7 +3349,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #14*"
+				"func #33*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3067,7 +3376,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #26*"
+				"func #32*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3094,7 +3403,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #11*"
+				"func #27*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3121,8 +3430,8 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #12*",
-				"func #13*"
+				"func #21*",
+				"func #23*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3149,7 +3458,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #10*"
+				"func #19*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3163,8 +3472,8 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #12*",
-				"func #19*"
+				"func #21*",
+				"func #22*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3204,7 +3513,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #28*"
+				"func #14*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3231,7 +3540,7 @@
 			[
 				"struct AParcel const*",
 				"void*",
-				"func #20*"
+				"func #15*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3244,6 +3553,19 @@
 			"params" : 
 			[
 				"struct AParcel*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func AParcel_setDataCapacity" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AParcel*",
+				"unsigned int32"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3298,7 +3620,7 @@
 				"struct AParcel*",
 				"void const*",
 				"int32",
-				"func #25*"
+				"func #26*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3488,7 +3810,7 @@
 				"struct AParcel*",
 				"void const*",
 				"int32",
-				"func #27*"
+				"func #30*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3530,7 +3852,7 @@
 				"struct AParcel*",
 				"void const*",
 				"int32",
-				"func #18*"
+				"func #34*"
 			],
 			"return_type" : "int32",
 			"size" : 0
@@ -3663,7 +3985,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3694,7 +4016,38 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
+				"void*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func APersistableBundle_getByteVector" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct APersistableBundle const*",
+				"unsigned char8 const*",
+				"unsigned char8*",
+				"int32"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
+		"func APersistableBundle_getByteVectorKeys" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct APersistableBundle const*",
+				"unsigned char8**",
+				"int32",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3724,7 +4077,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3755,7 +4108,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3785,7 +4138,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3816,7 +4169,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3846,7 +4199,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3877,7 +4230,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3907,7 +4260,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3923,7 +4276,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8 const*",
 				"unsigned char8**",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3939,7 +4292,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3956,7 +4309,7 @@
 				"unsigned char8 const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -3972,7 +4325,7 @@
 				"struct APersistableBundle const*",
 				"unsigned char8**",
 				"int32",
-				"func #9*",
+				"func #10*",
 				"void*"
 			],
 			"return_type" : "int32",
@@ -4024,6 +4377,21 @@
 				"struct APersistableBundle*",
 				"unsigned char8 const*",
 				"bool const*",
+				"int32"
+			],
+			"return_type" : "void",
+			"size" : 0
+		},
+		"func APersistableBundle_putByteVector" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct APersistableBundle*",
+				"unsigned char8 const*",
+				"unsigned char8 const*",
 				"int32"
 			],
 			"return_type" : "void",
@@ -4248,6 +4616,22 @@
 			"return_type" : "struct AIBinder*",
 			"size" : 0
 		},
+		"func AServiceManager_checkServiceAccess" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"unsigned char8 const*",
+				"int32",
+				"unsigned int32",
+				"unsigned char8 const*",
+				"unsigned int32"
+			],
+			"return_type" : "bool",
+			"size" : 0
+		},
 		"func AServiceManager_forEachDeclaredInstance" : 
 		{
 			"has_variadic_args" : false,
@@ -4257,7 +4641,7 @@
 			[
 				"unsigned char8 const*",
 				"void*",
-				"func #17*"
+				"func #13*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -4295,7 +4679,7 @@
 			[
 				"unsigned char8 const*",
 				"void*",
-				"func #17*"
+				"func #13*"
 			],
 			"return_type" : "void",
 			"size" : 0
@@ -4355,7 +4739,7 @@
 			"params" : 
 			[
 				"unsigned char8 const*",
-				"func #16*",
+				"func #29*",
 				"void*"
 			],
 			"return_type" : "struct AServiceManager_NotificationRegistration*",
@@ -4374,6 +4758,20 @@
 			"return_type" : "int32",
 			"size" : 0
 		},
+		"func AServiceManager_registerLazyServiceWithFlags" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct AIBinder*",
+				"unsigned char8 const*",
+				"unsigned int32 const"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
 		"func AServiceManager_setActiveServicesCallback" : 
 		{
 			"has_variadic_args" : false,
@@ -4381,7 +4779,7 @@
 			"kind" : "function",
 			"params" : 
 			[
-				"func #30*",
+				"func #31*",
 				"void*"
 			],
 			"return_type" : "void",
@@ -4695,16 +5093,13 @@
 			[
 				{
 					"name" : "mAccessorBinder",
-					"offset" : 64,
+					"offset" : 0,
 					"type" : "class android::sp<android::IBinder>"
 				}
 			],
-			"inheritance" : 
-			[
-				"class android::RefBase"
-			],
+			"inheritance" : [],
 			"kind" : "struct",
-			"size" : 96
+			"size" : 32
 		},
 		"struct ABinderRpc_Accessor*" : 
 		{
@@ -4759,7 +5154,7 @@
 				{
 					"name" : "_vptr$AIBinder",
 					"offset" : 0,
-					"type" : "func #4**"
+					"type" : "func #1**"
 				},
 				{
 					"name" : "mClazz",
@@ -4815,17 +5210,17 @@
 				{
 					"name" : "onCreate",
 					"offset" : 32,
-					"type" : "func #1* const"
+					"type" : "func #2* const"
 				},
 				{
 					"name" : "onDestroy",
 					"offset" : 64,
-					"type" : "func #2* const"
+					"type" : "func #3* const"
 				},
 				{
 					"name" : "onTransact",
 					"offset" : 96,
-					"type" : "func #3* const"
+					"type" : "func #4* const"
 				},
 				{
 					"name" : "onDump",
@@ -4848,25 +5243,20 @@
 					"type" : "class android::String16 const"
 				},
 				{
-					"name" : "mTransactionCodeToFunction",
-					"offset" : 320,
-					"type" : "unsigned char8 const**"
-				},
-				{
-					"name" : "mTransactionCodeToFunctionLength",
-					"offset" : 352,
-					"type" : "unsigned int32"
+					"name" : "mTransactionCodeData",
+					"offset" : 384,
+					"type" : "struct android::TransactionCodeData"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "struct",
-			"size" : 384
+			"size" : 512
 		},
 		"struct AIBinder_Class const" : 
 		{
 			"base_type" : "struct AIBinder_Class",
 			"kind" : "const",
-			"size" : 384
+			"size" : 512
 		},
 		"struct AIBinder_Class const*" : 
 		{
@@ -4885,24 +5275,19 @@
 			"fields" : 
 			[
 				{
-					"name" : "mDeathRecipientsMutex",
-					"offset" : 64,
-					"type" : "class std::__1::mutex"
-				},
-				{
 					"name" : "mDeathRecipients",
-					"offset" : 96,
-					"type" : "class std::__1::vector<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>, std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>>"
+					"offset" : 64,
+					"type" : "struct RecipientList<AIBinder_DeathRecipient::TransferDeathRecipient>"
 				},
 				{
 					"name" : "mOnDied",
 					"offset" : 192,
-					"type" : "func #2*"
+					"type" : "func #3*"
 				},
 				{
 					"name" : "mOnUnlinked",
 					"offset" : 224,
-					"type" : "func #2*"
+					"type" : "func #3*"
 				}
 			],
 			"inheritance" : 
@@ -4920,37 +5305,10 @@
 		},
 		"struct AIBinder_DeathRecipient::TransferDeathRecipient" : 
 		{
-			"fields" : 
-			[
-				{
-					"name" : "mWho",
-					"offset" : 32,
-					"type" : "class android::wp<android::IBinder>"
-				},
-				{
-					"name" : "mCookie",
-					"offset" : 96,
-					"type" : "void*"
-				},
-				{
-					"name" : "mParentRecipient",
-					"offset" : 128,
-					"type" : "class android::wp<AIBinder_DeathRecipient>"
-				},
-				{
-					"name" : "mOnDied",
-					"offset" : 192,
-					"type" : "func #2* const"
-				},
-				{
-					"name" : "mOnUnlinked",
-					"offset" : 224,
-					"type" : "func #2* const"
-				}
-			],
+			"fields" : [],
 			"inheritance" : 
 			[
-				"class android::IBinder::DeathRecipient"
+				"struct TransferRecipient<android::IBinder::DeathRecipient, AIBinder_DeathRecipient, func #3*, func #3*>"
 			],
 			"kind" : "struct",
 			"size" : 320
@@ -4959,6 +5317,55 @@
 		{
 			"kind" : "pointer",
 			"pointee_type" : "struct AIBinder_DeathRecipient::TransferDeathRecipient",
+			"size" : 32
+		},
+		"struct AIBinder_FrozenStateChangeCallback" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mFrozenStateChangeCallbacks",
+					"offset" : 64,
+					"type" : "struct RecipientList<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>"
+				},
+				{
+					"name" : "mOnStateChanged",
+					"offset" : 192,
+					"type" : "func #11*"
+				},
+				{
+					"name" : "mOnUnlinked",
+					"offset" : 224,
+					"type" : "func #3*"
+				}
+			],
+			"inheritance" : 
+			[
+				"class android::RefBase"
+			],
+			"kind" : "struct",
+			"size" : 256
+		},
+		"struct AIBinder_FrozenStateChangeCallback*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AIBinder_FrozenStateChangeCallback",
+			"size" : 32
+		},
+		"struct AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback" : 
+		{
+			"fields" : [],
+			"inheritance" : 
+			[
+				"struct TransferRecipient<android::IBinder::FrozenStateChangeCallback, AIBinder_FrozenStateChangeCallback, func #11*, func #3*>"
+			],
+			"kind" : "struct",
+			"size" : 320
+		},
+		"struct AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback*" : 
+		{
+			"kind" : "pointer",
+			"pointee_type" : "struct AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback",
 			"size" : 32
 		},
 		"struct AIBinder_Weak" : 
@@ -5053,13 +5460,13 @@
 			],
 			"inheritance" : [],
 			"kind" : "struct",
-			"size" : 1088
+			"size" : 1184
 		},
 		"struct APersistableBundle const" : 
 		{
 			"base_type" : "struct APersistableBundle",
 			"kind" : "const",
-			"size" : 1088
+			"size" : 1184
 		},
 		"struct APersistableBundle const*" : 
 		{
@@ -5101,7 +5508,7 @@
 				{
 					"name" : "onRegister",
 					"offset" : 128,
-					"type" : "func #16*"
+					"type" : "func #29*"
 				}
 			],
 			"inheritance" : 
@@ -5155,6 +5562,118 @@
 			"pointee_type" : "struct AStatus*",
 			"size" : 32
 		},
+		"struct RecipientList<AIBinder_DeathRecipient::TransferDeathRecipient>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mMutex",
+					"offset" : 0,
+					"type" : "class std::__1::mutex"
+				},
+				{
+					"name" : "mList",
+					"offset" : 32,
+					"type" : "class std::__1::vector<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>, std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct RecipientList<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mMutex",
+					"offset" : 0,
+					"type" : "class std::__1::mutex"
+				},
+				{
+					"name" : "mList",
+					"offset" : 32,
+					"type" : "class std::__1::vector<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>, std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
+		"struct TransferRecipient<android::IBinder::DeathRecipient, AIBinder_DeathRecipient, func #3*, func #3*>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mWho",
+					"offset" : 32,
+					"type" : "class android::wp<android::IBinder>"
+				},
+				{
+					"name" : "mCookie",
+					"offset" : 96,
+					"type" : "void*"
+				},
+				{
+					"name" : "mParentRecipient",
+					"offset" : 128,
+					"type" : "class android::wp<AIBinder_DeathRecipient>"
+				},
+				{
+					"name" : "mOnCallback",
+					"offset" : 192,
+					"type" : "func #3* const"
+				},
+				{
+					"name" : "mOnUnlinked",
+					"offset" : 224,
+					"type" : "func #3* const"
+				}
+			],
+			"inheritance" : 
+			[
+				"class android::IBinder::DeathRecipient"
+			],
+			"kind" : "struct",
+			"size" : 320
+		},
+		"struct TransferRecipient<android::IBinder::FrozenStateChangeCallback, AIBinder_FrozenStateChangeCallback, func #11*, func #3*>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "mWho",
+					"offset" : 32,
+					"type" : "class android::wp<android::IBinder>"
+				},
+				{
+					"name" : "mCookie",
+					"offset" : 96,
+					"type" : "void*"
+				},
+				{
+					"name" : "mParentRecipient",
+					"offset" : 128,
+					"type" : "class android::wp<AIBinder_FrozenStateChangeCallback>"
+				},
+				{
+					"name" : "mOnCallback",
+					"offset" : 192,
+					"type" : "func #11* const"
+				},
+				{
+					"name" : "mOnUnlinked",
+					"offset" : 224,
+					"type" : "func #3* const"
+				}
+			],
+			"inheritance" : 
+			[
+				"class android::IBinder::FrozenStateChangeCallback"
+			],
+			"kind" : "struct",
+			"size" : 320
+		},
 		"struct _JNIEnv" : 
 		{
 			"kind" : "incomplete"
@@ -5172,7 +5691,7 @@
 				{
 					"name" : "_vptr$LocalRegistrationCallback",
 					"offset" : 0,
-					"type" : "func #15**"
+					"type" : "func #28**"
 				}
 			],
 			"inheritance" : 
@@ -5181,6 +5700,35 @@
 			],
 			"kind" : "struct",
 			"size" : 96
+		},
+		"struct android::TransactionCodeData" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "totalSize",
+					"offset" : 0,
+					"type" : "unsigned int32"
+				},
+				{
+					"name" : "backendType",
+					"offset" : 32,
+					"type" : "unsigned char8 const*"
+				},
+				{
+					"name" : "names",
+					"offset" : 64,
+					"type" : "unsigned char8 const* const*"
+				},
+				{
+					"name" : "count",
+					"offset" : 96,
+					"type" : "unsigned int32"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
 		},
 		"struct in_addr" : 
 		{
@@ -5328,54 +5876,6 @@
 			"kind" : "struct",
 			"size" : 128
 		},
-		"struct std::__1::__compressed_pair_elem<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*, int32, false>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value_",
-					"offset" : 0,
-					"type" : "class android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 32
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>, int32, true>" : 
-		{
-			"fields" : [],
-			"inheritance" : 
-			[
-				"class std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>"
-			],
-			"kind" : "struct",
-			"size" : 8
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::allocator<unsigned char8>, int32, true>" : 
-		{
-			"fields" : [],
-			"inheritance" : 
-			[
-				"class std::__1::allocator<unsigned char8>"
-			],
-			"kind" : "struct",
-			"size" : 8
-		},
-		"struct std::__1::__compressed_pair_elem<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, int32, false>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value_",
-					"offset" : 0,
-					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 96
-		},
 		"struct std::__1::__non_trivial_if<true, std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>>" : 
 		{
 			"fields" : [],
@@ -5383,7 +5883,21 @@
 			"kind" : "struct",
 			"size" : 8
 		},
+		"struct std::__1::__non_trivial_if<true, std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
 		"struct std::__1::__non_trivial_if<true, std::__1::allocator<unsigned char8>>" : 
+		{
+			"fields" : [],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 8
+		},
+		"struct std::__1::__padding<0>" : 
 		{
 			"fields" : [],
 			"inheritance" : [],
@@ -5404,35 +5918,7 @@
 			"kind" : "struct",
 			"size" : 8
 		},
-		"struct std::__1::__variant_detail::__alt<unsigned int32, sockaddr_in>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value",
-					"offset" : 0,
-					"type" : "struct sockaddr_in"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 128
-		},
-		"struct std::__1::__variant_detail::__alt<unsigned int32, sockaddr_un>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__value",
-					"offset" : 0,
-					"type" : "struct sockaddr_un"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "struct",
-			"size" : 880
-		},
-		"struct std::__1::__variant_detail::__alt<unsigned int32, sockaddr_vm>" : 
+		"struct std::__1::__variant_detail::__alt<0, sockaddr_vm>" : 
 		{
 			"fields" : 
 			[
@@ -5446,12 +5932,69 @@
 			"kind" : "struct",
 			"size" : 128
 		},
+		"struct std::__1::__variant_detail::__alt<1, sockaddr_un>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__value",
+					"offset" : 0,
+					"type" : "struct sockaddr_un"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 880
+		},
+		"struct std::__1::__variant_detail::__alt<2, sockaddr_in>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__value",
+					"offset" : 0,
+					"type" : "struct sockaddr_in"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 128
+		},
 		"struct std::__1::__variant_detail::__traits<sockaddr_vmsockaddr_unsockaddr_in>" : 
 		{
 			"fields" : [],
 			"inheritance" : [],
 			"kind" : "struct",
 			"size" : 8
+		},
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::#7" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__rep_",
+					"offset" : 0,
+					"type" : "union std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep"
+				},
+				{
+					"name" : "__padding1_903_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__rep, true>"
+				},
+				{
+					"name" : "__alloc_",
+					"offset" : 0,
+					"type" : "class std::__1::allocator<unsigned char8>"
+				},
+				{
+					"name" : "__padding2_903_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::allocator<unsigned char8>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 96
 		},
 		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long" : 
 		{
@@ -5460,7 +6003,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#8"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#9"
 				},
 				{
 					"name" : "__size_",
@@ -5477,7 +6020,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#8" : 
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#9" : 
 		{
 			"fields" : 
 			[
@@ -5503,12 +6046,12 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#7"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#8"
 				},
 				{
 					"name" : "__padding_",
-					"offset" : 8,
-					"type" : "unsigned char8[0]"
+					"offset" : 0,
+					"type" : "struct std::__1::__padding<0>"
 				},
 				{
 					"name" : "__data_",
@@ -5520,7 +6063,7 @@
 			"kind" : "struct",
 			"size" : 96
 		},
-		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#7" : 
+		"struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#8" : 
 		{
 			"fields" : 
 			[
@@ -5546,7 +6089,65 @@
 			"kind" : "struct",
 			"size" : 8
 		},
-		"union std::__1::__variant_detail::__union<unsigned int32, unsigned int32, sockaddr_in>" : 
+		"struct std::__1::vector<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>, std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>>::#18" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__cap_",
+					"offset" : 0,
+					"type" : "class android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*"
+				},
+				{
+					"name" : "__padding1_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>*, true>"
+				},
+				{
+					"name" : "__alloc_",
+					"offset" : 0,
+					"type" : "class std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>"
+				},
+				{
+					"name" : "__padding2_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::allocator<android::sp<AIBinder_DeathRecipient::TransferDeathRecipient>>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"struct std::__1::vector<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>, std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>>::#12" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__cap_",
+					"offset" : 0,
+					"type" : "class android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>*"
+				},
+				{
+					"name" : "__padding1_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>*, true>"
+				},
+				{
+					"name" : "__alloc_",
+					"offset" : 0,
+					"type" : "class std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>"
+				},
+				{
+					"name" : "__padding2_571_",
+					"offset" : 0,
+					"type" : "class std::__1::__compressed_pair_padding<std::__1::allocator<android::sp<AIBinder_FrozenStateChangeCallback::TransferFrozenStateChangeCallback>>, true>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "struct",
+			"size" : 32
+		},
+		"union std::__1::__variant_detail::__union<0, 0, sockaddr_vm, sockaddr_un, sockaddr_in>" : 
 		{
 			"fields" : 
 			[
@@ -5558,67 +6159,67 @@
 				{
 					"name" : "__head",
 					"offset" : 0,
-					"type" : "struct std::__1::__variant_detail::__alt<unsigned int32, sockaddr_in>"
+					"type" : "struct std::__1::__variant_detail::__alt<0, sockaddr_vm>"
 				},
 				{
 					"name" : "__tail",
 					"offset" : 0,
-					"type" : "union std::__1::__variant_detail::__union<unsigned int32, unsigned int32>"
+					"type" : "union std::__1::__variant_detail::__union<0, 1, sockaddr_un, sockaddr_in>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 896
+		},
+		"union std::__1::__variant_detail::__union<0, 1, sockaddr_un, sockaddr_in>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__dummy",
+					"offset" : 0,
+					"type" : "unsigned char8"
+				},
+				{
+					"name" : "__head",
+					"offset" : 0,
+					"type" : "struct std::__1::__variant_detail::__alt<1, sockaddr_un>"
+				},
+				{
+					"name" : "__tail",
+					"offset" : 0,
+					"type" : "union std::__1::__variant_detail::__union<0, 2, sockaddr_in>"
+				}
+			],
+			"inheritance" : [],
+			"kind" : "union",
+			"size" : 896
+		},
+		"union std::__1::__variant_detail::__union<0, 2, sockaddr_in>" : 
+		{
+			"fields" : 
+			[
+				{
+					"name" : "__dummy",
+					"offset" : 0,
+					"type" : "unsigned char8"
+				},
+				{
+					"name" : "__head",
+					"offset" : 0,
+					"type" : "struct std::__1::__variant_detail::__alt<2, sockaddr_in>"
+				},
+				{
+					"name" : "__tail",
+					"offset" : 0,
+					"type" : "union std::__1::__variant_detail::__union<0, 3>"
 				}
 			],
 			"inheritance" : [],
 			"kind" : "union",
 			"size" : 128
 		},
-		"union std::__1::__variant_detail::__union<unsigned int32, unsigned int32, sockaddr_un, sockaddr_in>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__dummy",
-					"offset" : 0,
-					"type" : "unsigned char8"
-				},
-				{
-					"name" : "__head",
-					"offset" : 0,
-					"type" : "struct std::__1::__variant_detail::__alt<unsigned int32, sockaddr_un>"
-				},
-				{
-					"name" : "__tail",
-					"offset" : 0,
-					"type" : "union std::__1::__variant_detail::__union<unsigned int32, unsigned int32, sockaddr_in>"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "union",
-			"size" : 896
-		},
-		"union std::__1::__variant_detail::__union<unsigned int32, unsigned int32, sockaddr_vm, sockaddr_un, sockaddr_in>" : 
-		{
-			"fields" : 
-			[
-				{
-					"name" : "__dummy",
-					"offset" : 0,
-					"type" : "unsigned char8"
-				},
-				{
-					"name" : "__head",
-					"offset" : 0,
-					"type" : "struct std::__1::__variant_detail::__alt<unsigned int32, sockaddr_vm>"
-				},
-				{
-					"name" : "__tail",
-					"offset" : 0,
-					"type" : "union std::__1::__variant_detail::__union<unsigned int32, unsigned int32, sockaddr_un, sockaddr_in>"
-				}
-			],
-			"inheritance" : [],
-			"kind" : "union",
-			"size" : 896
-		},
-		"union std::__1::__variant_detail::__union<unsigned int32, unsigned int32>" : 
+		"union std::__1::__variant_detail::__union<0, 3>" : 
 		{
 			"fields" : [],
 			"inheritance" : [],
@@ -5727,12 +6328,6 @@
 			"kind" : "pointer",
 			"pointee_type" : "unsigned char8*",
 			"size" : 32
-		},
-		"unsigned char8[0]" : 
-		{
-			"element_type" : "unsigned char8",
-			"kind" : "array",
-			"size" : 0
 		},
 		"unsigned char8[108]" : 
 		{
