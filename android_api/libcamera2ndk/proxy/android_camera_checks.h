@@ -65,7 +65,7 @@ CHECK_FIELD_LAYOUT(ACameraCaptureSession_stateCallbacks, onClosed, 32, 32);
 CHECK_FIELD_LAYOUT(ACameraCaptureSession_stateCallbacks, onReady, 64, 32);
 CHECK_FIELD_LAYOUT(ACameraCaptureSession_stateCallbacks, onActive, 96, 32);
 
-CHECK_STRUCT_LAYOUT(ACameraDevice_StateCallbacks, 96, 32);
+CHECK_STRUCT_LAYOUT(ACameraDevice_StateCallbacks, 128, 32);
 CHECK_FIELD_LAYOUT(ACameraDevice_StateCallbacks, context, 0, 32);
 CHECK_FIELD_LAYOUT(ACameraDevice_StateCallbacks, onDisconnected, 32, 32);
 CHECK_FIELD_LAYOUT(ACameraDevice_StateCallbacks, onError, 64, 32);
@@ -112,7 +112,7 @@ CHECK_FIELD_LAYOUT(ACameraCaptureSession_stateCallbacks, onClosed, 64, 64);
 CHECK_FIELD_LAYOUT(ACameraCaptureSession_stateCallbacks, onReady, 128, 64);
 CHECK_FIELD_LAYOUT(ACameraCaptureSession_stateCallbacks, onActive, 192, 64);
 
-CHECK_STRUCT_LAYOUT(ACameraDevice_StateCallbacks, 192, 64);
+CHECK_STRUCT_LAYOUT(ACameraDevice_StateCallbacks, 256, 64);
 CHECK_FIELD_LAYOUT(ACameraDevice_StateCallbacks, context, 0, 64);
 CHECK_FIELD_LAYOUT(ACameraDevice_StateCallbacks, onDisconnected, 64, 64);
 CHECK_FIELD_LAYOUT(ACameraDevice_StateCallbacks, onError, 128, 64);
