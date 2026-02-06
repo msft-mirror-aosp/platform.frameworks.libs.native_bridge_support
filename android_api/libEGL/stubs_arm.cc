@@ -55,7 +55,6 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android39eglQueryStringImplementationANDR
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android42egl_get_num_extensions_for_current_contextEv);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZNK7android13egl_display_t13haveExtensionEPKcj);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZNK7android13egl_display_t9getObjectEPNS_12egl_object_tE);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_graphicsenv_flags_angle_feature_overrides);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(eglBindAPI);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(eglBindTexImage);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(eglChooseConfig);
@@ -175,7 +174,6 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libEGL.so", _ZN7android42egl_get_num_extensions_for_current_contextEv);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libEGL.so", _ZNK7android13egl_display_t13haveExtensionEPKcj);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libEGL.so", _ZNK7android13egl_display_t9getObjectEPNS_12egl_object_tE);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libEGL.so", com_android_graphics_graphicsenv_flags_angle_feature_overrides);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libEGL.so", eglBindAPI);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libEGL.so", eglBindTexImage);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libEGL.so", eglChooseConfig);

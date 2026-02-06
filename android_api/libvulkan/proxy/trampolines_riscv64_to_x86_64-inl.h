@@ -1,7 +1,20 @@
 // clang-format off
 const KnownTrampoline kKnownTrampolines[] = {
+{"_ZN7android7sysprop16VulkanProperties10oem_layersEv", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
+{"_ZN7android7sysprop16VulkanProperties15platform_layersEv", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"android_convertGralloc0To1Usage", GetTrampolineFunc<auto(int32_t, void*, void*) -> void>(), reinterpret_cast<void*>(NULL)},
 {"android_convertGralloc1To0Usage", GetTrampolineFunc<auto(uint64_t, uint64_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_ext_private_data_swapchain", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_khr_swapchain_maintenance1", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_oem_and_platform_layers", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_present_id2_khr", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext2", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_present_timing_ext", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_vk_khr_present_wait2", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
 {"vkAcquireNextImage2KHR", DoCustomTrampolineWithThunk_vkAcquireNextImage2KHR, reinterpret_cast<void*>(vkAcquireNextImage2KHR)},
 {"vkAcquireNextImageKHR", GetTrampolineFunc<auto(void*, void*, uint64_t, void*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"vkAllocateCommandBuffers", DoCustomTrampolineWithThunk_vkAllocateCommandBuffers, reinterpret_cast<void*>(vkAllocateCommandBuffers)},
@@ -255,5 +268,6 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"vkWaitSemaphores", DoCustomTrampolineWithThunk_vkWaitSemaphores, reinterpret_cast<void*>(vkWaitSemaphores)},
 };  // kKnownTrampolines
 const KnownVariable kKnownVariables[] = {
+{"_ZTVN3com7android8graphics9libvulkan5flags13flag_providerE", 8},
 };  // kKnownVariables
 // clang-format on
