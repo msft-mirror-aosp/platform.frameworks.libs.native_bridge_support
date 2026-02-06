@@ -134,6 +134,28 @@ class APIComparator(object):
     return type_desc['kind'] not in \
         ['class', 'struct', 'union', 'incomplete', 'array']
 
+  def _replace_pointer_to_function_name_with_function_name(self, guest_name, host_name):
+    guest_type = self.guest_types[guest_name]
+    host_type = self.host_types[host_name]
+
+    # If the type is a const-qualified version of another type, unwrap it.
+    if guest_type['kind'] == 'const' and host_type['kind'] == 'const':
+      base_guest_name = guest_type['base_type']
+      base_host_name = host_type['base_type']
+      guest_type = self.guest_types[base_guest_name]
+      host_type = self.host_types[base_host_name]
+
+    if (guest_type['kind'] == 'pointer' and
+        self.guest_types[guest_type['pointee_type']]['kind'] == 'function' and
+        host_type['kind'] == 'pointer' and
+        self.host_types[host_type['pointee_type']]['kind'] == 'function'):
+      guest_name = guest_type['pointee_type']
+      host_name = host_type['pointee_type']
+      return guest_name, host_name
+
+    # If types are not function pointers, return types unchanged.
+    return guest_name, host_name
+
   def _compare_trampoline_operand(
       self, operand_no, guest_name, host_name, name_pair):
     # We use 'x' trampoline operand type to involve this conversion.
@@ -156,14 +178,8 @@ class APIComparator(object):
     # If we accept pointers to functions we look on the functions themselves.
     # Note: function pointers embedded into data structures make them
     # incompatible, but GetTrampolineFunc knows how to wrap simple callbacks.
-    guest_type = self.guest_types[guest_name]
-    host_type = self.host_types[host_name]
-    if (guest_type['kind'] == 'pointer' and
-        self.guest_types[guest_type['pointee_type']]['kind'] == 'function' and
-        host_type['kind'] == 'pointer' and
-        self.host_types[host_type['pointee_type']]['kind'] == 'function'):
-      guest_name = guest_type['pointee_type']
-      host_name = host_type['pointee_type']
+    guest_name, host_name = self._replace_pointer_to_function_name_with_function_name(
+      guest_name, host_name)
     self._compare_referenced_types(guest_name, host_name, name_pair)
     return True
 
