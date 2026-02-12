@@ -17,8 +17,21 @@
 // clang-format off
 #include "native_bridge_support/vdso/interceptable_functions.h"
 
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android7sysprop16VulkanProperties10oem_layersEv);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android7sysprop16VulkanProperties15platform_layersEv);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(android_convertGralloc0To1Usage);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(android_convertGralloc1To0Usage);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_ext_private_data_swapchain);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_khr_swapchain_maintenance1);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_oem_and_platform_layers);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_present_id2_khr);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext2);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_present_timing_ext);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_vk_khr_present_wait2);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkAcquireNextImage2KHR);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkAcquireNextImageKHR);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkAllocateCommandBuffers);
@@ -270,10 +283,24 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkUpdateDescriptorSetWithTemplate);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkUpdateDescriptorSets);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkWaitForFences);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkWaitSemaphores);
+DEFINE_INTERCEPTABLE_STUB_VARIABLE(_ZTVN3com7android8graphics9libvulkan5flags13flag_providerE);
 
 static void __attribute__((constructor(0))) init_stub_library() {
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", _ZN7android7sysprop16VulkanProperties10oem_layersEv);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", _ZN7android7sysprop16VulkanProperties15platform_layersEv);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", android_convertGralloc0To1Usage);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", android_convertGralloc1To0Usage);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_ext_private_data_swapchain);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_khr_swapchain_maintenance1);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_oem_and_platform_layers);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_present_id2_khr);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_present_mode_fifo_latest_ready_ext2);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_present_timing_ext);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_vk_khr_present_wait2);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkAcquireNextImage2KHR);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkAcquireNextImageKHR);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkAllocateCommandBuffers);
@@ -525,5 +552,6 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkUpdateDescriptorSets);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkWaitForFences);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkWaitSemaphores);
+  INIT_INTERCEPTABLE_STUB_VARIABLE("libvulkan.so", _ZTVN3com7android8graphics9libvulkan5flags13flag_providerE);
 }
 // clang-format on

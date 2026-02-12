@@ -38,7 +38,6 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"_ZN7android42egl_get_num_extensions_for_current_contextEv", GetTrampolineFunc<auto(void) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"_ZNK7android13egl_display_t13haveExtensionEPKcm", GetTrampolineFunc<auto(void*, void*, uint64_t) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
 {"_ZNK7android13egl_display_t9getObjectEPNS_12egl_object_tE", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
-{"com_android_graphics_graphicsenv_flags_angle_feature_overrides", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
 {"eglBindAPI", GetTrampolineFunc<auto(uint32_t) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"eglBindTexImage", GetTrampolineFunc<auto(void*, void*, int32_t) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"eglChooseConfig", GetTrampolineFunc<auto(void*, void*, void*, int32_t, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},

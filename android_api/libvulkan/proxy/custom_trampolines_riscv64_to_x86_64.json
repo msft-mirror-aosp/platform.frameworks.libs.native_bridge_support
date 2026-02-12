@@ -43,6 +43,9 @@
     "vkBindImageMemory2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkBindTensorMemoryARM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkBindVideoSessionMemoryKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -55,7 +58,13 @@
     "vkCmdBeginConditionalRenderingEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCmdBeginCustomResolveEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCmdBeginDebugUtilsLabelEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdBeginPerTileExecutionQCOM": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdBeginRenderPass": {
@@ -85,6 +94,9 @@
     "vkCmdBindDescriptorSets2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCmdBindTileMemoryQCOM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCmdBlitImage2": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -104,6 +116,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdControlVideoCodingKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdConvertCooperativeVectorMatrixNV": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdCopyAccelerationStructureKHR": {
@@ -136,7 +151,13 @@
     "vkCmdCopyImageToBuffer2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCmdCopyMemoryIndirectKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCmdCopyMemoryToAccelerationStructureKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdCopyMemoryToImageIndirectKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdCopyMemoryToMicromapEXT": {
@@ -146,6 +167,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdCopyMicromapToMemoryEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdCopyTensorARM": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdCuLaunchKernelNVX": {
@@ -163,13 +187,28 @@
     "vkCmdDecodeVideoKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCmdDecompressMemoryEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdDispatchTileQCOM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCmdEncodeVideoKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdEndPerTileExecutionQCOM": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdEndRenderPass2": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdEndRenderPass2KHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdEndRendering2EXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCmdEndRendering2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkCmdEndVideoCodingKHR": {
@@ -283,6 +322,9 @@
     "vkCmdWaitEvents2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkConvertCooperativeVectorMatrixNV": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCopyAccelerationStructureKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -394,6 +436,9 @@
     "vkCreateExecutionGraphPipelinesAMDX": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCreateExternalComputeQueueNV": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCreateFence": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -502,6 +547,12 @@
     "vkCreateSwapchainKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkCreateTensorARM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkCreateTensorViewARM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkCreateValidationCacheEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -589,6 +640,9 @@
     "vkDestroyEvent": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkDestroyExternalComputeQueueNV": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkDestroyFence": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -662,6 +716,12 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkDestroySwapchainKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkDestroyTensorARM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkDestroyTensorViewARM": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkDestroyValidationCacheEXT": {
@@ -808,6 +868,9 @@
     "vkGetDeviceQueue2": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkGetDeviceTensorMemoryRequirementsARM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkGetDisplayModeProperties2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -824,6 +887,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetExecutionGraphPipelineScratchSizeAMDX": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetExternalComputeQueueDataNV": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetFenceFdKHR": {
@@ -874,6 +940,9 @@
     "vkGetImageViewAddressNVX": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkGetImageViewHandle64NVX": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkGetImageViewHandleNVX": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -893,6 +962,12 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetMemoryHostPointerPropertiesEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetMemoryMetalHandleEXT": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetMemoryMetalHandlePropertiesEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetMemoryRemoteAddressNV": {
@@ -916,10 +991,16 @@
     "vkGetMicromapBuildSizesEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetPhysicalDeviceCooperativeMatrixPropertiesNV": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetPhysicalDeviceCooperativeVectorPropertiesNV": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetPhysicalDeviceDisplayPlaneProperties2KHR": {
@@ -947,6 +1028,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetPhysicalDeviceExternalSemaphorePropertiesKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetPhysicalDeviceExternalTensorPropertiesARM": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkGetPhysicalDeviceFeatures2": {
@@ -1102,6 +1186,15 @@
     "vkGetSwapchainGrallocUsage4ANDROID": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkGetTensorMemoryRequirementsARM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetTensorOpaqueCaptureDescriptorDataARM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkGetTensorViewOpaqueCaptureDescriptorDataARM": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkGetVideoSessionMemoryRequirementsKHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -1180,6 +1273,9 @@
     "vkReleaseSwapchainImagesEXT": {
       "call_method": "custom_trampoline_with_thunk"
     },
+    "vkReleaseSwapchainImagesKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
     "vkSetBufferCollectionBufferConstraintsFUCHSIA": {
       "call_method": "custom_trampoline_with_thunk"
     },
@@ -1223,6 +1319,9 @@
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkUpdateVideoSessionParametersKHR": {
+      "call_method": "custom_trampoline_with_thunk"
+    },
+    "vkWaitForPresent2KHR": {
       "call_method": "custom_trampoline_with_thunk"
     },
     "vkWaitSemaphores": {
