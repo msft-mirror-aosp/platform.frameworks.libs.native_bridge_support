@@ -344,13 +344,6 @@
       "header": "malloc.h",
       "is_compatible": true
     },
-    "native_bridge_reallocarray": {
-      "call_method": "custom_thunk",
-      "custom_thunk": "reallocarray",
-      "guest_api_symbol": "reallocarray",
-      "header": "malloc.h",
-      "is_compatible": true
-    },
     "native_bridge_valloc": {
       "call_method": "custom_thunk",
       "custom_thunk": "valloc",
