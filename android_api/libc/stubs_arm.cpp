@@ -75,6 +75,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(native_bridge_memalign);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(native_bridge_posix_memalign);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(native_bridge_pvalloc);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(native_bridge_realloc);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(native_bridge_reallocarray);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(native_bridge_valloc);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(pthread_attr_destroy);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(pthread_attr_getdetachstate);
@@ -177,6 +178,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", native_bridge_posix_memalign);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", native_bridge_pvalloc);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", native_bridge_realloc);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", native_bridge_reallocarray);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", native_bridge_valloc);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", pthread_attr_destroy);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", pthread_attr_getdetachstate);

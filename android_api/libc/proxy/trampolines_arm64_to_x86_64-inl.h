@@ -60,6 +60,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"native_bridge_memalign", GetTrampolineFunc<auto(uint64_t, uint64_t) -> void*>(), reinterpret_cast<void*>(memalign)},
 {"native_bridge_posix_memalign", GetTrampolineFunc<auto(void*, uint64_t, uint64_t) -> int32_t>(), reinterpret_cast<void*>(posix_memalign)},
 {"native_bridge_realloc", GetTrampolineFunc<auto(void*, uint64_t) -> void*>(), reinterpret_cast<void*>(realloc)},
+{"native_bridge_reallocarray", GetTrampolineFunc<auto(void*, uint64_t, uint64_t) -> void*>(), reinterpret_cast<void*>(reallocarray)},
 {"pthread_attr_destroy", GetTrampolineFunc<auto(void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"pthread_attr_getdetachstate", GetTrampolineFunc<auto(void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"pthread_attr_getguardsize", GetTrampolineFunc<auto(void*, void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
