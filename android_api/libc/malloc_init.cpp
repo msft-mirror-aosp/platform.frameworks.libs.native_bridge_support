@@ -30,6 +30,7 @@ extern "C" size_t native_bridge_malloc_usable_size(const void*);
 extern "C" void* native_bridge_memalign(size_t, size_t);
 extern "C" int native_bridge_posix_memalign(void**, size_t, size_t);
 extern "C" void* native_bridge_realloc(void*, size_t);
+extern "C" void* native_bridge_reallocarray(void*, size_t, size_t);
 extern "C" int native_bridge_malloc_iterate(uintptr_t, size_t, void (*)(uintptr_t, size_t, void*), void*);
 extern "C" void native_bridge_malloc_disable();
 extern "C" void native_bridge_malloc_enable();
@@ -69,6 +70,7 @@ static void malloc_init_impl(libc_globals* globals) {
     native_bridge_pvalloc,
 #endif
     native_bridge_realloc,
+    native_bridge_reallocarray,
 #if defined(HAVE_DEPRECATED_MALLOC_FUNCS)
     native_bridge_valloc,
 #endif
