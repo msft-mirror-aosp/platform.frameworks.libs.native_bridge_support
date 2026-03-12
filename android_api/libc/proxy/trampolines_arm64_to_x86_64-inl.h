@@ -5,6 +5,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"__pthread_cleanup_pop", GetTrampolineFunc<auto(void*, int32_t) -> void>(), reinterpret_cast<void*>(NULL)},
 {"__pthread_cleanup_push", DoCustomTrampoline___pthread_cleanup_push, reinterpret_cast<void*>(DoBadThunk)},
 {"__system_properties_init", GetTrampolineFunc<auto(void) -> int32_t>(), reinterpret_cast<void*>(NULL)},
+{"__system_properties_zygote_reload", GetTrampolineFunc<auto(void) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"__system_property_add", GetTrampolineFunc<auto(void*, uint32_t, void*, uint32_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"__system_property_area_init", GetTrampolineFunc<auto(void) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"__system_property_area_serial", GetTrampolineFunc<auto(void) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
