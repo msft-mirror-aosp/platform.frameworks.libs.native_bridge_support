@@ -32,6 +32,11 @@
       "header": "sys/system_properties.h",
       "is_compatible": true
     },
+    "__system_properties_zygote_reload": {
+      "call_method": "default",
+      "header": "sys/system_properties.h",
+      "is_compatible": true
+    },
     "__system_property_add": {
       "call_method": "default",
       "header": "sys/system_properties.h",

@@ -22,6 +22,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(__get_thread_stack_top);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(__pthread_cleanup_pop);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(__pthread_cleanup_push);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(__system_properties_init);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(__system_properties_zygote_reload);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(__system_property_add);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(__system_property_area_init);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(__system_property_area_serial);
@@ -124,6 +125,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", __pthread_cleanup_pop);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", __pthread_cleanup_push);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", __system_properties_init);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", __system_properties_zygote_reload);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", __system_property_add);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", __system_property_area_init);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libc.so", __system_property_area_serial);
