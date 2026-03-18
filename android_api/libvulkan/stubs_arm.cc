@@ -31,7 +31,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_present_
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_vk_khr_present_wait2);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(com_android_graphics_libvulkan_flags_vk_khr_present_wait2_gpu);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkAcquireNextImage2KHR);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkAcquireNextImageKHR);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(vkAllocateCommandBuffers);
@@ -300,7 +300,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_vk_khr_present_wait2);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", com_android_graphics_libvulkan_flags_vk_khr_present_wait2_gpu);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkAcquireNextImage2KHR);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkAcquireNextImageKHR);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libvulkan.so", vkAllocateCommandBuffers);
