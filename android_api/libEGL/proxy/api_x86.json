@@ -2043,7 +2043,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::#491"
+					"type" : "struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::#522"
 				}
 			],
 			"inheritance" : [],

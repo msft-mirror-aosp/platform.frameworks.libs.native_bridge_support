@@ -23263,5097 +23263,5097 @@
 				{
 					"name" : "glActiveShaderProgram",
 					"offset" : 0,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glActiveShaderProgramEXT",
 					"offset" : 64,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glActiveTexture",
 					"offset" : 128,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glAlphaFunc",
 					"offset" : 192,
-					"type" : "func #528*"
+					"type" : "func #14*"
 				},
 				{
 					"name" : "glAlphaFuncQCOM",
 					"offset" : 256,
-					"type" : "func #529*"
+					"type" : "func #15*"
 				},
 				{
 					"name" : "glAlphaFuncx",
 					"offset" : 320,
-					"type" : "func #530*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "glAlphaFuncxOES",
 					"offset" : 384,
-					"type" : "func #530*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "glApplyFramebufferAttachmentCMAAINTEL",
 					"offset" : 448,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glAttachShader",
 					"offset" : 512,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glBeginConditionalRenderNV",
 					"offset" : 576,
-					"type" : "func #532*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "glBeginPerfMonitorAMD",
 					"offset" : 640,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glBeginPerfQueryINTEL",
 					"offset" : 704,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glBeginQuery",
 					"offset" : 768,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBeginQueryEXT",
 					"offset" : 832,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBeginTransformFeedback",
 					"offset" : 896,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glBindAttribLocation",
 					"offset" : 960,
-					"type" : "func #535*"
+					"type" : "func #21*"
 				},
 				{
 					"name" : "glBindBuffer",
 					"offset" : 1024,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBindBufferBase",
 					"offset" : 1088,
-					"type" : "func #536*"
+					"type" : "func #22*"
 				},
 				{
 					"name" : "glBindBufferRange",
 					"offset" : 1152,
-					"type" : "func #537*"
+					"type" : "func #23*"
 				},
 				{
 					"name" : "glBindFragDataLocationEXT",
 					"offset" : 1216,
-					"type" : "func #535*"
+					"type" : "func #21*"
 				},
 				{
 					"name" : "glBindFragDataLocationIndexedEXT",
 					"offset" : 1280,
-					"type" : "func #538*"
+					"type" : "func #24*"
 				},
 				{
 					"name" : "glBindFramebuffer",
 					"offset" : 1344,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBindFramebufferOES",
 					"offset" : 1408,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBindImageTexture",
 					"offset" : 1472,
-					"type" : "func #539*"
+					"type" : "func #25*"
 				},
 				{
 					"name" : "glBindProgramPipeline",
 					"offset" : 1536,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glBindProgramPipelineEXT",
 					"offset" : 1600,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glBindRenderbuffer",
 					"offset" : 1664,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBindRenderbufferOES",
 					"offset" : 1728,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBindSampler",
 					"offset" : 1792,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glBindTexture",
 					"offset" : 1856,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBindTransformFeedback",
 					"offset" : 1920,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glBindVertexArray",
 					"offset" : 1984,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glBindVertexArrayOES",
 					"offset" : 2048,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glBindVertexBuffer",
 					"offset" : 2112,
-					"type" : "func #540*"
+					"type" : "func #26*"
 				},
 				{
 					"name" : "glBlendBarrier",
 					"offset" : 2176,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glBlendBarrierKHR",
 					"offset" : 2240,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glBlendBarrierNV",
 					"offset" : 2304,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glBlendColor",
 					"offset" : 2368,
-					"type" : "func #541*"
+					"type" : "func #27*"
 				},
 				{
 					"name" : "glBlendEquation",
 					"offset" : 2432,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glBlendEquationOES",
 					"offset" : 2496,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glBlendEquationSeparate",
 					"offset" : 2560,
-					"type" : "func #542*"
+					"type" : "func #28*"
 				},
 				{
 					"name" : "glBlendEquationSeparateOES",
 					"offset" : 2624,
-					"type" : "func #542*"
+					"type" : "func #28*"
 				},
 				{
 					"name" : "glBlendEquationSeparatei",
 					"offset" : 2688,
-					"type" : "func #543*"
+					"type" : "func #29*"
 				},
 				{
 					"name" : "glBlendEquationSeparateiEXT",
 					"offset" : 2752,
-					"type" : "func #543*"
+					"type" : "func #29*"
 				},
 				{
 					"name" : "glBlendEquationSeparateiOES",
 					"offset" : 2816,
-					"type" : "func #543*"
+					"type" : "func #29*"
 				},
 				{
 					"name" : "glBlendEquationi",
 					"offset" : 2880,
-					"type" : "func #532*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "glBlendEquationiEXT",
 					"offset" : 2944,
-					"type" : "func #532*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "glBlendEquationiOES",
 					"offset" : 3008,
-					"type" : "func #532*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "glBlendFunc",
 					"offset" : 3072,
-					"type" : "func #542*"
+					"type" : "func #28*"
 				},
 				{
 					"name" : "glBlendFuncSeparate",
 					"offset" : 3136,
-					"type" : "func #544*"
+					"type" : "func #30*"
 				},
 				{
 					"name" : "glBlendFuncSeparateOES",
 					"offset" : 3200,
-					"type" : "func #544*"
+					"type" : "func #30*"
 				},
 				{
 					"name" : "glBlendFuncSeparatei",
 					"offset" : 3264,
-					"type" : "func #545*"
+					"type" : "func #31*"
 				},
 				{
 					"name" : "glBlendFuncSeparateiEXT",
 					"offset" : 3328,
-					"type" : "func #545*"
+					"type" : "func #31*"
 				},
 				{
 					"name" : "glBlendFuncSeparateiOES",
 					"offset" : 3392,
-					"type" : "func #545*"
+					"type" : "func #31*"
 				},
 				{
 					"name" : "glBlendFunci",
 					"offset" : 3456,
-					"type" : "func #543*"
+					"type" : "func #29*"
 				},
 				{
 					"name" : "glBlendFunciEXT",
 					"offset" : 3520,
-					"type" : "func #543*"
+					"type" : "func #29*"
 				},
 				{
 					"name" : "glBlendFunciOES",
 					"offset" : 3584,
-					"type" : "func #543*"
+					"type" : "func #29*"
 				},
 				{
 					"name" : "glBlendParameteriNV",
 					"offset" : 3648,
-					"type" : "func #546*"
+					"type" : "func #32*"
 				},
 				{
 					"name" : "glBlitFramebuffer",
 					"offset" : 3712,
-					"type" : "func #547*"
+					"type" : "func #33*"
 				},
 				{
 					"name" : "glBlitFramebufferANGLE",
 					"offset" : 3776,
-					"type" : "func #547*"
+					"type" : "func #33*"
 				},
 				{
 					"name" : "glBlitFramebufferNV",
 					"offset" : 3840,
-					"type" : "func #547*"
+					"type" : "func #33*"
 				},
 				{
 					"name" : "glBufferData",
 					"offset" : 3904,
-					"type" : "func #548*"
+					"type" : "func #34*"
 				},
 				{
 					"name" : "glBufferStorageEXT",
 					"offset" : 3968,
-					"type" : "func #549*"
+					"type" : "func #35*"
 				},
 				{
 					"name" : "glBufferStorageExternalEXT",
 					"offset" : 4032,
-					"type" : "func #550*"
+					"type" : "func #36*"
 				},
 				{
 					"name" : "glBufferStorageMemEXT",
 					"offset" : 4096,
-					"type" : "func #551*"
+					"type" : "func #37*"
 				},
 				{
 					"name" : "glBufferSubData",
 					"offset" : 4160,
-					"type" : "func #552*"
+					"type" : "func #38*"
 				},
 				{
 					"name" : "glCheckFramebufferStatus",
 					"offset" : 4224,
-					"type" : "func #553*"
+					"type" : "func #39*"
 				},
 				{
 					"name" : "glCheckFramebufferStatusOES",
 					"offset" : 4288,
-					"type" : "func #553*"
+					"type" : "func #39*"
 				},
 				{
 					"name" : "glClear",
 					"offset" : 4352,
-					"type" : "func #554*"
+					"type" : "func #40*"
 				},
 				{
 					"name" : "glClearBufferfi",
 					"offset" : 4416,
-					"type" : "func #555*"
+					"type" : "func #41*"
 				},
 				{
 					"name" : "glClearBufferfv",
 					"offset" : 4480,
-					"type" : "func #556*"
+					"type" : "func #42*"
 				},
 				{
 					"name" : "glClearBufferiv",
 					"offset" : 4544,
-					"type" : "func #557*"
+					"type" : "func #43*"
 				},
 				{
 					"name" : "glClearBufferuiv",
 					"offset" : 4608,
-					"type" : "func #558*"
+					"type" : "func #44*"
 				},
 				{
 					"name" : "glClearColor",
 					"offset" : 4672,
-					"type" : "func #541*"
+					"type" : "func #27*"
 				},
 				{
 					"name" : "glClearColorx",
 					"offset" : 4736,
-					"type" : "func #559*"
+					"type" : "func #45*"
 				},
 				{
 					"name" : "glClearColorxOES",
 					"offset" : 4800,
-					"type" : "func #559*"
+					"type" : "func #45*"
 				},
 				{
 					"name" : "glClearDepthf",
 					"offset" : 4864,
-					"type" : "func #560*"
+					"type" : "func #46*"
 				},
 				{
 					"name" : "glClearDepthfOES",
 					"offset" : 4928,
-					"type" : "func #561*"
+					"type" : "func #47*"
 				},
 				{
 					"name" : "glClearDepthx",
 					"offset" : 4992,
-					"type" : "func #562*"
+					"type" : "func #48*"
 				},
 				{
 					"name" : "glClearDepthxOES",
 					"offset" : 5056,
-					"type" : "func #562*"
+					"type" : "func #48*"
 				},
 				{
 					"name" : "glClearPixelLocalStorageuiEXT",
 					"offset" : 5120,
-					"type" : "func #563*"
+					"type" : "func #49*"
 				},
 				{
 					"name" : "glClearStencil",
 					"offset" : 5184,
-					"type" : "func #564*"
+					"type" : "func #50*"
 				},
 				{
 					"name" : "glClearTexImageEXT",
 					"offset" : 5248,
-					"type" : "func #565*"
+					"type" : "func #51*"
 				},
 				{
 					"name" : "glClearTexSubImageEXT",
 					"offset" : 5312,
-					"type" : "func #566*"
+					"type" : "func #52*"
 				},
 				{
 					"name" : "glClientActiveTexture",
 					"offset" : 5376,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glClientWaitSync",
 					"offset" : 5440,
-					"type" : "func #567*"
+					"type" : "func #53*"
 				},
 				{
 					"name" : "glClientWaitSyncAPPLE",
 					"offset" : 5504,
-					"type" : "func #567*"
+					"type" : "func #53*"
 				},
 				{
 					"name" : "glClipControlEXT",
 					"offset" : 5568,
-					"type" : "func #542*"
+					"type" : "func #28*"
 				},
 				{
 					"name" : "glClipPlanef",
 					"offset" : 5632,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glClipPlanefIMG",
 					"offset" : 5696,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glClipPlanefOES",
 					"offset" : 5760,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glClipPlanex",
 					"offset" : 5824,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glClipPlanexIMG",
 					"offset" : 5888,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glClipPlanexOES",
 					"offset" : 5952,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glColor4f",
 					"offset" : 6016,
-					"type" : "func #541*"
+					"type" : "func #27*"
 				},
 				{
 					"name" : "glColor4ub",
 					"offset" : 6080,
-					"type" : "func #570*"
+					"type" : "func #56*"
 				},
 				{
 					"name" : "glColor4x",
 					"offset" : 6144,
-					"type" : "func #559*"
+					"type" : "func #45*"
 				},
 				{
 					"name" : "glColor4xOES",
 					"offset" : 6208,
-					"type" : "func #559*"
+					"type" : "func #45*"
 				},
 				{
 					"name" : "glColorMask",
 					"offset" : 6272,
-					"type" : "func #571*"
+					"type" : "func #57*"
 				},
 				{
 					"name" : "glColorMaski",
 					"offset" : 6336,
-					"type" : "func #572*"
+					"type" : "func #58*"
 				},
 				{
 					"name" : "glColorMaskiEXT",
 					"offset" : 6400,
-					"type" : "func #572*"
+					"type" : "func #58*"
 				},
 				{
 					"name" : "glColorMaskiOES",
 					"offset" : 6464,
-					"type" : "func #572*"
+					"type" : "func #58*"
 				},
 				{
 					"name" : "glColorPointer",
 					"offset" : 6528,
-					"type" : "func #573*"
+					"type" : "func #59*"
 				},
 				{
 					"name" : "glCompileShader",
 					"offset" : 6592,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glCompressedTexImage2D",
 					"offset" : 6656,
-					"type" : "func #574*"
+					"type" : "func #60*"
 				},
 				{
 					"name" : "glCompressedTexImage3D",
 					"offset" : 6720,
-					"type" : "func #575*"
+					"type" : "func #61*"
 				},
 				{
 					"name" : "glCompressedTexImage3DOES",
 					"offset" : 6784,
-					"type" : "func #575*"
+					"type" : "func #61*"
 				},
 				{
 					"name" : "glCompressedTexSubImage2D",
 					"offset" : 6848,
-					"type" : "func #576*"
+					"type" : "func #62*"
 				},
 				{
 					"name" : "glCompressedTexSubImage3D",
 					"offset" : 6912,
-					"type" : "func #577*"
+					"type" : "func #63*"
 				},
 				{
 					"name" : "glCompressedTexSubImage3DOES",
 					"offset" : 6976,
-					"type" : "func #577*"
+					"type" : "func #63*"
 				},
 				{
 					"name" : "glConservativeRasterParameteriNV",
 					"offset" : 7040,
-					"type" : "func #546*"
+					"type" : "func #32*"
 				},
 				{
 					"name" : "glCopyBufferSubData",
 					"offset" : 7104,
-					"type" : "func #578*"
+					"type" : "func #64*"
 				},
 				{
 					"name" : "glCopyBufferSubDataNV",
 					"offset" : 7168,
-					"type" : "func #578*"
+					"type" : "func #64*"
 				},
 				{
 					"name" : "glCopyImageSubData",
 					"offset" : 7232,
-					"type" : "func #579*"
+					"type" : "func #65*"
 				},
 				{
 					"name" : "glCopyImageSubDataEXT",
 					"offset" : 7296,
-					"type" : "func #579*"
+					"type" : "func #65*"
 				},
 				{
 					"name" : "glCopyImageSubDataOES",
 					"offset" : 7360,
-					"type" : "func #579*"
+					"type" : "func #65*"
 				},
 				{
 					"name" : "glCopyPathNV",
 					"offset" : 7424,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glCopyTexImage2D",
 					"offset" : 7488,
-					"type" : "func #580*"
+					"type" : "func #66*"
 				},
 				{
 					"name" : "glCopyTexSubImage2D",
 					"offset" : 7552,
-					"type" : "func #581*"
+					"type" : "func #67*"
 				},
 				{
 					"name" : "glCopyTexSubImage3D",
 					"offset" : 7616,
-					"type" : "func #582*"
+					"type" : "func #68*"
 				},
 				{
 					"name" : "glCopyTexSubImage3DOES",
 					"offset" : 7680,
-					"type" : "func #582*"
+					"type" : "func #68*"
 				},
 				{
 					"name" : "glCopyTextureLevelsAPPLE",
 					"offset" : 7744,
-					"type" : "func #583*"
+					"type" : "func #69*"
 				},
 				{
 					"name" : "glCoverFillPathInstancedNV",
 					"offset" : 7808,
-					"type" : "func #584*"
+					"type" : "func #70*"
 				},
 				{
 					"name" : "glCoverFillPathNV",
 					"offset" : 7872,
-					"type" : "func #532*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "glCoverStrokePathInstancedNV",
 					"offset" : 7936,
-					"type" : "func #584*"
+					"type" : "func #70*"
 				},
 				{
 					"name" : "glCoverStrokePathNV",
 					"offset" : 8000,
-					"type" : "func #532*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "glCoverageMaskNV",
 					"offset" : 8064,
-					"type" : "func #585*"
+					"type" : "func #71*"
 				},
 				{
 					"name" : "glCoverageModulationNV",
 					"offset" : 8128,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glCoverageModulationTableNV",
 					"offset" : 8192,
-					"type" : "func #586*"
+					"type" : "func #72*"
 				},
 				{
 					"name" : "glCoverageOperationNV",
 					"offset" : 8256,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glCreateMemoryObjectsEXT",
 					"offset" : 8320,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glCreatePerfQueryINTEL",
 					"offset" : 8384,
-					"type" : "func #588*"
+					"type" : "func #74*"
 				},
 				{
 					"name" : "glCreateProgram",
 					"offset" : 8448,
-					"type" : "func #589*"
+					"type" : "func #75*"
 				},
 				{
 					"name" : "glCreateShader",
 					"offset" : 8512,
-					"type" : "func #590*"
+					"type" : "func #76*"
 				},
 				{
 					"name" : "glCreateShaderProgramv",
 					"offset" : 8576,
-					"type" : "func #591*"
+					"type" : "func #77*"
 				},
 				{
 					"name" : "glCreateShaderProgramvEXT",
 					"offset" : 8640,
-					"type" : "func #592*"
+					"type" : "func #78*"
 				},
 				{
 					"name" : "glCullFace",
 					"offset" : 8704,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glCurrentPaletteMatrixOES",
 					"offset" : 8768,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glDebugMessageCallback",
 					"offset" : 8832,
-					"type" : "func #593*"
+					"type" : "func #79*"
 				},
 				{
 					"name" : "glDebugMessageCallbackKHR",
 					"offset" : 8896,
-					"type" : "func #595*"
+					"type" : "func #81*"
 				},
 				{
 					"name" : "glDebugMessageControl",
 					"offset" : 8960,
-					"type" : "func #596*"
+					"type" : "func #82*"
 				},
 				{
 					"name" : "glDebugMessageControlKHR",
 					"offset" : 9024,
-					"type" : "func #596*"
+					"type" : "func #82*"
 				},
 				{
 					"name" : "glDebugMessageInsert",
 					"offset" : 9088,
-					"type" : "func #597*"
+					"type" : "func #83*"
 				},
 				{
 					"name" : "glDebugMessageInsertKHR",
 					"offset" : 9152,
-					"type" : "func #597*"
+					"type" : "func #83*"
 				},
 				{
 					"name" : "glDeleteBuffers",
 					"offset" : 9216,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteFencesNV",
 					"offset" : 9280,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteFramebuffers",
 					"offset" : 9344,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteFramebuffersOES",
 					"offset" : 9408,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteMemoryObjectsEXT",
 					"offset" : 9472,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeletePathsNV",
 					"offset" : 9536,
-					"type" : "func #599*"
+					"type" : "func #85*"
 				},
 				{
 					"name" : "glDeletePerfMonitorsAMD",
 					"offset" : 9600,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glDeletePerfQueryINTEL",
 					"offset" : 9664,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glDeleteProgram",
 					"offset" : 9728,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glDeleteProgramPipelines",
 					"offset" : 9792,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteProgramPipelinesEXT",
 					"offset" : 9856,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteQueries",
 					"offset" : 9920,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteQueriesEXT",
 					"offset" : 9984,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteRenderbuffers",
 					"offset" : 10048,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteRenderbuffersOES",
 					"offset" : 10112,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteSamplers",
 					"offset" : 10176,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteSemaphoresEXT",
 					"offset" : 10240,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteShader",
 					"offset" : 10304,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glDeleteSync",
 					"offset" : 10368,
-					"type" : "func #600*"
+					"type" : "func #86*"
 				},
 				{
 					"name" : "glDeleteSyncAPPLE",
 					"offset" : 10432,
-					"type" : "func #600*"
+					"type" : "func #86*"
 				},
 				{
 					"name" : "glDeleteTextures",
 					"offset" : 10496,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteTransformFeedbacks",
 					"offset" : 10560,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteVertexArrays",
 					"offset" : 10624,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDeleteVertexArraysOES",
 					"offset" : 10688,
-					"type" : "func #598*"
+					"type" : "func #84*"
 				},
 				{
 					"name" : "glDepthFunc",
 					"offset" : 10752,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glDepthMask",
 					"offset" : 10816,
-					"type" : "func #585*"
+					"type" : "func #71*"
 				},
 				{
 					"name" : "glDepthRangeArrayfvNV",
 					"offset" : 10880,
-					"type" : "func #601*"
+					"type" : "func #87*"
 				},
 				{
 					"name" : "glDepthRangeArrayfvOES",
 					"offset" : 10944,
-					"type" : "func #601*"
+					"type" : "func #87*"
 				},
 				{
 					"name" : "glDepthRangeIndexedfNV",
 					"offset" : 11008,
-					"type" : "func #602*"
+					"type" : "func #88*"
 				},
 				{
 					"name" : "glDepthRangeIndexedfOES",
 					"offset" : 11072,
-					"type" : "func #602*"
+					"type" : "func #88*"
 				},
 				{
 					"name" : "glDepthRangef",
 					"offset" : 11136,
-					"type" : "func #603*"
+					"type" : "func #89*"
 				},
 				{
 					"name" : "glDepthRangefOES",
 					"offset" : 11200,
-					"type" : "func #604*"
+					"type" : "func #90*"
 				},
 				{
 					"name" : "glDepthRangex",
 					"offset" : 11264,
-					"type" : "func #605*"
+					"type" : "func #91*"
 				},
 				{
 					"name" : "glDepthRangexOES",
 					"offset" : 11328,
-					"type" : "func #605*"
+					"type" : "func #91*"
 				},
 				{
 					"name" : "glDetachShader",
 					"offset" : 11392,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glDisable",
 					"offset" : 11456,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glDisableClientState",
 					"offset" : 11520,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glDisableDriverControlQCOM",
 					"offset" : 11584,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glDisableVertexAttribArray",
 					"offset" : 11648,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glDisablei",
 					"offset" : 11712,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glDisableiEXT",
 					"offset" : 11776,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glDisableiNV",
 					"offset" : 11840,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glDisableiOES",
 					"offset" : 11904,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glDiscardFramebufferEXT",
 					"offset" : 11968,
-					"type" : "func #606*"
+					"type" : "func #92*"
 				},
 				{
 					"name" : "glDispatchCompute",
 					"offset" : 12032,
-					"type" : "func #607*"
+					"type" : "func #93*"
 				},
 				{
 					"name" : "glDispatchComputeIndirect",
 					"offset" : 12096,
-					"type" : "func #608*"
+					"type" : "func #94*"
 				},
 				{
 					"name" : "glDrawArrays",
 					"offset" : 12160,
-					"type" : "func #609*"
+					"type" : "func #95*"
 				},
 				{
 					"name" : "glDrawArraysIndirect",
 					"offset" : 12224,
-					"type" : "func #610*"
+					"type" : "func #96*"
 				},
 				{
 					"name" : "glDrawArraysInstanced",
 					"offset" : 12288,
-					"type" : "func #611*"
+					"type" : "func #97*"
 				},
 				{
 					"name" : "glDrawArraysInstancedANGLE",
 					"offset" : 12352,
-					"type" : "func #611*"
+					"type" : "func #97*"
 				},
 				{
 					"name" : "glDrawArraysInstancedBaseInstanceEXT",
 					"offset" : 12416,
-					"type" : "func #612*"
+					"type" : "func #98*"
 				},
 				{
 					"name" : "glDrawArraysInstancedEXT",
 					"offset" : 12480,
-					"type" : "func #611*"
+					"type" : "func #97*"
 				},
 				{
 					"name" : "glDrawArraysInstancedNV",
 					"offset" : 12544,
-					"type" : "func #611*"
+					"type" : "func #97*"
 				},
 				{
 					"name" : "glDrawBuffers",
 					"offset" : 12608,
-					"type" : "func #613*"
+					"type" : "func #99*"
 				},
 				{
 					"name" : "glDrawBuffersEXT",
 					"offset" : 12672,
-					"type" : "func #613*"
+					"type" : "func #99*"
 				},
 				{
 					"name" : "glDrawBuffersIndexedEXT",
 					"offset" : 12736,
-					"type" : "func #614*"
+					"type" : "func #100*"
 				},
 				{
 					"name" : "glDrawBuffersNV",
 					"offset" : 12800,
-					"type" : "func #613*"
+					"type" : "func #99*"
 				},
 				{
 					"name" : "glDrawElements",
 					"offset" : 12864,
-					"type" : "func #615*"
+					"type" : "func #101*"
 				},
 				{
 					"name" : "glDrawElementsBaseVertex",
 					"offset" : 12928,
-					"type" : "func #616*"
+					"type" : "func #102*"
 				},
 				{
 					"name" : "glDrawElementsBaseVertexEXT",
 					"offset" : 12992,
-					"type" : "func #616*"
+					"type" : "func #102*"
 				},
 				{
 					"name" : "glDrawElementsBaseVertexOES",
 					"offset" : 13056,
-					"type" : "func #616*"
+					"type" : "func #102*"
 				},
 				{
 					"name" : "glDrawElementsIndirect",
 					"offset" : 13120,
-					"type" : "func #617*"
+					"type" : "func #103*"
 				},
 				{
 					"name" : "glDrawElementsInstanced",
 					"offset" : 13184,
-					"type" : "func #618*"
+					"type" : "func #104*"
 				},
 				{
 					"name" : "glDrawElementsInstancedANGLE",
 					"offset" : 13248,
-					"type" : "func #618*"
+					"type" : "func #104*"
 				},
 				{
 					"name" : "glDrawElementsInstancedBaseInstanceEXT",
 					"offset" : 13312,
-					"type" : "func #619*"
+					"type" : "func #105*"
 				},
 				{
 					"name" : "glDrawElementsInstancedBaseVertex",
 					"offset" : 13376,
-					"type" : "func #620*"
+					"type" : "func #106*"
 				},
 				{
 					"name" : "glDrawElementsInstancedBaseVertexBaseInstanceEXT",
 					"offset" : 13440,
-					"type" : "func #621*"
+					"type" : "func #107*"
 				},
 				{
 					"name" : "glDrawElementsInstancedBaseVertexEXT",
 					"offset" : 13504,
-					"type" : "func #620*"
+					"type" : "func #106*"
 				},
 				{
 					"name" : "glDrawElementsInstancedBaseVertexOES",
 					"offset" : 13568,
-					"type" : "func #620*"
+					"type" : "func #106*"
 				},
 				{
 					"name" : "glDrawElementsInstancedEXT",
 					"offset" : 13632,
-					"type" : "func #618*"
+					"type" : "func #104*"
 				},
 				{
 					"name" : "glDrawElementsInstancedNV",
 					"offset" : 13696,
-					"type" : "func #618*"
+					"type" : "func #104*"
 				},
 				{
 					"name" : "glDrawRangeElements",
 					"offset" : 13760,
-					"type" : "func #622*"
+					"type" : "func #108*"
 				},
 				{
 					"name" : "glDrawRangeElementsBaseVertex",
 					"offset" : 13824,
-					"type" : "func #623*"
+					"type" : "func #109*"
 				},
 				{
 					"name" : "glDrawRangeElementsBaseVertexEXT",
 					"offset" : 13888,
-					"type" : "func #623*"
+					"type" : "func #109*"
 				},
 				{
 					"name" : "glDrawRangeElementsBaseVertexOES",
 					"offset" : 13952,
-					"type" : "func #623*"
+					"type" : "func #109*"
 				},
 				{
 					"name" : "glDrawTexfOES",
 					"offset" : 14016,
-					"type" : "func #624*"
+					"type" : "func #110*"
 				},
 				{
 					"name" : "glDrawTexfvOES",
 					"offset" : 14080,
-					"type" : "func #625*"
+					"type" : "func #111*"
 				},
 				{
 					"name" : "glDrawTexiOES",
 					"offset" : 14144,
-					"type" : "func #626*"
+					"type" : "func #112*"
 				},
 				{
 					"name" : "glDrawTexivOES",
 					"offset" : 14208,
-					"type" : "func #627*"
+					"type" : "func #113*"
 				},
 				{
 					"name" : "glDrawTexsOES",
 					"offset" : 14272,
-					"type" : "func #628*"
+					"type" : "func #114*"
 				},
 				{
 					"name" : "glDrawTexsvOES",
 					"offset" : 14336,
-					"type" : "func #629*"
+					"type" : "func #115*"
 				},
 				{
 					"name" : "glDrawTexxOES",
 					"offset" : 14400,
-					"type" : "func #630*"
+					"type" : "func #116*"
 				},
 				{
 					"name" : "glDrawTexxvOES",
 					"offset" : 14464,
-					"type" : "func #631*"
+					"type" : "func #117*"
 				},
 				{
 					"name" : "glDrawTransformFeedbackEXT",
 					"offset" : 14528,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glDrawTransformFeedbackInstancedEXT",
 					"offset" : 14592,
-					"type" : "func #632*"
+					"type" : "func #118*"
 				},
 				{
 					"name" : "glDrawVkImageNV",
 					"offset" : 14656,
-					"type" : "func #633*"
+					"type" : "func #119*"
 				},
 				{
 					"name" : "glEGLImageTargetRenderbufferStorageOES",
 					"offset" : 14720,
-					"type" : "func #634*"
+					"type" : "func #120*"
 				},
 				{
 					"name" : "glEGLImageTargetTexStorageEXT",
 					"offset" : 14784,
-					"type" : "func #635*"
+					"type" : "func #121*"
 				},
 				{
 					"name" : "glEGLImageTargetTexture2DOES",
 					"offset" : 14848,
-					"type" : "func #634*"
+					"type" : "func #120*"
 				},
 				{
 					"name" : "glEGLImageTargetTextureStorageEXT",
 					"offset" : 14912,
-					"type" : "func #636*"
+					"type" : "func #122*"
 				},
 				{
 					"name" : "glEnable",
 					"offset" : 14976,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glEnableClientState",
 					"offset" : 15040,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glEnableDriverControlQCOM",
 					"offset" : 15104,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glEnableVertexAttribArray",
 					"offset" : 15168,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glEnablei",
 					"offset" : 15232,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glEnableiEXT",
 					"offset" : 15296,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glEnableiNV",
 					"offset" : 15360,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glEnableiOES",
 					"offset" : 15424,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glEndConditionalRenderNV",
 					"offset" : 15488,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glEndPerfMonitorAMD",
 					"offset" : 15552,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glEndPerfQueryINTEL",
 					"offset" : 15616,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glEndQuery",
 					"offset" : 15680,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glEndQueryEXT",
 					"offset" : 15744,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glEndTilingQCOM",
 					"offset" : 15808,
-					"type" : "func #554*"
+					"type" : "func #40*"
 				},
 				{
 					"name" : "glEndTransformFeedback",
 					"offset" : 15872,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glExtGetBufferPointervQCOM",
 					"offset" : 15936,
-					"type" : "func #637*"
+					"type" : "func #123*"
 				},
 				{
 					"name" : "glExtGetBuffersQCOM",
 					"offset" : 16000,
-					"type" : "func #638*"
+					"type" : "func #124*"
 				},
 				{
 					"name" : "glExtGetFramebuffersQCOM",
 					"offset" : 16064,
-					"type" : "func #638*"
+					"type" : "func #124*"
 				},
 				{
 					"name" : "glExtGetProgramBinarySourceQCOM",
 					"offset" : 16128,
-					"type" : "func #639*"
+					"type" : "func #125*"
 				},
 				{
 					"name" : "glExtGetProgramsQCOM",
 					"offset" : 16192,
-					"type" : "func #638*"
+					"type" : "func #124*"
 				},
 				{
 					"name" : "glExtGetRenderbuffersQCOM",
 					"offset" : 16256,
-					"type" : "func #638*"
+					"type" : "func #124*"
 				},
 				{
 					"name" : "glExtGetShadersQCOM",
 					"offset" : 16320,
-					"type" : "func #638*"
+					"type" : "func #124*"
 				},
 				{
 					"name" : "glExtGetTexLevelParameterivQCOM",
 					"offset" : 16384,
-					"type" : "func #640*"
+					"type" : "func #126*"
 				},
 				{
 					"name" : "glExtGetTexSubImageQCOM",
 					"offset" : 16448,
-					"type" : "func #641*"
+					"type" : "func #127*"
 				},
 				{
 					"name" : "glExtGetTexturesQCOM",
 					"offset" : 16512,
-					"type" : "func #638*"
+					"type" : "func #124*"
 				},
 				{
 					"name" : "glExtIsProgramBinaryQCOM",
 					"offset" : 16576,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glExtTexObjectStateOverrideiQCOM",
 					"offset" : 16640,
-					"type" : "func #643*"
+					"type" : "func #129*"
 				},
 				{
 					"name" : "glFenceSync",
 					"offset" : 16704,
-					"type" : "func #644*"
+					"type" : "func #130*"
 				},
 				{
 					"name" : "glFenceSyncAPPLE",
 					"offset" : 16768,
-					"type" : "func #644*"
+					"type" : "func #130*"
 				},
 				{
 					"name" : "glFinish",
 					"offset" : 16832,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glFinishFenceNV",
 					"offset" : 16896,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glFlush",
 					"offset" : 16960,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glFlushMappedBufferRange",
 					"offset" : 17024,
-					"type" : "func #645*"
+					"type" : "func #131*"
 				},
 				{
 					"name" : "glFlushMappedBufferRangeEXT",
 					"offset" : 17088,
-					"type" : "func #645*"
+					"type" : "func #131*"
 				},
 				{
 					"name" : "glFogf",
 					"offset" : 17152,
-					"type" : "func #528*"
+					"type" : "func #14*"
 				},
 				{
 					"name" : "glFogfv",
 					"offset" : 17216,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glFogx",
 					"offset" : 17280,
-					"type" : "func #530*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "glFogxOES",
 					"offset" : 17344,
-					"type" : "func #530*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "glFogxv",
 					"offset" : 17408,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glFogxvOES",
 					"offset" : 17472,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glFragmentCoverageColorNV",
 					"offset" : 17536,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glFramebufferFetchBarrierEXT",
 					"offset" : 17600,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glFramebufferFetchBarrierQCOM",
 					"offset" : 17664,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glFramebufferFoveationConfigQCOM",
 					"offset" : 17728,
-					"type" : "func #646*"
+					"type" : "func #132*"
 				},
 				{
 					"name" : "glFramebufferFoveationParametersQCOM",
 					"offset" : 17792,
-					"type" : "func #647*"
+					"type" : "func #133*"
 				},
 				{
 					"name" : "glFramebufferParameteri",
 					"offset" : 17856,
-					"type" : "func #643*"
+					"type" : "func #129*"
 				},
 				{
 					"name" : "glFramebufferPixelLocalStorageSizeEXT",
 					"offset" : 17920,
-					"type" : "func #599*"
+					"type" : "func #85*"
 				},
 				{
 					"name" : "glFramebufferRenderbuffer",
 					"offset" : 17984,
-					"type" : "func #648*"
+					"type" : "func #134*"
 				},
 				{
 					"name" : "glFramebufferRenderbufferOES",
 					"offset" : 18048,
-					"type" : "func #648*"
+					"type" : "func #134*"
 				},
 				{
 					"name" : "glFramebufferSampleLocationsfvNV",
 					"offset" : 18112,
-					"type" : "func #649*"
+					"type" : "func #135*"
 				},
 				{
 					"name" : "glFramebufferTexture",
 					"offset" : 18176,
-					"type" : "func #650*"
+					"type" : "func #136*"
 				},
 				{
 					"name" : "glFramebufferTexture2D",
 					"offset" : 18240,
-					"type" : "func #651*"
+					"type" : "func #137*"
 				},
 				{
 					"name" : "glFramebufferTexture2DDownsampleIMG",
 					"offset" : 18304,
-					"type" : "func #652*"
+					"type" : "func #138*"
 				},
 				{
 					"name" : "glFramebufferTexture2DMultisampleEXT",
 					"offset" : 18368,
-					"type" : "func #653*"
+					"type" : "func #139*"
 				},
 				{
 					"name" : "glFramebufferTexture2DMultisampleIMG",
 					"offset" : 18432,
-					"type" : "func #653*"
+					"type" : "func #139*"
 				},
 				{
 					"name" : "glFramebufferTexture2DOES",
 					"offset" : 18496,
-					"type" : "func #651*"
+					"type" : "func #137*"
 				},
 				{
 					"name" : "glFramebufferTexture3DOES",
 					"offset" : 18560,
-					"type" : "func #654*"
+					"type" : "func #140*"
 				},
 				{
 					"name" : "glFramebufferTextureEXT",
 					"offset" : 18624,
-					"type" : "func #650*"
+					"type" : "func #136*"
 				},
 				{
 					"name" : "glFramebufferTextureLayer",
 					"offset" : 18688,
-					"type" : "func #655*"
+					"type" : "func #141*"
 				},
 				{
 					"name" : "glFramebufferTextureLayerDownsampleIMG",
 					"offset" : 18752,
-					"type" : "func #656*"
+					"type" : "func #142*"
 				},
 				{
 					"name" : "glFramebufferTextureMultisampleMultiviewOVR",
 					"offset" : 18816,
-					"type" : "func #657*"
+					"type" : "func #143*"
 				},
 				{
 					"name" : "glFramebufferTextureMultiviewOVR",
 					"offset" : 18880,
-					"type" : "func #658*"
+					"type" : "func #144*"
 				},
 				{
 					"name" : "glFramebufferTextureOES",
 					"offset" : 18944,
-					"type" : "func #650*"
+					"type" : "func #136*"
 				},
 				{
 					"name" : "glFrontFace",
 					"offset" : 19008,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glFrustumf",
 					"offset" : 19072,
-					"type" : "func #659*"
+					"type" : "func #145*"
 				},
 				{
 					"name" : "glFrustumfOES",
 					"offset" : 19136,
-					"type" : "func #659*"
+					"type" : "func #145*"
 				},
 				{
 					"name" : "glFrustumx",
 					"offset" : 19200,
-					"type" : "func #660*"
+					"type" : "func #146*"
 				},
 				{
 					"name" : "glFrustumxOES",
 					"offset" : 19264,
-					"type" : "func #660*"
+					"type" : "func #146*"
 				},
 				{
 					"name" : "glGenBuffers",
 					"offset" : 19328,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenFencesNV",
 					"offset" : 19392,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenFramebuffers",
 					"offset" : 19456,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenFramebuffersOES",
 					"offset" : 19520,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenPathsNV",
 					"offset" : 19584,
-					"type" : "func #661*"
+					"type" : "func #147*"
 				},
 				{
 					"name" : "glGenPerfMonitorsAMD",
 					"offset" : 19648,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenProgramPipelines",
 					"offset" : 19712,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenProgramPipelinesEXT",
 					"offset" : 19776,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenQueries",
 					"offset" : 19840,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenQueriesEXT",
 					"offset" : 19904,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenRenderbuffers",
 					"offset" : 19968,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenRenderbuffersOES",
 					"offset" : 20032,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenSamplers",
 					"offset" : 20096,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenSemaphoresEXT",
 					"offset" : 20160,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenTextures",
 					"offset" : 20224,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenTransformFeedbacks",
 					"offset" : 20288,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenVertexArrays",
 					"offset" : 20352,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenVertexArraysOES",
 					"offset" : 20416,
-					"type" : "func #587*"
+					"type" : "func #73*"
 				},
 				{
 					"name" : "glGenerateMipmap",
 					"offset" : 20480,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glGenerateMipmapOES",
 					"offset" : 20544,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glGetActiveAttrib",
 					"offset" : 20608,
-					"type" : "func #662*"
+					"type" : "func #148*"
 				},
 				{
 					"name" : "glGetActiveUniform",
 					"offset" : 20672,
-					"type" : "func #662*"
+					"type" : "func #148*"
 				},
 				{
 					"name" : "glGetActiveUniformBlockName",
 					"offset" : 20736,
-					"type" : "func #663*"
+					"type" : "func #149*"
 				},
 				{
 					"name" : "glGetActiveUniformBlockiv",
 					"offset" : 20800,
-					"type" : "func #664*"
+					"type" : "func #150*"
 				},
 				{
 					"name" : "glGetActiveUniformsiv",
 					"offset" : 20864,
-					"type" : "func #665*"
+					"type" : "func #151*"
 				},
 				{
 					"name" : "glGetAttachedShaders",
 					"offset" : 20928,
-					"type" : "func #666*"
+					"type" : "func #152*"
 				},
 				{
 					"name" : "glGetAttribLocation",
 					"offset" : 20992,
-					"type" : "func #667*"
+					"type" : "func #153*"
 				},
 				{
 					"name" : "glGetBooleani_v",
 					"offset" : 21056,
-					"type" : "func #668*"
+					"type" : "func #154*"
 				},
 				{
 					"name" : "glGetBooleanv",
 					"offset" : 21120,
-					"type" : "func #669*"
+					"type" : "func #155*"
 				},
 				{
 					"name" : "glGetBufferParameteri64v",
 					"offset" : 21184,
-					"type" : "func #670*"
+					"type" : "func #156*"
 				},
 				{
 					"name" : "glGetBufferParameteriv",
 					"offset" : 21248,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetBufferPointerv",
 					"offset" : 21312,
-					"type" : "func #672*"
+					"type" : "func #158*"
 				},
 				{
 					"name" : "glGetBufferPointervOES",
 					"offset" : 21376,
-					"type" : "func #672*"
+					"type" : "func #158*"
 				},
 				{
 					"name" : "glGetClipPlanef",
 					"offset" : 21440,
-					"type" : "func #673*"
+					"type" : "func #159*"
 				},
 				{
 					"name" : "glGetClipPlanefOES",
 					"offset" : 21504,
-					"type" : "func #673*"
+					"type" : "func #159*"
 				},
 				{
 					"name" : "glGetClipPlanex",
 					"offset" : 21568,
-					"type" : "func #674*"
+					"type" : "func #160*"
 				},
 				{
 					"name" : "glGetClipPlanexOES",
 					"offset" : 21632,
-					"type" : "func #674*"
+					"type" : "func #160*"
 				},
 				{
 					"name" : "glGetCoverageModulationTableNV",
 					"offset" : 21696,
-					"type" : "func #675*"
+					"type" : "func #161*"
 				},
 				{
 					"name" : "glGetDebugMessageLog",
 					"offset" : 21760,
-					"type" : "func #676*"
+					"type" : "func #162*"
 				},
 				{
 					"name" : "glGetDebugMessageLogKHR",
 					"offset" : 21824,
-					"type" : "func #676*"
+					"type" : "func #162*"
 				},
 				{
 					"name" : "glGetDriverControlStringQCOM",
 					"offset" : 21888,
-					"type" : "func #677*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "glGetDriverControlsQCOM",
 					"offset" : 21952,
-					"type" : "func #678*"
+					"type" : "func #164*"
 				},
 				{
 					"name" : "glGetError",
 					"offset" : 22016,
-					"type" : "func #679*"
+					"type" : "func #165*"
 				},
 				{
 					"name" : "glGetFenceivNV",
 					"offset" : 22080,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetFirstPerfQueryIdINTEL",
 					"offset" : 22144,
-					"type" : "func #681*"
+					"type" : "func #167*"
 				},
 				{
 					"name" : "glGetFixedv",
 					"offset" : 22208,
-					"type" : "func #674*"
+					"type" : "func #160*"
 				},
 				{
 					"name" : "glGetFixedvOES",
 					"offset" : 22272,
-					"type" : "func #674*"
+					"type" : "func #160*"
 				},
 				{
 					"name" : "glGetFloati_vNV",
 					"offset" : 22336,
-					"type" : "func #682*"
+					"type" : "func #168*"
 				},
 				{
 					"name" : "glGetFloati_vOES",
 					"offset" : 22400,
-					"type" : "func #682*"
+					"type" : "func #168*"
 				},
 				{
 					"name" : "glGetFloatv",
 					"offset" : 22464,
-					"type" : "func #673*"
+					"type" : "func #159*"
 				},
 				{
 					"name" : "glGetFragDataIndexEXT",
 					"offset" : 22528,
-					"type" : "func #667*"
+					"type" : "func #153*"
 				},
 				{
 					"name" : "glGetFragDataLocation",
 					"offset" : 22592,
-					"type" : "func #667*"
+					"type" : "func #153*"
 				},
 				{
 					"name" : "glGetFramebufferAttachmentParameteriv",
 					"offset" : 22656,
-					"type" : "func #683*"
+					"type" : "func #169*"
 				},
 				{
 					"name" : "glGetFramebufferAttachmentParameterivOES",
 					"offset" : 22720,
-					"type" : "func #683*"
+					"type" : "func #169*"
 				},
 				{
 					"name" : "glGetFramebufferParameteriv",
 					"offset" : 22784,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetFramebufferPixelLocalStorageSizeEXT",
 					"offset" : 22848,
-					"type" : "func #684*"
+					"type" : "func #170*"
 				},
 				{
 					"name" : "glGetGraphicsResetStatus",
 					"offset" : 22912,
-					"type" : "func #679*"
+					"type" : "func #165*"
 				},
 				{
 					"name" : "glGetGraphicsResetStatusEXT",
 					"offset" : 22976,
-					"type" : "func #679*"
+					"type" : "func #165*"
 				},
 				{
 					"name" : "glGetGraphicsResetStatusKHR",
 					"offset" : 23040,
-					"type" : "func #679*"
+					"type" : "func #165*"
 				},
 				{
 					"name" : "glGetImageHandleNV",
 					"offset" : 23104,
-					"type" : "func #685*"
+					"type" : "func #171*"
 				},
 				{
 					"name" : "glGetInteger64i_v",
 					"offset" : 23168,
-					"type" : "func #686*"
+					"type" : "func #172*"
 				},
 				{
 					"name" : "glGetInteger64v",
 					"offset" : 23232,
-					"type" : "func #687*"
+					"type" : "func #173*"
 				},
 				{
 					"name" : "glGetInteger64vAPPLE",
 					"offset" : 23296,
-					"type" : "func #687*"
+					"type" : "func #173*"
 				},
 				{
 					"name" : "glGetIntegeri_v",
 					"offset" : 23360,
-					"type" : "func #688*"
+					"type" : "func #174*"
 				},
 				{
 					"name" : "glGetIntegeri_vEXT",
 					"offset" : 23424,
-					"type" : "func #688*"
+					"type" : "func #174*"
 				},
 				{
 					"name" : "glGetIntegerv",
 					"offset" : 23488,
-					"type" : "func #689*"
+					"type" : "func #175*"
 				},
 				{
 					"name" : "glGetInternalformatSampleivNV",
 					"offset" : 23552,
-					"type" : "func #690*"
+					"type" : "func #176*"
 				},
 				{
 					"name" : "glGetInternalformativ",
 					"offset" : 23616,
-					"type" : "func #691*"
+					"type" : "func #177*"
 				},
 				{
 					"name" : "glGetLightfv",
 					"offset" : 23680,
-					"type" : "func #692*"
+					"type" : "func #178*"
 				},
 				{
 					"name" : "glGetLightxv",
 					"offset" : 23744,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetLightxvOES",
 					"offset" : 23808,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetMaterialfv",
 					"offset" : 23872,
-					"type" : "func #692*"
+					"type" : "func #178*"
 				},
 				{
 					"name" : "glGetMaterialxv",
 					"offset" : 23936,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetMaterialxvOES",
 					"offset" : 24000,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetMemoryObjectParameterivEXT",
 					"offset" : 24064,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetMultisamplefv",
 					"offset" : 24128,
-					"type" : "func #682*"
+					"type" : "func #168*"
 				},
 				{
 					"name" : "glGetNextPerfQueryIdINTEL",
 					"offset" : 24192,
-					"type" : "func #588*"
+					"type" : "func #74*"
 				},
 				{
 					"name" : "glGetObjectLabel",
 					"offset" : 24256,
-					"type" : "func #694*"
+					"type" : "func #180*"
 				},
 				{
 					"name" : "glGetObjectLabelEXT",
 					"offset" : 24320,
-					"type" : "func #694*"
+					"type" : "func #180*"
 				},
 				{
 					"name" : "glGetObjectLabelKHR",
 					"offset" : 24384,
-					"type" : "func #694*"
+					"type" : "func #180*"
 				},
 				{
 					"name" : "glGetObjectPtrLabel",
 					"offset" : 24448,
-					"type" : "func #695*"
+					"type" : "func #181*"
 				},
 				{
 					"name" : "glGetObjectPtrLabelKHR",
 					"offset" : 24512,
-					"type" : "func #695*"
+					"type" : "func #181*"
 				},
 				{
 					"name" : "glGetPathCommandsNV",
 					"offset" : 24576,
-					"type" : "func #696*"
+					"type" : "func #182*"
 				},
 				{
 					"name" : "glGetPathCoordsNV",
 					"offset" : 24640,
-					"type" : "func #697*"
+					"type" : "func #183*"
 				},
 				{
 					"name" : "glGetPathDashArrayNV",
 					"offset" : 24704,
-					"type" : "func #697*"
+					"type" : "func #183*"
 				},
 				{
 					"name" : "glGetPathLengthNV",
 					"offset" : 24768,
-					"type" : "func #698*"
+					"type" : "func #184*"
 				},
 				{
 					"name" : "glGetPathMetricRangeNV",
 					"offset" : 24832,
-					"type" : "func #699*"
+					"type" : "func #185*"
 				},
 				{
 					"name" : "glGetPathMetricsNV",
 					"offset" : 24896,
-					"type" : "func #700*"
+					"type" : "func #186*"
 				},
 				{
 					"name" : "glGetPathParameterfvNV",
 					"offset" : 24960,
-					"type" : "func #701*"
+					"type" : "func #187*"
 				},
 				{
 					"name" : "glGetPathParameterivNV",
 					"offset" : 25024,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetPathSpacingNV",
 					"offset" : 25088,
-					"type" : "func #702*"
+					"type" : "func #188*"
 				},
 				{
 					"name" : "glGetPerfCounterInfoINTEL",
 					"offset" : 25152,
-					"type" : "func #703*"
+					"type" : "func #189*"
 				},
 				{
 					"name" : "glGetPerfMonitorCounterDataAMD",
 					"offset" : 25216,
-					"type" : "func #704*"
+					"type" : "func #190*"
 				},
 				{
 					"name" : "glGetPerfMonitorCounterInfoAMD",
 					"offset" : 25280,
-					"type" : "func #705*"
+					"type" : "func #191*"
 				},
 				{
 					"name" : "glGetPerfMonitorCounterStringAMD",
 					"offset" : 25344,
-					"type" : "func #663*"
+					"type" : "func #149*"
 				},
 				{
 					"name" : "glGetPerfMonitorCountersAMD",
 					"offset" : 25408,
-					"type" : "func #706*"
+					"type" : "func #192*"
 				},
 				{
 					"name" : "glGetPerfMonitorGroupStringAMD",
 					"offset" : 25472,
-					"type" : "func #677*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "glGetPerfMonitorGroupsAMD",
 					"offset" : 25536,
-					"type" : "func #678*"
+					"type" : "func #164*"
 				},
 				{
 					"name" : "glGetPerfQueryDataINTEL",
 					"offset" : 25600,
-					"type" : "func #707*"
+					"type" : "func #193*"
 				},
 				{
 					"name" : "glGetPerfQueryIdByNameINTEL",
 					"offset" : 25664,
-					"type" : "func #708*"
+					"type" : "func #194*"
 				},
 				{
 					"name" : "glGetPerfQueryInfoINTEL",
 					"offset" : 25728,
-					"type" : "func #709*"
+					"type" : "func #195*"
 				},
 				{
 					"name" : "glGetPointerv",
 					"offset" : 25792,
-					"type" : "func #637*"
+					"type" : "func #123*"
 				},
 				{
 					"name" : "glGetPointervKHR",
 					"offset" : 25856,
-					"type" : "func #637*"
+					"type" : "func #123*"
 				},
 				{
 					"name" : "glGetProgramBinary",
 					"offset" : 25920,
-					"type" : "func #710*"
+					"type" : "func #196*"
 				},
 				{
 					"name" : "glGetProgramBinaryOES",
 					"offset" : 25984,
-					"type" : "func #710*"
+					"type" : "func #196*"
 				},
 				{
 					"name" : "glGetProgramInfoLog",
 					"offset" : 26048,
-					"type" : "func #677*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "glGetProgramInterfaceiv",
 					"offset" : 26112,
-					"type" : "func #711*"
+					"type" : "func #197*"
 				},
 				{
 					"name" : "glGetProgramPipelineInfoLog",
 					"offset" : 26176,
-					"type" : "func #677*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "glGetProgramPipelineInfoLogEXT",
 					"offset" : 26240,
-					"type" : "func #677*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "glGetProgramPipelineiv",
 					"offset" : 26304,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetProgramPipelineivEXT",
 					"offset" : 26368,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetProgramResourceIndex",
 					"offset" : 26432,
-					"type" : "func #712*"
+					"type" : "func #198*"
 				},
 				{
 					"name" : "glGetProgramResourceLocation",
 					"offset" : 26496,
-					"type" : "func #713*"
+					"type" : "func #199*"
 				},
 				{
 					"name" : "glGetProgramResourceLocationIndexEXT",
 					"offset" : 26560,
-					"type" : "func #713*"
+					"type" : "func #199*"
 				},
 				{
 					"name" : "glGetProgramResourceName",
 					"offset" : 26624,
-					"type" : "func #714*"
+					"type" : "func #200*"
 				},
 				{
 					"name" : "glGetProgramResourcefvNV",
 					"offset" : 26688,
-					"type" : "func #715*"
+					"type" : "func #201*"
 				},
 				{
 					"name" : "glGetProgramResourceiv",
 					"offset" : 26752,
-					"type" : "func #716*"
+					"type" : "func #202*"
 				},
 				{
 					"name" : "glGetProgramiv",
 					"offset" : 26816,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetQueryObjecti64vEXT",
 					"offset" : 26880,
-					"type" : "func #717*"
+					"type" : "func #203*"
 				},
 				{
 					"name" : "glGetQueryObjectivEXT",
 					"offset" : 26944,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetQueryObjectui64vEXT",
 					"offset" : 27008,
-					"type" : "func #718*"
+					"type" : "func #204*"
 				},
 				{
 					"name" : "glGetQueryObjectuiv",
 					"offset" : 27072,
-					"type" : "func #719*"
+					"type" : "func #205*"
 				},
 				{
 					"name" : "glGetQueryObjectuivEXT",
 					"offset" : 27136,
-					"type" : "func #719*"
+					"type" : "func #205*"
 				},
 				{
 					"name" : "glGetQueryiv",
 					"offset" : 27200,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetQueryivEXT",
 					"offset" : 27264,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetRenderbufferParameteriv",
 					"offset" : 27328,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetRenderbufferParameterivOES",
 					"offset" : 27392,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetSamplerParameterIiv",
 					"offset" : 27456,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetSamplerParameterIivEXT",
 					"offset" : 27520,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetSamplerParameterIivOES",
 					"offset" : 27584,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetSamplerParameterIuiv",
 					"offset" : 27648,
-					"type" : "func #719*"
+					"type" : "func #205*"
 				},
 				{
 					"name" : "glGetSamplerParameterIuivEXT",
 					"offset" : 27712,
-					"type" : "func #719*"
+					"type" : "func #205*"
 				},
 				{
 					"name" : "glGetSamplerParameterIuivOES",
 					"offset" : 27776,
-					"type" : "func #719*"
+					"type" : "func #205*"
 				},
 				{
 					"name" : "glGetSamplerParameterfv",
 					"offset" : 27840,
-					"type" : "func #701*"
+					"type" : "func #187*"
 				},
 				{
 					"name" : "glGetSamplerParameteriv",
 					"offset" : 27904,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetSemaphoreParameterui64vEXT",
 					"offset" : 27968,
-					"type" : "func #718*"
+					"type" : "func #204*"
 				},
 				{
 					"name" : "glGetShaderInfoLog",
 					"offset" : 28032,
-					"type" : "func #677*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "glGetShaderPrecisionFormat",
 					"offset" : 28096,
-					"type" : "func #720*"
+					"type" : "func #206*"
 				},
 				{
 					"name" : "glGetShaderSource",
 					"offset" : 28160,
-					"type" : "func #677*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "glGetShaderiv",
 					"offset" : 28224,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetString",
 					"offset" : 28288,
-					"type" : "func #721*"
+					"type" : "func #207*"
 				},
 				{
 					"name" : "glGetStringi",
 					"offset" : 28352,
-					"type" : "func #722*"
+					"type" : "func #208*"
 				},
 				{
 					"name" : "glGetSynciv",
 					"offset" : 28416,
-					"type" : "func #723*"
+					"type" : "func #209*"
 				},
 				{
 					"name" : "glGetSyncivAPPLE",
 					"offset" : 28480,
-					"type" : "func #723*"
+					"type" : "func #209*"
 				},
 				{
 					"name" : "glGetTexEnvfv",
 					"offset" : 28544,
-					"type" : "func #692*"
+					"type" : "func #178*"
 				},
 				{
 					"name" : "glGetTexEnviv",
 					"offset" : 28608,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetTexEnvxv",
 					"offset" : 28672,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetTexEnvxvOES",
 					"offset" : 28736,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetTexGenfvOES",
 					"offset" : 28800,
-					"type" : "func #692*"
+					"type" : "func #178*"
 				},
 				{
 					"name" : "glGetTexGenivOES",
 					"offset" : 28864,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetTexGenxvOES",
 					"offset" : 28928,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetTexLevelParameterfv",
 					"offset" : 28992,
-					"type" : "func #724*"
+					"type" : "func #210*"
 				},
 				{
 					"name" : "glGetTexLevelParameteriv",
 					"offset" : 29056,
-					"type" : "func #725*"
+					"type" : "func #211*"
 				},
 				{
 					"name" : "glGetTexParameterIiv",
 					"offset" : 29120,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetTexParameterIivEXT",
 					"offset" : 29184,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetTexParameterIivOES",
 					"offset" : 29248,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetTexParameterIuiv",
 					"offset" : 29312,
-					"type" : "func #726*"
+					"type" : "func #212*"
 				},
 				{
 					"name" : "glGetTexParameterIuivEXT",
 					"offset" : 29376,
-					"type" : "func #726*"
+					"type" : "func #212*"
 				},
 				{
 					"name" : "glGetTexParameterIuivOES",
 					"offset" : 29440,
-					"type" : "func #726*"
+					"type" : "func #212*"
 				},
 				{
 					"name" : "glGetTexParameterfv",
 					"offset" : 29504,
-					"type" : "func #692*"
+					"type" : "func #178*"
 				},
 				{
 					"name" : "glGetTexParameteriv",
 					"offset" : 29568,
-					"type" : "func #671*"
+					"type" : "func #157*"
 				},
 				{
 					"name" : "glGetTexParameterxv",
 					"offset" : 29632,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetTexParameterxvOES",
 					"offset" : 29696,
-					"type" : "func #693*"
+					"type" : "func #179*"
 				},
 				{
 					"name" : "glGetTextureHandleIMG",
 					"offset" : 29760,
-					"type" : "func #727*"
+					"type" : "func #213*"
 				},
 				{
 					"name" : "glGetTextureHandleNV",
 					"offset" : 29824,
-					"type" : "func #727*"
+					"type" : "func #213*"
 				},
 				{
 					"name" : "glGetTextureSamplerHandleIMG",
 					"offset" : 29888,
-					"type" : "func #728*"
+					"type" : "func #214*"
 				},
 				{
 					"name" : "glGetTextureSamplerHandleNV",
 					"offset" : 29952,
-					"type" : "func #728*"
+					"type" : "func #214*"
 				},
 				{
 					"name" : "glGetTransformFeedbackVarying",
 					"offset" : 30016,
-					"type" : "func #729*"
+					"type" : "func #215*"
 				},
 				{
 					"name" : "glGetTranslatedShaderSourceANGLE",
 					"offset" : 30080,
-					"type" : "func #677*"
+					"type" : "func #163*"
 				},
 				{
 					"name" : "glGetUniformBlockIndex",
 					"offset" : 30144,
-					"type" : "func #730*"
+					"type" : "func #216*"
 				},
 				{
 					"name" : "glGetUniformIndices",
 					"offset" : 30208,
-					"type" : "func #731*"
+					"type" : "func #217*"
 				},
 				{
 					"name" : "glGetUniformLocation",
 					"offset" : 30272,
-					"type" : "func #667*"
+					"type" : "func #153*"
 				},
 				{
 					"name" : "glGetUniformfv",
 					"offset" : 30336,
-					"type" : "func #732*"
+					"type" : "func #218*"
 				},
 				{
 					"name" : "glGetUniformi64vNV",
 					"offset" : 30400,
-					"type" : "func #733*"
+					"type" : "func #219*"
 				},
 				{
 					"name" : "glGetUniformiv",
 					"offset" : 30464,
-					"type" : "func #734*"
+					"type" : "func #220*"
 				},
 				{
 					"name" : "glGetUniformuiv",
 					"offset" : 30528,
-					"type" : "func #735*"
+					"type" : "func #221*"
 				},
 				{
 					"name" : "glGetUnsignedBytei_vEXT",
 					"offset" : 30592,
-					"type" : "func #736*"
+					"type" : "func #222*"
 				},
 				{
 					"name" : "glGetUnsignedBytevEXT",
 					"offset" : 30656,
-					"type" : "func #737*"
+					"type" : "func #223*"
 				},
 				{
 					"name" : "glGetVertexAttribIiv",
 					"offset" : 30720,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetVertexAttribIuiv",
 					"offset" : 30784,
-					"type" : "func #719*"
+					"type" : "func #205*"
 				},
 				{
 					"name" : "glGetVertexAttribPointerv",
 					"offset" : 30848,
-					"type" : "func #738*"
+					"type" : "func #224*"
 				},
 				{
 					"name" : "glGetVertexAttribfv",
 					"offset" : 30912,
-					"type" : "func #701*"
+					"type" : "func #187*"
 				},
 				{
 					"name" : "glGetVertexAttribiv",
 					"offset" : 30976,
-					"type" : "func #680*"
+					"type" : "func #166*"
 				},
 				{
 					"name" : "glGetVkProcAddrNV",
 					"offset" : 31040,
-					"type" : "func #739*"
+					"type" : "func #225*"
 				},
 				{
 					"name" : "glGetnUniformfv",
 					"offset" : 31104,
-					"type" : "func #740*"
+					"type" : "func #226*"
 				},
 				{
 					"name" : "glGetnUniformfvEXT",
 					"offset" : 31168,
-					"type" : "func #740*"
+					"type" : "func #226*"
 				},
 				{
 					"name" : "glGetnUniformfvKHR",
 					"offset" : 31232,
-					"type" : "func #740*"
+					"type" : "func #226*"
 				},
 				{
 					"name" : "glGetnUniformiv",
 					"offset" : 31296,
-					"type" : "func #741*"
+					"type" : "func #227*"
 				},
 				{
 					"name" : "glGetnUniformivEXT",
 					"offset" : 31360,
-					"type" : "func #741*"
+					"type" : "func #227*"
 				},
 				{
 					"name" : "glGetnUniformivKHR",
 					"offset" : 31424,
-					"type" : "func #741*"
+					"type" : "func #227*"
 				},
 				{
 					"name" : "glGetnUniformuiv",
 					"offset" : 31488,
-					"type" : "func #742*"
+					"type" : "func #228*"
 				},
 				{
 					"name" : "glGetnUniformuivKHR",
 					"offset" : 31552,
-					"type" : "func #742*"
+					"type" : "func #228*"
 				},
 				{
 					"name" : "glHint",
 					"offset" : 31616,
-					"type" : "func #542*"
+					"type" : "func #28*"
 				},
 				{
 					"name" : "glImportMemoryFdEXT",
 					"offset" : 31680,
-					"type" : "func #743*"
+					"type" : "func #229*"
 				},
 				{
 					"name" : "glImportSemaphoreFdEXT",
 					"offset" : 31744,
-					"type" : "func #744*"
+					"type" : "func #230*"
 				},
 				{
 					"name" : "glInsertEventMarkerEXT",
 					"offset" : 31808,
-					"type" : "func #745*"
+					"type" : "func #231*"
 				},
 				{
 					"name" : "glInterpolatePathsNV",
 					"offset" : 31872,
-					"type" : "func #746*"
+					"type" : "func #232*"
 				},
 				{
 					"name" : "glInvalidateFramebuffer",
 					"offset" : 31936,
-					"type" : "func #606*"
+					"type" : "func #92*"
 				},
 				{
 					"name" : "glInvalidateSubFramebuffer",
 					"offset" : 32000,
-					"type" : "func #747*"
+					"type" : "func #233*"
 				},
 				{
 					"name" : "glIsBuffer",
 					"offset" : 32064,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsEnabled",
 					"offset" : 32128,
-					"type" : "func #748*"
+					"type" : "func #234*"
 				},
 				{
 					"name" : "glIsEnabledi",
 					"offset" : 32192,
-					"type" : "func #749*"
+					"type" : "func #235*"
 				},
 				{
 					"name" : "glIsEnablediEXT",
 					"offset" : 32256,
-					"type" : "func #749*"
+					"type" : "func #235*"
 				},
 				{
 					"name" : "glIsEnablediNV",
 					"offset" : 32320,
-					"type" : "func #749*"
+					"type" : "func #235*"
 				},
 				{
 					"name" : "glIsEnablediOES",
 					"offset" : 32384,
-					"type" : "func #749*"
+					"type" : "func #235*"
 				},
 				{
 					"name" : "glIsFenceNV",
 					"offset" : 32448,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsFramebuffer",
 					"offset" : 32512,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsFramebufferOES",
 					"offset" : 32576,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsImageHandleResidentNV",
 					"offset" : 32640,
-					"type" : "func #750*"
+					"type" : "func #236*"
 				},
 				{
 					"name" : "glIsMemoryObjectEXT",
 					"offset" : 32704,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsPathNV",
 					"offset" : 32768,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsPointInFillPathNV",
 					"offset" : 32832,
-					"type" : "func #751*"
+					"type" : "func #237*"
 				},
 				{
 					"name" : "glIsPointInStrokePathNV",
 					"offset" : 32896,
-					"type" : "func #752*"
+					"type" : "func #238*"
 				},
 				{
 					"name" : "glIsProgram",
 					"offset" : 32960,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsProgramPipeline",
 					"offset" : 33024,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsProgramPipelineEXT",
 					"offset" : 33088,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsQuery",
 					"offset" : 33152,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsQueryEXT",
 					"offset" : 33216,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsRenderbuffer",
 					"offset" : 33280,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsRenderbufferOES",
 					"offset" : 33344,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsSampler",
 					"offset" : 33408,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsSemaphoreEXT",
 					"offset" : 33472,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsShader",
 					"offset" : 33536,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsSync",
 					"offset" : 33600,
-					"type" : "func #753*"
+					"type" : "func #239*"
 				},
 				{
 					"name" : "glIsSyncAPPLE",
 					"offset" : 33664,
-					"type" : "func #753*"
+					"type" : "func #239*"
 				},
 				{
 					"name" : "glIsTexture",
 					"offset" : 33728,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsTextureHandleResidentNV",
 					"offset" : 33792,
-					"type" : "func #750*"
+					"type" : "func #236*"
 				},
 				{
 					"name" : "glIsTransformFeedback",
 					"offset" : 33856,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsVertexArray",
 					"offset" : 33920,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glIsVertexArrayOES",
 					"offset" : 33984,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glLabelObjectEXT",
 					"offset" : 34048,
-					"type" : "func #754*"
+					"type" : "func #240*"
 				},
 				{
 					"name" : "glLightModelf",
 					"offset" : 34112,
-					"type" : "func #528*"
+					"type" : "func #14*"
 				},
 				{
 					"name" : "glLightModelfv",
 					"offset" : 34176,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glLightModelx",
 					"offset" : 34240,
-					"type" : "func #530*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "glLightModelxOES",
 					"offset" : 34304,
-					"type" : "func #530*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "glLightModelxv",
 					"offset" : 34368,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glLightModelxvOES",
 					"offset" : 34432,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glLightf",
 					"offset" : 34496,
-					"type" : "func #755*"
+					"type" : "func #241*"
 				},
 				{
 					"name" : "glLightfv",
 					"offset" : 34560,
-					"type" : "func #756*"
+					"type" : "func #242*"
 				},
 				{
 					"name" : "glLightx",
 					"offset" : 34624,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glLightxOES",
 					"offset" : 34688,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glLightxv",
 					"offset" : 34752,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glLightxvOES",
 					"offset" : 34816,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glLineWidth",
 					"offset" : 34880,
-					"type" : "func #560*"
+					"type" : "func #46*"
 				},
 				{
 					"name" : "glLineWidthx",
 					"offset" : 34944,
-					"type" : "func #562*"
+					"type" : "func #48*"
 				},
 				{
 					"name" : "glLineWidthxOES",
 					"offset" : 35008,
-					"type" : "func #562*"
+					"type" : "func #48*"
 				},
 				{
 					"name" : "glLinkProgram",
 					"offset" : 35072,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glLoadIdentity",
 					"offset" : 35136,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glLoadMatrixf",
 					"offset" : 35200,
-					"type" : "func #625*"
+					"type" : "func #111*"
 				},
 				{
 					"name" : "glLoadMatrixx",
 					"offset" : 35264,
-					"type" : "func #631*"
+					"type" : "func #117*"
 				},
 				{
 					"name" : "glLoadMatrixxOES",
 					"offset" : 35328,
-					"type" : "func #631*"
+					"type" : "func #117*"
 				},
 				{
 					"name" : "glLoadPaletteFromModelViewMatrixOES",
 					"offset" : 35392,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glLogicOp",
 					"offset" : 35456,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glMakeImageHandleNonResidentNV",
 					"offset" : 35520,
-					"type" : "func #759*"
+					"type" : "func #245*"
 				},
 				{
 					"name" : "glMakeImageHandleResidentNV",
 					"offset" : 35584,
-					"type" : "func #760*"
+					"type" : "func #246*"
 				},
 				{
 					"name" : "glMakeTextureHandleNonResidentNV",
 					"offset" : 35648,
-					"type" : "func #759*"
+					"type" : "func #245*"
 				},
 				{
 					"name" : "glMakeTextureHandleResidentNV",
 					"offset" : 35712,
-					"type" : "func #759*"
+					"type" : "func #245*"
 				},
 				{
 					"name" : "glMapBufferOES",
 					"offset" : 35776,
-					"type" : "func #761*"
+					"type" : "func #247*"
 				},
 				{
 					"name" : "glMapBufferRange",
 					"offset" : 35840,
-					"type" : "func #762*"
+					"type" : "func #248*"
 				},
 				{
 					"name" : "glMapBufferRangeEXT",
 					"offset" : 35904,
-					"type" : "func #762*"
+					"type" : "func #248*"
 				},
 				{
 					"name" : "glMaterialf",
 					"offset" : 35968,
-					"type" : "func #755*"
+					"type" : "func #241*"
 				},
 				{
 					"name" : "glMaterialfv",
 					"offset" : 36032,
-					"type" : "func #756*"
+					"type" : "func #242*"
 				},
 				{
 					"name" : "glMaterialx",
 					"offset" : 36096,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glMaterialxOES",
 					"offset" : 36160,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glMaterialxv",
 					"offset" : 36224,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glMaterialxvOES",
 					"offset" : 36288,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glMatrixFrustumEXT",
 					"offset" : 36352,
-					"type" : "func #763*"
+					"type" : "func #249*"
 				},
 				{
 					"name" : "glMatrixIndexPointerOES",
 					"offset" : 36416,
-					"type" : "func #573*"
+					"type" : "func #59*"
 				},
 				{
 					"name" : "glMatrixLoad3x2fNV",
 					"offset" : 36480,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixLoad3x3fNV",
 					"offset" : 36544,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixLoadIdentityEXT",
 					"offset" : 36608,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glMatrixLoadTranspose3x3fNV",
 					"offset" : 36672,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixLoadTransposedEXT",
 					"offset" : 36736,
-					"type" : "func #764*"
+					"type" : "func #250*"
 				},
 				{
 					"name" : "glMatrixLoadTransposefEXT",
 					"offset" : 36800,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixLoaddEXT",
 					"offset" : 36864,
-					"type" : "func #764*"
+					"type" : "func #250*"
 				},
 				{
 					"name" : "glMatrixLoadfEXT",
 					"offset" : 36928,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixMode",
 					"offset" : 36992,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glMatrixMult3x2fNV",
 					"offset" : 37056,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixMult3x3fNV",
 					"offset" : 37120,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixMultTranspose3x3fNV",
 					"offset" : 37184,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixMultTransposedEXT",
 					"offset" : 37248,
-					"type" : "func #764*"
+					"type" : "func #250*"
 				},
 				{
 					"name" : "glMatrixMultTransposefEXT",
 					"offset" : 37312,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixMultdEXT",
 					"offset" : 37376,
-					"type" : "func #764*"
+					"type" : "func #250*"
 				},
 				{
 					"name" : "glMatrixMultfEXT",
 					"offset" : 37440,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glMatrixOrthoEXT",
 					"offset" : 37504,
-					"type" : "func #763*"
+					"type" : "func #249*"
 				},
 				{
 					"name" : "glMatrixPopEXT",
 					"offset" : 37568,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glMatrixPushEXT",
 					"offset" : 37632,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glMatrixRotatedEXT",
 					"offset" : 37696,
-					"type" : "func #765*"
+					"type" : "func #251*"
 				},
 				{
 					"name" : "glMatrixRotatefEXT",
 					"offset" : 37760,
-					"type" : "func #766*"
+					"type" : "func #252*"
 				},
 				{
 					"name" : "glMatrixScaledEXT",
 					"offset" : 37824,
-					"type" : "func #767*"
+					"type" : "func #253*"
 				},
 				{
 					"name" : "glMatrixScalefEXT",
 					"offset" : 37888,
-					"type" : "func #768*"
+					"type" : "func #254*"
 				},
 				{
 					"name" : "glMatrixTranslatedEXT",
 					"offset" : 37952,
-					"type" : "func #767*"
+					"type" : "func #253*"
 				},
 				{
 					"name" : "glMatrixTranslatefEXT",
 					"offset" : 38016,
-					"type" : "func #768*"
+					"type" : "func #254*"
 				},
 				{
 					"name" : "glMaxShaderCompilerThreadsKHR",
 					"offset" : 38080,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glMemoryBarrier",
 					"offset" : 38144,
-					"type" : "func #554*"
+					"type" : "func #40*"
 				},
 				{
 					"name" : "glMemoryBarrierByRegion",
 					"offset" : 38208,
-					"type" : "func #554*"
+					"type" : "func #40*"
 				},
 				{
 					"name" : "glMemoryObjectParameterivEXT",
 					"offset" : 38272,
-					"type" : "func #769*"
+					"type" : "func #255*"
 				},
 				{
 					"name" : "glMinSampleShading",
 					"offset" : 38336,
-					"type" : "func #560*"
+					"type" : "func #46*"
 				},
 				{
 					"name" : "glMinSampleShadingOES",
 					"offset" : 38400,
-					"type" : "func #560*"
+					"type" : "func #46*"
 				},
 				{
 					"name" : "glMultMatrixf",
 					"offset" : 38464,
-					"type" : "func #625*"
+					"type" : "func #111*"
 				},
 				{
 					"name" : "glMultMatrixx",
 					"offset" : 38528,
-					"type" : "func #631*"
+					"type" : "func #117*"
 				},
 				{
 					"name" : "glMultMatrixxOES",
 					"offset" : 38592,
-					"type" : "func #631*"
+					"type" : "func #117*"
 				},
 				{
 					"name" : "glMultiDrawArraysEXT",
 					"offset" : 38656,
-					"type" : "func #770*"
+					"type" : "func #256*"
 				},
 				{
 					"name" : "glMultiDrawArraysIndirectEXT",
 					"offset" : 38720,
-					"type" : "func #771*"
+					"type" : "func #257*"
 				},
 				{
 					"name" : "glMultiDrawElementsBaseVertexEXT",
 					"offset" : 38784,
-					"type" : "func #772*"
+					"type" : "func #258*"
 				},
 				{
 					"name" : "glMultiDrawElementsEXT",
 					"offset" : 38848,
-					"type" : "func #773*"
+					"type" : "func #259*"
 				},
 				{
 					"name" : "glMultiDrawElementsIndirectEXT",
 					"offset" : 38912,
-					"type" : "func #774*"
+					"type" : "func #260*"
 				},
 				{
 					"name" : "glMultiTexCoord4f",
 					"offset" : 38976,
-					"type" : "func #766*"
+					"type" : "func #252*"
 				},
 				{
 					"name" : "glMultiTexCoord4x",
 					"offset" : 39040,
-					"type" : "func #775*"
+					"type" : "func #261*"
 				},
 				{
 					"name" : "glMultiTexCoord4xOES",
 					"offset" : 39104,
-					"type" : "func #775*"
+					"type" : "func #261*"
 				},
 				{
 					"name" : "glNamedBufferStorageExternalEXT",
 					"offset" : 39168,
-					"type" : "func #776*"
+					"type" : "func #262*"
 				},
 				{
 					"name" : "glNamedBufferStorageMemEXT",
 					"offset" : 39232,
-					"type" : "func #777*"
+					"type" : "func #263*"
 				},
 				{
 					"name" : "glNamedFramebufferSampleLocationsfvNV",
 					"offset" : 39296,
-					"type" : "func #778*"
+					"type" : "func #264*"
 				},
 				{
 					"name" : "glNormal3f",
 					"offset" : 39360,
-					"type" : "func #779*"
+					"type" : "func #265*"
 				},
 				{
 					"name" : "glNormal3x",
 					"offset" : 39424,
-					"type" : "func #780*"
+					"type" : "func #266*"
 				},
 				{
 					"name" : "glNormal3xOES",
 					"offset" : 39488,
-					"type" : "func #780*"
+					"type" : "func #266*"
 				},
 				{
 					"name" : "glNormalPointer",
 					"offset" : 39552,
-					"type" : "func #781*"
+					"type" : "func #267*"
 				},
 				{
 					"name" : "glObjectLabel",
 					"offset" : 39616,
-					"type" : "func #754*"
+					"type" : "func #240*"
 				},
 				{
 					"name" : "glObjectLabelKHR",
 					"offset" : 39680,
-					"type" : "func #754*"
+					"type" : "func #240*"
 				},
 				{
 					"name" : "glObjectPtrLabel",
 					"offset" : 39744,
-					"type" : "func #782*"
+					"type" : "func #268*"
 				},
 				{
 					"name" : "glObjectPtrLabelKHR",
 					"offset" : 39808,
-					"type" : "func #782*"
+					"type" : "func #268*"
 				},
 				{
 					"name" : "glOrthof",
 					"offset" : 39872,
-					"type" : "func #659*"
+					"type" : "func #145*"
 				},
 				{
 					"name" : "glOrthofOES",
 					"offset" : 39936,
-					"type" : "func #659*"
+					"type" : "func #145*"
 				},
 				{
 					"name" : "glOrthox",
 					"offset" : 40000,
-					"type" : "func #660*"
+					"type" : "func #146*"
 				},
 				{
 					"name" : "glOrthoxOES",
 					"offset" : 40064,
-					"type" : "func #660*"
+					"type" : "func #146*"
 				},
 				{
 					"name" : "glPatchParameteri",
 					"offset" : 40128,
-					"type" : "func #546*"
+					"type" : "func #32*"
 				},
 				{
 					"name" : "glPatchParameteriEXT",
 					"offset" : 40192,
-					"type" : "func #546*"
+					"type" : "func #32*"
 				},
 				{
 					"name" : "glPatchParameteriOES",
 					"offset" : 40256,
-					"type" : "func #546*"
+					"type" : "func #32*"
 				},
 				{
 					"name" : "glPathCommandsNV",
 					"offset" : 40320,
-					"type" : "func #783*"
+					"type" : "func #269*"
 				},
 				{
 					"name" : "glPathCoordsNV",
 					"offset" : 40384,
-					"type" : "func #784*"
+					"type" : "func #270*"
 				},
 				{
 					"name" : "glPathCoverDepthFuncNV",
 					"offset" : 40448,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glPathDashArrayNV",
 					"offset" : 40512,
-					"type" : "func #601*"
+					"type" : "func #87*"
 				},
 				{
 					"name" : "glPathGlyphIndexArrayNV",
 					"offset" : 40576,
-					"type" : "func #785*"
+					"type" : "func #271*"
 				},
 				{
 					"name" : "glPathGlyphIndexRangeNV",
 					"offset" : 40640,
-					"type" : "func #786*"
+					"type" : "func #272*"
 				},
 				{
 					"name" : "glPathGlyphRangeNV",
 					"offset" : 40704,
-					"type" : "func #787*"
+					"type" : "func #273*"
 				},
 				{
 					"name" : "glPathGlyphsNV",
 					"offset" : 40768,
-					"type" : "func #788*"
+					"type" : "func #274*"
 				},
 				{
 					"name" : "glPathMemoryGlyphIndexArrayNV",
 					"offset" : 40832,
-					"type" : "func #789*"
+					"type" : "func #275*"
 				},
 				{
 					"name" : "glPathParameterfNV",
 					"offset" : 40896,
-					"type" : "func #790*"
+					"type" : "func #276*"
 				},
 				{
 					"name" : "glPathParameterfvNV",
 					"offset" : 40960,
-					"type" : "func #791*"
+					"type" : "func #277*"
 				},
 				{
 					"name" : "glPathParameteriNV",
 					"offset" : 41024,
-					"type" : "func #744*"
+					"type" : "func #230*"
 				},
 				{
 					"name" : "glPathParameterivNV",
 					"offset" : 41088,
-					"type" : "func #769*"
+					"type" : "func #255*"
 				},
 				{
 					"name" : "glPathStencilDepthOffsetNV",
 					"offset" : 41152,
-					"type" : "func #603*"
+					"type" : "func #89*"
 				},
 				{
 					"name" : "glPathStencilFuncNV",
 					"offset" : 41216,
-					"type" : "func #792*"
+					"type" : "func #278*"
 				},
 				{
 					"name" : "glPathStringNV",
 					"offset" : 41280,
-					"type" : "func #793*"
+					"type" : "func #279*"
 				},
 				{
 					"name" : "glPathSubCommandsNV",
 					"offset" : 41344,
-					"type" : "func #794*"
+					"type" : "func #280*"
 				},
 				{
 					"name" : "glPathSubCoordsNV",
 					"offset" : 41408,
-					"type" : "func #795*"
+					"type" : "func #281*"
 				},
 				{
 					"name" : "glPauseTransformFeedback",
 					"offset" : 41472,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glPixelStorei",
 					"offset" : 41536,
-					"type" : "func #546*"
+					"type" : "func #32*"
 				},
 				{
 					"name" : "glPointAlongPathNV",
 					"offset" : 41600,
-					"type" : "func #796*"
+					"type" : "func #282*"
 				},
 				{
 					"name" : "glPointParameterf",
 					"offset" : 41664,
-					"type" : "func #528*"
+					"type" : "func #14*"
 				},
 				{
 					"name" : "glPointParameterfv",
 					"offset" : 41728,
-					"type" : "func #568*"
+					"type" : "func #54*"
 				},
 				{
 					"name" : "glPointParameterx",
 					"offset" : 41792,
-					"type" : "func #530*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "glPointParameterxOES",
 					"offset" : 41856,
-					"type" : "func #530*"
+					"type" : "func #16*"
 				},
 				{
 					"name" : "glPointParameterxv",
 					"offset" : 41920,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glPointParameterxvOES",
 					"offset" : 41984,
-					"type" : "func #569*"
+					"type" : "func #55*"
 				},
 				{
 					"name" : "glPointSize",
 					"offset" : 42048,
-					"type" : "func #560*"
+					"type" : "func #46*"
 				},
 				{
 					"name" : "glPointSizePointerOES",
 					"offset" : 42112,
-					"type" : "func #781*"
+					"type" : "func #267*"
 				},
 				{
 					"name" : "glPointSizex",
 					"offset" : 42176,
-					"type" : "func #562*"
+					"type" : "func #48*"
 				},
 				{
 					"name" : "glPointSizexOES",
 					"offset" : 42240,
-					"type" : "func #562*"
+					"type" : "func #48*"
 				},
 				{
 					"name" : "glPolygonModeNV",
 					"offset" : 42304,
-					"type" : "func #542*"
+					"type" : "func #28*"
 				},
 				{
 					"name" : "glPolygonOffset",
 					"offset" : 42368,
-					"type" : "func #603*"
+					"type" : "func #89*"
 				},
 				{
 					"name" : "glPolygonOffsetClampEXT",
 					"offset" : 42432,
-					"type" : "func #779*"
+					"type" : "func #265*"
 				},
 				{
 					"name" : "glPolygonOffsetx",
 					"offset" : 42496,
-					"type" : "func #605*"
+					"type" : "func #91*"
 				},
 				{
 					"name" : "glPolygonOffsetxOES",
 					"offset" : 42560,
-					"type" : "func #605*"
+					"type" : "func #91*"
 				},
 				{
 					"name" : "glPopDebugGroup",
 					"offset" : 42624,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glPopDebugGroupKHR",
 					"offset" : 42688,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glPopGroupMarkerEXT",
 					"offset" : 42752,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glPopMatrix",
 					"offset" : 42816,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glPrimitiveBoundingBox",
 					"offset" : 42880,
-					"type" : "func #797*"
+					"type" : "func #283*"
 				},
 				{
 					"name" : "glPrimitiveBoundingBoxEXT",
 					"offset" : 42944,
-					"type" : "func #797*"
+					"type" : "func #283*"
 				},
 				{
 					"name" : "glPrimitiveBoundingBoxOES",
 					"offset" : 43008,
-					"type" : "func #797*"
+					"type" : "func #283*"
 				},
 				{
 					"name" : "glProgramBinary",
 					"offset" : 43072,
-					"type" : "func #798*"
+					"type" : "func #284*"
 				},
 				{
 					"name" : "glProgramBinaryOES",
 					"offset" : 43136,
-					"type" : "func #799*"
+					"type" : "func #285*"
 				},
 				{
 					"name" : "glProgramParameteri",
 					"offset" : 43200,
-					"type" : "func #744*"
+					"type" : "func #230*"
 				},
 				{
 					"name" : "glProgramParameteriEXT",
 					"offset" : 43264,
-					"type" : "func #744*"
+					"type" : "func #230*"
 				},
 				{
 					"name" : "glProgramPathFragmentInputGenNV",
 					"offset" : 43328,
-					"type" : "func #800*"
+					"type" : "func #286*"
 				},
 				{
 					"name" : "glProgramUniform1f",
 					"offset" : 43392,
-					"type" : "func #801*"
+					"type" : "func #287*"
 				},
 				{
 					"name" : "glProgramUniform1fEXT",
 					"offset" : 43456,
-					"type" : "func #801*"
+					"type" : "func #287*"
 				},
 				{
 					"name" : "glProgramUniform1fv",
 					"offset" : 43520,
-					"type" : "func #802*"
+					"type" : "func #288*"
 				},
 				{
 					"name" : "glProgramUniform1fvEXT",
 					"offset" : 43584,
-					"type" : "func #802*"
+					"type" : "func #288*"
 				},
 				{
 					"name" : "glProgramUniform1i",
 					"offset" : 43648,
-					"type" : "func #803*"
+					"type" : "func #289*"
 				},
 				{
 					"name" : "glProgramUniform1i64NV",
 					"offset" : 43712,
-					"type" : "func #804*"
+					"type" : "func #290*"
 				},
 				{
 					"name" : "glProgramUniform1i64vNV",
 					"offset" : 43776,
-					"type" : "func #805*"
+					"type" : "func #291*"
 				},
 				{
 					"name" : "glProgramUniform1iEXT",
 					"offset" : 43840,
-					"type" : "func #803*"
+					"type" : "func #289*"
 				},
 				{
 					"name" : "glProgramUniform1iv",
 					"offset" : 43904,
-					"type" : "func #806*"
+					"type" : "func #292*"
 				},
 				{
 					"name" : "glProgramUniform1ivEXT",
 					"offset" : 43968,
-					"type" : "func #806*"
+					"type" : "func #292*"
 				},
 				{
 					"name" : "glProgramUniform1ui",
 					"offset" : 44032,
-					"type" : "func #807*"
+					"type" : "func #293*"
 				},
 				{
 					"name" : "glProgramUniform1ui64NV",
 					"offset" : 44096,
-					"type" : "func #808*"
+					"type" : "func #294*"
 				},
 				{
 					"name" : "glProgramUniform1ui64vNV",
 					"offset" : 44160,
-					"type" : "func #809*"
+					"type" : "func #295*"
 				},
 				{
 					"name" : "glProgramUniform1uiEXT",
 					"offset" : 44224,
-					"type" : "func #807*"
+					"type" : "func #293*"
 				},
 				{
 					"name" : "glProgramUniform1uiv",
 					"offset" : 44288,
-					"type" : "func #810*"
+					"type" : "func #296*"
 				},
 				{
 					"name" : "glProgramUniform1uivEXT",
 					"offset" : 44352,
-					"type" : "func #810*"
+					"type" : "func #296*"
 				},
 				{
 					"name" : "glProgramUniform2f",
 					"offset" : 44416,
-					"type" : "func #811*"
+					"type" : "func #297*"
 				},
 				{
 					"name" : "glProgramUniform2fEXT",
 					"offset" : 44480,
-					"type" : "func #811*"
+					"type" : "func #297*"
 				},
 				{
 					"name" : "glProgramUniform2fv",
 					"offset" : 44544,
-					"type" : "func #802*"
+					"type" : "func #288*"
 				},
 				{
 					"name" : "glProgramUniform2fvEXT",
 					"offset" : 44608,
-					"type" : "func #802*"
+					"type" : "func #288*"
 				},
 				{
 					"name" : "glProgramUniform2i",
 					"offset" : 44672,
-					"type" : "func #812*"
+					"type" : "func #298*"
 				},
 				{
 					"name" : "glProgramUniform2i64NV",
 					"offset" : 44736,
-					"type" : "func #813*"
+					"type" : "func #299*"
 				},
 				{
 					"name" : "glProgramUniform2i64vNV",
 					"offset" : 44800,
-					"type" : "func #805*"
+					"type" : "func #291*"
 				},
 				{
 					"name" : "glProgramUniform2iEXT",
 					"offset" : 44864,
-					"type" : "func #812*"
+					"type" : "func #298*"
 				},
 				{
 					"name" : "glProgramUniform2iv",
 					"offset" : 44928,
-					"type" : "func #806*"
+					"type" : "func #292*"
 				},
 				{
 					"name" : "glProgramUniform2ivEXT",
 					"offset" : 44992,
-					"type" : "func #806*"
+					"type" : "func #292*"
 				},
 				{
 					"name" : "glProgramUniform2ui",
 					"offset" : 45056,
-					"type" : "func #814*"
+					"type" : "func #300*"
 				},
 				{
 					"name" : "glProgramUniform2ui64NV",
 					"offset" : 45120,
-					"type" : "func #815*"
+					"type" : "func #301*"
 				},
 				{
 					"name" : "glProgramUniform2ui64vNV",
 					"offset" : 45184,
-					"type" : "func #809*"
+					"type" : "func #295*"
 				},
 				{
 					"name" : "glProgramUniform2uiEXT",
 					"offset" : 45248,
-					"type" : "func #814*"
+					"type" : "func #300*"
 				},
 				{
 					"name" : "glProgramUniform2uiv",
 					"offset" : 45312,
-					"type" : "func #810*"
+					"type" : "func #296*"
 				},
 				{
 					"name" : "glProgramUniform2uivEXT",
 					"offset" : 45376,
-					"type" : "func #810*"
+					"type" : "func #296*"
 				},
 				{
 					"name" : "glProgramUniform3f",
 					"offset" : 45440,
-					"type" : "func #816*"
+					"type" : "func #302*"
 				},
 				{
 					"name" : "glProgramUniform3fEXT",
 					"offset" : 45504,
-					"type" : "func #816*"
+					"type" : "func #302*"
 				},
 				{
 					"name" : "glProgramUniform3fv",
 					"offset" : 45568,
-					"type" : "func #802*"
+					"type" : "func #288*"
 				},
 				{
 					"name" : "glProgramUniform3fvEXT",
 					"offset" : 45632,
-					"type" : "func #802*"
+					"type" : "func #288*"
 				},
 				{
 					"name" : "glProgramUniform3i",
 					"offset" : 45696,
-					"type" : "func #817*"
+					"type" : "func #303*"
 				},
 				{
 					"name" : "glProgramUniform3i64NV",
 					"offset" : 45760,
-					"type" : "func #818*"
+					"type" : "func #304*"
 				},
 				{
 					"name" : "glProgramUniform3i64vNV",
 					"offset" : 45824,
-					"type" : "func #805*"
+					"type" : "func #291*"
 				},
 				{
 					"name" : "glProgramUniform3iEXT",
 					"offset" : 45888,
-					"type" : "func #817*"
+					"type" : "func #303*"
 				},
 				{
 					"name" : "glProgramUniform3iv",
 					"offset" : 45952,
-					"type" : "func #806*"
+					"type" : "func #292*"
 				},
 				{
 					"name" : "glProgramUniform3ivEXT",
 					"offset" : 46016,
-					"type" : "func #806*"
+					"type" : "func #292*"
 				},
 				{
 					"name" : "glProgramUniform3ui",
 					"offset" : 46080,
-					"type" : "func #819*"
+					"type" : "func #305*"
 				},
 				{
 					"name" : "glProgramUniform3ui64NV",
 					"offset" : 46144,
-					"type" : "func #820*"
+					"type" : "func #306*"
 				},
 				{
 					"name" : "glProgramUniform3ui64vNV",
 					"offset" : 46208,
-					"type" : "func #809*"
+					"type" : "func #295*"
 				},
 				{
 					"name" : "glProgramUniform3uiEXT",
 					"offset" : 46272,
-					"type" : "func #819*"
+					"type" : "func #305*"
 				},
 				{
 					"name" : "glProgramUniform3uiv",
 					"offset" : 46336,
-					"type" : "func #810*"
+					"type" : "func #296*"
 				},
 				{
 					"name" : "glProgramUniform3uivEXT",
 					"offset" : 46400,
-					"type" : "func #810*"
+					"type" : "func #296*"
 				},
 				{
 					"name" : "glProgramUniform4f",
 					"offset" : 46464,
-					"type" : "func #821*"
+					"type" : "func #307*"
 				},
 				{
 					"name" : "glProgramUniform4fEXT",
 					"offset" : 46528,
-					"type" : "func #821*"
+					"type" : "func #307*"
 				},
 				{
 					"name" : "glProgramUniform4fv",
 					"offset" : 46592,
-					"type" : "func #802*"
+					"type" : "func #288*"
 				},
 				{
 					"name" : "glProgramUniform4fvEXT",
 					"offset" : 46656,
-					"type" : "func #802*"
+					"type" : "func #288*"
 				},
 				{
 					"name" : "glProgramUniform4i",
 					"offset" : 46720,
-					"type" : "func #822*"
+					"type" : "func #308*"
 				},
 				{
 					"name" : "glProgramUniform4i64NV",
 					"offset" : 46784,
-					"type" : "func #823*"
+					"type" : "func #309*"
 				},
 				{
 					"name" : "glProgramUniform4i64vNV",
 					"offset" : 46848,
-					"type" : "func #805*"
+					"type" : "func #291*"
 				},
 				{
 					"name" : "glProgramUniform4iEXT",
 					"offset" : 46912,
-					"type" : "func #822*"
+					"type" : "func #308*"
 				},
 				{
 					"name" : "glProgramUniform4iv",
 					"offset" : 46976,
-					"type" : "func #806*"
+					"type" : "func #292*"
 				},
 				{
 					"name" : "glProgramUniform4ivEXT",
 					"offset" : 47040,
-					"type" : "func #806*"
+					"type" : "func #292*"
 				},
 				{
 					"name" : "glProgramUniform4ui",
 					"offset" : 47104,
-					"type" : "func #824*"
+					"type" : "func #310*"
 				},
 				{
 					"name" : "glProgramUniform4ui64NV",
 					"offset" : 47168,
-					"type" : "func #825*"
+					"type" : "func #311*"
 				},
 				{
 					"name" : "glProgramUniform4ui64vNV",
 					"offset" : 47232,
-					"type" : "func #809*"
+					"type" : "func #295*"
 				},
 				{
 					"name" : "glProgramUniform4uiEXT",
 					"offset" : 47296,
-					"type" : "func #824*"
+					"type" : "func #310*"
 				},
 				{
 					"name" : "glProgramUniform4uiv",
 					"offset" : 47360,
-					"type" : "func #810*"
+					"type" : "func #296*"
 				},
 				{
 					"name" : "glProgramUniform4uivEXT",
 					"offset" : 47424,
-					"type" : "func #810*"
+					"type" : "func #296*"
 				},
 				{
 					"name" : "glProgramUniformHandleui64IMG",
 					"offset" : 47488,
-					"type" : "func #826*"
+					"type" : "func #312*"
 				},
 				{
 					"name" : "glProgramUniformHandleui64NV",
 					"offset" : 47552,
-					"type" : "func #826*"
+					"type" : "func #312*"
 				},
 				{
 					"name" : "glProgramUniformHandleui64vIMG",
 					"offset" : 47616,
-					"type" : "func #827*"
+					"type" : "func #313*"
 				},
 				{
 					"name" : "glProgramUniformHandleui64vNV",
 					"offset" : 47680,
-					"type" : "func #827*"
+					"type" : "func #313*"
 				},
 				{
 					"name" : "glProgramUniformMatrix2fv",
 					"offset" : 47744,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix2fvEXT",
 					"offset" : 47808,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix2x3fv",
 					"offset" : 47872,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix2x3fvEXT",
 					"offset" : 47936,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix2x4fv",
 					"offset" : 48000,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix2x4fvEXT",
 					"offset" : 48064,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix3fv",
 					"offset" : 48128,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix3fvEXT",
 					"offset" : 48192,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix3x2fv",
 					"offset" : 48256,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix3x2fvEXT",
 					"offset" : 48320,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix3x4fv",
 					"offset" : 48384,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix3x4fvEXT",
 					"offset" : 48448,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix4fv",
 					"offset" : 48512,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix4fvEXT",
 					"offset" : 48576,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix4x2fv",
 					"offset" : 48640,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix4x2fvEXT",
 					"offset" : 48704,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix4x3fv",
 					"offset" : 48768,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glProgramUniformMatrix4x3fvEXT",
 					"offset" : 48832,
-					"type" : "func #828*"
+					"type" : "func #314*"
 				},
 				{
 					"name" : "glPushDebugGroup",
 					"offset" : 48896,
-					"type" : "func #754*"
+					"type" : "func #240*"
 				},
 				{
 					"name" : "glPushDebugGroupKHR",
 					"offset" : 48960,
-					"type" : "func #754*"
+					"type" : "func #240*"
 				},
 				{
 					"name" : "glPushGroupMarkerEXT",
 					"offset" : 49024,
-					"type" : "func #745*"
+					"type" : "func #231*"
 				},
 				{
 					"name" : "glPushMatrix",
 					"offset" : 49088,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glQueryCounterEXT",
 					"offset" : 49152,
-					"type" : "func #532*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "glQueryMatrixxOES",
 					"offset" : 49216,
-					"type" : "func #829*"
+					"type" : "func #315*"
 				},
 				{
 					"name" : "glRasterSamplesEXT",
 					"offset" : 49280,
-					"type" : "func #830*"
+					"type" : "func #316*"
 				},
 				{
 					"name" : "glReadBuffer",
 					"offset" : 49344,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glReadBufferIndexedEXT",
 					"offset" : 49408,
-					"type" : "func #546*"
+					"type" : "func #32*"
 				},
 				{
 					"name" : "glReadBufferNV",
 					"offset" : 49472,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glReadPixels",
 					"offset" : 49536,
-					"type" : "func #831*"
+					"type" : "func #317*"
 				},
 				{
 					"name" : "glReadnPixels",
 					"offset" : 49600,
-					"type" : "func #832*"
+					"type" : "func #318*"
 				},
 				{
 					"name" : "glReadnPixelsEXT",
 					"offset" : 49664,
-					"type" : "func #832*"
+					"type" : "func #318*"
 				},
 				{
 					"name" : "glReadnPixelsKHR",
 					"offset" : 49728,
-					"type" : "func #832*"
+					"type" : "func #318*"
 				},
 				{
 					"name" : "glReleaseShaderCompiler",
 					"offset" : 49792,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glRenderbufferStorage",
 					"offset" : 49856,
-					"type" : "func #833*"
+					"type" : "func #319*"
 				},
 				{
 					"name" : "glRenderbufferStorageMultisample",
 					"offset" : 49920,
-					"type" : "func #834*"
+					"type" : "func #320*"
 				},
 				{
 					"name" : "glRenderbufferStorageMultisampleANGLE",
 					"offset" : 49984,
-					"type" : "func #834*"
+					"type" : "func #320*"
 				},
 				{
 					"name" : "glRenderbufferStorageMultisampleAPPLE",
 					"offset" : 50048,
-					"type" : "func #834*"
+					"type" : "func #320*"
 				},
 				{
 					"name" : "glRenderbufferStorageMultisampleEXT",
 					"offset" : 50112,
-					"type" : "func #834*"
+					"type" : "func #320*"
 				},
 				{
 					"name" : "glRenderbufferStorageMultisampleIMG",
 					"offset" : 50176,
-					"type" : "func #834*"
+					"type" : "func #320*"
 				},
 				{
 					"name" : "glRenderbufferStorageMultisampleNV",
 					"offset" : 50240,
-					"type" : "func #834*"
+					"type" : "func #320*"
 				},
 				{
 					"name" : "glRenderbufferStorageOES",
 					"offset" : 50304,
-					"type" : "func #833*"
+					"type" : "func #319*"
 				},
 				{
 					"name" : "glResolveDepthValuesNV",
 					"offset" : 50368,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glResolveMultisampleFramebufferAPPLE",
 					"offset" : 50432,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glResumeTransformFeedback",
 					"offset" : 50496,
-					"type" : "func #531*"
+					"type" : "func #17*"
 				},
 				{
 					"name" : "glRotatef",
 					"offset" : 50560,
-					"type" : "func #541*"
+					"type" : "func #27*"
 				},
 				{
 					"name" : "glRotatex",
 					"offset" : 50624,
-					"type" : "func #559*"
+					"type" : "func #45*"
 				},
 				{
 					"name" : "glRotatexOES",
 					"offset" : 50688,
-					"type" : "func #559*"
+					"type" : "func #45*"
 				},
 				{
 					"name" : "glSampleCoverage",
 					"offset" : 50752,
-					"type" : "func #835*"
+					"type" : "func #321*"
 				},
 				{
 					"name" : "glSampleCoveragex",
 					"offset" : 50816,
-					"type" : "func #836*"
+					"type" : "func #322*"
 				},
 				{
 					"name" : "glSampleCoveragexOES",
 					"offset" : 50880,
-					"type" : "func #836*"
+					"type" : "func #322*"
 				},
 				{
 					"name" : "glSampleMaski",
 					"offset" : 50944,
-					"type" : "func #837*"
+					"type" : "func #323*"
 				},
 				{
 					"name" : "glSamplerParameterIiv",
 					"offset" : 51008,
-					"type" : "func #769*"
+					"type" : "func #255*"
 				},
 				{
 					"name" : "glSamplerParameterIivEXT",
 					"offset" : 51072,
-					"type" : "func #769*"
+					"type" : "func #255*"
 				},
 				{
 					"name" : "glSamplerParameterIivOES",
 					"offset" : 51136,
-					"type" : "func #769*"
+					"type" : "func #255*"
 				},
 				{
 					"name" : "glSamplerParameterIuiv",
 					"offset" : 51200,
-					"type" : "func #838*"
+					"type" : "func #324*"
 				},
 				{
 					"name" : "glSamplerParameterIuivEXT",
 					"offset" : 51264,
-					"type" : "func #838*"
+					"type" : "func #324*"
 				},
 				{
 					"name" : "glSamplerParameterIuivOES",
 					"offset" : 51328,
-					"type" : "func #838*"
+					"type" : "func #324*"
 				},
 				{
 					"name" : "glSamplerParameterf",
 					"offset" : 51392,
-					"type" : "func #790*"
+					"type" : "func #276*"
 				},
 				{
 					"name" : "glSamplerParameterfv",
 					"offset" : 51456,
-					"type" : "func #791*"
+					"type" : "func #277*"
 				},
 				{
 					"name" : "glSamplerParameteri",
 					"offset" : 51520,
-					"type" : "func #744*"
+					"type" : "func #230*"
 				},
 				{
 					"name" : "glSamplerParameteriv",
 					"offset" : 51584,
-					"type" : "func #769*"
+					"type" : "func #255*"
 				},
 				{
 					"name" : "glScalef",
 					"offset" : 51648,
-					"type" : "func #779*"
+					"type" : "func #265*"
 				},
 				{
 					"name" : "glScalex",
 					"offset" : 51712,
-					"type" : "func #780*"
+					"type" : "func #266*"
 				},
 				{
 					"name" : "glScalexOES",
 					"offset" : 51776,
-					"type" : "func #780*"
+					"type" : "func #266*"
 				},
 				{
 					"name" : "glScissor",
 					"offset" : 51840,
-					"type" : "func #839*"
+					"type" : "func #325*"
 				},
 				{
 					"name" : "glScissorArrayvNV",
 					"offset" : 51904,
-					"type" : "func #840*"
+					"type" : "func #326*"
 				},
 				{
 					"name" : "glScissorArrayvOES",
 					"offset" : 51968,
-					"type" : "func #840*"
+					"type" : "func #326*"
 				},
 				{
 					"name" : "glScissorIndexedNV",
 					"offset" : 52032,
-					"type" : "func #841*"
+					"type" : "func #327*"
 				},
 				{
 					"name" : "glScissorIndexedOES",
 					"offset" : 52096,
-					"type" : "func #841*"
+					"type" : "func #327*"
 				},
 				{
 					"name" : "glScissorIndexedvNV",
 					"offset" : 52160,
-					"type" : "func #842*"
+					"type" : "func #328*"
 				},
 				{
 					"name" : "glScissorIndexedvOES",
 					"offset" : 52224,
-					"type" : "func #842*"
+					"type" : "func #328*"
 				},
 				{
 					"name" : "glSelectPerfMonitorCountersAMD",
 					"offset" : 52288,
-					"type" : "func #843*"
+					"type" : "func #329*"
 				},
 				{
 					"name" : "glSemaphoreParameterui64vEXT",
 					"offset" : 52352,
-					"type" : "func #844*"
+					"type" : "func #330*"
 				},
 				{
 					"name" : "glSetFenceNV",
 					"offset" : 52416,
-					"type" : "func #532*"
+					"type" : "func #18*"
 				},
 				{
 					"name" : "glShadeModel",
 					"offset" : 52480,
-					"type" : "func #527*"
+					"type" : "func #13*"
 				},
 				{
 					"name" : "glShaderBinary",
 					"offset" : 52544,
-					"type" : "func #845*"
+					"type" : "func #331*"
 				},
 				{
 					"name" : "glShaderSource",
 					"offset" : 52608,
-					"type" : "func #846*"
+					"type" : "func #332*"
 				},
 				{
 					"name" : "glSignalSemaphoreEXT",
 					"offset" : 52672,
-					"type" : "func #847*"
+					"type" : "func #333*"
 				},
 				{
 					"name" : "glSignalVkFenceNV",
 					"offset" : 52736,
-					"type" : "func #759*"
+					"type" : "func #245*"
 				},
 				{
 					"name" : "glSignalVkSemaphoreNV",
 					"offset" : 52800,
-					"type" : "func #759*"
+					"type" : "func #245*"
 				},
 				{
 					"name" : "glStartTilingQCOM",
 					"offset" : 52864,
-					"type" : "func #848*"
+					"type" : "func #334*"
 				},
 				{
 					"name" : "glStencilFillPathInstancedNV",
 					"offset" : 52928,
-					"type" : "func #849*"
+					"type" : "func #335*"
 				},
 				{
 					"name" : "glStencilFillPathNV",
 					"offset" : 52992,
-					"type" : "func #850*"
+					"type" : "func #336*"
 				},
 				{
 					"name" : "glStencilFunc",
 					"offset" : 53056,
-					"type" : "func #792*"
+					"type" : "func #278*"
 				},
 				{
 					"name" : "glStencilFuncSeparate",
 					"offset" : 53120,
-					"type" : "func #851*"
+					"type" : "func #337*"
 				},
 				{
 					"name" : "glStencilMask",
 					"offset" : 53184,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glStencilMaskSeparate",
 					"offset" : 53248,
-					"type" : "func #534*"
+					"type" : "func #20*"
 				},
 				{
 					"name" : "glStencilOp",
 					"offset" : 53312,
-					"type" : "func #852*"
+					"type" : "func #338*"
 				},
 				{
 					"name" : "glStencilOpSeparate",
 					"offset" : 53376,
-					"type" : "func #544*"
+					"type" : "func #30*"
 				},
 				{
 					"name" : "glStencilStrokePathInstancedNV",
 					"offset" : 53440,
-					"type" : "func #853*"
+					"type" : "func #339*"
 				},
 				{
 					"name" : "glStencilStrokePathNV",
 					"offset" : 53504,
-					"type" : "func #807*"
+					"type" : "func #293*"
 				},
 				{
 					"name" : "glStencilThenCoverFillPathInstancedNV",
 					"offset" : 53568,
-					"type" : "func #854*"
+					"type" : "func #340*"
 				},
 				{
 					"name" : "glStencilThenCoverFillPathNV",
 					"offset" : 53632,
-					"type" : "func #855*"
+					"type" : "func #341*"
 				},
 				{
 					"name" : "glStencilThenCoverStrokePathInstancedNV",
 					"offset" : 53696,
-					"type" : "func #856*"
+					"type" : "func #342*"
 				},
 				{
 					"name" : "glStencilThenCoverStrokePathNV",
 					"offset" : 53760,
-					"type" : "func #857*"
+					"type" : "func #343*"
 				},
 				{
 					"name" : "glSubpixelPrecisionBiasNV",
 					"offset" : 53824,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glTestFenceNV",
 					"offset" : 53888,
-					"type" : "func #642*"
+					"type" : "func #128*"
 				},
 				{
 					"name" : "glTexBuffer",
 					"offset" : 53952,
-					"type" : "func #858*"
+					"type" : "func #344*"
 				},
 				{
 					"name" : "glTexBufferEXT",
 					"offset" : 54016,
-					"type" : "func #858*"
+					"type" : "func #344*"
 				},
 				{
 					"name" : "glTexBufferOES",
 					"offset" : 54080,
-					"type" : "func #858*"
+					"type" : "func #344*"
 				},
 				{
 					"name" : "glTexBufferRange",
 					"offset" : 54144,
-					"type" : "func #859*"
+					"type" : "func #345*"
 				},
 				{
 					"name" : "glTexBufferRangeEXT",
 					"offset" : 54208,
-					"type" : "func #859*"
+					"type" : "func #345*"
 				},
 				{
 					"name" : "glTexBufferRangeOES",
 					"offset" : 54272,
-					"type" : "func #859*"
+					"type" : "func #345*"
 				},
 				{
 					"name" : "glTexCoordPointer",
 					"offset" : 54336,
-					"type" : "func #573*"
+					"type" : "func #59*"
 				},
 				{
 					"name" : "glTexEnvf",
 					"offset" : 54400,
-					"type" : "func #755*"
+					"type" : "func #241*"
 				},
 				{
 					"name" : "glTexEnvfv",
 					"offset" : 54464,
-					"type" : "func #756*"
+					"type" : "func #242*"
 				},
 				{
 					"name" : "glTexEnvi",
 					"offset" : 54528,
-					"type" : "func #643*"
+					"type" : "func #129*"
 				},
 				{
 					"name" : "glTexEnviv",
 					"offset" : 54592,
-					"type" : "func #860*"
+					"type" : "func #346*"
 				},
 				{
 					"name" : "glTexEnvx",
 					"offset" : 54656,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glTexEnvxOES",
 					"offset" : 54720,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glTexEnvxv",
 					"offset" : 54784,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glTexEnvxvOES",
 					"offset" : 54848,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glTexGenfOES",
 					"offset" : 54912,
-					"type" : "func #755*"
+					"type" : "func #241*"
 				},
 				{
 					"name" : "glTexGenfvOES",
 					"offset" : 54976,
-					"type" : "func #756*"
+					"type" : "func #242*"
 				},
 				{
 					"name" : "glTexGeniOES",
 					"offset" : 55040,
-					"type" : "func #643*"
+					"type" : "func #129*"
 				},
 				{
 					"name" : "glTexGenivOES",
 					"offset" : 55104,
-					"type" : "func #860*"
+					"type" : "func #346*"
 				},
 				{
 					"name" : "glTexGenxOES",
 					"offset" : 55168,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glTexGenxvOES",
 					"offset" : 55232,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glTexImage2D",
 					"offset" : 55296,
-					"type" : "func #861*"
+					"type" : "func #347*"
 				},
 				{
 					"name" : "glTexImage3D",
 					"offset" : 55360,
-					"type" : "func #862*"
+					"type" : "func #348*"
 				},
 				{
 					"name" : "glTexImage3DOES",
 					"offset" : 55424,
-					"type" : "func #863*"
+					"type" : "func #349*"
 				},
 				{
 					"name" : "glTexPageCommitmentEXT",
 					"offset" : 55488,
-					"type" : "func #864*"
+					"type" : "func #350*"
 				},
 				{
 					"name" : "glTexParameterIiv",
 					"offset" : 55552,
-					"type" : "func #860*"
+					"type" : "func #346*"
 				},
 				{
 					"name" : "glTexParameterIivEXT",
 					"offset" : 55616,
-					"type" : "func #860*"
+					"type" : "func #346*"
 				},
 				{
 					"name" : "glTexParameterIivOES",
 					"offset" : 55680,
-					"type" : "func #860*"
+					"type" : "func #346*"
 				},
 				{
 					"name" : "glTexParameterIuiv",
 					"offset" : 55744,
-					"type" : "func #865*"
+					"type" : "func #351*"
 				},
 				{
 					"name" : "glTexParameterIuivEXT",
 					"offset" : 55808,
-					"type" : "func #865*"
+					"type" : "func #351*"
 				},
 				{
 					"name" : "glTexParameterIuivOES",
 					"offset" : 55872,
-					"type" : "func #865*"
+					"type" : "func #351*"
 				},
 				{
 					"name" : "glTexParameterf",
 					"offset" : 55936,
-					"type" : "func #755*"
+					"type" : "func #241*"
 				},
 				{
 					"name" : "glTexParameterfv",
 					"offset" : 56000,
-					"type" : "func #756*"
+					"type" : "func #242*"
 				},
 				{
 					"name" : "glTexParameteri",
 					"offset" : 56064,
-					"type" : "func #643*"
+					"type" : "func #129*"
 				},
 				{
 					"name" : "glTexParameteriv",
 					"offset" : 56128,
-					"type" : "func #860*"
+					"type" : "func #346*"
 				},
 				{
 					"name" : "glTexParameterx",
 					"offset" : 56192,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glTexParameterxOES",
 					"offset" : 56256,
-					"type" : "func #757*"
+					"type" : "func #243*"
 				},
 				{
 					"name" : "glTexParameterxv",
 					"offset" : 56320,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glTexParameterxvOES",
 					"offset" : 56384,
-					"type" : "func #758*"
+					"type" : "func #244*"
 				},
 				{
 					"name" : "glTexStorage1DEXT",
 					"offset" : 56448,
-					"type" : "func #866*"
+					"type" : "func #352*"
 				},
 				{
 					"name" : "glTexStorage2D",
 					"offset" : 56512,
-					"type" : "func #834*"
+					"type" : "func #320*"
 				},
 				{
 					"name" : "glTexStorage2DEXT",
 					"offset" : 56576,
-					"type" : "func #834*"
+					"type" : "func #320*"
 				},
 				{
 					"name" : "glTexStorage2DMultisample",
 					"offset" : 56640,
-					"type" : "func #867*"
+					"type" : "func #353*"
 				},
 				{
 					"name" : "glTexStorage3D",
 					"offset" : 56704,
-					"type" : "func #868*"
+					"type" : "func #354*"
 				},
 				{
 					"name" : "glTexStorage3DEXT",
 					"offset" : 56768,
-					"type" : "func #868*"
+					"type" : "func #354*"
 				},
 				{
 					"name" : "glTexStorage3DMultisample",
 					"offset" : 56832,
-					"type" : "func #869*"
+					"type" : "func #355*"
 				},
 				{
 					"name" : "glTexStorage3DMultisampleOES",
 					"offset" : 56896,
-					"type" : "func #869*"
+					"type" : "func #355*"
 				},
 				{
 					"name" : "glTexStorageMem2DEXT",
 					"offset" : 56960,
-					"type" : "func #870*"
+					"type" : "func #356*"
 				},
 				{
 					"name" : "glTexStorageMem2DMultisampleEXT",
 					"offset" : 57024,
-					"type" : "func #871*"
+					"type" : "func #357*"
 				},
 				{
 					"name" : "glTexStorageMem3DEXT",
 					"offset" : 57088,
-					"type" : "func #872*"
+					"type" : "func #358*"
 				},
 				{
 					"name" : "glTexStorageMem3DMultisampleEXT",
 					"offset" : 57152,
-					"type" : "func #873*"
+					"type" : "func #359*"
 				},
 				{
 					"name" : "glTexSubImage2D",
 					"offset" : 57216,
-					"type" : "func #874*"
+					"type" : "func #360*"
 				},
 				{
 					"name" : "glTexSubImage3D",
 					"offset" : 57280,
-					"type" : "func #875*"
+					"type" : "func #361*"
 				},
 				{
 					"name" : "glTexSubImage3DOES",
 					"offset" : 57344,
-					"type" : "func #875*"
+					"type" : "func #361*"
 				},
 				{
 					"name" : "glTextureFoveationParametersQCOM",
 					"offset" : 57408,
-					"type" : "func #647*"
+					"type" : "func #133*"
 				},
 				{
 					"name" : "glTextureStorage1DEXT",
 					"offset" : 57472,
-					"type" : "func #876*"
+					"type" : "func #362*"
 				},
 				{
 					"name" : "glTextureStorage2DEXT",
 					"offset" : 57536,
-					"type" : "func #877*"
+					"type" : "func #363*"
 				},
 				{
 					"name" : "glTextureStorage3DEXT",
 					"offset" : 57600,
-					"type" : "func #878*"
+					"type" : "func #364*"
 				},
 				{
 					"name" : "glTextureStorageMem2DEXT",
 					"offset" : 57664,
-					"type" : "func #879*"
+					"type" : "func #365*"
 				},
 				{
 					"name" : "glTextureStorageMem2DMultisampleEXT",
 					"offset" : 57728,
-					"type" : "func #880*"
+					"type" : "func #366*"
 				},
 				{
 					"name" : "glTextureStorageMem3DEXT",
 					"offset" : 57792,
-					"type" : "func #881*"
+					"type" : "func #367*"
 				},
 				{
 					"name" : "glTextureStorageMem3DMultisampleEXT",
 					"offset" : 57856,
-					"type" : "func #882*"
+					"type" : "func #368*"
 				},
 				{
 					"name" : "glTextureViewEXT",
 					"offset" : 57920,
-					"type" : "func #883*"
+					"type" : "func #369*"
 				},
 				{
 					"name" : "glTextureViewOES",
 					"offset" : 57984,
-					"type" : "func #883*"
+					"type" : "func #369*"
 				},
 				{
 					"name" : "glTransformFeedbackVaryings",
 					"offset" : 58048,
-					"type" : "func #884*"
+					"type" : "func #370*"
 				},
 				{
 					"name" : "glTransformPathNV",
 					"offset" : 58112,
-					"type" : "func #885*"
+					"type" : "func #371*"
 				},
 				{
 					"name" : "glTranslatef",
 					"offset" : 58176,
-					"type" : "func #779*"
+					"type" : "func #265*"
 				},
 				{
 					"name" : "glTranslatex",
 					"offset" : 58240,
-					"type" : "func #780*"
+					"type" : "func #266*"
 				},
 				{
 					"name" : "glTranslatexOES",
 					"offset" : 58304,
-					"type" : "func #780*"
+					"type" : "func #266*"
 				},
 				{
 					"name" : "glUniform1f",
 					"offset" : 58368,
-					"type" : "func #886*"
+					"type" : "func #372*"
 				},
 				{
 					"name" : "glUniform1fv",
 					"offset" : 58432,
-					"type" : "func #887*"
+					"type" : "func #373*"
 				},
 				{
 					"name" : "glUniform1i",
 					"offset" : 58496,
-					"type" : "func #888*"
+					"type" : "func #374*"
 				},
 				{
 					"name" : "glUniform1i64NV",
 					"offset" : 58560,
-					"type" : "func #889*"
+					"type" : "func #375*"
 				},
 				{
 					"name" : "glUniform1i64vNV",
 					"offset" : 58624,
-					"type" : "func #890*"
+					"type" : "func #376*"
 				},
 				{
 					"name" : "glUniform1iv",
 					"offset" : 58688,
-					"type" : "func #891*"
+					"type" : "func #377*"
 				},
 				{
 					"name" : "glUniform1ui",
 					"offset" : 58752,
-					"type" : "func #892*"
+					"type" : "func #378*"
 				},
 				{
 					"name" : "glUniform1ui64NV",
 					"offset" : 58816,
-					"type" : "func #893*"
+					"type" : "func #379*"
 				},
 				{
 					"name" : "glUniform1ui64vNV",
 					"offset" : 58880,
-					"type" : "func #894*"
+					"type" : "func #380*"
 				},
 				{
 					"name" : "glUniform1uiv",
 					"offset" : 58944,
-					"type" : "func #895*"
+					"type" : "func #381*"
 				},
 				{
 					"name" : "glUniform2f",
 					"offset" : 59008,
-					"type" : "func #896*"
+					"type" : "func #382*"
 				},
 				{
 					"name" : "glUniform2fv",
 					"offset" : 59072,
-					"type" : "func #887*"
+					"type" : "func #373*"
 				},
 				{
 					"name" : "glUniform2i",
 					"offset" : 59136,
-					"type" : "func #897*"
+					"type" : "func #383*"
 				},
 				{
 					"name" : "glUniform2i64NV",
 					"offset" : 59200,
-					"type" : "func #898*"
+					"type" : "func #384*"
 				},
 				{
 					"name" : "glUniform2i64vNV",
 					"offset" : 59264,
-					"type" : "func #890*"
+					"type" : "func #376*"
 				},
 				{
 					"name" : "glUniform2iv",
 					"offset" : 59328,
-					"type" : "func #891*"
+					"type" : "func #377*"
 				},
 				{
 					"name" : "glUniform2ui",
 					"offset" : 59392,
-					"type" : "func #899*"
+					"type" : "func #385*"
 				},
 				{
 					"name" : "glUniform2ui64NV",
 					"offset" : 59456,
-					"type" : "func #900*"
+					"type" : "func #386*"
 				},
 				{
 					"name" : "glUniform2ui64vNV",
 					"offset" : 59520,
-					"type" : "func #894*"
+					"type" : "func #380*"
 				},
 				{
 					"name" : "glUniform2uiv",
 					"offset" : 59584,
-					"type" : "func #895*"
+					"type" : "func #381*"
 				},
 				{
 					"name" : "glUniform3f",
 					"offset" : 59648,
-					"type" : "func #901*"
+					"type" : "func #387*"
 				},
 				{
 					"name" : "glUniform3fv",
 					"offset" : 59712,
-					"type" : "func #887*"
+					"type" : "func #373*"
 				},
 				{
 					"name" : "glUniform3i",
 					"offset" : 59776,
-					"type" : "func #902*"
+					"type" : "func #388*"
 				},
 				{
 					"name" : "glUniform3i64NV",
 					"offset" : 59840,
-					"type" : "func #903*"
+					"type" : "func #389*"
 				},
 				{
 					"name" : "glUniform3i64vNV",
 					"offset" : 59904,
-					"type" : "func #890*"
+					"type" : "func #376*"
 				},
 				{
 					"name" : "glUniform3iv",
 					"offset" : 59968,
-					"type" : "func #891*"
+					"type" : "func #377*"
 				},
 				{
 					"name" : "glUniform3ui",
 					"offset" : 60032,
-					"type" : "func #904*"
+					"type" : "func #390*"
 				},
 				{
 					"name" : "glUniform3ui64NV",
 					"offset" : 60096,
-					"type" : "func #905*"
+					"type" : "func #391*"
 				},
 				{
 					"name" : "glUniform3ui64vNV",
 					"offset" : 60160,
-					"type" : "func #894*"
+					"type" : "func #380*"
 				},
 				{
 					"name" : "glUniform3uiv",
 					"offset" : 60224,
-					"type" : "func #895*"
+					"type" : "func #381*"
 				},
 				{
 					"name" : "glUniform4f",
 					"offset" : 60288,
-					"type" : "func #906*"
+					"type" : "func #392*"
 				},
 				{
 					"name" : "glUniform4fv",
 					"offset" : 60352,
-					"type" : "func #887*"
+					"type" : "func #373*"
 				},
 				{
 					"name" : "glUniform4i",
 					"offset" : 60416,
-					"type" : "func #626*"
+					"type" : "func #112*"
 				},
 				{
 					"name" : "glUniform4i64NV",
 					"offset" : 60480,
-					"type" : "func #907*"
+					"type" : "func #393*"
 				},
 				{
 					"name" : "glUniform4i64vNV",
 					"offset" : 60544,
-					"type" : "func #890*"
+					"type" : "func #376*"
 				},
 				{
 					"name" : "glUniform4iv",
 					"offset" : 60608,
-					"type" : "func #891*"
+					"type" : "func #377*"
 				},
 				{
 					"name" : "glUniform4ui",
 					"offset" : 60672,
-					"type" : "func #908*"
+					"type" : "func #394*"
 				},
 				{
 					"name" : "glUniform4ui64NV",
 					"offset" : 60736,
-					"type" : "func #909*"
+					"type" : "func #395*"
 				},
 				{
 					"name" : "glUniform4ui64vNV",
 					"offset" : 60800,
-					"type" : "func #894*"
+					"type" : "func #380*"
 				},
 				{
 					"name" : "glUniform4uiv",
 					"offset" : 60864,
-					"type" : "func #895*"
+					"type" : "func #381*"
 				},
 				{
 					"name" : "glUniformBlockBinding",
 					"offset" : 60928,
-					"type" : "func #607*"
+					"type" : "func #93*"
 				},
 				{
 					"name" : "glUniformHandleui64IMG",
 					"offset" : 60992,
-					"type" : "func #910*"
+					"type" : "func #396*"
 				},
 				{
 					"name" : "glUniformHandleui64NV",
 					"offset" : 61056,
-					"type" : "func #910*"
+					"type" : "func #396*"
 				},
 				{
 					"name" : "glUniformHandleui64vIMG",
 					"offset" : 61120,
-					"type" : "func #911*"
+					"type" : "func #397*"
 				},
 				{
 					"name" : "glUniformHandleui64vNV",
 					"offset" : 61184,
-					"type" : "func #911*"
+					"type" : "func #397*"
 				},
 				{
 					"name" : "glUniformMatrix2fv",
 					"offset" : 61248,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix2x3fv",
 					"offset" : 61312,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix2x3fvNV",
 					"offset" : 61376,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix2x4fv",
 					"offset" : 61440,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix2x4fvNV",
 					"offset" : 61504,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix3fv",
 					"offset" : 61568,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix3x2fv",
 					"offset" : 61632,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix3x2fvNV",
 					"offset" : 61696,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix3x4fv",
 					"offset" : 61760,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix3x4fvNV",
 					"offset" : 61824,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix4fv",
 					"offset" : 61888,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix4x2fv",
 					"offset" : 61952,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix4x2fvNV",
 					"offset" : 62016,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix4x3fv",
 					"offset" : 62080,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUniformMatrix4x3fvNV",
 					"offset" : 62144,
-					"type" : "func #912*"
+					"type" : "func #398*"
 				},
 				{
 					"name" : "glUnmapBuffer",
 					"offset" : 62208,
-					"type" : "func #748*"
+					"type" : "func #234*"
 				},
 				{
 					"name" : "glUnmapBufferOES",
 					"offset" : 62272,
-					"type" : "func #748*"
+					"type" : "func #234*"
 				},
 				{
 					"name" : "glUseProgram",
 					"offset" : 62336,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glUseProgramStages",
 					"offset" : 62400,
-					"type" : "func #913*"
+					"type" : "func #399*"
 				},
 				{
 					"name" : "glUseProgramStagesEXT",
 					"offset" : 62464,
-					"type" : "func #913*"
+					"type" : "func #399*"
 				},
 				{
 					"name" : "glValidateProgram",
 					"offset" : 62528,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glValidateProgramPipeline",
 					"offset" : 62592,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glValidateProgramPipelineEXT",
 					"offset" : 62656,
-					"type" : "func #533*"
+					"type" : "func #19*"
 				},
 				{
 					"name" : "glVertexAttrib1f",
 					"offset" : 62720,
-					"type" : "func #914*"
+					"type" : "func #400*"
 				},
 				{
 					"name" : "glVertexAttrib1fv",
 					"offset" : 62784,
-					"type" : "func #915*"
+					"type" : "func #401*"
 				},
 				{
 					"name" : "glVertexAttrib2f",
 					"offset" : 62848,
-					"type" : "func #602*"
+					"type" : "func #88*"
 				},
 				{
 					"name" : "glVertexAttrib2fv",
 					"offset" : 62912,
-					"type" : "func #915*"
+					"type" : "func #401*"
 				},
 				{
 					"name" : "glVertexAttrib3f",
 					"offset" : 62976,
-					"type" : "func #916*"
+					"type" : "func #402*"
 				},
 				{
 					"name" : "glVertexAttrib3fv",
 					"offset" : 63040,
-					"type" : "func #915*"
+					"type" : "func #401*"
 				},
 				{
 					"name" : "glVertexAttrib4f",
 					"offset" : 63104,
-					"type" : "func #917*"
+					"type" : "func #403*"
 				},
 				{
 					"name" : "glVertexAttrib4fv",
 					"offset" : 63168,
-					"type" : "func #915*"
+					"type" : "func #401*"
 				},
 				{
 					"name" : "glVertexAttribBinding",
 					"offset" : 63232,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glVertexAttribDivisor",
 					"offset" : 63296,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glVertexAttribDivisorANGLE",
 					"offset" : 63360,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glVertexAttribDivisorEXT",
 					"offset" : 63424,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glVertexAttribDivisorNV",
 					"offset" : 63488,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glVertexAttribFormat",
 					"offset" : 63552,
-					"type" : "func #918*"
+					"type" : "func #404*"
 				},
 				{
 					"name" : "glVertexAttribI4i",
 					"offset" : 63616,
-					"type" : "func #817*"
+					"type" : "func #303*"
 				},
 				{
 					"name" : "glVertexAttribI4iv",
 					"offset" : 63680,
-					"type" : "func #842*"
+					"type" : "func #328*"
 				},
 				{
 					"name" : "glVertexAttribI4ui",
 					"offset" : 63744,
-					"type" : "func #919*"
+					"type" : "func #405*"
 				},
 				{
 					"name" : "glVertexAttribI4uiv",
 					"offset" : 63808,
-					"type" : "func #920*"
+					"type" : "func #406*"
 				},
 				{
 					"name" : "glVertexAttribIFormat",
 					"offset" : 63872,
-					"type" : "func #921*"
+					"type" : "func #407*"
 				},
 				{
 					"name" : "glVertexAttribIPointer",
 					"offset" : 63936,
-					"type" : "func #922*"
+					"type" : "func #408*"
 				},
 				{
 					"name" : "glVertexAttribPointer",
 					"offset" : 64000,
-					"type" : "func #923*"
+					"type" : "func #409*"
 				},
 				{
 					"name" : "glVertexBindingDivisor",
 					"offset" : 64064,
-					"type" : "func #526*"
+					"type" : "func #12*"
 				},
 				{
 					"name" : "glVertexPointer",
 					"offset" : 64128,
-					"type" : "func #573*"
+					"type" : "func #59*"
 				},
 				{
 					"name" : "glViewport",
 					"offset" : 64192,
-					"type" : "func #839*"
+					"type" : "func #325*"
 				},
 				{
 					"name" : "glViewportArrayvNV",
 					"offset" : 64256,
-					"type" : "func #601*"
+					"type" : "func #87*"
 				},
 				{
 					"name" : "glViewportArrayvOES",
 					"offset" : 64320,
-					"type" : "func #601*"
+					"type" : "func #87*"
 				},
 				{
 					"name" : "glViewportIndexedfNV",
 					"offset" : 64384,
-					"type" : "func #917*"
+					"type" : "func #403*"
 				},
 				{
 					"name" : "glViewportIndexedfOES",
 					"offset" : 64448,
-					"type" : "func #917*"
+					"type" : "func #403*"
 				},
 				{
 					"name" : "glViewportIndexedfvNV",
 					"offset" : 64512,
-					"type" : "func #915*"
+					"type" : "func #401*"
 				},
 				{
 					"name" : "glViewportIndexedfvOES",
 					"offset" : 64576,
-					"type" : "func #915*"
+					"type" : "func #401*"
 				},
 				{
 					"name" : "glViewportPositionWScaleNV",
 					"offset" : 64640,
-					"type" : "func #602*"
+					"type" : "func #88*"
 				},
 				{
 					"name" : "glViewportSwizzleNV",
 					"offset" : 64704,
-					"type" : "func #545*"
+					"type" : "func #31*"
 				},
 				{
 					"name" : "glWaitSemaphoreEXT",
 					"offset" : 64768,
-					"type" : "func #847*"
+					"type" : "func #333*"
 				},
 				{
 					"name" : "glWaitSync",
 					"offset" : 64832,
-					"type" : "func #924*"
+					"type" : "func #410*"
 				},
 				{
 					"name" : "glWaitSyncAPPLE",
 					"offset" : 64896,
-					"type" : "func #924*"
+					"type" : "func #410*"
 				},
 				{
 					"name" : "glWaitVkSemaphoreNV",
 					"offset" : 64960,
-					"type" : "func #759*"
+					"type" : "func #245*"
 				},
 				{
 					"name" : "glWeightPathsNV",
 					"offset" : 65024,
-					"type" : "func #925*"
+					"type" : "func #411*"
 				},
 				{
 					"name" : "glWeightPointerOES",
 					"offset" : 65088,
-					"type" : "func #573*"
+					"type" : "func #59*"
 				},
 				{
 					"name" : "glWindowRectanglesEXT",
 					"offset" : 65152,
-					"type" : "func #926*"
+					"type" : "func #412*"
 				}
 			],
 			"inheritance" : [],
@@ -30026,7 +30026,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#499"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__long::#491"
 				},
 				{
 					"name" : "__size_",
@@ -30145,7 +30145,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#502"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#524"
 				},
 				{
 					"name" : "__padding_",

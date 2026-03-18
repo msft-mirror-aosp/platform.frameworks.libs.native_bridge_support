@@ -5196,7 +5196,7 @@
 				{
 					"name" : "_vptr$AIBinder",
 					"offset" : 0,
-					"type" : "func #12**"
+					"type" : "func #1**"
 				},
 				{
 					"name" : "mClazz",

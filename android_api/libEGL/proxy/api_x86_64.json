@@ -1079,7 +1079,7 @@
 				{
 					"name" : "_vptr$egl_object_t",
 					"offset" : 0,
-					"type" : "func #2**"
+					"type" : "func #1**"
 				},
 				{
 					"name" : "display",
@@ -23297,7 +23297,7 @@
 				{
 					"name" : "extensions",
 					"offset" : 0,
-					"type" : "func #531*[256]"
+					"type" : "func #17*[256]"
 				}
 			],
 			"inheritance" : [],

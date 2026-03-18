@@ -1995,7 +1995,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::#522"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::#496"
 				}
 			],
 			"inheritance" : [],
@@ -21616,7 +21616,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#523"
+					"type" : "struct std::__1::basic_string<unsigned char8, std::__1::char_traits<unsigned char8>, std::__1::allocator<unsigned char8>>::__short::#497"
 				},
 				{
 					"name" : "__padding_",
