@@ -65,9 +65,9 @@
 		{
 			"type" : "func com_android_graphics_libvulkan_flags_vk_khr_present_wait2"
 		},
-		"com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api" : 
+		"com_android_graphics_libvulkan_flags_vk_khr_present_wait2_gpu" : 
 		{
-			"type" : "func com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api"
+			"type" : "func com_android_graphics_libvulkan_flags_vk_khr_present_wait2_gpu"
 		},
 		"vkAcquireNextImage2KHR" : 
 		{
@@ -1623,7 +1623,7 @@
 			"return_type" : "bool",
 			"size" : 0
 		},
-		"func com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api" : 
+		"func com_android_graphics_libvulkan_flags_vk_khr_present_wait2_gpu" : 
 		{
 			"has_variadic_args" : false,
 			"is_virtual_method" : false,

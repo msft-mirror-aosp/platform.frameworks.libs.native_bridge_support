@@ -5965,7 +5965,7 @@
 				{
 					"name" : "start_routine",
 					"offset" : 384,
-					"type" : "func #358*"
+					"type" : "func #435*"
 				},
 				{
 					"name" : "start_routine_arg",
@@ -28676,17 +28676,17 @@
 				{
 					"name" : "sort_list",
 					"offset" : 3040,
-					"type" : "struct __res_state::#339[10]"
+					"type" : "struct __res_state::#1[10]"
 				},
 				{
 					"name" : "qhook",
 					"offset" : 3680,
-					"type" : "func #340*"
+					"type" : "func #2*"
 				},
 				{
 					"name" : "rhook",
 					"offset" : 3712,
-					"type" : "func #341*"
+					"type" : "func #3*"
 				},
 				{
 					"name" : "res_h_errno",
@@ -28716,7 +28716,7 @@
 				{
 					"name" : "_u",
 					"offset" : 3904,
-					"type" : "union __res_state::#342"
+					"type" : "union __res_state::#4"
 				},
 				{
 					"name" : "rstatic",
@@ -29068,22 +29068,22 @@
 				{
 					"name" : "_close",
 					"offset" : 256,
-					"type" : "func #16*"
+					"type" : "func #76*"
 				},
 				{
 					"name" : "_read",
 					"offset" : 288,
-					"type" : "func #17*"
+					"type" : "func #77*"
 				},
 				{
 					"name" : "_seek",
 					"offset" : 320,
-					"type" : "func #18*"
+					"type" : "func #78*"
 				},
 				{
 					"name" : "_write",
 					"offset" : 352,
-					"type" : "func #19*"
+					"type" : "func #79*"
 				},
 				{
 					"name" : "_ext",
@@ -33405,7 +33405,7 @@
 				{
 					"name" : "data",
 					"offset" : 64,
-					"type" : "union android_fdtrack_event::#399"
+					"type" : "union android_fdtrack_event::#379"
 				}
 			],
 			"inheritance" : [],
@@ -33609,7 +33609,7 @@
 				{
 					"name" : "qhook",
 					"offset" : 192,
-					"type" : "func #350*"
+					"type" : "func #337*"
 				}
 			],
 			"inheritance" : [],
@@ -34469,7 +34469,7 @@
 				{
 					"name" : "in6_u",
 					"offset" : 0,
-					"type" : "union in6_addr::#413"
+					"type" : "union in6_addr::#8"
 				}
 			],
 			"inheritance" : [],
@@ -36162,7 +36162,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "union siginfo::#188"
+					"type" : "union siginfo::#175"
 				}
 			],
 			"inheritance" : [],
@@ -36899,12 +36899,12 @@
 				{
 					"name" : "addr",
 					"offset" : 32,
-					"type" : "union sort_list::#11"
+					"type" : "union sort_list::#7"
 				},
 				{
 					"name" : "mask",
 					"offset" : 160,
-					"type" : "union sort_list::#11"
+					"type" : "union sort_list::#7"
 				}
 			],
 			"inheritance" : [],
@@ -37839,37 +37839,37 @@
 				{
 					"name" : "_kill",
 					"offset" : 0,
-					"type" : "struct __sifields::#281"
+					"type" : "struct __sifields::#216"
 				},
 				{
 					"name" : "_timer",
 					"offset" : 0,
-					"type" : "struct __sifields::#282"
+					"type" : "struct __sifields::#217"
 				},
 				{
 					"name" : "_rt",
 					"offset" : 0,
-					"type" : "struct __sifields::#283"
+					"type" : "struct __sifields::#218"
 				},
 				{
 					"name" : "_sigchld",
 					"offset" : 0,
-					"type" : "struct __sifields::#284"
+					"type" : "struct __sifields::#219"
 				},
 				{
 					"name" : "_sigfault",
 					"offset" : 0,
-					"type" : "struct __sifields::#285"
+					"type" : "struct __sifields::#220"
 				},
 				{
 					"name" : "_sigpoll",
 					"offset" : 0,
-					"type" : "struct __sifields::#290"
+					"type" : "struct __sifields::#225"
 				},
 				{
 					"name" : "_sigsys",
 					"offset" : 0,
-					"type" : "struct __sifields::#291"
+					"type" : "struct __sifields::#226"
 				}
 			],
 			"inheritance" : [],

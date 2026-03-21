@@ -26740,22 +26740,22 @@
 				{
 					"name" : "_close",
 					"offset" : 448,
-					"type" : "func #19*"
+					"type" : "func #99*"
 				},
 				{
 					"name" : "_read",
 					"offset" : 512,
-					"type" : "func #20*"
+					"type" : "func #100*"
 				},
 				{
 					"name" : "_seek",
 					"offset" : 576,
-					"type" : "func #21*"
+					"type" : "func #101*"
 				},
 				{
 					"name" : "_write",
 					"offset" : 640,
-					"type" : "func #22*"
+					"type" : "func #102*"
 				},
 				{
 					"name" : "_ext",
@@ -31097,7 +31097,7 @@
 				{
 					"name" : "data",
 					"offset" : 64,
-					"type" : "union android_fdtrack_event::#201"
+					"type" : "union android_fdtrack_event::#189"
 				}
 			],
 			"inheritance" : [],
@@ -31301,7 +31301,7 @@
 				{
 					"name" : "qhook",
 					"offset" : 192,
-					"type" : "func #160*"
+					"type" : "func #236*"
 				}
 			],
 			"inheritance" : [],
@@ -31997,7 +31997,7 @@
 				{
 					"name" : "in6_u",
 					"offset" : 0,
-					"type" : "union in6_addr::#228"
+					"type" : "union in6_addr::#155"
 				}
 			],
 			"inheritance" : [],
@@ -32817,7 +32817,7 @@
 				{
 					"name" : "",
 					"offset" : 32,
-					"type" : "union prop_info::#124"
+					"type" : "union prop_info::#120"
 				},
 				{
 					"name" : "name",
@@ -34522,12 +34522,12 @@
 				{
 					"name" : "addr",
 					"offset" : 32,
-					"type" : "union sort_list::#154"
+					"type" : "union sort_list::#152"
 				},
 				{
 					"name" : "mask",
 					"offset" : 160,
-					"type" : "union sort_list::#154"
+					"type" : "union sort_list::#152"
 				}
 			],
 			"inheritance" : [],

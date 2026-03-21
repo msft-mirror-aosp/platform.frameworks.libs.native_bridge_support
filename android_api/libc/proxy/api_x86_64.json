@@ -27087,22 +27087,22 @@
 				{
 					"name" : "_close",
 					"offset" : 448,
-					"type" : "func #75*"
+					"type" : "func #39*"
 				},
 				{
 					"name" : "_read",
 					"offset" : 512,
-					"type" : "func #76*"
+					"type" : "func #40*"
 				},
 				{
 					"name" : "_seek",
 					"offset" : 576,
-					"type" : "func #77*"
+					"type" : "func #41*"
 				},
 				{
 					"name" : "_write",
 					"offset" : 640,
-					"type" : "func #78*"
+					"type" : "func #42*"
 				},
 				{
 					"name" : "_ext",
@@ -31649,7 +31649,7 @@
 				{
 					"name" : "qhook",
 					"offset" : 192,
-					"type" : "func #236*"
+					"type" : "func #160*"
 				}
 			],
 			"inheritance" : [],
@@ -34823,12 +34823,12 @@
 				{
 					"name" : "addr",
 					"offset" : 32,
-					"type" : "union sort_list::#154"
+					"type" : "union sort_list::#156"
 				},
 				{
 					"name" : "mask",
 					"offset" : 160,
-					"type" : "union sort_list::#154"
+					"type" : "union sort_list::#156"
 				}
 			],
 			"inheritance" : [],

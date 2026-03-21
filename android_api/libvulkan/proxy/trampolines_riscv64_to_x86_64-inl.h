@@ -14,7 +14,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"com_android_graphics_libvulkan_flags_swapchain_mutable_format_ext", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
 {"com_android_graphics_libvulkan_flags_swapchain_r8g8b8_format", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
 {"com_android_graphics_libvulkan_flags_vk_khr_present_wait2", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
-{"com_android_graphics_libvulkan_flags_vulkan_1_4_instance_api", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
+{"com_android_graphics_libvulkan_flags_vk_khr_present_wait2_gpu", GetTrampolineFunc<auto(void) -> uint8_t>(), reinterpret_cast<void*>(NULL)},
 {"vkAcquireNextImage2KHR", DoCustomTrampolineWithThunk_vkAcquireNextImage2KHR, reinterpret_cast<void*>(vkAcquireNextImage2KHR)},
 {"vkAcquireNextImageKHR", GetTrampolineFunc<auto(void*, void*, uint64_t, void*, void*, void*) -> uint32_t>(), reinterpret_cast<void*>(NULL)},
 {"vkAllocateCommandBuffers", DoCustomTrampolineWithThunk_vkAllocateCommandBuffers, reinterpret_cast<void*>(vkAllocateCommandBuffers)},
