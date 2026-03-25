@@ -19,14 +19,14 @@
 #include "EGL/egl.h"
 #include "EGL/eglext.h"
 
+#include "berberis/base/tracing.h"
 #include "berberis/guest_abi/function_wrappers.h"
 #include "berberis/guest_abi/guest_arguments.h"
 #include "berberis/guest_abi/guest_params.h"
 #include "berberis/guest_state/guest_state.h"
 #include "berberis/proxy_loader/proxy_library_builder.h"
+#include "berberis/runtime_library/runtime_library.h"
 #include "berberis/runtime_primitives/known_guest_function_wrapper.h"
-#include "berberis/runtime_primitives/runtime_library.h"
-#include "berberis/base/tracing.h"
 #include "native_bridge_proxy/android_api/libEGL/gl_common_defs.h"
 
 namespace berberis {

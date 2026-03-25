@@ -30,8 +30,8 @@
 #include "berberis/guest_abi/guest_params.h"
 #include "berberis/guest_loader/guest_loader.h"
 #include "berberis/proxy_loader/proxy_library_builder.h"
+#include "berberis/runtime_library/runtime_library.h"
 #include "berberis/runtime_primitives/known_guest_function_wrapper.h"
-#include "berberis/runtime_primitives/runtime_library.h"
 
 #include "binary_search.h"
 #include "vulkan_xml.h"
