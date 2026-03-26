@@ -1313,7 +1313,7 @@ inline GuestType<const %[1]s*>::GuestType(GuestType<%[1]s>*&& new_value) : value
 inline GuestType<%[1]s*>::GuestHolder::~GuestHolder() {
 }
 
-inline GuestType<%[1]s*>::GuestType(%[1]s* const new_value, GuestType<%[1]s*>::GuestHolder&, bool&) : value_(bit_cast<GuestAddr>(new_value)) {
+inline GuestType<%[1]s*>::GuestType(%[1]s* const new_value, GuestType<%[1]s*>::GuestHolder&, bool&) : value_(std::bit_cast<GuestAddr>(new_value)) {
 }
 
 `,
@@ -1447,7 +1447,7 @@ inline %[1]s* ToHostType(const GuestType<%[1]s*>& new_value, GuestType<%[1]s*>::
 inline GuestType<%[1]s*>::GuestArrayHolder::~GuestArrayHolder() {
 }
 
-inline GuestType<%[1]s*>::GuestType(%[1]s* const new_value, GuestType<%[1]s*>::GuestArrayHolder&, const std::uint32_t*, bool&) : value_(bit_cast<GuestAddr>(new_value)) {
+inline GuestType<%[1]s*>::GuestType(%[1]s* const new_value, GuestType<%[1]s*>::GuestArrayHolder&, const std::uint32_t*, bool&) : value_(std::bit_cast<GuestAddr>(new_value)) {
 }
 
 `,
@@ -1597,7 +1597,7 @@ inline GuestType<const VkAccelerationStructureBuildGeometryInfoKHR*>::GuestType(
     const VkAccelerationStructureBuildGeometryInfoKHR* new_value,
     GuestType<const VkAccelerationStructureBuildGeometryInfoKHR*>::GuestHolder&,
     bool&)
-    : value_(bit_cast<GuestAddr>(new_value)) {
+    : value_(std::bit_cast<GuestAddr>(new_value)) {
 }
 
 class GuestType<const VkAccelerationStructureBuildGeometryInfoKHR*>::HostHolder {
@@ -1753,7 +1753,7 @@ inline GuestType<const VkDescriptorGetInfoEXT*>::GuestType(
     const VkDescriptorGetInfoEXT* new_value,
     GuestType<const VkDescriptorGetInfoEXT*>::GuestHolder&,
     bool&)
-    : value_(bit_cast<GuestAddr>(new_value)) {}
+    : value_(std::bit_cast<GuestAddr>(new_value)) {}
 
 #endif
 
@@ -1804,7 +1804,7 @@ inline GuestType<const VkDescriptorGetInfoEXT*>::GuestType(
                                                               out_of_memory)}}
 #else
                 ? GuestType<VkDescriptorDataEXT>{
-                      .uniоn = {.pSampledImage = bit_cast<GuestType<const VkDescriptorImageInfo*>>(
+                      .uniоn = {.pSampledImage = std::bit_cast<GuestType<const VkDescriptorImageInfo*>>(
                                     GuestType<const VkDescriptorImageInfo*>(
                                         new_value->data.pSampledImage))}}
 #endif
@@ -1836,7 +1836,7 @@ inline GuestType<const VkDescriptorGetInfoEXT*>::GuestType(
  private:
 };
 
-inline GuestType<const %[1]s*>::GuestType(const %[1]s* new_value, GuestType<const %[1]s*>::GuestHolder&, bool&) : value_(bit_cast<GuestAddr>(new_value))  {
+inline GuestType<const %[1]s*>::GuestType(const %[1]s* new_value, GuestType<const %[1]s*>::GuestHolder&, bool&) : value_(std::bit_cast<GuestAddr>(new_value))  {
 }
 
 `,
@@ -1969,7 +1969,7 @@ inline const VkDescriptorGetInfoEXT* ToHostType(
 #else
               ? VkDescriptorDataEXT{
                   .pSampledImage =
-                        bit_cast<const VkDescriptorImageInfo*>(
+                        std::bit_cast<const VkDescriptorImageInfo*>(
                             ToHostAddr<GuestType<VkDescriptorGetInfoEXT>>(
                                 ToGuestAddr(new_value))->data.uniоn.pSampledImage)}
 #endif
@@ -2070,7 +2070,7 @@ inline GuestType<const VkAccelerationStructureGeometryKHR*>::GuestType(
     GuestType<const VkAccelerationStructureGeometryKHR*>::GuestArrayHolder&,
     std::size_t,
     bool&)
-    : value_(bit_cast<GuestAddr>(new_value)) {
+    : value_(std::bit_cast<GuestAddr>(new_value)) {
 }
 
 class GuestType<const VkAccelerationStructureGeometryKHR*>::HostArrayHolder {
@@ -2255,7 +2255,7 @@ inline GuestType<const VkAccelerationStructureBuildGeometryInfoKHR*>::GuestType(
     GuestType<const VkAccelerationStructureBuildGeometryInfoKHR*>::GuestArrayHolder&,
     std::size_t,
     bool&)
-    : value_(bit_cast<GuestAddr>(new_value)) {
+    : value_(std::bit_cast<GuestAddr>(new_value)) {
 }
 
 class GuestType<const VkAccelerationStructureBuildGeometryInfoKHR*>::HostArrayHolder {
@@ -2705,7 +2705,7 @@ inline const VkGraphicsPipelineCreateInfo* ToHostType(const GuestType<const VkGr
 inline GuestType<const %[1]s*>::GuestArrayHolder::~GuestArrayHolder() {
 }
 
-inline GuestType<const %[1]s*>::GuestType(const %[1]s* const new_value, GuestType<const %[1]s*>::GuestArrayHolder&, std::size_t, bool&) : value_(bit_cast<GuestAddr>(new_value)) {
+inline GuestType<const %[1]s*>::GuestType(const %[1]s* const new_value, GuestType<const %[1]s*>::GuestArrayHolder&, std::size_t, bool&) : value_(std::bit_cast<GuestAddr>(new_value)) {
 }
 
 `,
@@ -3060,7 +3060,7 @@ func makeInitializerList(initializer_list []string, mode initializeStructMode, c
 							field_length_ref = ", &" + prefix + field_length.Name()
 						} else {
 							// After taking address we end up with weird “GuestType<GuestType<std::uint32_t>*>” which we can only  convert to “const ::uint32_t*” using bit_cast
-							field_length_ref = ", bit_cast<const ::uint32_t*>(&" + prefix + field_length.Name() + ")"
+							field_length_ref = ", std::bit_cast<const ::uint32_t*>(&" + prefix + field_length.Name() + ")"
 						}
 					} else {
 						field_length_ref = ", " + prefix + field_length.Name()

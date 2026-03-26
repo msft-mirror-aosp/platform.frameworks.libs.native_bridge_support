@@ -18,6 +18,7 @@
 #include <vulkan/vk_layer_interface.h>
 #include <vulkan/vulkan.h>
 
+#include <bit>
 #include <map>
 #include <mutex>
 #include <tuple>
@@ -30,8 +31,8 @@
 #include "berberis/guest_abi/guest_params.h"
 #include "berberis/guest_loader/guest_loader.h"
 #include "berberis/proxy_loader/proxy_library_builder.h"
+#include "berberis/runtime_library/runtime_library.h"
 #include "berberis/runtime_primitives/known_guest_function_wrapper.h"
-#include "berberis/runtime_primitives/runtime_library.h"
 
 #include "binary_search.h"
 #include "vulkan_xml.h"
@@ -339,7 +340,7 @@ void RunGuest_vkCreateInstance(GuestAddr pc, GuestArgumentBuffer* buf) {
         GuestArgumentsReferences<PFN_vkCreateInstance>(buf);
 
     const VkLayerInstanceCreateInfo* layer_create_info =
-        bit_cast<const VkLayerInstanceCreateInfo*>(pCreateInfo_host);
+        std::bit_cast<const VkLayerInstanceCreateInfo*>(pCreateInfo_host);
 
     // Step through the pNext chain until we get to the link function
     while (layer_create_info &&
@@ -348,7 +349,8 @@ void RunGuest_vkCreateInstance(GuestAddr pc, GuestArgumentBuffer* buf) {
       layer_create_info = static_cast<const VkLayerInstanceCreateInfo*>(layer_create_info->pNext);
     }
     if (layer_create_info) {
-      void* func = bit_cast<void*>(layer_create_info->u.pLayerInfo->pfnNextGetInstanceProcAddr);
+      void* func =
+          std::bit_cast<void*>(layer_create_info->u.pLayerInfo->pfnNextGetInstanceProcAddr);
       WrapHostFunctionImpl(
           func, DoCustomTrampolineWithThunk_vkGetInstanceProcAddr, "NextGetInstanceProcAddr");
     }
@@ -369,12 +371,12 @@ void RunGuest_vkGetDeviceProcAddr(GuestAddr pc, GuestArgumentBuffer* buf) {
     RunGuestCall(pc, buf);
     auto&& [host_result] = HostResultReference<PFN_vkGetDeviceProcAddr>(buf);
     auto [guest_result] = GuestResultValue<PFN_vkGetDeviceProcAddr>(buf);
-    host_result = bit_cast<PFN_vkVoidFunction>(conversion->wrapper(ToGuestAddr(guest_result)));
+    host_result = std::bit_cast<PFN_vkVoidFunction>(conversion->wrapper(ToGuestAddr(guest_result)));
     return;
   }
   ALOGE("Unknown function is used with vkGetDeviceProcAddr: %s", function_name);
   auto&& [result] = HostResultReference<PFN_vkGetDeviceProcAddr>(buf);
-  result = bit_cast<PFN_vkVoidFunction>(nullptr);
+  result = std::bit_cast<PFN_vkVoidFunction>(nullptr);
 }
 
 void RunGuest_vkGetInstanceProcAddr(GuestAddr pc, GuestArgumentBuffer* buf) {
@@ -386,12 +388,12 @@ void RunGuest_vkGetInstanceProcAddr(GuestAddr pc, GuestArgumentBuffer* buf) {
     RunGuestCall(pc, buf);
     auto&& [host_result] = HostResultReference<PFN_vkGetDeviceProcAddr>(buf);
     auto [guest_result] = GuestResultValue<PFN_vkGetDeviceProcAddr>(buf);
-    host_result = bit_cast<PFN_vkVoidFunction>(conversion->wrapper(ToGuestAddr(guest_result)));
+    host_result = std::bit_cast<PFN_vkVoidFunction>(conversion->wrapper(ToGuestAddr(guest_result)));
     return;
   }
   ALOGE("Unknown function is used with vkGetInstanceProcAddr: %s", function_name);
   auto&& [result] = HostResultReference<PFN_vkGetDeviceProcAddr>(buf);
-  result = bit_cast<PFN_vkVoidFunction>(nullptr);
+  result = std::bit_cast<PFN_vkVoidFunction>(nullptr);
 }
 
 }  // namespace

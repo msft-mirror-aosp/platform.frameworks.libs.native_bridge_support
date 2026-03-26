@@ -31,10 +31,10 @@
 #include "berberis/guest_abi/guest_type.h"
 #include "berberis/guest_state/guest_addr.h"
 #include "berberis/guest_state/guest_state.h"
+#include "berberis/runtime_library/runtime_library.h"
 #include "berberis/runtime_primitives/guest_function_wrapper_impl.h"
 #include "berberis/runtime_primitives/host_code.h"
 #include "berberis/runtime_primitives/host_function_wrapper_impl.h"
-#include "berberis/runtime_primitives/runtime_library.h"
 
 #include "binary_search.h"
 #endif
