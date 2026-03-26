@@ -15,11 +15,12 @@
 */
 
 #include <dlfcn.h>
-#include <stdint.h>
+
+#include <bit>
+#include <cstdint>
 
 #include <android/imagedecoder.h>
 
-#include "berberis/base/bit_util.h"
 #include "berberis/guest_abi/function_wrappers.h"
 #include "berberis/proxy_loader/proxy_library_builder.h"
 
@@ -65,7 +66,7 @@ void DoCustomTrampoline_AImageDecoderFrameInfo_getFrameRect(HostCode /* callee *
 #endif
   auto [info] = GuestParamsValues<FuncType>(state);
   auto&& [ret] = GuestReturnReference<FuncType>(state);
-  ret = bit_cast<ResType>(AImageDecoderFrameInfo_getFrameRect(info));
+  ret = std::bit_cast<ResType>(AImageDecoderFrameInfo_getFrameRect(info));
 }
 
 #if defined(NATIVE_BRIDGE_GUEST_ARCH_ARM) && defined(__i386__)
