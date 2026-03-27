@@ -281,6 +281,7 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANativeWindow_setBuffersGeometry);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANativeWindow_toSurface);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANativeWindow_unlockAndPost);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANpuBuffer_free);
+DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANpuBuffer_getFd);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANpuBuffer_loadAsync);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANpuBuffer_map);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(ANpuBuffer_setPriority);
@@ -755,6 +756,7 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ANativeWindow_toSurface);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ANativeWindow_unlockAndPost);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ANpuBuffer_free);
+  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ANpuBuffer_getFd);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ANpuBuffer_loadAsync);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ANpuBuffer_map);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid.so", ANpuBuffer_setPriority);
