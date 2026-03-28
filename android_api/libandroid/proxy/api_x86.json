@@ -1057,6 +1057,10 @@
 		{
 			"type" : "func ANpuBuffer_free"
 		},
+		"ANpuBuffer_getFd" : 
+		{
+			"type" : "func ANpuBuffer_getFd"
+		},
 		"ANpuBuffer_loadAsync" : 
 		{
 			"type" : "func ANpuBuffer_loadAsync"
@@ -26342,6 +26346,18 @@
 			"return_type" : "int32",
 			"size" : 0
 		},
+		"func ANpuBuffer_getFd" : 
+		{
+			"has_variadic_args" : false,
+			"is_virtual_method" : false,
+			"kind" : "function",
+			"params" : 
+			[
+				"struct ANpuBuffer*"
+			],
+			"return_type" : "int32",
+			"size" : 0
+		},
 		"func ANpuBuffer_loadAsync" : 
 		{
 			"has_variadic_args" : false,
@@ -34713,7 +34729,7 @@
 				{
 					"name" : "",
 					"offset" : 0,
-					"type" : "struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__long::#47"
+					"type" : "struct std::__1::basic_string<char8, std::__1::char_traits<char8>, std::__1::allocator<char8>>::__long::#61"
 				},
 				{
 					"name" : "__size_",

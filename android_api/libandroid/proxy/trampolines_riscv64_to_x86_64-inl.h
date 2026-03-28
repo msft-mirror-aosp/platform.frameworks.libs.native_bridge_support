@@ -264,6 +264,7 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"ANativeWindow_toSurface", GetTrampolineFunc<auto(JNIEnv*, void*) -> void*>(), reinterpret_cast<void*>(NULL)},
 {"ANativeWindow_unlockAndPost", GetTrampolineFunc<auto(void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"ANpuBuffer_free", GetTrampolineFunc<auto(void*, uint64_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
+{"ANpuBuffer_getFd", GetTrampolineFunc<auto(void*) -> int32_t>(), reinterpret_cast<void*>(NULL)},
 {"ANpuBuffer_loadAsync", GetTrampolineFunc<auto(void*, int32_t, int64_t, int64_t, int64_t, auto(*)(void*, int32_t, void*) -> void) -> void>(), reinterpret_cast<void*>(NULL)},
 {"ANpuBuffer_map", GetTrampolineFunc<auto(void*, void*, uint64_t, int32_t, int32_t, int64_t) -> void*>(), reinterpret_cast<void*>(NULL)},
 {"ANpuBuffer_setPriority", GetTrampolineFunc<auto(void*, int32_t) -> int32_t>(), reinterpret_cast<void*>(NULL)},
