@@ -1,6 +1,5 @@
 // clang-format off
 const KnownTrampoline kKnownTrampolines[] = {
-{"JNI_OnLoad", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"_ZN7android17GraphicBufferImpl11UnmapStaticEl", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"_ZN7android17GraphicBufferImpl15GetStrideStaticEl", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"_ZN7android17GraphicBufferImpl21GetNativeBufferStaticEl", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
