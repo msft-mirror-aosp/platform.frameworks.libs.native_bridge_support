@@ -27,7 +27,6 @@ const KnownTrampoline kKnownTrampolines[] = {
 {"JNI_CreateJavaVM", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JNI_GetCreatedJavaVMs", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JNI_GetDefaultJavaVMInitArgs", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
-{"JNI_OnLoad", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JniInvocationCreate", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JniInvocationDestroy", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},
 {"JniInvocationGetLibrary", DoBadTrampoline, reinterpret_cast<void*>(DoBadThunk)},

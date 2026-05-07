@@ -17,7 +17,6 @@
 // clang-format off
 #include "native_bridge_support/vdso/interceptable_functions.h"
 
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(JNI_OnLoad);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android17GraphicBufferImpl11UnmapStaticEl);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android17GraphicBufferImpl15GetStrideStaticEl);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZN7android17GraphicBufferImpl21GetNativeBufferStaticEl);
@@ -37,7 +36,6 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZNK7android17GraphicBufferImpl9GetStrideEv);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(_ZNK7android17GraphicBufferImpl9InitCheckEv);
 
 static void __attribute__((constructor(0))) init_stub_library() {
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libwebviewchromium_plat_support.so", JNI_OnLoad);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libwebviewchromium_plat_support.so", _ZN7android17GraphicBufferImpl11UnmapStaticEl);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libwebviewchromium_plat_support.so", _ZN7android17GraphicBufferImpl15GetStrideStaticEl);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libwebviewchromium_plat_support.so", _ZN7android17GraphicBufferImpl21GetNativeBufferStaticEl);

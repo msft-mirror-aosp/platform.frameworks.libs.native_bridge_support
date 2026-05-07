@@ -44,7 +44,6 @@ DEFINE_INTERCEPTABLE_STUB_FUNCTION(AndroidRuntimeGetJavaVM);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JNI_CreateJavaVM);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JNI_GetCreatedJavaVMs);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JNI_GetDefaultJavaVMInitArgs);
-DEFINE_INTERCEPTABLE_STUB_FUNCTION(JNI_OnLoad);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniInvocationCreate);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniInvocationDestroy);
 DEFINE_INTERCEPTABLE_STUB_FUNCTION(JniInvocationGetLibrary);
@@ -1692,7 +1691,6 @@ static void __attribute__((constructor(0))) init_stub_library() {
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", JNI_CreateJavaVM);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", JNI_GetCreatedJavaVMs);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", JNI_GetDefaultJavaVMInitArgs);
-  INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", JNI_OnLoad);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", JniInvocationCreate);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", JniInvocationDestroy);
   INIT_INTERCEPTABLE_STUB_FUNCTION("libandroid_runtime.so", JniInvocationGetLibrary);
